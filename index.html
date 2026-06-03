@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GeoStory Atlas | สารานุกรมภูมิศาสตร์ ภูมิประเทศ และภูมิอากาศ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQY4f8hZMg6jBqjPuV3VfFq2M6Y9Qk0="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="GeoStory Atlas">
+        <span class="brand-mark">G</span>
+        <span>GeoStory Atlas</span>
+      </a>
+      <nav class="main-nav" aria-label="เมนูหลัก">
+        <a href="#encyclopedia">พื้นฐาน</a>
+        <a href="#process-diagrams">แผนภาพ</a>
+        <a href="#glossary">ศัพท์</a>
+        <a href="#library">สารานุกรม</a>
+        <a href="#map-section">แผนที่</a>
+        <a href="#learning-path">เส้นทางเรียนรู้</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="ภูมิประเทศภูเขา ถนน แม่น้ำ และหุบเขา"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Geography Storytelling Encyclopedia</p>
+          <h1 id="hero-title">สารานุกรมภูมิศาสตร์ที่เล่าโลกผ่านสถานที่จริง</h1>
+          <p>
+            รวมความรู้ภูมิศาสตร์ ภูมิประเทศ ภูมิอากาศ น้ำ ชายฝั่ง เมือง และภัยพิบัติ
+            พร้อมภาพประกอบสวยงาม เนื้อหาแบบ story telling และหมุดแผนที่ที่พาไปเห็นตัวอย่างสถานที่จริง
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#library">
+              <i data-lucide="compass"></i>
+              เริ่มสำรวจ
+            </a>
+            <a class="secondary-action" href="#map-section" aria-label="เปิดแผนที่">
+              <i data-lucide="map"></i>
+              เปิดแผนที่
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="สรุปบทเรียน">
+          <span><strong id="topicCount">298</strong> เรื่องสารานุกรม</span>
+          <strong>จากภูเขาถึงภูมิอากาศเมือง</strong>
+          <small>เลือกหัวข้อเพื่ออ่านเนื้อหา ดูภาพ และย้ายแผนที่ไปยังตัวอย่างสถานที่จริง</small>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="ภาพรวมระบบ">
+        <article>
+          <i data-lucide="mountain-snow"></i>
+          <h2>ภูมิประเทศ</h2>
+          <p>ภูเขา ที่ราบลุ่ม หุบเขา ฟยอร์ด ทะเลทราย ดินดอน และชายฝั่งที่เกิดจากแรงภายในและแรงภายนอกโลก</p>
+        </article>
+        <article>
+          <i data-lucide="cloud-sun"></i>
+          <h2>ภูมิอากาศ</h2>
+          <p>ร้อนชื้น มรสุม ทะเลทราย สะวันนา เมดิเตอร์เรเนียน ทุนดรา และภูมิอากาศเมือง</p>
+        </article>
+        <article>
+          <i data-lucide="route"></i>
+          <h2>โยงกับแผนที่</h2>
+          <p><span id="mapCount">298</span> หมุดสถานที่จริงพร้อมคำอธิบาย เพื่ออ่านโลกจากตำแหน่งและบริบทพื้นที่</p>
+        </article>
+      </section>
+
+      <section class="concept-section" id="encyclopedia" aria-labelledby="concept-title">
+        <div class="section-heading">
+          <p class="eyebrow">Core Encyclopedia</p>
+          <h2 id="concept-title">ภูมิศาสตร์ ภูมิประเทศ ภูมิอากาศ มีอะไรบ้าง</h2>
+          <p>
+            ก่อนเลือกหัวข้อ ลองอ่านแกนความรู้พื้นฐานที่ใช้เชื่อมทุกเรื่องในเว็บนี้:
+            พื้นที่ รูปร่างผิวโลก ภูมิอากาศ และการอ่านสถานที่ผ่านแผนที่
+          </p>
+        </div>
+        <div class="concept-grid" id="conceptGrid"></div>
+      </section>
+
+      <section class="taxonomy-section" aria-labelledby="taxonomy-title">
+        <div class="section-heading">
+          <p class="eyebrow">Classification Guide</p>
+          <h2 id="taxonomy-title">จำแนกภูมิประเทศและภูมิอากาศแบบเร็ว</h2>
+          <p>
+            ใช้แผนผังนี้เป็นเข็มทิศก่อนอ่านสารานุกรม:
+            รูปร่างผิวโลกเกิดจากแรงหลายแบบ ส่วนภูมิอากาศถูกควบคุมด้วยตำแหน่ง ความสูง น้ำทะเล ลม และการใช้พื้นที่ของมนุษย์
+          </p>
+        </div>
+        <div class="taxonomy-grid" id="taxonomyGrid"></div>
+      </section>
+
+      <section class="diagram-section" id="process-diagrams" aria-labelledby="diagram-title">
+        <div class="section-heading">
+          <p class="eyebrow">Process Diagrams</p>
+          <h2 id="diagram-title">แผนภาพการเกิดภูมิประเทศ ภูมิอากาศ และปรากฏการณ์</h2>
+          <p>
+            อ่านโลกผ่านลำดับขั้นแบบภาพประกอบ: จากแรงภายในโลก น้ำ ลม น้ำแข็ง ภูมิอากาศเมือง ไปจนถึงภัยพิบัติ
+            แต่ละแผนภาพช่วยให้เห็นว่ากระบวนการหนึ่งเริ่มจากอะไร เคลื่อนต่ออย่างไร และทิ้งร่องรอยไว้บนแผนที่แบบไหน
+          </p>
+        </div>
+        <div class="diagram-grid" id="diagramGrid"></div>
+      </section>
+
+      <section class="comparison-section" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <p class="eyebrow">Quick Compare</p>
+          <h2 id="comparison-title">เปรียบเทียบแนวคิดที่มักสับสน</h2>
+          <p>
+            อ่านตารางสั้น ๆ นี้ก่อนเข้าสู่สารานุกรม เพื่อแยกคำสำคัญที่คล้ายกันแต่ใช้คนละระดับความหมาย
+            แล้วนำไปอ่านตัวอย่างสถานที่บนแผนที่ได้แม่นขึ้น
+          </p>
+        </div>
+        <div class="comparison-grid" id="comparisonGrid"></div>
+      </section>
+
+      <section class="inquiry-section" aria-labelledby="inquiry-title">
+        <div class="section-heading">
+          <p class="eyebrow">Map Thinking</p>
+          <h2 id="inquiry-title">คำถามฝึกคิดแบบนักภูมิศาสตร์</h2>
+          <p>
+            ใช้คำถามเหล่านี้คู่กับแผนที่และบทความแต่ละเรื่อง เพื่อฝึกมองตำแหน่ง รูปร่าง กระบวนการ
+            ภูมิอากาศ และผลกระทบต่อผู้คนเป็นระบบเดียวกัน
+          </p>
+        </div>
+        <div class="inquiry-grid" id="inquiryGrid"></div>
+      </section>
+
+      <section class="glossary-section" id="glossary" aria-labelledby="glossary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Glossary</p>
+          <h2 id="glossary-title">อภิธานศัพท์ภูมิศาสตร์</h2>
+          <p>
+            รวมคำสำคัญที่ใช้ซ้ำในบทความสารานุกรม เพื่อให้ผู้เรียนอ่านเรื่องภูมิประเทศ ภูมิอากาศ แผนที่ และภัยพิบัติได้ต่อเนื่องขึ้น
+          </p>
+        </div>
+        <div class="glossary-grid" id="glossaryGrid"></div>
+      </section>
+
+      <section class="route-section" id="routes" aria-labelledby="routes-title">
+        <div class="section-heading">
+          <p class="eyebrow">Atlas Routes</p>
+          <h2 id="routes-title">เส้นทางสำรวจสำหรับอ่านเป็นชุด</h2>
+          <p>
+            ถ้าไม่อยากเริ่มจากการ์ดทั้งหมด เลือกเส้นทางสำรวจเหล่านี้เพื่ออ่านหัวข้อที่เชื่อมกันเป็นเรื่องเดียว
+            แล้วกระโดดไปยังแผนที่ของแต่ละสถานที่ได้ทันที
+          </p>
+        </div>
+        <div class="route-grid" id="routeGrid"></div>
+      </section>
+
+      <section class="library-section" id="library" aria-labelledby="library-title">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive Library</p>
+          <h2 id="library-title">คลังสารานุกรมภูมิศาสตร์</h2>
+          <p>
+            มี <strong id="categoryCount">5</strong> หมวดหลักให้ค้นหาและกรอง:
+            ภูมิประเทศ ภูมิอากาศ น้ำและชายฝั่ง ภัยพิบัติ ทรัพยากรและมนุษย์ พร้อมตัวอย่างสถานที่จริงทั่วโลกและในไทย
+          </p>
+        </div>
+
+        <div class="toolbar" aria-label="เครื่องมือค้นหา">
+          <label class="search-box">
+            <i data-lucide="search"></i>
+            <span class="sr-only">ค้นหาเรื่องภูมิศาสตร์</span>
+            <input id="searchInput" type="search" placeholder="ค้นหา เช่น มรสุม ภูเขา ทะเลทราย ปะการัง น้ำท่วม กรุงเทพฯ" />
+          </label>
+          <div class="filter-group" id="filterGroup" aria-label="หมวดหมู่"></div>
+        </div>
+
+        <div class="quick-search-group" id="quickSearchGroup" aria-label="คำค้นเร็ว"></div>
+
+        <div class="category-overview" id="categoryOverview" aria-label="ภาพรวมหมวดสารานุกรม"></div>
+
+        <div class="topic-grid" id="topicGrid"></div>
+      </section>
+
+      <section class="story-map-section" id="map-section" aria-labelledby="map-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Mapped Story</p>
+          <h2 id="map-title">อ่านเรื่องเล่าคู่กับแผนที่</h2>
+          <p>หมุดและการ์ดเนื้อหาเชื่อมกัน เลือกหัวข้อเพื่อดูพื้นที่จริงและมิติทางภูมิศาสตร์ของสถานที่นั้น</p>
+        </div>
+
+        <div class="map-layout">
+          <aside class="story-reader" id="storyReader" aria-live="polite"></aside>
+          <div class="map-shell">
+            <div id="map" aria-label="แผนที่แสดงตำแหน่งหัวข้อภูมิศาสตร์"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="learning-path" id="learning-path" aria-labelledby="path-title">
+        <div class="section-heading">
+          <p class="eyebrow">Learning Path</p>
+          <h2 id="path-title">ลำดับการเรียนรู้ที่เชื่อมโยงกัน</h2>
+        </div>
+        <div class="path-list">
+          <article>
+            <span>01</span>
+            <h3>อ่านพื้นที่และตำแหน่ง</h3>
+            <p>เริ่มจากพิกัด ทิศทาง ระยะทาง มาตราส่วน และแผนที่ เพื่อเห็นว่าทุกปรากฏการณ์เกิดขึ้นในบริบทพื้นที่จริง</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>เข้าใจภูมิประเทศ</h3>
+            <p>ตามแรงสร้างภูมิประเทศจากแผ่นธรณี ภูเขาไฟ แม่น้ำ ธารน้ำแข็ง คลื่น และลมที่เปลี่ยนรูปผิวโลก</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>เชื่อมภูมิอากาศกับชีวิต</h3>
+            <p>ดูว่าฝน ลม อุณหภูมิ ฤดูกาล และภูมิอากาศเมืองกำหนดป่า เกษตร น้ำ เมือง และความเสี่ยงอย่างไร</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>GeoStory Atlas</span>
+      <a href="#top">กลับขึ้นด้านบน</a>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
