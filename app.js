@@ -9538,81 +9538,138 @@ function renderTopics(resetPage) {
 }
 
 function renderStory(topic) {
-  const academicGuide = buildAcademicGuide(topic);
+  const guide = buildAcademicGuide(topic);
   const svgInfographic = buildSvgInfographic(topic);
-  const processPanel = buildProcessInfographic(topic);
-  const longArticle = buildLongArticle(topic, academicGuide);
   const relatedTopics = getRelatedTopics(topic);
 
+  const formationSteps = guide.formation
+    .map((step, i) => `<li><span>${i + 1}</span><p>${step}</p></li>`)
+    .join("");
+
+  const typesHtml = guide.types
+    .map((t) => `<li>${t}</li>`)
+    .join("");
+
+  const landformsHtml = guide.landforms
+    .map((l) => `<li>${l}</li>`)
+    .join("");
+
+  const pointsHtml = topic.points
+    .map((p) => `<li>${p}</li>`)
+    .join("");
+
+  const relatedHtml = relatedTopics
+    .map(
+      (rt) => `
+      <button type="button" data-related-topic="${rt.id}" class="related-article-card">
+        <span class="related-cat">${rt.category} / ${rt.subcategory}</span>
+        <strong>${rt.title}</strong>
+        <small>${rt.location}</small>
+        <em>${getRelatedReason(topic, rt)}</em>
+      </button>`,
+    )
+    .join("");
+
   storyReader.innerHTML = `
+    <!-- Photo hero -->
     <div class="story-photo-hero" style="background-image:url('${topic.image}')">
       <div class="story-photo-meta">
-        <p class="eyebrow">${topic.category} / ${topic.subcategory}</p>
-        <h3>${topic.title}</h3>
+        <span class="article-category-badge">${topic.category} · ${topic.subcategory}</span>
+        <h1>${topic.title}</h1>
         <div class="story-location-tag">
           <i data-lucide="map-pin"></i>${topic.location}
         </div>
       </div>
     </div>
-    <div class="story-body">
-      <div class="story-facts">
-        <div>
-          <span>ตำแหน่ง</span>
-          <strong>${topic.location}</strong>
+
+    <!-- Article body -->
+    <div class="article-body">
+
+      <!-- Lead -->
+      <p class="article-lead">${topic.summary}</p>
+
+      <!-- Story / Travel narrative -->
+      <section class="article-section">
+        <p class="article-story-text">${topic.story}</p>
+        <div class="article-why">
+          <strong>Why it matters</strong>
+          <p>${topic.whyItMatters}</p>
         </div>
-        <div>
-          <span>ขนาด/ขอบเขต</span>
-          <strong>${topic.scale}</strong>
-        </div>
-        <div>
-          <span>แนวคิดหลัก</span>
-          <strong>${topic.keyConcept}</strong>
-        </div>
-        <div>
-          <span>ภูมิอากาศ</span>
-          <strong>${topic.climate}</strong>
-        </div>
-      </div>
+      </section>
+
+      <!-- Infographic -->
       ${svgInfographic || ""}
-      <div class="story-learning-split">
-        <div class="story-learning-copy">
-          ${longArticle}
+
+      <!-- The Geography (Science) -->
+      <section class="article-section article-science">
+        <h2 class="article-section-title">
+          <i data-lucide="graduation-cap"></i>
+          The Geography
+        </h2>
+        <p class="article-definition">${guide.definition}</p>
+
+        <h3 class="article-sub-title">How it forms</h3>
+        <ol class="article-steps">
+          ${formationSteps}
+        </ol>
+
+        <div class="article-two-col">
+          <div>
+            <h3 class="article-sub-title">Types</h3>
+            <ul class="article-list">${typesHtml}</ul>
+          </div>
+          <div>
+            <h3 class="article-sub-title">Landforms &amp; Features</h3>
+            <ul class="article-list">${landformsHtml}</ul>
+          </div>
         </div>
-        ${processPanel}
-      </div>
-      <div class="related-map-panel" aria-label="ตัวอย่างสถานที่เกี่ยวข้องบนแผนที่">
-        <div class="related-map-heading">
-          <h4>ตัวอย่างสถานที่เกี่ยวข้องบนแผนที่</h4>
-          <p>กดเพื่อโยงเรื่องนี้กับพื้นที่จริงอื่น ๆ แล้วดูหมุดดาวเทียมด้านล่างได้ทันที</p>
+
+        <div class="article-map-reading">
+          <i data-lucide="map"></i>
+          <p><strong>How to read the map: </strong>${guide.mapReading}</p>
         </div>
-        <div class="related-map-list">
-          ${relatedTopics
-            .map(
-              (relatedTopic) => `
-                <button type="button" data-related-topic="${relatedTopic.id}">
-                  <span>${relatedTopic.category} / ${relatedTopic.subcategory}</span>
-                  <strong>${relatedTopic.title}</strong>
-                  <small>${relatedTopic.location}</small>
-                  <em>${getRelatedReason(topic, relatedTopic)}</em>
-                </button>
-              `,
-            )
-            .join("")}
+      </section>
+
+      <!-- Key Facts -->
+      <section class="article-section">
+        <h2 class="article-section-title">
+          <i data-lucide="list-checks"></i>Key Facts
+        </h2>
+        <div class="article-facts-grid">
+          <div><span>Location</span><strong>${topic.location}</strong></div>
+          <div><span>Scale</span><strong>${topic.scale}</strong></div>
+          <div><span>Key Concept</span><strong>${topic.keyConcept}</strong></div>
+          <div><span>Climate</span><strong>${topic.climate}</strong></div>
         </div>
-      </div>
-      <div class="reader-actions">
-        <a href="https://www.openstreetmap.org/?mlat=${topic.coords[0]}&mlon=${topic.coords[1]}#map=${topic.zoom}/${topic.coords[0]}/${topic.coords[1]}" target="_blank" rel="noreferrer">
-          <i data-lucide="external-link"></i>เปิดใน OpenStreetMap
+        <ul class="article-points">${pointsHtml}</ul>
+      </section>
+
+      <!-- Explore More -->
+      <section class="article-section">
+        <h2 class="article-section-title">
+          <i data-lucide="globe"></i>Explore More
+        </h2>
+        <p class="article-explore-desc">Similar geography, climate, or processes — click to read another article.</p>
+        <div class="related-article-grid">${relatedHtml}</div>
+      </section>
+
+      <!-- Actions -->
+      <div class="article-actions">
+        <a class="article-action-link"
+           href="https://www.openstreetmap.org/?mlat=${topic.coords[0]}&mlon=${topic.coords[1]}#map=${topic.zoom}/${topic.coords[0]}/${topic.coords[1]}"
+           target="_blank" rel="noreferrer">
+          <i data-lucide="external-link"></i>Open in OpenStreetMap
         </a>
-        <button type="button" class="reader-map-btn" id="readerOpenMapBtn">
-          <i data-lucide="satellite"></i>ดูบนแผนที่ดาวเทียม
+        <button type="button" class="article-action-btn" id="readerOpenMapBtn">
+          <i data-lucide="satellite"></i>View Satellite Map
         </button>
       </div>
-    </div>
+
+    </div><!-- /article-body -->
   `;
 
-  storyReader.querySelectorAll("[data-related-topic]").forEach((button) => {
-    button.addEventListener("click", () => selectTopic(button.dataset.relatedTopic, false));
+  storyReader.querySelectorAll("[data-related-topic]").forEach((btn) => {
+    btn.addEventListener("click", () => selectTopic(btn.dataset.relatedTopic, false));
   });
 
   const openMapBtn = document.getElementById("readerOpenMapBtn");
@@ -9623,11 +9680,15 @@ function renderStory(topic) {
       if (panel && !panel.classList.contains("visible")) {
         panel.classList.add("visible");
         panel.setAttribute("aria-hidden", "false");
-        toggleBtn.classList.add("active");
-        toggleBtn.setAttribute("aria-expanded", "true");
+        if (toggleBtn) {
+          toggleBtn.classList.add("active");
+          toggleBtn.setAttribute("aria-expanded", "true");
+          const span = toggleBtn.querySelector("span");
+          if (span) span.textContent = "Hide Map";
+        }
         setTimeout(() => { if (map) map.invalidateSize(); }, 50);
       }
-      panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      panel?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
 
@@ -9684,9 +9745,9 @@ function initializeMap() {
     mapPanel.setAttribute("aria-hidden", String(!isOpen));
     if (isOpen) {
       setTimeout(() => map.invalidateSize(), 50);
-      mapToggleBtn.querySelector("span").textContent = "ปิดแผนที่";
+      mapToggleBtn.querySelector("span").textContent = "Hide Map";
     } else {
-      mapToggleBtn.querySelector("span").textContent = "แสดงแผนที่ดาวเทียม";
+      mapToggleBtn.querySelector("span").textContent = "View Satellite Map";
     }
   });
 
@@ -9704,32 +9765,58 @@ function initializeMap() {
   map.addLayer(clusterGroup);
 }
 
-function selectTopic(topicId, shouldScroll) {
+const libraryView = document.getElementById("libraryView");
+const articleView = document.getElementById("articleView");
+
+function showLibraryView() {
+  libraryView.hidden = false;
+  articleView.hidden = true;
+  document.getElementById("navBackBtn").hidden = true;
+  window.scrollTo({ top: 0, behavior: "instant" });
+  history.replaceState(null, "", "#library");
+}
+
+function showArticleView(topic) {
+  libraryView.hidden = true;
+  articleView.hidden = false;
+  document.getElementById("navBackBtn").hidden = false;
+  const crumb = document.getElementById("articleBreadcrumb");
+  if (crumb) crumb.textContent = `${topic.category} / ${topic.subcategory}`;
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function selectTopic(topicId) {
   const topic = topics.find((item) => item.id === topicId);
-  if (!topic || !map) return;
+  if (!topic) return;
 
   activeTopic = topic;
   history.replaceState(null, "", "#" + topic.id);
   renderStory(topic);
+  showArticleView(topic);
 
   const hint = document.getElementById("mapLocationHint");
   if (hint) hint.textContent = topic.location;
 
-  if (shouldScroll) {
-    document.querySelector("#map-section").scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  const mapPanel = document.getElementById("mapPanel");
-  const isMapOpen = mapPanel && mapPanel.classList.contains("visible");
-
-  map.setView(topic.coords, topic.zoom, { animate: false });
-
-  if (isMapOpen) {
-    clusterGroup.zoomToShowLayer(markers[topic.id], () => {
-      markers[topic.id].openPopup();
-    });
+  if (map) {
+    map.setView(topic.coords, topic.zoom, { animate: false });
+    const mapPanel = document.getElementById("mapPanel");
+    if (mapPanel && mapPanel.classList.contains("visible")) {
+      clusterGroup.zoomToShowLayer(markers[topic.id], () => markers[topic.id].openPopup());
+    }
   }
 }
+
+// Back navigation
+document.getElementById("backToLibrary").addEventListener("click", showLibraryView);
+document.getElementById("navBackBtn").addEventListener("click", showLibraryView);
+document.getElementById("brandLink").addEventListener("click", (e) => {
+  e.preventDefault();
+  showLibraryView();
+});
+document.getElementById("footerBackTop")?.addEventListener("click", (e) => {
+  e.preventDefault();
+  showLibraryView();
+});
 
 let searchDebounceTimer;
 searchInput.addEventListener("input", () => {
@@ -9737,26 +9824,25 @@ searchInput.addEventListener("input", () => {
   searchDebounceTimer = setTimeout(renderTopics, 220);
 });
 
-renderConcepts();
-renderTaxonomy();
-renderProcessDiagrams();
-renderComparisons();
-renderInquiryPrompts();
+// Boot
 const hashId = location.hash.slice(1);
 if (hashId) {
   const hashTopic = topics.find((t) => t.id === hashId);
   if (hashTopic) activeTopic = hashTopic;
 }
 
-renderGlossary();
 updateStats();
 createFilters();
 renderCategoryOverview();
 renderQuickSearches();
 renderTopics();
-renderStory(activeTopic);
 initializeMap();
-renderRoutes();
-const initHint = document.getElementById("mapLocationHint");
-if (initHint) initHint.textContent = activeTopic.location;
+
+if (hashId && topics.find((t) => t.id === hashId)) {
+  renderStory(activeTopic);
+  showArticleView(activeTopic);
+  const initHint = document.getElementById("mapLocationHint");
+  if (initHint) initHint.textContent = activeTopic.location;
+}
+
 refreshIcons();
