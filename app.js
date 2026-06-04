@@ -643,6 +643,133 @@ const atlasRoutes = [
   },
 ];
 
+// ─── Concept Definitions (for inline textbook) ────────────────────────────────
+
+const pu = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1400&q=80`;
+
+const CONCEPT_DEFS = {
+  volcano:   { title: "Volcano", subtitle: "ภูเขาไฟ — Volcanic Landforms & Processes",          image: pu("1505852679233-d9fd70aff56d"), kw: "ภูเขาไฟ ลาวา แมกมา" },
+  tectonic:  { title: "Plate Tectonics & Mountains", subtitle: "แผ่นธรณี — Tectonic Landforms", image: pu("1544735716-392fe2489ffa"),   kw: "แผ่นธรณี ภูเขา ธรณีสัณฐาน" },
+  river:     { title: "River Systems & Hydrology", subtitle: "แม่น้ำ — Rivers, Deltas & Watersheds", image: pu("1500530855697-b586d89ba3ee"), kw: "แม่น้ำ ลุ่มน้ำ ดินดอน ตะกอน" },
+  coastal:   { title: "Coastal & Marine Geography", subtitle: "ชายฝั่ง — Coasts, Reefs & Ocean Margins", image: pu("1507525428034-b723cf961d3e"), kw: "ชายฝั่ง คลื่น ปะการัง ทะเล" },
+  desert:    { title: "Desert & Arid Landscapes", subtitle: "ทะเลทราย — Dryland Processes & Landforms", image: pu("1509316785289-025f5b846b35"), kw: "ทะเลทราย เนินทราย ลม โอเอซิส" },
+  glacier:   { title: "Glaciers & Cryosphere", subtitle: "ธารน้ำแข็ง — Ice Processes & Cold Landscapes", image: pu("1519681393784-d120267933ba"), kw: "ธารน้ำแข็ง น้ำแข็ง หิมะ permafrost" },
+  climate:   { title: "Climate Zones & Atmosphere", subtitle: "ภูมิอากาศ — Global Climate Systems", image: pu("1501691223387-dd0500403074"), kw: "ภูมิอากาศ มรสุม ลม ฝน อุณหภูมิ" },
+  hazard:    { title: "Natural Hazards & Disasters", subtitle: "ภัยพิบัติ — Hazard Types & Disaster Risk", image: pu("1500534314209-a25ddb2bd429"), kw: "ภัยพิบัติ แผ่นดินไหว สึนามิ น้ำท่วม พายุ" },
+  karst:     { title: "Karst & Groundwater", subtitle: "คาร์สต์ — Limestone Dissolution & Caves", image: pu("1500375592092-40eb2168fd21"), kw: "คาร์สต์ ถ้ำ หินปูน น้ำบาดาล" },
+  ecosystem: { title: "Ecosystems & Biomes", subtitle: "ระบบนิเวศ — Global Biomes & Ecological Zones", image: pu("1516026672322-bc52d61a55d5"), kw: "ป่า ระบบนิเวศ พืช ecotone" },
+  human:     { title: "Human Geography", subtitle: "ภูมิศาสตร์มนุษย์ — Cities, Agriculture & Resources", image: pu("1494526585095-c41746248156"), kw: "เมือง ทรัพยากร มนุษย์ เกษตร ชลประทาน" },
+};
+
+const KEYWORD_TO_CONCEPT = {
+  "ภูเขาไฟ":"volcano","หินบะซอลต์":"volcano","น้ำพุร้อน":"volcano","เขตมุดตัว":"volcano","ดินภูเขาไฟ":"volcano",
+  "ดินดอน":"river","ลุ่มน้ำ":"river","ที่ราบน้ำพา":"river","น้ำกร่อย":"river","hydrograph":"river","flood pulse":"river","จังหวะน้ำหลาก":"river","น้ำใต้ดินเติมกลับ":"karst",
+  "เมืองชายฝั่ง":"coastal","ป่าชายเลน":"coastal","เกาะ":"coastal","อะทอลล์":"coastal","แนวปะการัง":"coastal","น้ำขึ้นน้ำลง":"coastal","ลากูนน้ำกร่อย":"coastal","ทะเลปิด":"coastal","น้ำเค็มรุก":"coastal","พื้นที่ถมทะเล":"human","พลังงานลมนอกชายฝั่ง":"human",
+  "ทะเลทราย":"desert","โอเอซิส":"desert","ทะเลทรายชายฝั่ง":"desert","พายุฝุ่น":"desert","ทะเลเกลือ":"desert","สเตปป์":"desert","เอิร์ก":"desert","พลายา":"desert","ซับคา":"desert","แอ่งยุบต่ำ":"desert",
+  "ธารน้ำแข็ง":"glacier","เพอร์มาฟรอสต์":"glacier","น้ำแข็งทะเล":"glacier","เส้นหิมะ":"glacier","น้ำท่วมทะเลสาบธารน้ำแข็ง":"glacier","ลมคาตาบาติก":"glacier","อัลบีโด":"glacier",
+  "มรสุม":"climate","สะวันนา":"climate","ITCZ":"climate","เงาฝน":"climate","MJO":"climate","IOD":"climate","ENSO":"climate","เอลนีโญ":"climate","ลานีญา":"climate","แม่น้ำในบรรยากาศ":"climate","Walker circulation":"climate","กระแสน้ำ":"climate","ไจเออร์":"climate","ร่องลึก":"tectonic","สันเขากลางมหาสมุทร":"tectonic","น้ำฟอสซิล":"karst",
+  "แผ่นดินไหว":"hazard","ดินถล่ม":"hazard","ไฟป่า":"hazard","ไต้ฝุ่น":"hazard","ทอร์นาโด":"hazard","ดินเหลว":"hazard","คลื่นพายุซัดฝั่ง":"hazard","คลื่นความร้อน":"hazard","น้ำท่วม":"hazard",
+  "น้ำบาดาล":"karst","คานัต":"karst","ระบบชลประทานวัฒนธรรม":"karst",
+  "ป่าฝน":"ecosystem","พื้นที่ชุ่มน้ำ":"ecosystem","อีโคโทน":"ecosystem","ป่าเมฆ":"ecosystem","พาราโม":"ecosystem","โครงสร้างสีเขียว":"human",
+  "เกาะความร้อนเมือง":"human","โพลเดอร์":"human","เกษตรขั้นบันได":"human","เดซาลิเนชัน":"human","ห่วงโซ่อุปทาน":"human","ลิเทียมบรаइน":"human",
+};
+
+let activeConceptKey = null;
+
+function synTopic(kw, img) {
+  return { id: kw, title: kw, category: kw, subcategory: kw, keyConcept: kw, summary: kw, points: [], story: "", whyItMatters: "", location: "Worldwide", scale: "Regional to global", climate: "Varies", coords: [20, 0], zoom: 3, image: img };
+}
+
+function renderConceptTextbook(conceptKey) {
+  const def = CONCEPT_DEFS[conceptKey];
+  if (!def) return;
+
+  const tb = document.getElementById("conceptTextbook");
+  const catOverview = document.getElementById("categoryOverview");
+  const gridLabel = document.getElementById("topicGridLabel");
+  const gridLabelText = document.getElementById("topicGridLabelText");
+
+  // Toggle: click same chip hides textbook
+  if (activeConceptKey === conceptKey) {
+    activeConceptKey = null;
+    tb.hidden = true;
+    if (catOverview) catOverview.hidden = false;
+    if (gridLabel) gridLabel.hidden = true;
+    document.querySelectorAll(".quick-search.concept-active").forEach((b) => b.classList.remove("concept-active"));
+    return;
+  }
+
+  activeConceptKey = conceptKey;
+
+  const topic = synTopic(def.kw, def.image);
+  const guide = buildAcademicGuide(topic);
+  const svgInfographic = buildSvgInfographic(topic) || "";
+
+  const formationHtml = guide.formation.map((s, i) => `<li><span>${i + 1}</span><p>${s}</p></li>`).join("");
+  const typesHtml = guide.types.map((t) => `<li>${t}</li>`).join("");
+  const landformsHtml = guide.landforms.map((l) => `<li>${l}</li>`).join("");
+
+  tb.innerHTML = `
+    <div class="ctb-hero" style="background-image:url('${def.image}')">
+      <div class="ctb-hero-inner">
+        <span class="ctb-badge">Encyclopedia</span>
+        <h2>${def.title}</h2>
+        <p>${def.subtitle}</p>
+      </div>
+      <button class="ctb-close" type="button" id="ctbCloseBtn" aria-label="Close textbook">✕</button>
+    </div>
+    <div class="ctb-body">
+      <p class="ctb-definition">${guide.definition}</p>
+
+      ${buildTypeGallery(guide.typeGallery)}
+
+      ${svgInfographic}
+
+      <div class="ctb-two-col">
+        <div class="ctb-section">
+          <h3 class="ctb-heading">How it forms</h3>
+          <ol class="article-steps">${formationHtml}</ol>
+        </div>
+        <div>
+          <div class="ctb-section">
+            <h3 class="ctb-heading">Types</h3>
+            <ul class="article-list">${typesHtml}</ul>
+          </div>
+          <div class="ctb-section" style="margin-top:18px">
+            <h3 class="ctb-heading">Landforms & Features</h3>
+            <ul class="article-list">${landformsHtml}</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-map-reading">
+        <i data-lucide="map"></i>
+        <p><strong>How to read the map: </strong>${guide.mapReading}</p>
+      </div>
+
+      <div class="ctb-divider">
+        <i data-lucide="layers"></i>
+        <span>Explore real-world locations below</span>
+        <i data-lucide="chevron-down"></i>
+      </div>
+    </div>
+  `;
+
+  tb.hidden = false;
+  if (catOverview) catOverview.hidden = true;
+  if (gridLabel) { gridLabel.hidden = false; if (gridLabelText) gridLabelText.textContent = `Real-world examples — ${def.title}`; }
+
+  document.querySelectorAll(".quick-search.concept-active").forEach((b) => b.classList.remove("concept-active"));
+  document.querySelectorAll(`.quick-search[data-keyword]`).forEach((b) => {
+    if (KEYWORD_TO_CONCEPT[b.dataset.keyword] === conceptKey) b.classList.add("concept-active");
+  });
+
+  document.getElementById("ctbCloseBtn")?.addEventListener("click", () => renderConceptTextbook(conceptKey));
+
+  tb.scrollIntoView({ behavior: "smooth", block: "start" });
+  refreshIcons();
+}
+
 const quickSearches = [
   "ภูเขาไฟ",
   "มรสุม",
@@ -8078,12 +8205,37 @@ function renderQuickSearches() {
 
   quickSearchGroup.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
-      searchInput.value = button.dataset.keyword;
+      const kw = button.dataset.keyword;
+      const conceptKey = KEYWORD_TO_CONCEPT[kw];
+
+      // Always filter the topic grid
+      searchInput.value = kw;
       renderTopics();
-      document.querySelector("#library").scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Show concept textbook if mapped
+      if (conceptKey) {
+        renderConceptTextbook(conceptKey);
+      } else {
+        // No concept mapped: just scroll to results
+        document.querySelector("#library").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
   });
 }
+
+// Clear textbook when user types in search box
+searchInput?.addEventListener("focus", () => {
+  if (activeConceptKey) {
+    const tb = document.getElementById("conceptTextbook");
+    const catOverview = document.getElementById("categoryOverview");
+    const gridLabel = document.getElementById("topicGridLabel");
+    if (tb) tb.hidden = true;
+    if (catOverview) catOverview.hidden = false;
+    if (gridLabel) gridLabel.hidden = true;
+    document.querySelectorAll(".quick-search.concept-active").forEach((b) => b.classList.remove("concept-active"));
+    activeConceptKey = null;
+  }
+});
 
 function getVisibleTopics() {
   const query = searchInput.value.trim().toLowerCase();
