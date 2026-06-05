@@ -10,7 +10,7 @@
   --gold: #f59e0b;
   --rose: #e11d48;
   --shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
-  --font-display: "Noto Serif Thai", serif;
+  --font-display: "Noto Sans Thai", system-ui, sans-serif;
   --font-body: "Noto Sans Thai", system-ui, sans-serif;
 }
 
@@ -159,7 +159,7 @@ img {
   max-width: 13ch;
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 6vw, 5.6rem);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.06;
   letter-spacing: -0.01em;
   text-wrap: balance;
@@ -719,7 +719,7 @@ img {
   margin: 0 0 10px;
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 4vw, 3.4rem);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.01em;
   text-wrap: balance;
@@ -1630,7 +1630,7 @@ img {
   margin: 4px 0 14px;
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.18;
   letter-spacing: -0.01em;
   text-wrap: balance;
