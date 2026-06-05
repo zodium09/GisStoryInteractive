@@ -8457,26 +8457,68 @@ function renderDisciplinePanel() {
   const disc = TAXONOMY.find(d => d.id === activeDisciplineId);
   if (!disc) { disciplinePanel.hidden = true; return; }
 
-  const mainTabsHtml = disc.mainTopics.map(m => `
+  const discTopicIds = collectTaxonomyTopicIds(disc);
+  const discProfile = getTaxonomyVisualProfile(discTopicIds);
+  const discImage = getTaxonomyDisplayImage(discTopicIds);
+  const discCount = getTaxonomyTopicCount(discTopicIds);
+
+  const mainTabsHtml = disc.mainTopics.map(m => {
+    const topicIds = collectTaxonomyTopicIds(m);
+    const profile = getTaxonomyVisualProfile(topicIds);
+    const image = getTaxonomyDisplayImage(topicIds);
+    const count = getTaxonomyTopicCount(topicIds);
+    return `
     <button class="main-topic-tab${activeMainTopicId === m.id ? " active" : ""}"
       type="button" data-main-id="${m.id}"
-      style="--disc-color:${disc.color};--disc-light:${disc.colorLight}">${m.label}</button>
-  `).join("");
+      style="--disc-color:${disc.color};--disc-light:${disc.colorLight};--tax-image:url('${image}')">
+      <span class="taxonomy-thumb" aria-hidden="true"></span>
+      <span class="taxonomy-copy">
+        <span class="taxonomy-kicker"><i data-lucide="${m.icon || profile.icon}"></i>${count} หัวข้อ</span>
+        <strong>${m.label}</strong>
+        <small>${profile.process}</small>
+      </span>
+    </button>
+  `;
+  }).join("");
 
   let subHtml = "";
   if (activeMainTopicId) {
     const main = disc.mainTopics.find(m => m.id === activeMainTopicId);
     if (main) {
-      subHtml = `<div class="disc-sub-row">${main.subTopics.map(s => `
+      subHtml = `<div class="disc-sub-row">${main.subTopics.map(s => {
+        const topicIds = collectTaxonomyTopicIds(s);
+        const profile = getTaxonomyVisualProfile(topicIds);
+        const image = getTaxonomyDisplayImage(topicIds);
+        const count = getTaxonomyTopicCount(topicIds);
+        return `
         <button class="sub-topic-chip${activeSubTopicId === s.id ? " active" : ""}"
           type="button" data-sub-id="${s.id}"
-          style="--disc-color:${disc.color}">${s.label}</button>
-      `).join("")}</div>`;
+          style="--disc-color:${disc.color};--tax-image:url('${image}')">
+          <span class="sub-topic-thumb" aria-hidden="true"></span>
+          <span class="sub-topic-copy">
+            <strong>${s.label}</strong>
+            <small><i data-lucide="${profile.icon}"></i>${count} หัวข้อ</small>
+          </span>
+        </button>
+      `;
+      }).join("")}</div>`;
     }
   }
 
   disciplinePanel.style.setProperty("--disc-color", disc.color);
-  disciplinePanel.innerHTML = `<div class="disc-main-row">${mainTabsHtml}</div>${subHtml}`;
+  disciplinePanel.innerHTML = `
+    <div class="disc-panel-hero ${discProfile.className}"
+      style="--disc-color:${disc.color};--disc-light:${disc.colorLight};--tax-image:url('${discImage}')">
+      <div class="disc-panel-photo" aria-hidden="true"></div>
+      <div class="disc-panel-copy">
+        <span><i data-lucide="${disc.icon}"></i>${disc.labelEn} · ${discCount} หัวข้อ</span>
+        <strong>${disc.label}</strong>
+        <small>${discProfile.process}</small>
+      </div>
+    </div>
+    <div class="disc-main-row">${mainTabsHtml}</div>
+    ${subHtml}
+  `;
   disciplinePanel.hidden = false;
 
   disciplinePanel.querySelectorAll(".main-topic-tab").forEach((btn) => {
@@ -8498,6 +8540,7 @@ function renderDisciplinePanel() {
       renderTopics();
     });
   });
+  refreshIcons();
 }
 
 function updateFilterBreadcrumb() {
@@ -8534,12 +8577,18 @@ function renderCategoryOverview() {
   if (activeDisciplineId) { categoryOverview.hidden = true; return; }
 
   categoryOverview.innerHTML = TAXONOMY.map(disc => {
-    const count = disc.mainTopics.reduce((n, m) => n + m.subTopics.reduce((a, s) => a + s.topicIds.length, 0), 0);
+    const topicIds = collectTaxonomyTopicIds(disc);
+    const count = getTaxonomyTopicCount(topicIds);
+    const image = getTaxonomyDisplayImage(topicIds);
+    const profile = getTaxonomyVisualProfile(topicIds);
     const mainLabels = disc.mainTopics.slice(0, 3).map(m => m.label).join(" · ");
     return `
       <button class="category-stat disc-card" type="button" data-disc-id="${disc.id}"
-        style="--disc-color:${disc.color};--disc-light:${disc.colorLight}">
-        <span><i data-lucide="${disc.icon}"></i> ${disc.labelEn}</span>
+        style="--disc-color:${disc.color};--disc-light:${disc.colorLight};--tax-image:url('${image}')">
+        <span class="disc-card-visual ${profile.className}" aria-hidden="true">
+          <span class="disc-card-icon"><i data-lucide="${disc.icon}"></i></span>
+        </span>
+        <span class="disc-card-meta"><i data-lucide="${disc.icon}"></i> ${disc.labelEn} · ${count} หัวข้อ</span>
         <strong>${disc.label}</strong>
         <small>${mainLabels}</small>
       </button>
@@ -8563,6 +8612,39 @@ function renderCategoryOverview() {
     });
   });
   refreshIcons();
+}
+
+function collectTaxonomyTopicIds(node) {
+  if (!node) return [];
+  if (Array.isArray(node.topicIds)) return node.topicIds;
+  if (Array.isArray(node.subTopics)) return node.subTopics.flatMap(collectTaxonomyTopicIds);
+  if (Array.isArray(node.mainTopics)) return node.mainTopics.flatMap(collectTaxonomyTopicIds);
+  return [];
+}
+
+function getTopicById(topicId) {
+  return topics.find((topic) => topic.id === topicId);
+}
+
+function getRepresentativeTaxonomyTopic(topicIds) {
+  return topicIds.map(getTopicById).find(Boolean) || topics[0];
+}
+
+function getTaxonomyTopicCount(topicIds) {
+  const foundCount = topicIds.reduce((count, topicId) => count + (getTopicById(topicId) ? 1 : 0), 0);
+  return foundCount || topicIds.length;
+}
+
+function getTaxonomyDisplayImage(topicIds) {
+  const topic = getRepresentativeTaxonomyTopic(topicIds);
+  return topic ? getTopicDisplayImage(topic) : "";
+}
+
+function getTaxonomyVisualProfile(topicIds) {
+  const topic = getRepresentativeTaxonomyTopic(topicIds);
+  return topic
+    ? getTopicVisualProfile(topic)
+    : { className: "visual-landform", icon: "layers", label: "Geography", process: "place · process · pattern" };
 }
 
 function renderQuickSearches() {
