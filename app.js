@@ -10779,6 +10779,31 @@ function buildPlaceGallery(topic) {
 }
 
 function buildFocusedArticle(topic, guide) {
+  const pointItems = topic.points?.length
+    ? `
+      <div class="story-point-list">
+        ${topic.points.map((point) => `<p>${point}</p>`).join("")}
+      </div>
+    `
+    : "";
+  const climateText = topic.climate ? `<p>${topic.climate}</p>` : "";
+  return `
+    <section class="article-section longread-section">
+      <h2 class="article-section-title">
+        <i data-lucide="book-open"></i>
+        บทความ
+      </h2>
+      <div class="longread-copy">
+        <p>${topic.summary}</p>
+        <p>${topic.story}</p>
+        <p>พื้นที่หรือปรากฏการณ์นี้อยู่ในบริบทของ ${topic.location} โดยมีขอบเขตสำคัญคือ ${topic.scale} แกนหลักของเรื่องคือ ${topic.keyConcept}</p>
+        ${climateText}
+        <p>${topic.whyItMatters}</p>
+        ${pointItems}
+      </div>
+    </section>
+  `;
+
   const pointText = topic.points?.length ? topic.points.join(" ") : "";
   return `
     <section class="article-section longread-section">
