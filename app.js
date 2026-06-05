@@ -8458,13 +8458,13 @@ function renderDisciplinePanel() {
   if (!disc) { disciplinePanel.hidden = true; return; }
 
   const discTopicIds = collectTaxonomyTopicIds(disc);
-  const discProfile = getTaxonomyVisualProfile(discTopicIds);
+  const discProfile = getTaxonomyVisualProfile(disc, discTopicIds);
   const discImage = getTaxonomyDisplayImage(discTopicIds);
   const discCount = getTaxonomyTopicCount(discTopicIds);
 
   const mainTabsHtml = disc.mainTopics.map(m => {
     const topicIds = collectTaxonomyTopicIds(m);
-    const profile = getTaxonomyVisualProfile(topicIds);
+    const profile = getTaxonomyVisualProfile(m, topicIds);
     const image = getTaxonomyDisplayImage(topicIds);
     const count = getTaxonomyTopicCount(topicIds);
     return `
@@ -8487,7 +8487,7 @@ function renderDisciplinePanel() {
     if (main) {
       subHtml = `<div class="disc-sub-row">${main.subTopics.map(s => {
         const topicIds = collectTaxonomyTopicIds(s);
-        const profile = getTaxonomyVisualProfile(topicIds);
+        const profile = getTaxonomyVisualProfile(s, topicIds);
         const image = getTaxonomyDisplayImage(topicIds);
         const count = getTaxonomyTopicCount(topicIds);
         return `
@@ -8580,7 +8580,7 @@ function renderCategoryOverview() {
     const topicIds = collectTaxonomyTopicIds(disc);
     const count = getTaxonomyTopicCount(topicIds);
     const image = getTaxonomyDisplayImage(topicIds);
-    const profile = getTaxonomyVisualProfile(topicIds);
+    const profile = getTaxonomyVisualProfile(disc, topicIds);
     const mainLabels = disc.mainTopics.slice(0, 3).map(m => m.label).join(" · ");
     return `
       <button class="category-stat disc-card" type="button" data-disc-id="${disc.id}"
@@ -8637,10 +8637,50 @@ function getTaxonomyTopicCount(topicIds) {
 
 function getTaxonomyDisplayImage(topicIds) {
   const topic = getRepresentativeTaxonomyTopic(topicIds);
-  return topic ? getTopicDisplayImage(topic) : "";
+  return topic ? getSatelliteTileImage(topic, Math.max(topic.zoom || 6, 6)) : "";
 }
 
-function getTaxonomyVisualProfile(topicIds) {
+function getTaxonomyVisualProfile(node, topicIds) {
+  const nodeText = `${node?.id || ""} ${node?.label || ""} ${node?.labelEn || ""}`.toLowerCase();
+  if (nodeText.includes("geology") || nodeText.includes("ธรณีวิทยา")) {
+    return { className: "visual-landform", icon: "layers", label: "ธรณีวิทยา", process: "ชั้นหิน · รอยเลื่อน · แรงธรณี" };
+  }
+  if (nodeText.includes("plate") || nodeText.includes("แผ่นธรณี") || nodeText.includes("รอยต่อ")) {
+    return { className: "visual-landform", icon: "triangle", label: "ธรณีแปรสัณฐาน", process: "แผ่นธรณี · รอยต่อ · มุดตัว/ชนกัน" };
+  }
+  if (nodeText.includes("volcano") || nodeText.includes("volcan") || nodeText.includes("ภูเขาไฟ") || nodeText.includes("geothermal")) {
+    return { className: "visual-volcano", icon: "flame", label: "ภูเขาไฟ", process: "แมกมา · ปล่อง · ลาวา/เถ้า" };
+  }
+  if (nodeText.includes("karst") || nodeText.includes("คาร์สต์") || nodeText.includes("หินปูน") || nodeText.includes("ถ้ำ")) {
+    return { className: "visual-landform", icon: "mountain", label: "คาร์สต์", process: "น้ำฝน · หินปูน · ถ้ำ/หลุมยุบ" };
+  }
+  if (nodeText.includes("glacial") || nodeText.includes("glacier") || nodeText.includes("ice") || nodeText.includes("ธารน้ำแข็ง") || nodeText.includes("น้ำแข็ง")) {
+    return { className: "visual-ice", icon: "snowflake", label: "ธารน้ำแข็ง", process: "สะสมหิมะ · ไหลช้า · กัดเซาะหิน" };
+  }
+  if (nodeText.includes("arid") || nodeText.includes("desert") || nodeText.includes("dune") || nodeText.includes("แห้ง") || nodeText.includes("ทะเลทราย")) {
+    return { className: "visual-desert", icon: "sun", label: "ภูมิประเทศแห้งแล้ง", process: "ลม · ความแห้ง · การสะสมตะกอน" };
+  }
+  if (nodeText.includes("geomorphology") || nodeText.includes("landform") || nodeText.includes("rock") || nodeText.includes("canyon") || nodeText.includes("plateau") || nodeText.includes("rift") || nodeText.includes("fold") || nodeText.includes("mountain") || nodeText.includes("ภูมิประเทศ") || nodeText.includes("ภูเขา") || nodeText.includes("หุบ") || nodeText.includes("ที่ราบสูง")) {
+    return { className: "visual-landform", icon: "mountain-snow", label: "ภูมิสัณฐาน", process: "แรงยกตัว · ผุพัง/กัดเซาะ · รูปทรงภูมิประเทศ" };
+  }
+  if (nodeText.includes("hydrology") || nodeText.includes("river") || nodeText.includes("water") || nodeText.includes("น้ำ") || nodeText.includes("ลุ่มน้ำ")) {
+    return { className: "visual-river", icon: "waves", label: "อุทกวิทยา", process: "ฝน · น้ำท่า · ตะกอน/น้ำใต้ดิน" };
+  }
+  if (nodeText.includes("ocean") || nodeText.includes("sea") || nodeText.includes("coast") || nodeText.includes("สมุทร") || nodeText.includes("ทะเล") || nodeText.includes("ชายฝั่ง")) {
+    return { className: "visual-coast", icon: "waves", label: "สมุทรศาสตร์", process: "คลื่น · กระแสน้ำ · ชายฝั่ง" };
+  }
+  if (nodeText.includes("climate") || nodeText.includes("weather") || nodeText.includes("ภูมิอากาศ") || nodeText.includes("มรสุม")) {
+    return { className: "visual-climate", icon: "cloud-sun", label: "ภูมิอากาศ", process: "ทะเลอุ่น · ลม · ฝน/พายุ" };
+  }
+  if (nodeText.includes("biogeography") || nodeText.includes("eco") || nodeText.includes("นิเวศ") || nodeText.includes("ชีว")) {
+    return { className: "visual-eco", icon: "trees", label: "ชีวภูมิศาสตร์", process: "ภูมิอากาศ · ดิน/น้ำ · สิ่งมีชีวิต" };
+  }
+  if (nodeText.includes("human") || nodeText.includes("urban") || nodeText.includes("เมือง") || nodeText.includes("มนุษย์")) {
+    return { className: "visual-human", icon: "building-2", label: "ภูมิศาสตร์มนุษย์", process: "พื้นที่ · โครงสร้าง · การใช้ทรัพยากร" };
+  }
+  if (nodeText.includes("hazard") || nodeText.includes("risk") || nodeText.includes("ภัย")) {
+    return { className: "visual-hazard", icon: "triangle-alert", label: "ภัยธรรมชาติ", process: "อันตราย · การเปิดรับ · ความเปราะบาง" };
+  }
   const topic = getRepresentativeTaxonomyTopic(topicIds);
   return topic
     ? getTopicVisualProfile(topic)
