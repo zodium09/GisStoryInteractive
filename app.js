@@ -1096,6 +1096,17 @@ const quickSearches = [
   "flood pulse",
 ];
 
+const DISCIPLINE_KEYWORDS = {
+  "geology":         ["ภูเขาไฟ","หินบะซอลต์","น้ำพุร้อน","เขตมุดตัว","ดินภูเขาไฟ","ร่องลึก","สันเขากลางมหาสมุทร","น้ำบาดาล","คานัต","น้ำฟอสซิล"],
+  "geomorphology":   ["ดินดอน","ที่ราบน้ำพา","ธารน้ำแข็ง","เพอร์มาฟรอสต์","น้ำแข็งทะเล","เส้นหิมะ","ลมคาตาบาติก","อัลบีโด","ทะเลทราย","เอิร์ก","พลายา","ซับคา","แอ่งยุบต่ำ","เมืองชายฝั่ง","น้ำขึ้นน้ำลง"],
+  "hydrology":       ["ลุ่มน้ำ","น้ำบาดาล","น้ำกร่อย","จังหวะน้ำหลาก","hydrograph","flood pulse","น้ำใต้ดินเติมกลับ","โพลเดอร์","น้ำขึ้นน้ำลง","น้ำเค็มรุก"],
+  "oceanography":    ["กระแสน้ำ","ไจเออร์","ร่องลึก","สันเขากลางมหาสมุทร","ทะเลปิด","น้ำขึ้นน้ำลง","เกาะ","อะทอลล์","แนวปะการัง","ป่าชายเลน","ลากูนน้ำกร่อย"],
+  "climatology":     ["มรสุม","ITCZ","เงาฝน","ENSO","เอลนีโญ","ลานีญา","IOD","MJO","Walker circulation","แม่น้ำในบรรยากาศ","คลื่นความร้อน","อัลบีโด","เส้นหิมะ","น้ำแข็งทะเล"],
+  "ecology":         ["ป่าฝน","พื้นที่ชุ่มน้ำ","อีโคโทน","ป่าเมฆ","พาราโม","สะวันนา","ป่าชายเลน","แนวปะการัง","เกาะ"],
+  "human-geography": ["เกาะความร้อนเมือง","โพลเดอร์","เกษตรขั้นบันได","เดซาลิเนชัน","ห่วงโซ่อุปทาน","ลิเทียมบรаइน","โครงสร้างสีเขียว","พื้นที่ถมทะเล","พลังงานลมนอกชายฝั่ง","ระบบชลประทานวัฒนธรรม"],
+  "natural-hazards": ["ภูเขาไฟ","แผ่นดินไหว","น้ำท่วม","ดินถล่ม","ไฟป่า","ไต้ฝุ่น","ทอร์นาโด","ดินเหลว","คลื่นพายุซัดฝั่ง","คลื่นความร้อน","น้ำท่วมทะเลสาบธารน้ำแข็ง"],
+};
+
 const topics = [
   {
     id: "himalaya",
@@ -8543,14 +8554,16 @@ function renderCategoryOverview() {
 function renderQuickSearches() {
   if (!quickSearchGroup) return;
 
-  // When a discipline is active, hide keyword chips — the discipline panel is the navigation
-  if (activeDisciplineId !== null) {
+  if (activeDisciplineId === null) {
     quickSearchGroup.hidden = true;
     return;
   }
-  quickSearchGroup.hidden = false;
 
-  quickSearchGroup.innerHTML = quickSearches
+  const keywords = DISCIPLINE_KEYWORDS[activeDisciplineId] || [];
+  if (keywords.length === 0) { quickSearchGroup.hidden = true; return; }
+
+  quickSearchGroup.hidden = false;
+  quickSearchGroup.innerHTML = keywords
     .map((keyword) => `<button type="button" class="quick-search" data-keyword="${keyword}">${keyword}</button>`)
     .join("");
 
