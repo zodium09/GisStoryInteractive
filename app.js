@@ -94,7 +94,7 @@ const processDiagrams = [
   {
     icon: "waves",
     title: "แม่น้ำสร้างดินดอนสามเหลี่ยม",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
     intro: "ดินดอนสามเหลี่ยมคือปลายทางของตะกอนจากภูเขา ที่เดินทางมากับแม่น้ำจนถึงพื้นที่น้ำไหลช้าลง",
     steps: [
       "ฝนและลำธารกัดเซาะหินดินจากพื้นที่ต้นน้ำ",
@@ -122,7 +122,7 @@ const processDiagrams = [
   {
     icon: "snowflake",
     title: "ธารน้ำแข็งแกะสลักหุบเขา U",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80",
     intro: "ธารน้ำแข็งเคลื่อนช้ามาก แต่มีพลังมหาศาลพอจะขูดหินทั้งหุบเขาให้เปลี่ยนหน้าตาได้",
     steps: [
       "หิมะสะสมบนภูเขาสูงหรือเขตหนาวและอัดแน่นเป็นน้ำแข็ง",
@@ -164,7 +164,7 @@ const processDiagrams = [
   {
     icon: "activity",
     title: "แผ่นดินไหวและสึนามิ",
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
     intro: "สึนามิมักเริ่มจากการขยับตัวของพื้นทะเลในเขตแผ่นธรณีมุดตัว พลังงานจึงเดินทางผ่านมหาสมุทรเป็นคลื่นยาว",
     steps: [
       "แผ่นธรณีในเขตมุดตัวสะสมพลังงานจากการเคลื่อนที่อย่างต่อเนื่อง",
@@ -1418,7 +1418,7 @@ const topics = [
     location: "คาซัคสถานและอุซเบกิสถาน",
     coords: [45.0, 59.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ทะเลสาบน้ำเค็มขนาดใหญ่เคยหดตัวอย่างรุนแรงจากการผันน้ำเพื่อเกษตรกรรม ทำให้เกิดปัญหาฝุ่น เกลือ และเศรษฐกิจประมง",
     story:
@@ -1634,7 +1634,7 @@ const topics = [
     location: "จังหวัดพังงา ประเทศไทย",
     coords: [8.274, 98.608],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1400&q=82",
     summary:
       "อ่าวพังงาเป็นตัวอย่างชายฝั่งคาสต์ที่หินปูนถูกน้ำทะเล คลื่น และน้ำฝนกัดกร่อนจนเกิดเกาะ หน้าผา ถ้ำ และลากูน",
     story:
@@ -1706,7 +1706,7 @@ const topics = [
     location: "ตอนเหนือของชิลี",
     coords: [-24.5, -69.25],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "อาตากามาเป็นหนึ่งในทะเลทรายที่แห้งที่สุดในโลก เกิดจากกระแสน้ำเย็นฮุมโบลต์ ความกดอากาศสูง และเงาฝนของแอนดีส",
     story:
@@ -1730,7 +1730,7 @@ const topics = [
     location: "มองโกเลียและจีนตอนเหนือ",
     coords: [42.59, 103.43],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=82",
     summary:
       "โกบีเป็นทะเลทรายเย็นที่เกิดจากความห่างไกลทะเลและเงาฝนของเทือกเขา มีฤดูหนาวหนาวจัดและฤดูร้อนแห้ง",
     story:
@@ -1778,7 +1778,7 @@ const topics = [
     location: "บังกลาเทศและอินเดีย",
     coords: [21.9497, 89.1833],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ซุนดาร์บันส์เป็นป่าชายเลนขนาดใหญ่บนดินดอนคงคา-พรหมบุตร ช่วยลดแรงคลื่น พายุ และเป็นระบบนิเวศชายฝั่งสำคัญ",
     story:
@@ -1898,7 +1898,7 @@ const topics = [
     location: "อันดามัน อินโดนีเซีย ศรีลังกา อินเดีย และไทย",
     coords: [3.316, 95.854],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "สึนามิเกิดจากการยกหรือยุบของพื้นทะเลอย่างรวดเร็ว มักสัมพันธ์กับแผ่นดินไหวในเขตมุดตัว และเดินทางได้ไกลมากในมหาสมุทร",
     story:
@@ -1970,7 +1970,7 @@ const topics = [
     location: "ไวโอมิง สหรัฐอเมริกา",
     coords: [44.428, -110.5885],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เยลโลว์สโตนตั้งอยู่เหนือระบบแมกมาขนาดใหญ่ ทำให้เกิดแคลดีรา น้ำพุร้อน กีย์เซอร์ บ่อน้ำแร่ และภูมิประเทศพลังงานใต้พิภพ",
     story:
@@ -2066,7 +2066,7 @@ const topics = [
     location: "จีนตอนเหนือ",
     coords: [36.0, 109.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ที่ราบสูงดินลมหอบเกิดจากฝุ่นละเอียดที่ลมพัดมาสะสมหนามาก ดินอุดมแต่พังทลายง่ายเมื่อไม่มีพืชคลุม",
     story:
@@ -2114,7 +2114,7 @@ const topics = [
     location: "สหรัฐอเมริกาตอนกลางถึงอ่าวเม็กซิโก",
     coords: [35.1495, -90.049],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82",
     summary:
       "มิสซิสซิปปีสร้างที่ราบน้ำท่วมกว้างจากการคดเคี้ยว กัดเซาะ และสะสมตะกอน เป็นพื้นที่เกษตร เมือง และความเสี่ยงน้ำท่วม",
     story:
@@ -2162,7 +2162,7 @@ const topics = [
     location: "จังหวัดเชียงใหม่ ประเทศไทย",
     coords: [18.5889, 98.4867],
     zoom: 11,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ดอยอินทนนท์แสดงให้เห็นว่าความสูงเปลี่ยนอุณหภูมิ ป่า เมฆ หมอก และการใช้พื้นที่ได้แม้อยู่ในประเทศเขตร้อน",
     story:
@@ -2186,7 +2186,7 @@ const topics = [
     location: "ภาคตะวันออกเฉียงเหนือ ประเทศไทย",
     coords: [15.0, 103.0],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ที่ราบสูงโคราชเป็นภูมิประเทศสำคัญของไทย มีแอ่งตะกอน หินเกลือ ดินทราย ดินเค็ม และความแปรปรวนของฝนมรสุม",
     story:
@@ -2282,7 +2282,7 @@ const topics = [
     location: "ฟลอริดา สหรัฐอเมริกา",
     coords: [25.2866, -80.8987],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เอเวอร์เกลดส์เป็นพื้นที่ชุ่มน้ำกว้างที่น้ำไหลช้า ๆ ผ่านทุ่งหญ้า เลี้ยงระบบนิเวศกึ่งร้อนและช่วยกรองน้ำธรรมชาติ",
     story:
@@ -2306,7 +2306,7 @@ const topics = [
     location: "ยุโรปกลางและยุโรปตะวันออก",
     coords: [47.0, 19.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ดานูบไหลผ่านและเชื่อมหลายประเทศในยุโรป เป็นตัวอย่างของลุ่มน้ำที่ต้องจัดการน้ำ มลพิษ ขนส่ง และน้ำท่วมร่วมกัน",
     story:
@@ -2330,7 +2330,7 @@ const topics = [
     location: "รัฐแคลิฟอร์เนีย สหรัฐอเมริกา",
     coords: [37.1661, -119.4494],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ภูมิอากาศฤดูร้อนแห้ง พืชติดไฟง่าย ลมแห้ง และการขยายเมืองเข้าสู่พื้นที่ป่า ทำให้แคลิฟอร์เนียเสี่ยงไฟป่าสูง",
     story:
@@ -2378,7 +2378,7 @@ const topics = [
     location: "เกาะลูซอน ประเทศฟิลิปปินส์",
     coords: [16.9355, 121.1363],
     zoom: 12,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1400&q=82",
     summary:
       "นาขั้นบันไดเปลี่ยนลาดเขาชันให้เป็นพื้นที่ปลูกข้าว กักน้ำ ลดการชะล้าง และสะท้อนภูมิปัญญาการอยู่กับภูเขา",
     story:
@@ -2402,7 +2402,7 @@ const topics = [
     location: "ประเทศปานามา",
     coords: [9.08, -79.68],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1467377791767-c929b5dc9a23?auto=format&fit=crop&w=1400&q=82",
     summary:
       "คลองปานามาใช้ตำแหน่งคอคอดเชื่อมมหาสมุทรแอตแลนติกกับแปซิฟิก ลดระยะเดินเรือและเปลี่ยนภูมิศาสตร์การค้าโลก",
     story:
@@ -2450,7 +2450,7 @@ const topics = [
     location: "เอธิโอเปีย เคนยา แทนซาเนีย",
     coords: [-1.2921, 36.8219],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=82",
     summary:
       "รอยแยกแอฟริกาตะวันออกเป็นแนวที่เปลือกทวีปถูกดึงให้บางและแยกออก เกิดหุบเขายาว ภูเขาไฟ ทะเลสาบรอยแยก และน้ำพุร้อน",
     story:
@@ -2474,7 +2474,7 @@ const topics = [
     location: "ไซบีเรีย ประเทศรัสเซีย",
     coords: [53.5587, 108.165],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ไบคาลเป็นทะเลสาบน้ำจืดลึกมาก เกิดในแอ่งรอยแยกและเป็นแหล่งน้ำจืดกับความหลากหลายทางชีวภาพสำคัญ",
     story:
@@ -2498,7 +2498,7 @@ const topics = [
     location: "สหรัฐอเมริกาและแคนาดา",
     coords: [45.0, -84.5],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เกรตเลกส์เกิดจากธารน้ำแข็งยุคน้ำแข็งขุดแอ่งและทิ้งน้ำไว้ เป็นระบบน้ำจืด เมือง ท่าเรือ และเศรษฐกิจขนาดใหญ่",
     story:
@@ -2546,7 +2546,7 @@ const topics = [
     location: "สหราชอาณาจักรและไอร์แลนด์",
     coords: [54.5, -4.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=82",
     summary:
       "หมู่เกาะบริติชมีอากาศอบอุ่นชื้นกว่าละติจูดเดียวกันหลายพื้นที่ เพราะได้รับอิทธิพลทะเล ลมตะวันตก และกระแสน้ำอุ่นแอตแลนติกเหนือ",
     story:
@@ -2570,7 +2570,7 @@ const topics = [
     location: "รัฐแคลิฟอร์เนีย สหรัฐอเมริกา",
     coords: [35.116, -119.65],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ซานแอนเดรียสเป็นรอยเลื่อนแปรสภาพที่แผ่นแปซิฟิกและอเมริกาเหนือเลื่อนผ่านกัน ก่อให้เกิดความเสี่ยงแผ่นดินไหวในแคลิฟอร์เนีย",
     story:
@@ -2666,7 +2666,7 @@ const topics = [
     location: "จังหวัดเชียงใหม่ ประเทศไทย",
     coords: [18.7883, 98.9853],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เชียงใหม่ตั้งอยู่ในแอ่งที่มีภูเขาล้อมรอบ ทำให้บางฤดูอากาศนิ่งและสะสมฝุ่นควันจากไฟ เกษตร และเมืองได้ง่าย",
     story:
@@ -2714,7 +2714,7 @@ const topics = [
     location: "ชิลีและอาร์เจนตินาตอนใต้",
     coords: [-49.3, -73.05],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ปาตาโกเนียมีภูมิอากาศลมแรงจากลมตะวันตก เทือกเขาแอนดีสสร้างฝนด้านชิลีและเงาฝนแห้งด้านอาร์เจนตินา",
     story:
@@ -2834,7 +2834,7 @@ const topics = [
     location: "มณฑลหูเป่ย์ ประเทศจีน",
     coords: [30.8231, 111.0033],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เขื่อนสามผาเป็นโครงสร้างขนาดใหญ่บนแม่น้ำแยงซี ใช้ผลิตไฟฟ้า ควบคุมน้ำ และเดินเรือ แต่เปลี่ยนตะกอน ระบบนิเวศ และชุมชน",
     story:
@@ -2930,7 +2930,7 @@ const topics = [
     location: "แคลิฟอร์เนีย สหรัฐอเมริกา",
     coords: [37.7456, -119.5936],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1400&q=82",
     summary:
       "โยเซมิตีเป็นหุบเขารูปตัวยูที่ธารน้ำแข็งกัดเซาะหินแกรนิตจนเกิดหน้าผาสูง น้ำตก และภูมิทัศน์โดดเด่น",
     story:
@@ -2954,7 +2954,7 @@ const topics = [
     location: "เคนต์ สหราชอาณาจักร",
     coords: [51.1279, 1.3221],
     zoom: 11,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
     summary:
       "หน้าผาขาวโดเวอร์เกิดจากหินชอล์กทะเลโบราณที่ถูกคลื่นและสภาพอากาศกัดเซาะจนเป็นหน้าผาสีขาวริมช่องแคบอังกฤษ",
     story:
@@ -3242,7 +3242,7 @@ const topics = [
     location: "บราซิล โบลิเวีย ปารากวัย",
     coords: [-17.5, -57.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ปันตานัลเป็นพื้นที่ชุ่มน้ำขนาดใหญ่ที่น้ำหลากตามฤดูกาลสร้างทุ่งน้ำ ป่า เกาะดอน และแหล่งอาศัยของสัตว์ป่าจำนวนมาก",
     story:
@@ -3266,7 +3266,7 @@ const topics = [
     location: "โบลิเวีย",
     coords: [-20.1338, -67.4891],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ซาลาร์เดอูยูนีเป็นที่ราบเกลือขนาดใหญ่บนที่สูง เกิดจากทะเลสาบโบราณในแอ่งปิดที่ระเหยจนเหลือเกลือและแร่",
     story:
@@ -3410,7 +3410,7 @@ const topics = [
     location: "ลุยเซียนา สหรัฐอเมริกา",
     coords: [29.9511, -90.0715],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=82",
     summary:
       "นิวออร์ลีนส์ตั้งอยู่บนดินดอนและพื้นที่ลุ่มต่ำใกล้อ่าวเม็กซิโก เสี่ยงน้ำท่วมจากเฮอริเคน คันกั้นน้ำ และพื้นที่ชุ่มน้ำเสื่อมโทรม",
     story:
@@ -3458,7 +3458,7 @@ const topics = [
     location: "โมร็อกโก แอลจีเรีย ตูนิเซีย",
     coords: [31.059, -7.915],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=82",
     summary:
       "แอตลาสเป็นแนวภูเขาในแอฟริกาเหนือที่กั้นอิทธิพลชื้นจากทะเลเมดิเตอร์เรเนียนกับความแห้งแล้งของซาฮารา",
     story:
@@ -3530,7 +3530,7 @@ const topics = [
     location: "อินเดียตอนกลางและตอนใต้",
     coords: [17.5, 77.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เดคคานเป็นที่ราบสูงขนาดใหญ่ที่เกิดจากลาวาบะซอลต์โบราณ ดินดำจากหินภูเขาไฟช่วยเกษตรกรรม แต่ฝนมรสุมแปรปรวน",
     story:
@@ -3650,7 +3650,7 @@ const topics = [
     location: "ประเทศจอร์แดน",
     coords: [29.5766, 35.4191],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=82",
     summary:
       "วาดีรัมมีผาหินทราย เสาหิน ซุ้มโค้ง และพื้นทะเลทรายที่เกิดจากการผุพังร่วมกับลม น้ำหลากฉับพลัน และความต่างอุณหภูมิสูง",
     story:
@@ -3674,7 +3674,7 @@ const topics = [
     location: "ชายฝั่งตะวันตกของนอร์เวย์",
     coords: [61.1, 6.9],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ฟยอร์ดคืออ่าวยาว แคบ และลึกที่เกิดจากธารน้ำแข็งกัดเซาะหุบเขา ก่อนที่ระดับน้ำทะเลจะท่วมเข้าไปหลังยุคน้ำแข็ง",
     story:
@@ -3794,7 +3794,7 @@ const topics = [
     location: "อินโดนีเซีย",
     coords: [-7.54, 110.44],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&w=1400&q=82",
     summary:
       "อินโดนีเซียตั้งอยู่บนแนวมุดตัวหลายแนว ทำให้มีภูเขาไฟ แผ่นดินไหว และสึนามิเป็นส่วนหนึ่งของภูมิศาสตร์ประจำภูมิภาค",
     story:
@@ -3818,7 +3818,7 @@ const topics = [
     location: "รัฐฟลอริดา สหรัฐอเมริกา",
     coords: [25.2866, -80.8987],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เอเวอร์เกลดส์เป็นพื้นที่ชุ่มน้ำกว้างที่น้ำไหลช้า ๆ ผ่านทุ่งหญ้า พรุ และป่าชายเลน เชื่อมภูมิอากาศ น้ำจืด และชายฝั่งเข้าด้วยกัน",
     story:
@@ -3962,7 +3962,7 @@ const topics = [
     location: "แม่น้ำโขงตอนบนของไทยและลาว",
     coords: [20.25, 100.1],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary:
       "แก่งเกิดเมื่อแม่น้ำไหลผ่านหินแข็งหรือระดับท้องน้ำต่างกัน ทำให้น้ำเร็ว ปั่นป่วน และสร้างถิ่นอาศัยเฉพาะในลำน้ำ",
     story:
@@ -3986,7 +3986,7 @@ const topics = [
     location: "ประเทศไอซ์แลนด์",
     coords: [64.416, -16.8],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1400&q=82",
     summary:
       "วัตนาโจกุลเป็นธารน้ำแข็งขนาดใหญ่ที่ปกคลุมภูเขาไฟหลายลูก ทำให้ภูมิประเทศของไอซ์แลนด์เชื่อมทั้งน้ำแข็ง ไฟ และน้ำหลากฉับพลันเข้าด้วยกัน",
     story:
@@ -4010,7 +4010,7 @@ const topics = [
     location: "สาธารณรัฐมัลดีฟส์",
     coords: [3.2028, 73.2207],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1400&q=82",
     summary:
       "อะทอลล์มัลดีฟส์เกิดจากแนวปะการังที่เติบโตรอบเกาะภูเขาไฟเดิม ก่อนเกาะจมต่ำและเหลือวงแหวนปะการังล้อมลากูน",
     story:
@@ -4106,7 +4106,7 @@ const topics = [
     location: "อาร์เจนตินาและชิลีตอนใต้",
     coords: [-49.3, -73.2],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ปาตาโกเนียแสดงผลของลมตะวันตกที่พาความชื้นชนเทือกเขาแอนดีส ทำให้ด้านชิลีชื้นมาก ส่วนด้านอาร์เจนตินาแห้งเป็นเงาฝน",
     story:
@@ -4154,7 +4154,7 @@ const topics = [
     location: "เกาะลูซอน ประเทศฟิลิปปินส์",
     coords: [16.935, 121.135],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1400&q=82",
     summary:
       "นาขั้นบันไดอีฟูเกาแสดงการดัดแปลงภูเขาให้กลายเป็นระบบเกษตรที่กักน้ำ ลดการพังทลาย และใช้ความลาดชันอย่างละเอียด",
     story:
@@ -4202,7 +4202,7 @@ const topics = [
     location: "รัฐแพรรีของแคนาดา",
     coords: [51.0, -106.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ทุ่งแพรรีเป็นที่ราบหญ้าเขตอบอุ่นที่ดินลึก เหมาะต่อการปลูกธัญพืช แต่ต้องจัดการความแห้งแล้ง ลม และฤดูปลูกสั้น",
     story:
@@ -4298,7 +4298,7 @@ const topics = [
     location: "รัฐวอชิงตัน สหรัฐอเมริกา",
     coords: [46.1912, -122.1944],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เมาท์เซนต์เฮเลนส์เป็นภูเขาไฟในแนวมุดตัวแคสเคด การปะทุครั้งใหญ่เปลี่ยนภูเขา ป่า แม่น้ำ และชุมชนโดยรอบในเวลาอันสั้น",
     story:
@@ -4322,7 +4322,7 @@ const topics = [
     location: "แคว้นกาตาลุญญา ประเทศสเปน",
     coords: [40.72, 0.78],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ดินดอนเอโบรเกิดจากตะกอนแม่น้ำที่สะสมในทะเลเมดิเตอร์เรเนียน เป็นพื้นที่ชุ่มน้ำ นาข้าว และถิ่นอาศัยนกที่เสี่ยงต่อการกัดเซาะชายฝั่ง",
     story:
@@ -4346,7 +4346,7 @@ const topics = [
     location: "ชายฝั่งตะวันตกของอินเดีย",
     coords: [10.1667, 77.0667],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เทือกเขาฆาฏตะวันตกบังคับลมมรสุมชื้นจากทะเลอาหรับให้ยกตัว เกิดฝนหนักด้านรับลมและสภาพแห้งกว่าด้านหลังเขา",
     story:
@@ -4370,7 +4370,7 @@ const topics = [
     location: "หมู่เกาะสวาลบาร์ด นอร์เวย์",
     coords: [78.2232, 15.6267],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=1400&q=82",
     summary:
       "สวาลบาร์ดอยู่ในเขตอาร์กติก มีทุนดรา เพอร์มาฟรอสต์ ธารน้ำแข็ง และชุมชนที่ต้องปรับตัวกับความหนาว มืด และการเปลี่ยนแปลงภูมิอากาศ",
     story:
@@ -4442,7 +4442,7 @@ const topics = [
     location: "ระหว่างคาบสมุทรมลายูกับเกาะสุมาตรา",
     coords: [3.5, 100.5],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ช่องแคบมะละกาเป็นทางน้ำแคบที่เชื่อมมหาสมุทรอินเดียกับทะเลจีนใต้ ทำให้เป็นเส้นทางเดินเรือสำคัญและพื้นที่ยุทธศาสตร์ของภูมิภาค",
     story:
@@ -4466,7 +4466,7 @@ const topics = [
     location: "ดอร์เซตและเดวอน อังกฤษ",
     coords: [50.705, -2.989],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ชายฝั่งจูราสสิกมีหน้าผา โค้งหิน อ่าว และชั้นหินหลายยุคที่ถูกคลื่นกัดเซาะจนเปิดเผยซากดึกดำบรรพ์และประวัติธรณี",
     story:
@@ -4514,7 +4514,7 @@ const topics = [
     location: "เขตบริหารพิเศษฮ่องกง",
     coords: [22.3193, 114.1694],
     zoom: 11,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ฮ่องกงมีภูเขาชัน ฝนมรสุมหนัก และเมืองหนาแน่น ทำให้การจัดการลาดเขา กำแพงกันดิน และระบบเตือนภัยดินถล่มมีความสำคัญมาก",
     story:
@@ -4538,7 +4538,7 @@ const topics = [
     location: "รัฐนิวเซาท์เวลส์ ประเทศออสเตรเลีย",
     coords: [-33.7, 150.3],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=82",
     summary:
       "บลูเมาน์เทนส์มีป่ายูคาลิปตัส หุบเขาชัน ฤดูร้อนแห้ง และชุมชนริมป่า ทำให้ไฟป่าเป็นทั้งกระบวนการธรรมชาติและภัยพิบัติเมืองชายป่า",
     story:
@@ -4610,7 +4610,7 @@ const topics = [
     location: "รัฐไวโอมิง สหรัฐอเมริกา",
     coords: [44.428, -110.5885],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เยลโลว์สโตนตั้งอยู่บนระบบภูเขาไฟขนาดใหญ่ มีน้ำพุร้อน ไกเซอร์ บ่อโคลน และแอ่งภูเขาไฟที่เกิดจากความร้อนใต้พิภพ",
     story:
@@ -4658,7 +4658,7 @@ const topics = [
     location: "ไอร์แลนด์เหนือ สหราชอาณาจักร",
     coords: [55.2408, -6.5116],
     zoom: 12,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Giant's Causeway เป็นชายฝั่งที่มีเสาหินบะซอลต์รูปหลายเหลี่ยมจำนวนมาก เกิดจากลาวาเย็นตัวและหดตัวจนแตกร้าวเป็นแนวเสา",
     story:
@@ -4706,7 +4706,7 @@ const topics = [
     location: "มณฑลเสฉวน ประเทศจีน",
     coords: [30.67, 104.07],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1400&q=82",
     summary:
       "แอ่งเสฉวนถูกล้อมด้วยภูเขา ทำให้อากาศชื้นและหมอกสะสมได้ง่าย เป็นตัวอย่างของภูมิอากาศที่ถูกควบคุมโดยรูปทรงแอ่ง",
     story:
@@ -4874,7 +4874,7 @@ const topics = [
     location: "ประเทศโบลิเวีย",
     coords: [-20.1338, -67.4891],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ซาลาร์เดอูยูนีคือทะเลเกลือขนาดใหญ่บนที่ราบสูง เกิดจากทะเลสาบโบราณในแอ่งปิดที่น้ำระเหยเหลือเกลือและแร่ธาตุสะสม",
     story:
@@ -4946,7 +4946,7 @@ const topics = [
     location: "Great Plains สหรัฐอเมริกา",
     coords: [36.5, -101.5],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Dust Bowl เป็นตัวอย่างภัยพิบัติสิ่งแวดล้อมที่เกิดจากภัยแล้ง ลมแรง และการใช้ที่ดินที่ทำให้หน้าดินเปิดโล่งจนถูกพัดเป็นพายุฝุ่น",
     story:
@@ -4970,7 +4970,7 @@ const topics = [
     location: "ยูเครนตอนเหนือ",
     coords: [51.276, 30.221],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เขตยกเว้นเชอร์โนบิลแสดงให้เห็นว่าภัยเทคโนโลยีสามารถสร้างภูมิศาสตร์แบบใหม่ ผ่านเขตห้ามเข้า การติดตามรังสี และการฟื้นตัวของระบบนิเวศบางส่วน",
     story:
@@ -4994,7 +4994,7 @@ const topics = [
     location: "ทาจิกิสถาน คีร์กีซสถาน อัฟกานิสถาน และจีนตะวันตก",
     coords: [38.6, 74.9],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ปมพามีร์เป็นบริเวณที่แนวภูเขาใหญ่หลายระบบมาบรรจบกัน ทั้งฮินดูกูช คาราโครัม เทียนซาน และคุนหลุน จึงเป็นพื้นที่สูงสำคัญที่กำหนดต้นน้ำ เส้นทางคมนาคม และภูมิอากาศของเอเชียกลาง",
     story:
@@ -5114,7 +5114,7 @@ const topics = [
     location: "นามิเบียชายฝั่งมหาสมุทรแอตแลนติก",
     coords: [-24.7, 15.3],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=82",
     summary:
       "นามิบเป็นทะเลทรายชายฝั่งเก่าแก่ที่ได้รับอิทธิพลจากกระแสน้ำเย็นเบงเกวลา ทำให้ฝนน้อย แต่หมอกจากทะเลกลายเป็นแหล่งความชื้นสำคัญของสิ่งมีชีวิต",
     story:
@@ -5162,7 +5162,7 @@ const topics = [
     location: "ที่ราบตอนกลางของสหรัฐอเมริกา",
     coords: [37.0, -97.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500674425229-f692875b0ab7?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Tornado Alley เป็นแนวพื้นที่ที่มวลอากาศอุ่นชื้นจากอ่าวเม็กซิโก มวลอากาศเย็นจากละติจูดสูง และลมเฉือนในบรรยากาศมาพบกันบ่อย จึงเอื้อต่อพายุฝนฟ้าคะนองรุนแรงและทอร์นาโด",
     story:
@@ -5234,7 +5234,7 @@ const topics = [
     location: "อิรักและซีเรียตอนล่าง",
     coords: [32.5, 44.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ที่ราบลุ่มไทกริส-ยูเฟรทีสเกิดจากตะกอนน้ำพาที่สะสมยาวนาน ทำให้เกิดพื้นที่เกษตรในเขตแห้งแล้งและเป็นฐานสำคัญของอารยธรรมเมืองยุคแรก",
     story:
@@ -5258,7 +5258,7 @@ const topics = [
     location: "คาซัคสถานและเอเชียกลาง",
     coords: [48.0, 67.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82",
     summary:
       "สเตปป์เอเชียกลางเป็นทุ่งหญ้าเขตอบอุ่นในพื้นที่ตอนในทวีป ฝนน้อยกว่าป่าแต่ไม่แห้งเท่าทะเลทราย จึงเหมาะกับหญ้า การเลี้ยงสัตว์ และการเคลื่อนย้ายตามฤดูกาล",
     story:
@@ -5330,7 +5330,7 @@ const topics = [
     location: "เคปทาวน์ ประเทศแอฟริกาใต้",
     coords: [-33.9628, 18.4098],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Table Mountain เป็นภูเขายอดราบโดดเด่นเหนือเคปทาวน์ รูปทรงภูเขา ลมทะเล และภูมิอากาศเมดิเตอร์เรเนียนช่วยสร้างพืชพรรณเฉพาะถิ่นและภาพจำของเมืองชายฝั่ง",
     story:
@@ -5450,7 +5450,7 @@ const topics = [
     location: "รัฐไวโอมิง มอนแทนา และไอดาโฮ สหรัฐอเมริกา",
     coords: [44.428, -110.5885],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Yellowstone เป็นพื้นที่พลังงานใต้พิภพที่มีน้ำพุร้อน ไกเซอร์ บ่อโคลน และแอ่งน้ำร้อนจำนวนมาก เกิดจากความร้อนใต้เปลือกโลก น้ำใต้ดิน และระบบรอยแตกในหิน",
     story:
@@ -5546,7 +5546,7 @@ const topics = [
     location: "เขตร้อนและกึ่งร้อนทั่วโลก",
     coords: [15.0, -30.0],
     zoom: 2,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เซลล์แฮดลีย์คือการหมุนเวียนอากาศจากเขตร้อนที่อากาศอุ่นยกตัวใกล้เส้นศูนย์สูตร แล้วไหลลงในเขตกึ่งร้อน ทำให้เกิดลมค้า ฝนเขตร้อน และแนวทะเลทรายกึ่งร้อนจำนวนมาก",
     story:
@@ -5594,7 +5594,7 @@ const topics = [
     location: "รัฐยูทาห์ สหรัฐอเมริกา",
     coords: [41.2, -112.6],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Great Salt Lake เป็นทะเลสาบเค็มในแอ่งปิดของตะวันตกสหรัฐ ระดับน้ำเปลี่ยนตามหิมะละลาย น้ำไหลเข้า การใช้น้ำ และการระเหย ส่งผลต่อพื้นที่ชุ่มน้ำ นกอพยพ และฝุ่นจากก้นทะเลสาบ",
     story:
@@ -5618,7 +5618,7 @@ const topics = [
     location: "พรมแดนแซมเบียและซิมบับเว",
     coords: [-17.9243, 25.856],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1467377791767-c929b5dc9a23?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Victoria Falls เกิดเมื่อแม่น้ำแซมบีซีไหลข้ามที่ราบหินบะซอลต์และตกลงในรอยแตกยาว เกิดน้ำตกกว้าง ช่องเขาลึก และละอองน้ำที่สร้างระบบนิเวศชื้นเฉพาะพื้นที่",
     story:
@@ -5762,7 +5762,7 @@ const topics = [
     location: "แอตแลนติกเหนือใกล้แคนาดาตะวันออก",
     coords: [52.0, -52.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Labrador Current เป็นกระแสน้ำเย็นที่ไหลลงมาตามชายฝั่งลาบราดอร์และนิวฟันด์แลนด์ เมื่อพบอากาศอุ่นชื้นหรือกระแสน้ำอุ่น จะเกิดหมอกหนาและพื้นที่ประมงสำคัญ",
     story:
@@ -5882,7 +5882,7 @@ const topics = [
     location: "อียิปต์และลุ่มน้ำไนล์ตอนล่าง",
     coords: [24.0889, 32.8998],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "น้ำหลากแม่น้ำไนล์เคยพาตะกอนและความชื้นมาหล่อเลี้ยงเกษตรในอียิปต์ เขื่อนอัสวานช่วยควบคุมน้ำและผลิตไฟฟ้า แต่ก็เปลี่ยนการไหลของตะกอนและระบบปลายน้ำ",
     story:
@@ -5906,7 +5906,7 @@ const topics = [
     location: "กรีนแลนด์",
     coords: [72.0, -40.0],
     zoom: 4,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=1400&q=82",
     summary:
       "แผ่นน้ำแข็งกรีนแลนด์เป็นแหล่งน้ำแข็งบนบกขนาดใหญ่ในซีกโลกเหนือ สมดุลระหว่างหิมะที่สะสมกับน้ำแข็งที่ละลายหรือไหลลงทะเลมีผลต่อระดับน้ำทะเลโลก",
     story:
@@ -5930,7 +5930,7 @@ const topics = [
     location: "มหาสมุทรอาร์กติก",
     coords: [82.0, 0.0],
     zoom: 3,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=1400&q=82",
     summary:
       "น้ำแข็งทะเลอาร์กติกสะท้อนแสงอาทิตย์ได้มาก เมื่อพื้นที่น้ำแข็งลดลง ผิวน้ำทะเลมืดจะดูดซับความร้อนมากขึ้น เกิดวงจรป้อนกลับที่มีผลต่อภูมิอากาศขั้วโลก",
     story:
@@ -5978,7 +5978,7 @@ const topics = [
     location: "สาธารณรัฐซาฮา รัสเซีย",
     coords: [62.0355, 129.6755],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ยาคุตสค์เป็นเมืองขนาดใหญ่ในภูมิอากาศหนาวจัด ตั้งอยู่บนเพอร์มาฟรอสต์ อาคาร ถนน ท่อ และระบบสาธารณูปโภคต้องออกแบบให้พื้นดินเยือกแข็งยังคงเสถียร",
     story:
@@ -6002,7 +6002,7 @@ const topics = [
     location: "McMurdo Dry Valleys แอนตาร์กติกา",
     coords: [-77.5, 162.0],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=1400&q=82",
     summary:
       "Dry Valleys เป็นพื้นที่แห้งมากในแอนตาร์กติกา ลมคาตาบาติกเย็นและแห้งไหลลงจากลานน้ำแข็ง ทำให้หิมะระเหิดและพื้นที่บางส่วนแทบไม่มีน้ำแข็งปกคลุม",
     story:
@@ -6050,7 +6050,7 @@ const topics = [
     location: "แคนาดาตอนเหนือ",
     coords: [56.0, -105.0],
     zoom: 4,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ป่าบอเรียลเป็นป่าเขตหนาวที่กักเก็บคาร์บอนจำนวนมาก ไฟป่าเป็นส่วนหนึ่งของระบบนิเวศ แต่ฤดูร้อนที่ร้อนและแห้งขึ้นอาจทำให้ไฟรุนแรงและปล่อยคาร์บอนมากขึ้น",
     story:
@@ -6122,7 +6122,7 @@ const topics = [
     location: "สแกนดิเนเวียตอนเหนือ",
     coords: [68.0, 24.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=1400&q=82",
     summary:
       "แลปแลนด์เป็นภูมิภาคกึ่งขั้วโลกที่หิมะ ฤดูกาลแสง และพืชทุนดรากับไทกามีผลต่อการเลี้ยงกวางเรนเดียร์ การเดินทาง และวัฒนธรรมของชุมชนซามี",
     story:
@@ -6266,7 +6266,7 @@ const topics = [
     location: "ลอสแอนเจลิส สหรัฐอเมริกา",
     coords: [34.0953, -118.2348],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1400&q=82",
     summary:
       "แม่น้ำลอสแอนเจลิสถูกปรับเป็นรางคอนกรีตเพื่อระบายน้ำท่วมฉับพลันในภูมิอากาศกึ่งแห้งแล้ง แต่ปัจจุบันเมืองเริ่มมองหาแนวทางฟื้นฟูลำน้ำและพื้นที่สีเขียวริมคลอง",
     story:
@@ -6410,7 +6410,7 @@ const topics = [
     location: "อุทยานแห่งชาติชิงกาซา ประเทศโคลอมเบีย",
     coords: [4.55, -73.75],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=1400&q=82",
     summary:
       "พาราโมเป็นระบบนิเวศบนแอนดีสเขตร้อนที่ดินและพืชกักเก็บน้ำได้ดี ชิงกาซาจึงเป็นแหล่งต้นน้ำสำคัญของเมืองโบโกตา",
     story:
@@ -6482,7 +6482,7 @@ const topics = [
     location: "ชิลีตอนใต้และอาร์เจนตินาบางส่วน",
     coords: [-39.8, -73.2],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ป่าวัลดิเวียนเป็นป่าฝนอบอุ่นที่ได้รับความชื้นจากลมตะวันตกของแปซิฟิกและภูเขาแอนดีส มีไม้ใหญ่ เฟิร์น และชนิดพันธุ์เฉพาะถิ่นจำนวนมาก",
     story:
@@ -6554,7 +6554,7 @@ const topics = [
     location: "ปากแม่น้ำโรน ประเทศฝรั่งเศส",
     coords: [43.53, 4.5],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=82",
     summary:
       "คามาร์กเป็นดินดอนสามเหลี่ยมของแม่น้ำโรนที่ผสมผสานน้ำจืด น้ำเค็ม บึง เกลือ นาข้าว และถิ่นอาศัยนกน้ำจำนวนมาก",
     story:
@@ -6578,7 +6578,7 @@ const topics = [
     location: "เกาะโซโคตรา เยเมน",
     coords: [12.4634, 53.8237],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=82",
     summary:
       "โซโคตราเป็นเกาะโดดเดี่ยวในทะเลอาหรับ มีพืชเฉพาะถิ่นจำนวนมาก เช่น ต้นเลือดมังกร เพราะตำแหน่งเกาะ ภูเขา หินปูน และลมมรสุมสร้างสภาพแวดล้อมพิเศษ",
     story:
@@ -6602,7 +6602,7 @@ const topics = [
     location: "บราซิลตอนกลาง",
     coords: [-15.8, -47.9],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เซร์ราโดเป็นสะวันนาเขตร้อนขนาดใหญ่ของบราซิล มีฤดูฝนและฤดูแล้งชัดเจน ดินเป็นกรด ไฟตามธรรมชาติ และเป็นต้นน้ำของลุ่มน้ำสำคัญหลายสาย",
     story:
@@ -6650,7 +6650,7 @@ const topics = [
     location: "ไครสต์เชิร์ช ประเทศนิวซีแลนด์",
     coords: [-43.532, 172.636],
     zoom: 11,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ไครสต์เชิร์ชตั้งอยู่บนที่ราบตะกอนและพื้นที่ชุ่มน้ำเดิม เมื่อเกิดแผ่นดินไหว ดินทรายอิ่มน้ำบางส่วนกลายเป็นดินเหลว ทำให้อาคาร ถนน และท่อสาธารณูปโภคเสียหาย",
     story:
@@ -6674,7 +6674,7 @@ const topics = [
     location: "รัฐเทกซัส สหรัฐอเมริกา",
     coords: [29.301, -94.797],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1500674425229-f692875b0ab7?auto=format&fit=crop&w=1400&q=82",
     summary:
       "กัลเวสตันตั้งอยู่บนเกาะสันดอนต่ำริมอ่าวเม็กซิโก พายุเฮอริเคนสามารถดันน้ำทะเลเข้าฝั่งจนเกิดคลื่นพายุซัดฝั่งที่รุนแรงต่อเมืองชายฝั่ง",
     story:
@@ -6698,7 +6698,7 @@ const topics = [
     location: "เกาะซิซิลี ประเทศอิตาลี",
     coords: [37.751, 14.993],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เอตนาเป็นภูเขาไฟที่ปะทุบ่อย เถ้าภูเขาไฟสามารถรบกวนการบิน ถนน บ้าน และเกษตร แต่ดินภูเขาไฟก็ทำให้พื้นที่รอบภูเขาอุดมสมบูรณ์",
     story:
@@ -6722,7 +6722,7 @@ const topics = [
     location: "เอเธนส์ ประเทศกรีซ",
     coords: [37.984, 23.728],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เอเธนส์ตั้งอยู่ในแอ่งที่มีภูเขาล้อมบางด้านและฤดูร้อนแห้งร้อน คลื่นความร้อนรุนแรงขึ้นเมื่อพื้นผิวเมืองสะสมความร้อนและลมระบายอากาศจำกัด",
     story:
@@ -6770,7 +6770,7 @@ const topics = [
     location: "แคลิฟอร์เนีย สหรัฐอเมริกา",
     coords: [38.58, -121.49],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1400&q=82",
     summary:
       "พื้นที่รอยต่อเมือง-ป่าในแคลิฟอร์เนียเสี่ยงไฟป่าเมื่อบ้านขยายเข้าใกล้พืชแห้ง ลมแรง ภัยแล้ง และฤดูร้อนยาวขึ้นทำให้ไฟลุกลามเร็ว",
     story:
@@ -6794,7 +6794,7 @@ const topics = [
     location: "ชายฝั่งแปซิฟิกตะวันตกเฉียงเหนือ",
     coords: [44.6, -124.1],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เขตมุดตัวคาสเคเดียสามารถเกิดแผ่นดินไหวใหญ่และสึนามิใกล้ฝั่งได้ เมืองชายฝั่งจึงต้องมีแผนที่พื้นที่น้ำท่วม เส้นทางขึ้นที่สูง และการเตือนภัยที่เข้าใจง่าย",
     story:
@@ -6818,7 +6818,7 @@ const topics = [
     location: "หมู่เกาะคานารี ประเทศสเปน",
     coords: [28.57, -17.84],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&w=1400&q=82",
     summary:
       "การปะทุบนเกาะลาปัลมาทำให้ลาวาไหลผ่านชุมชนและลงสู่ทะเล เกิดชายฝั่งใหม่จากลาวา แต่ระหว่างทางสร้างความเสียหายต่อบ้าน เกษตร และถนน",
     story:
@@ -6866,7 +6866,7 @@ const topics = [
     location: "ประเทศอียิปต์",
     coords: [30.585, 32.265],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=82",
     summary:
       "คลองสุเอซเชื่อมทะเลเมดิเตอร์เรเนียนกับทะเลแดง ลดระยะทางเดินเรือระหว่างยุโรปกับเอเชีย และทำให้คอคอดแห้งแล้งกลายเป็นจุดยุทธศาสตร์ของห่วงโซ่อุปทานโลก",
     story:
@@ -6914,7 +6914,7 @@ const topics = [
     location: "เอธิโอเปียตะวันตกเฉียงใต้",
     coords: [7.67, 36.83],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=82",
     summary:
       "กาแฟอาราบิกามีถิ่นกำเนิดในที่สูงเอธิโอเปีย ความสูง ฝน ดิน และร่มเงาป่าช่วยกำหนดคุณภาพและความหลากหลายของภูมิประเทศกาแฟ",
     story:
@@ -7130,7 +7130,7 @@ const topics = [
     location: "ภาคใต้ของประเทศไทย",
     coords: [7.27, 100.45],
     zoom: 9,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ทะเลสาบสงขลาเป็นระบบลากูนขนาดใหญ่ที่รับน้ำจืดจากลุ่มน้ำและน้ำเค็มจากอ่าวไทย ความเค็มจึงเปลี่ยนตามฤดูฝน มรสุม และช่องเปิดสู่ทะเล",
     story:
@@ -7178,7 +7178,7 @@ const topics = [
     location: "เวียดนามตอนเหนือ",
     coords: [20.9, 106.0],
     zoom: 8,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ดินดอนแม่น้ำแดงเป็นที่ราบต่ำที่ถูกจัดการด้วยคันกั้นน้ำและคลองชลประทานมายาวนาน เพื่อป้องกันน้ำหลากและผลิตข้าวในพื้นที่ประชากรหนาแน่น",
     story:
@@ -7226,7 +7226,7 @@ const topics = [
     location: "เกาะชวา อินโดนีเซีย",
     coords: [-7.5, 110.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ชวาเป็นเกาะภูเขาไฟที่มีดินอุดมสมบูรณ์จากเถ้าและหินภูเขาไฟ จึงรองรับเกษตรและประชากรหนาแน่น แม้ต้องอยู่กับภัยปะทุ แผ่นดินไหว และลาฮาร์",
     story:
@@ -7250,7 +7250,7 @@ const topics = [
     location: "เวียดนามตอนเหนือ",
     coords: [20.91, 107.18],
     zoom: 11,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1400&q=82",
     summary:
       "อ่าวฮาลองมีเสาหินปูนคาสต์จำนวนมากที่ถูกน้ำทะเลท่วมบางส่วน เกิดจากการละลายของหินปูน การยกตัว และระดับทะเลที่เปลี่ยนตามเวลา",
     story:
@@ -7274,7 +7274,7 @@ const topics = [
     location: "รัฐซาบาห์ เกาะบอร์เนียว มาเลเซีย",
     coords: [6.075, 116.558],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary:
       "ภูเขาคินาบาลูสูงโดดเด่นบนเกาะบอร์เนียว ทำให้เกิดเขตภูมิอากาศและพืชพรรณหลายระดับในระยะทางสั้น ตั้งแต่ป่าฝนร้อนชื้นถึงยอดเขาเย็นชื้น",
     story:
@@ -7298,7 +7298,7 @@ const topics = [
     location: "ลุ่มน้ำโขงตอนกลางและตอนล่าง",
     coords: [17.9, 102.6],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary:
       "เขื่อนในลุ่มน้ำโขงผลิตไฟฟ้าและควบคุมน้ำบางส่วน แต่เปลี่ยนจังหวะน้ำหลาก การอพยพของปลา และปริมาณตะกอนที่ไปหล่อเลี้ยงดินดอนปลายน้ำ",
     story:
@@ -7562,7 +7562,7 @@ const topics = [
     location: "ประเทศโอมาน",
     coords: [22.62, 59.09],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=82",
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=82",
     summary:
       "วาดีในโอมานมักแห้งหรือมีน้ำไหลน้อย แต่เมื่อฝนตกหนักบนภูเขา น้ำสามารถไหลหลากลงหุบเขาแคบอย่างรวดเร็ว กลายเป็นภัยฉับพลันต่อผู้เดินทางและชุมชน",
     story:
@@ -7608,7 +7608,7 @@ const topics = [
     location: "ชายฝั่งเปรูและเอกวาดอร์",
     coords: [-9.2, -79.7],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=82",
     summary: "เอลนีโญทำให้น้ำอุ่นแผ่ไปทางแปซิฟิกตะวันออก ลดการยกตัวของน้ำเย็นและเปลี่ยนทั้งฝน ประมง และน้ำท่วมชายฝั่งเปรู",
     story: "ตามปกติ ลมค้าช่วยดันน้ำผิวหน้าออกจากชายฝั่งเปรู ทำให้น้ำเย็นที่อุดมธาตุอาหารยกตัวขึ้นมาเลี้ยงแพลงก์ตอนและปลา แต่ในปีเอลนีโญ ลมค้าอ่อนลง น้ำอุ่นแผ่เข้ามาแทนที่ น้ำเย็นยกตัวลดลง ฝนเขตร้อนอาจเลื่อนมาทางตะวันออก และพื้นที่ชายฝั่งแห้งแล้งอาจเจอฝนหนักผิดปกติ เรื่องนี้ทำให้เห็นว่าการเปลี่ยนแปลงอุณหภูมิทะเลเพียงไม่กี่องศาอาจเปลี่ยนชีวิตประมง เกษตร และเมืองชายฝั่งได้",
     scale: "ชายฝั่งแปซิฟิกตะวันออกและมหาสมุทรเขตร้อน",
@@ -7630,7 +7630,7 @@ const topics = [
     location: "ควีนส์แลนด์และนิวเซาท์เวลส์ ออสเตรเลีย",
     coords: [-27.5, 153.0],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=82",
     summary: "ลานีญามักเสริมความชื้นและฝนในออสเตรเลียตะวันออก ทำให้ลุ่มน้ำอิ่มตัว เขื่อนเต็ม และน้ำท่วมเกิดซ้ำได้ง่ายขึ้น",
     story: "เมื่อแปซิฟิกตะวันตกอุ่นและลมค้าแรงขึ้น ความชื้นจำนวนมากถูกพัดเข้าหาออสเตรเลียตะวันออก เมฆฝนตั้งตัวได้บ่อยขึ้น และพายุฝนหลายระลอกทำให้ดินอิ่มน้ำ แม่น้ำตอบสนองเร็วขึ้นจากฝนครั้งต่อไป ลานีญาจึงไม่ได้แปลว่าแค่ฝนมาก แต่หมายถึงระบบลุ่มน้ำที่มีความทรงจำ: ฝนก่อนหน้า ความชื้นดิน และระดับเขื่อนกำหนดว่าน้ำหลากครั้งต่อไปจะรุนแรงแค่ไหน",
     scale: "ภูมิภาคลุ่มน้ำตะวันออกของออสเตรเลีย",
@@ -7718,7 +7718,7 @@ const topics = [
     location: "ชายฝั่งและเทือกเขาเซียร์ราเนวาดา แคลิฟอร์เนีย",
     coords: [38.5, -122.5],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1400&q=82",
     summary: "แม่น้ำในบรรยากาศคือสายพานไอน้ำจากมหาสมุทร เมื่อชนภูเขาจะปล่อยฝนหรือหิมะหนักและทำให้เกิดน้ำท่วมได้",
     story: "ไอน้ำจำนวนมากสามารถรวมตัวเป็นแถบยาวในบรรยากาศเหมือนแม่น้ำที่มองไม่เห็น เมื่อไหลจากแปซิฟิกเข้าหาฝั่งตะวันตกสหรัฐฯ และชนเทือกเขา อากาศถูกยกตัว เย็นลง และปล่อยความชื้นเป็นฝนหรือหิมะ เหตุการณ์เดียวอาจเติมน้ำให้เขื่อนและ snowpack แต่ถ้าดินอิ่มน้ำหรือฝนตกบนหิมะก็อาจเกิดน้ำท่วม ดินถล่ม และ hydrograph ที่พุ่งเร็ว",
     scale: "ชายฝั่ง ภูเขา และลุ่มน้ำระดับภูมิภาค",
@@ -7762,7 +7762,7 @@ const topics = [
     location: "ลุ่มน้ำโขงและโตนเลสาบ",
     coords: [12.9, 104.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary: "แม่น้ำโขงมีจังหวะน้ำหลากตามฤดูที่หล่อเลี้ยงปลา พื้นที่ชุ่มน้ำ เกษตร และวัฒนธรรมริมฝั่ง",
     story: "เมื่อมรสุมทำให้แม่น้ำโขงสูงขึ้น น้ำไม่ได้ไหลผ่านเฉย ๆ แต่แผ่ออกสู่ทุ่งน้ำ พื้นที่ชุ่มน้ำ และโตนเลสาบที่ขยายตัวตามฤดูกาล น้ำหลากพาตะกอนและธาตุอาหาร กระตุ้นการวางไข่ของปลา และกำหนดจังหวะเพาะปลูกของผู้คน หากจังหวะนี้เปลี่ยนจากเขื่อน ภัยแล้ง หรือฝนผิดฤดู ระบบนิเวศและชีวิตริมแม่น้ำก็เปลี่ยนตาม",
     scale: "ลุ่มน้ำข้ามพรมแดน",
@@ -7806,7 +7806,7 @@ const topics = [
     location: "เทือกเขาดินาริก บอลข่าน",
     coords: [43.3, 17.8],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=82",
     summary: "พื้นที่หินปูนคาร์สต์ทำให้น้ำฝนซึมเร็ว ไหลใต้ดินผ่านโพรง และผุดออกเป็นน้ำพุหรือแม่น้ำอย่างฉับพลัน",
     story: "ในภูมิประเทศคาร์สต์ ฝนไม่ได้ไหลบนผิวดินเสมอไป แต่มุดลงรอยแตกและโพรงหินปูนที่ละลายจากน้ำกรดอ่อน ๆ น้ำใต้ดินจึงเดินทางเร็วและยากต่อการมองเห็น บางแห่งผุดออกเป็นน้ำพุขนาดใหญ่ บางช่วงแม่น้ำหายลงใต้ดินแล้วกลับมาใหม่ การอ่านคาร์สต์จึงต้องใช้ทั้งแผนที่ภูมิประเทศ ธรณีวิทยา และความเข้าใจน้ำใต้ดิน",
     scale: "ภูมิประเทศหินปูนและลุ่มน้ำใต้ดิน",
@@ -7872,7 +7872,7 @@ const topics = [
     location: "เทือกเขาแอลป์ถึงลุ่มน้ำไรน์ ยุโรป",
     coords: [47.6, 8.2],
     zoom: 5,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=82",
     summary: "แม่น้ำที่รับน้ำจากภูเขาหิมะมีจังหวะน้ำเพิ่มตามฤดูใบไม้ผลิและฤดูร้อน เมื่อหิมะละลายและฝนซ้อนทับกัน",
     story: "ในลุ่มน้ำที่มีต้นน้ำจากแอลป์ หิมะทำหน้าที่เหมือนอ่างเก็บน้ำธรรมชาติ เก็บฝนฤดูหนาวไว้เป็นหิมะแล้วปล่อยออกมาเมื่ออากาศอุ่นขึ้น หากความร้อนมาเร็วหรือฝนตกบนหิมะ น้ำจำนวนมากจะไหลลงแม่น้ำในเวลาใกล้กัน ทำให้ hydrograph สูงขึ้น การเข้าใจ snowmelt จึงช่วยอ่านน้ำท่วม การเดินเรือ และน้ำใช้ในยุโรปตอนกลาง",
     scale: "ภูเขาต้นน้ำถึงแม่น้ำสายหลัก",
@@ -7916,7 +7916,7 @@ const topics = [
     location: "ลุ่มแม่น้ำมิสซิสซิปปีตอนล่าง สหรัฐอเมริกา",
     coords: [33.8, -91.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82",
     summary: "แม่น้ำคดเคี้ยวกัดเซาะฝั่งนอก ทับถมฝั่งใน และบางครั้งตัดคุ้งน้ำจนเกิดทะเลสาบรูปแอก",
     story: "บนที่ราบน้ำท่วมถึง กระแสน้ำไม่ไหลเป็นเส้นตรงตลอดเวลา ฝั่งนอกคุ้งน้ำไหลแรงและกัดเซาะ ส่วนฝั่งในไหลช้ากว่าและสะสมตะกอน คุ้งน้ำจึงค่อย ๆ โค้งมากขึ้น จนวันหนึ่งน้ำหลากอาจตัดคอคอดและทิ้งทางน้ำเก่าไว้เป็นทะเลสาบรูปแอก เรื่องนี้ทำให้เห็นว่าแม่น้ำเป็นผู้เขียนแผนที่ด้วยการกัดเซาะและสะสมตะกอนทีละน้อย",
     scale: "ที่ราบน้ำท่วมถึงและร่องน้ำแม่น้ำ",
@@ -7982,7 +7982,7 @@ const topics = [
     location: "ลุ่มน้ำเจ้าพระยา ประเทศไทย",
     coords: [16.5, 100.2],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=1400&q=82",
     summary: "เขื่อนและอ่างเก็บน้ำเปลี่ยนรูปร่าง hydrograph ของแม่น้ำ โดยหน่วงน้ำหลาก เก็บน้ำแล้ง และต้องตัดสินใจภายใต้ฝนที่ไม่แน่นอน",
     story: "ในลุ่มเจ้าพระยา ฝนจากมรสุมไหลจากภูเขาและที่ราบลงสู่แม่น้ำสายหลัก เขื่อนต้นน้ำช่วยเก็บน้ำ ลดยอดน้ำหลากบางช่วง และปล่อยน้ำในฤดูแล้ง แต่ถ้าฝนมามากต่อเนื่องหรือคาดการณ์ผิด อ่างเก็บน้ำอาจเต็มและต้องระบายน้ำเพิ่ม การอ่าน hydrograph จึงไม่ใช่ดูน้ำขึ้นลงเท่านั้น แต่ต้องดูฝนล่วงหน้า พื้นที่รับน้ำ ระดับอ่าง และความต้องการน้ำของเกษตร เมือง และระบบนิเวศพร้อมกัน",
     scale: "ลุ่มน้ำ เขื่อน และที่ราบเจ้าพระยา",
@@ -8026,7 +8026,7 @@ const topics = [
     location: "หิมาลัยตอนกลาง",
     coords: [30.0, 80.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1400&q=82",
     summary: "เมื่อฝนตกลงบนหิมะ น้ำจากฝนและหิมะละลายรวมกัน ทำให้ลำน้ำภูเขาเพิ่มเร็วและเสี่ยงน้ำหลากฉับพลัน",
     story: "บนภูเขาสูง หิมะคือคลังน้ำที่ควรค่อย ๆ ละลายตามฤดู แต่ถ้าอากาศอุ่นพอให้ฝนตกแทนหิมะ น้ำฝนจะถ่ายเทความร้อนให้ชั้นหิมะและเร่งการละลาย น้ำสองแหล่งจึงไหลลงลำธารพร้อมกัน ในหุบเขาแคบ hydrograph อาจพุ่งเร็วมาก เหตุการณ์ฝนบนหิมะจึงเป็นตัวอย่างว่าภูมิอากาศที่อุ่นขึ้นสามารถเปลี่ยนชนิดหยาดน้ำฟ้าและความเสี่ยงน้ำหลากในภูเขาได้",
     scale: "หุบเขาภูเขาและลุ่มน้ำต้นน้ำ",
@@ -8070,7 +8070,7 @@ const topics = [
     location: "กรุงเทพมหานครและที่ราบเจ้าพระยาตอนล่าง",
     coords: [13.75, 100.5],
     zoom: 10,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=1400&q=82",
     summary: "การสูบน้ำใต้ดินในที่ราบตะกอนอ่อนทำให้ชั้นดินยุบตัว เมืองต่ำลง และความเสี่ยงน้ำท่วมกับน้ำทะเลหนุนเพิ่มขึ้น",
     story: "เมืองบนดินตะกอนปากแม่น้ำมีน้ำใต้ดินอยู่ในช่องว่างของชั้นทรายและดิน เมื่อสูบน้ำมาก แรงดันน้ำในชั้นดินลดลง เม็ดดินอัดแน่นขึ้นและพื้นดินทรุดตัว แม้การควบคุมการสูบน้ำช่วยลดอัตราทรุดได้ แต่ภูมิประเทศต่ำ น้ำทะเลหนุน ฝนหนัก และการขยายเมืองยังทำให้กรุงเทพฯ ต้องอ่านน้ำทั้งจากฟ้า แม่น้ำ ทะเล และใต้ดินพร้อมกัน",
     scale: "เมืองใหญ่บนที่ราบตะกอนต่ำ",
@@ -8092,7 +8092,7 @@ const topics = [
     location: "แม่น้ำกรวดในเทือกเขาร็อกกี",
     coords: [44.4, -110.6],
     zoom: 7,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1400&q=82",
     summary: "ใต้ท้องน้ำของแม่น้ำ มีเขตแลกเปลี่ยนน้ำระหว่างลำน้ำกับน้ำใต้ดินที่ช่วยกรอง ควบคุมอุณหภูมิ และเลี้ยงระบบนิเวศ",
     story: "แม่น้ำไม่ได้ไหลอยู่บนผิวดินอย่างเดียว น้ำส่วนหนึ่งซึมลงระหว่างกรวดทรายใต้ท้องน้ำ แล้วไหลกลับขึ้นมาในระยะไม่ไกล เขตแลกเปลี่ยนนี้เรียกว่า hyporheic zone เป็นเหมือนห้องทดลองธรรมชาติที่น้ำ ออกซิเจน จุลินทรีย์ และธาตุอาหารทำงานร่วมกัน ทำให้อุณหภูมิน้ำคงที่ขึ้น ช่วยย่อยสลายสารอินทรีย์ และเป็นที่อยู่อาศัยของสิ่งมีชีวิตขนาดเล็ก",
     scale: "ร่องน้ำ ท้องน้ำ และน้ำใต้ดินตื้น",
@@ -8202,7 +8202,7 @@ const topics = [
     location: "วาดีในคาบสมุทรอาหรับ",
     coords: [23.0, 57.0],
     zoom: 6,
-    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=82",
     summary: "วาดีที่ดูแห้งอาจมี hydrograph พุ่งสูงเร็วมากเมื่อฝนตกบนภูเขาหิน ทำให้น้ำหลากมาถึงปลายน้ำโดยแทบไม่มีเวลาเตือน",
     story: "ในเขตแห้งแล้ง พื้นผิวหิน ดินบาง และพืชปกคลุมน้อยทำให้น้ำฝนซึมลงดินได้น้อย เมื่อฝนตกหนักบนภูเขาหรือที่สูง น้ำไหลบ่ารวมลงร่องวาดีอย่างรวดเร็ว hydrograph จึงมีช่วงขึ้นชันและยอดน้ำสูง แม้บริเวณปลายน้ำจะไม่มีฝนตกเลยก็อาจถูกน้ำหลากจากต้นน้ำพัดผ่าน เรื่องนี้ย้ำว่าการอ่านน้ำท่วมต้องอ่านทั้งลุ่มน้ำ ไม่ใช่แค่ท้องฟ้าเหนือหัว",
     scale: "ลุ่มน้ำขนาดเล็กในเขตแห้งแล้ง",
