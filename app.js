@@ -647,6 +647,25 @@ const atlasRoutes = [
 
 const pu = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1400&q=80`;
 
+const AI_VISUAL_ASSETS = {
+  volcano: "assets/ai/volcano-system-gpt.png",
+};
+
+const GENERIC_STOCK_IMAGE_IDS = new Set([
+  "1500534314209-a25ddb2bd429",
+  "1509316785289-025f5b846b35",
+  "1500530855697-b586d89ba3ee",
+  "1507525428034-b723cf961d3e",
+  "1519681393784-d120267933ba",
+  "1500375592092-40eb2168fd21",
+  "1516026672322-bc52d61a55d5",
+  "1500382017468-9049fed747ef",
+  "1464822759023-fed622ff2c3b",
+  "1512453979798-5ea266f8880c",
+  "1544735716-392fe2489ffa",
+  "1516426122078-c23e76319801",
+]);
+
 const CONCEPT_DEFS = {
   volcano:   { title: "Volcano", subtitle: "ภูเขาไฟ — Volcanic Landforms & Processes",          image: pu("1505852679233-d9fd70aff56d"), kw: "ภูเขาไฟ ลาวา แมกมา" },
   tectonic:  { title: "Plate Tectonics & Mountains", subtitle: "แผ่นธรณี — Tectonic Landforms", image: pu("1544735716-392fe2489ffa"),   kw: "แผ่นธรณี ภูเขา ธรณีสัณฐาน" },
@@ -703,7 +722,6 @@ function renderConceptTextbook(conceptKey) {
 
   const topic = synTopic(def.kw, def.image);
   const guide = buildAcademicGuide(topic);
-  const svgInfographic = buildSvgInfographic(topic) || "";
 
   const formationHtml = guide.formation.map((s, i) => `<li><span>${i + 1}</span><p>${s}</p></li>`).join("");
   const typesHtml = guide.types.map((t) => `<li>${t}</li>`).join("");
@@ -720,10 +738,6 @@ function renderConceptTextbook(conceptKey) {
     </div>
     <div class="ctb-body">
       <p class="ctb-definition">${guide.definition}</p>
-
-      ${buildTypeGallery(guide.typeGallery)}
-
-      ${svgInfographic}
 
       <div class="ctb-two-col">
         <div class="ctb-section">
@@ -749,7 +763,7 @@ function renderConceptTextbook(conceptKey) {
 
       <div class="ctb-divider">
         <i data-lucide="layers"></i>
-        <span>สำรวจสถานที่จริงด้านล่าง</span>
+        <span>เลือกหัวข้อจริงด้านล่างเพื่อดูแผนภาพ รูปประกอบ และประเภทที่ตรงกับเรื่องนั้น</span>
         <i data-lucide="chevron-down"></i>
       </div>
     </div>
@@ -8570,16 +8584,13 @@ function renderQuickSearches() {
   quickSearchGroup.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
       const kw = button.dataset.keyword;
-      const conceptKey = KEYWORD_TO_CONCEPT[kw];
 
+      activeConceptKey = null;
+      document.getElementById("conceptTextbook").hidden = true;
+      document.querySelectorAll(".quick-search.concept-active").forEach((b) => b.classList.remove("concept-active"));
       searchInput.value = kw;
       renderTopics();
-
-      if (conceptKey) {
-        renderConceptTextbook(conceptKey);
-      } else {
-        document.querySelector("#library").scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      document.querySelector("#library").scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 }
@@ -10099,17 +10110,26 @@ const TYPE_GALLERIES = {
 
 // ─── Build Type Gallery HTML ───────────────────────────────────────────────────
 
-function buildTypeGallery(items) {
+function getTypeGalleryPhoto(item, currentTopic) {
+  const linkedTopics = (item.storyLinks || [])
+    .map((link) => topics.find((topic) => topic.id === link.id))
+    .filter(Boolean);
+  const currentMatch = linkedTopics.find((topic) => topic.id === currentTopic?.id);
+  return getTopicDisplayImage(currentMatch || linkedTopics[0] || { image: item.photo, coords: currentTopic?.coords || [20, 0], zoom: currentTopic?.zoom || 6 });
+}
+
+function buildTypeGallery(items, currentTopic) {
   if (!items || items.length === 0) return "";
   return `
     <div class="type-gallery-section">
       <h3 class="article-sub-title">Types at a Glance</h3>
+      <p class="type-gallery-intro">รูปในส่วนนี้เปลี่ยนตามหัวข้อที่เลือกและอ้างอิงจากสถานที่จริงหรือพิกัดจริงในคลังบทความ</p>
       <div class="type-gallery">
         ${items
           .map(
             (item) => `
           <div class="type-card">
-            <img class="type-card-photo" src="${item.photo}" alt="${item.name}" loading="lazy">
+            <img class="type-card-photo" src="${getTypeGalleryPhoto(item, currentTopic)}" alt="${item.name}" loading="lazy">
             <div class="type-card-body">
               <h4 class="type-card-name">${item.name}</h4>
               <p class="type-card-desc">${item.desc}</p>
@@ -10486,11 +10506,105 @@ function getTopicVisualProfile(topic) {
   return { className: "visual-landform", icon: "layers", label: "ภูมิประเทศ", process: "แรงสร้าง - การผุพัง - รูปทรงพื้นที่" };
 }
 
+function getUnsplashPhotoId(imageUrl = "") {
+  return imageUrl.match(/photo-([^?]+)/)?.[1] || "";
+}
+
+function getSatelliteTileImage(topic) {
+  const [lat, lon] = topic.coords;
+  const zoom = Math.max(5, Math.min(10, topic.zoom || 8));
+  const latRad = (lat * Math.PI) / 180;
+  const scale = 2 ** zoom;
+  const x = Math.floor(((lon + 180) / 360) * scale);
+  const y = Math.floor(((1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2) * scale);
+  return `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${zoom}/${y}/${x}`;
+}
+
+function isGenericStockImage(topic) {
+  return GENERIC_STOCK_IMAGE_IDS.has(getUnsplashPhotoId(topic.image));
+}
+
+function getTopicDisplayImage(topic) {
+  return isGenericStockImage(topic) ? getSatelliteTileImage(topic) : topic.image;
+}
+
+function getTopicIllustrationImage(topic) {
+  const profile = getTopicVisualProfile(topic);
+  if (profile.className === "visual-volcano") return AI_VISUAL_ASSETS.volcano;
+  return getTopicDisplayImage(topic);
+}
+
+function buildVisualCallouts(topic, guide) {
+  const callouts = [
+    {
+      className: "callout-primary",
+      title: getTopicVisualProfile(topic).label,
+      body: guide.formation[0] || topic.keyConcept,
+    },
+    {
+      className: "callout-secondary",
+      title: "จุดสังเกต",
+      body: guide.landforms[0] || topic.location,
+    },
+    {
+      className: "callout-tertiary",
+      title: "อ่านจากภาพ",
+      body: guide.landforms[1] || topic.climate,
+    },
+  ];
+
+  return `
+    <div class="ai-image-callouts" aria-label="คำอธิบายบนภาพ">
+      ${callouts
+        .map(
+          (callout) => `
+            <span class="${callout.className}">
+              <strong>${callout.title}</strong>
+              <small>${callout.body}</small>
+            </span>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function buildAiIllustrationPanel(topic, guide) {
+  const profile = getTopicVisualProfile(topic);
+  const illustrationImage = getTopicIllustrationImage(topic);
+  const featureChips = guide.landforms
+    .slice(0, 4)
+    .map((feature) => `<span>${feature}</span>`)
+    .join("");
+
+  return `
+    <section class="ai-illustration-panel ${profile.className}" aria-label="AI illustration and topic diagram">
+      <figure class="ai-illustration-media" style="background-image:url('${illustrationImage}')">
+        ${buildVisualCallouts(topic, guide)}
+        <figcaption>
+          <span><i data-lucide="${profile.icon}"></i>${profile.label}</span>
+          <strong>${topic.title}</strong>
+          <small>${profile.process}</small>
+        </figcaption>
+      </figure>
+      <div class="ai-illustration-copy">
+        <p class="ai-kicker">GPT Image + Process Infographic</p>
+        <h2>ภาพประกอบและแผนภาพตามหัวข้อนี้</h2>
+        <p>${guide.mapReading}</p>
+        <div class="ai-feature-chips" aria-label="Key visual clues">${featureChips}</div>
+      </div>
+    </section>
+  `;
+}
+
 function buildTopicVisual(topic, variant = "card") {
   const profile = getTopicVisualProfile(topic);
   const title = variant === "hero" ? topic.title : profile.label;
+  const displayImage = getTopicDisplayImage(topic);
+  const locationImageClass = isGenericStockImage(topic) ? " visual-location-tile" : "";
   return `
-    <div class="geo-visual ${profile.className} geo-visual-${variant}" aria-label="ภาพประกอบเชิงกระบวนการ: ${topic.title}">
+    <div class="geo-visual ${profile.className} geo-visual-${variant}${locationImageClass}" aria-label="ภาพประกอบเชิงกระบวนการ: ${topic.title}">
+      <div class="geo-visual-photo" style="background-image:url('${displayImage}')" aria-hidden="true"></div>
       <div class="geo-visual-bg" aria-hidden="true">
         <span></span>
         <span></span>
@@ -10604,7 +10718,9 @@ function renderTopics(resetPage) {
 function renderStory(topic) {
   const guide = buildAcademicGuide(topic);
   const svgInfographic = buildSvgInfographic(topic);
+  const processInfographic = svgInfographic ? "" : buildProcessInfographic(topic);
   const relatedTopics = getRelatedTopics(topic);
+  const displayImage = getTopicDisplayImage(topic);
 
   const formationSteps = guide.formation
     .map((step, i) => `<li><span>${i + 1}</span><p>${step}</p></li>`)
@@ -10636,7 +10752,7 @@ function renderStory(topic) {
 
   storyReader.innerHTML = `
     <!-- Photo hero -->
-    <div class="story-photo-hero" style="background-image:url('${topic.image}')">
+    <div class="story-photo-hero" style="background-image:url('${displayImage}')">
       <div class="story-photo-meta">
         <span class="article-category-badge">${topic.category} · ${topic.subcategory}</span>
         <h1>${topic.title}</h1>
@@ -10661,8 +10777,11 @@ function renderStory(topic) {
         </div>
       </section>
 
+      ${buildAiIllustrationPanel(topic, guide)}
+
       <!-- Infographic -->
       ${svgInfographic || ""}
+      ${processInfographic}
 
       <!-- The Geography (Science) -->
       <section class="article-section article-science">
@@ -10672,7 +10791,7 @@ function renderStory(topic) {
         </h2>
         <p class="article-definition">${guide.definition}</p>
 
-        ${buildTypeGallery(guide.typeGallery)}
+        ${buildTypeGallery(guide.typeGallery, topic)}
 
         <h3 class="article-sub-title">How it forms</h3>
         <ol class="article-steps">
