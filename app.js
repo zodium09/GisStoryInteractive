@@ -9254,36 +9254,42 @@ const TYPE_GALLERIES = {
       photo: p("1506905925346-21bda4d32df4"),
       desc: "เกิดจาก basaltic lava ที่ viscosity ต่ำมาก ไหลออกไกลและสะสมเป็นโดมแบน ลาดชันเพียง 5–10° ปะทุแบบ effusive ไม่รุนแรง",
       tags: ["Low-viscosity basalt", "Gently sloping", "Effusive", "Ex: Mauna Loa, Hawaii"],
+      storyLinks: [{id:"hawaii-hotspot",label:"Hawaii / Mauna Loa"}],
     },
     {
       name: "Stratovolcano (Composite)",
       photo: p("1505852679233-d9fd70aff56d"),
       desc: "ประกอบด้วยชั้น lava และ pyroclastic material สลับกัน รูปทรงกรวยสูง ลาดชัน มี viscosity สูง ปะทุรุนแรงและระเบิดได้",
       tags: ["High-viscosity lava", "Steep cone", "Explosive", "Ex: Fuji, Etna, Merapi"],
+      storyLinks: [{id:"mount-fuji",label:"Mt Fuji"},{id:"lahar-merapi",label:"Merapi"},{id:"etna-ashfall-sicily",label:"Etna, Sicily"}],
     },
     {
       name: "Cinder Cone",
       photo: p("1509316785289-025f5b846b35"),
       desc: "ภูเขาไฟขนาดเล็กที่สุด เกิดจาก pyroclastic fragments (scoria, cinders) ร่วงหล่นรอบปล่อง สูงไม่เกิน 300 เมตร มักเกิดเดี่ยวหรือเป็นกลุ่ม",
       tags: ["Scoria & cinders", "Small (<300 m)", "Short-lived", "Ex: Parícutin, Mexico"],
+      storyLinks: [{id:"ring-of-fire-indonesia",label:"Ring of Fire — Indonesia"},{id:"ring-of-fire",label:"Pacific Ring of Fire"}],
     },
     {
       name: "Caldera",
       photo: p("1500375592092-40eb2168fd21"),
       desc: "แอ่งขนาดใหญ่เกิดหลังการปะทุรุนแรงที่ระบาย magma chamber ออกมาก จนยอดภูเขาไฟยุบตัวลง บางแห่งกลายเป็นทะเลสาบ",
       tags: ["Collapse depression", "Post-eruption", "Can be 1–100 km wide", "Ex: Crater Lake, Toba"],
+      storyLinks: [{id:"yellowstone-geothermal",label:"Yellowstone"},{id:"yellowstone-geysers",label:"Yellowstone Geysers"}],
     },
     {
       name: "Lava Dome",
       photo: p("1519681393784-d120267933ba"),
       desc: "เกิดเมื่อ lava ที่มี viscosity สูงมากดันขึ้นช้า ๆ โดยไม่ไหล ก่อตัวเป็นโดมหิน หากพังทลายจะเกิด pyroclastic flow อันตราย",
       tags: ["Very high viscosity", "Rhyolite/dacite", "Dome collapse risk", "Ex: Mt St Helens, Soufrière"],
+      storyLinks: [{id:"mount-st-helens",label:"Mt St Helens"},{id:"pinatubo",label:"Pinatubo"}],
     },
     {
       name: "Supervolcano / Large Igneous Province",
       photo: p("1544735716-392fe2489ffa"),
       desc: "ระบบ magma ขนาดมหึมาที่ปะทุในระดับ VEI 8 ทิ้ง ash ปกคลุมทวีป หรือปล่อย flood basalt เป็นพื้นที่กว้างใหญ่",
       tags: ["VEI 7–8", "Ash falls continental scale", "Ex: Yellowstone, Toba, Deccan Traps"],
+      storyLinks: [{id:"yellowstone",label:"Yellowstone"},{id:"deccan-plateau",label:"Deccan Traps"}],
     },
   ],
 
@@ -9293,30 +9299,35 @@ const TYPE_GALLERIES = {
       photo: p("1544735716-392fe2489ffa"),
       desc: "เกิดจากแรงบีบอัดเมื่อ tectonic plates ชนกัน ชั้นหินพับและยกตัวเป็นแนวเทือกเขาสูง anticlines และ synclines ปรากฏชัดในหน้าผา",
       tags: ["Compressional force", "Anticline & syncline", "Ex: Himalayas, Alps, Andes"],
+      storyLinks: [{id:"himalaya",label:"Himalayas"},{id:"andes",label:"Andes"},{id:"alps",label:"Alps"}],
     },
     {
       name: "Block Mountains (Horst & Graben)",
       photo: p("1464822759023-fed622ff2c3b"),
       desc: "เกิดจาก faulting เมื่อ crust ยืดตัว บล็อกหินยกตัว (horst) เป็นยอดเขา ส่วนบล็อกที่จมตัว (graben) เป็นหุบเขาหรือ rift valley",
       tags: ["Extensional fault", "Horst & graben", "Ex: Rhine Graben, East African Rift"],
+      storyLinks: [{id:"east-african-rift",label:"East African Rift"},{id:"dead-sea-rift",label:"Dead Sea Rift"}],
     },
     {
       name: "Volcanic Mountains",
       photo: p("1505852679233-d9fd70aff56d"),
       desc: "ภูเขาที่สร้างโดยการสะสมของ lava และ pyroclastic material ไม่ใช่จากการพับหรือเลื่อนของชั้นหิน พบตามแนว subduction และ hot spots",
       tags: ["Lava accumulation", "Along plate margins", "Ex: Cascade Range, Ring of Fire"],
+      storyLinks: [{id:"ring-of-fire",label:"Pacific Ring of Fire"},{id:"ring-of-fire-indonesia",label:"Indonesia Arc"}],
     },
     {
       name: "Residual Mountains (Monadnocks)",
       photo: p("1506905925346-21bda4d32df4"),
       desc: "เกิดจากการกัดเซาะหิน erosion ของภูเขาเก่า ทิ้งหินแข็งส่วนที่ทนทานไว้เป็นยอดเขาโดด บ่งบอกถึงประวัติธรณีวิทยาที่ยาวนาน",
       tags: ["Erosional remnant", "Hard rock inlier", "Ex: Uluru, Inselbergs of Africa"],
+      storyLinks: [{id:"guiana-shield-tepui",label:"Tepui, Guiana Shield"},{id:"canadian-shield",label:"Canadian Shield"}],
     },
     {
       name: "Plateau (High-level plain)",
       photo: p("1500534314209-a25ddb2bd429"),
       desc: "ที่ราบสูงที่ยกตัวจากกระบวนการ tectonic uplift หรือ lava flooding ขอบมักตัดชันเป็น escarpment มีความสำคัญต่อ water supply และเกษตร",
       tags: ["Flat-topped", "Uplifted", "Ex: Tibetan Plateau, Deccan Plateau, Colorado Plateau"],
+      storyLinks: [{id:"tibetan-plateau",label:"Tibetan Plateau"},{id:"deccan-plateau",label:"Deccan Plateau"}],
     },
   ],
 
@@ -9326,36 +9337,42 @@ const TYPE_GALLERIES = {
       photo: p("1500530855697-b586d89ba3ee"),
       desc: "แม่น้ำที่ไหลคดเคี้ยวในที่ราบลุ่ม มี meander bends กัดเซาะฝั่งนอกและทับถมฝั่งใน เกิด oxbow lakes เมื่อ meander ตัดขาด",
       tags: ["Low gradient", "Lateral erosion", "Oxbow lakes", "Ex: Amazon, Mississippi"],
+      storyLinks: [{id:"amazon",label:"Amazon"},{id:"mississippi-meander-oxbow",label:"Mississippi Meander"}],
     },
     {
       name: "Braided River",
       photo: p("1474044159687-1ee9f3a51722"),
       desc: "แม่น้ำที่แตกแขนงเป็นร่องน้ำหลายสายสลับกับสันทรายและกรวด เกิดในพื้นที่ที่มีตะกอนสูงและ gradient ชัน น้ำท่วมสม่ำเสมอ",
       tags: ["High sediment load", "Multiple channels", "Unstable banks", "Ex: Brahmaputra, Waimakariri"],
+      storyLinks: [{id:"braided-river-sediment-new-zealand",label:"Waimakariri, NZ"},{id:"indus-floodplain",label:"Indus / Brahmaputra"}],
     },
     {
       name: "Canyon / Gorge",
       photo: p("1500534314209-a25ddb2bd429"),
       desc: "หุบเขาลึกที่แม่น้ำกัดเซาะหินแข็งในแนวดิ่ง มักพบในที่ราบสูงที่ยกตัว หน้าผาชันและชั้นหินเผยให้เห็นประวัติธรณีวิทยา",
       tags: ["Vertical erosion", "Resistant rock", "Geological record", "Ex: Grand Canyon, Yarlung Tsangpo"],
+      storyLinks: [{id:"grand-canyon",label:"Grand Canyon"},{id:"colorado-river-water",label:"Colorado River"}],
     },
     {
       name: "River Delta",
       photo: p("1484318571209-661cf29a69c3"),
       desc: "พื้นที่สะสมตะกอนปากแม่น้ำ เกิดเมื่อกระแสน้ำช้าลงและตะกอนทับถม แบ่งเป็น bird-foot delta, arcuate delta, cuspate delta ตามพลังงานคลื่น",
       tags: ["Sediment deposition", "Multiple distributaries", "Fertile land", "Ex: Nile, Mekong, Mississippi"],
+      storyLinks: [{id:"mekong-delta",label:"Mekong Delta"},{id:"nile-delta",label:"Nile Delta"},{id:"mississippi-floodplain",label:"Mississippi"}],
     },
     {
       name: "Waterfall & Rapids",
       photo: p("1516026672322-bc52d61a55d5"),
       desc: "เกิดเมื่อแม่น้ำไหลผ่านจากชั้นหินแข็งลงสู่หินอ่อน หรือเมื่อหน้าผาถูกตัดขวาง เป็นสัญญาณของ knickpoint ในโปรไฟล์ตามยาวของแม่น้ำ",
       tags: ["Knickpoint", "Hard/soft rock contact", "Energy dissipation", "Ex: Victoria Falls, Niagara, Iguaçu"],
+      storyLinks: [{id:"iguazu-falls",label:"Iguaçu Falls"},{id:"victoria-falls-gorge",label:"Victoria Falls"}],
     },
     {
       name: "Alluvial Fan / Bajada",
       photo: p("1509316785289-025f5b846b35"),
       desc: "พัดรูปพัดของตะกอนที่เกิดเมื่อแม่น้ำออกจากภูเขาสู่ที่ราบและพลังงานลดลงอย่างรวดเร็ว หลายพัดซ้อนกันเป็น bajada ตามเชิงเขา",
       tags: ["Mountain-plain transition", "Coarse-to-fine sorting", "Ex: Death Valley, Himalayan piedmont"],
+      storyLinks: [{id:"himalaya",label:"Himalayan Piedmont"},{id:"death-valley-playa",label:"Death Valley"}],
     },
   ],
 
@@ -9365,36 +9382,42 @@ const TYPE_GALLERIES = {
       photo: p("1507525428034-b723cf961d3e"),
       desc: "ชายหาดทรายเกิดจากตะกอนละเอียดที่ถูกพัดพามาโดย longshore drift และ wave action ความชันของหาดสัมพันธ์กับขนาดเม็ดทราย",
       tags: ["Depositional coast", "Longshore drift", "Swash & backwash", "Ex: Bondi, Copacabana, Patong"],
+      storyLinks: [{id:"eastern-seaboard-thailand",label:"Thailand Eastern Seaboard"},{id:"galapagos",label:"Galápagos"}],
     },
     {
       name: "Sea Cliff & Wave-cut Platform",
       photo: p("1464822759023-fed622ff2c3b"),
       desc: "ชายฝั่งกัดเซาะที่ถูกคลื่นขุดกินและทำให้หน้าผาถอยร่น ด้านล่างเกิด wave-cut platform ราบ ใต้น้ำขึ้นน้ำลง",
       tags: ["Erosional coast", "Wave undercutting", "Notch & cave", "Ex: White Cliffs of Dover, Twelve Apostles"],
+      storyLinks: [{id:"white-cliffs-dover",label:"White Cliffs of Dover"},{id:"jurassic-coast",label:"Jurassic Coast"}],
     },
     {
       name: "Coral Reef",
       photo: p("1544551763-46a013bb70d5"),
       desc: "โครงสร้างชีวภาพที่ coral polyps สร้างจาก calcium carbonate ต้องการน้ำอุ่น ใส และแสงแดด แบ่งเป็น fringing, barrier, atoll ตามตำแหน่ง",
       tags: ["Biogenic structure", "Warm & clear water", "Fringing/Barrier/Atoll", "Ex: Great Barrier Reef, Maldives"],
+      storyLinks: [{id:"great-barrier-reef-system",label:"Great Barrier Reef"},{id:"maldives-atolls",label:"Maldives Atolls"}],
     },
     {
       name: "Mangrove Coast",
       photo: p("1501691223387-dd0500403074"),
       desc: "ป่าชายเลนในน้ำกร่อยเขตร้อน รากค้ำยันดักตะกอนและป้องกันคลื่น เป็น nursery ของสัตว์น้ำ และ carbon sink สำคัญ",
       tags: ["Brackish water", "Prop roots", "Carbon sink", "Ex: Sundarbans, Mekong Delta"],
+      storyLinks: [{id:"sundarbans",label:"Sundarbans"},{id:"sundarbans-cyclone-adaptation",label:"Sundarbans Cyclone"},{id:"mekong-delta",label:"Mekong Delta"}],
     },
     {
       name: "Estuary & Drowned Valley (Ria)",
       photo: p("1500375592092-40eb2168fd21"),
       desc: "ปากแม่น้ำที่น้ำทะเลรุกเข้ามา น้ำจืดกับน้ำเค็มผสมกันตาม tidal cycle ความเค็มเปลี่ยนตามช่วงน้ำขึ้นน้ำลงและน้ำหลาก",
       tags: ["Tidal mixing", "Salinity gradient", "Ex: Thames, Chesapeake Bay, Elbe"],
+      storyLinks: [{id:"bay-of-fundy-tides",label:"Bay of Fundy"},{id:"estuary-salt-wedge-mekong",label:"Mekong Salt Wedge"}],
     },
     {
       name: "Barrier Island & Lagoon",
       photo: p("1484318571209-661cf29a69c3"),
       desc: "เกาะสันทรายที่วิ่งขนานชายฝั่ง กั้นน้ำเป็น lagoon ด้านใน เกิดจาก longshore drift และ wave action ความสูงต่ำทำให้เปราะบางต่อ storm surge",
       tags: ["Barrier island", "Sheltered lagoon", "Ex: Outer Banks NC, Venice Lagoon, Wadden Sea"],
+      storyLinks: [{id:"venice-lagoon",label:"Venice Lagoon"},{id:"songkhla-lagoon-brackish",label:"Songkhla Lagoon"}],
     },
   ],
 
@@ -9404,30 +9427,35 @@ const TYPE_GALLERIES = {
       photo: p("1509316785289-025f5b846b35"),
       desc: "ทะเลทรายทรายที่ dunes ปกคลุม ลมพัดพา sand grains กระโดดแบบ saltation สร้าง barchan, seif, star dunes ตามทิศและความแรงลม",
       tags: ["Sand dunes", "Saltation transport", "Barchan/Seif/Star", "Ex: Saharan Erg, Rub' al Khali"],
+      storyLinks: [{id:"rub-al-khali-erg",label:"Rub' al Khali"},{id:"sahara",label:"Sahara Erg"}],
     },
     {
       name: "Hammada (Rocky Desert)",
       photo: p("1500534314209-a25ddb2bd429"),
       desc: "ทะเลทรายที่พื้นผิวเป็นหินโผล่หรือกรวดขนาดใหญ่ ลมพัดเม็ดทรายออกจนเหลือแต่หิน เกิด varnish สีดำจากออกไซด์บนผิวหิน",
       tags: ["Wind deflation", "Rock pavement", "Desert varnish", "Ex: Sahara interior, Arabian Desert"],
+      storyLinks: [{id:"sahara",label:"Sahara"},{id:"wadi-rum",label:"Wadi Rum"}],
     },
     {
       name: "Reg (Gravel Desert / Serir)",
       photo: p("1474044159687-1ee9f3a51722"),
       desc: "ทะเลทรายกรวดที่ลมคัดแยกทรายออก เหลือหินและกรวดขนาดกลางปูพื้น เป็น lag deposit ที่ป้องกันการกัดเซาะต่อไป",
       tags: ["Lag gravel", "Wind sorting", "Ex: Sahel, Central Asian Reg"],
+      storyLinks: [{id:"gobi",label:"Gobi Desert"},{id:"central-asian-steppe",label:"Central Asian Steppe"}],
     },
     {
       name: "Cold Desert (Continental / Polar)",
       photo: p("1519681393784-d120267933ba"),
       desc: "ทะเลทรายเย็นที่ฝนน้อย เพราะอยู่ในแผ่นดินไกล ทะเล หรือลมถูก rain shadow เกาะ Gobi มีหิมะฤดูหนาว Antarctic Dry Valleys แห้งที่สุด",
       tags: ["Cold & dry", "Rain shadow or interior", "Ex: Gobi, Atacama, Antarctic Dry Valleys"],
+      storyLinks: [{id:"gobi",label:"Gobi"},{id:"atacama-desert",label:"Atacama"},{id:"antarctic-dry-valleys",label:"Antarctic Dry Valleys"}],
     },
     {
       name: "Coastal Desert (Fog Desert)",
       photo: p("1507525428034-b723cf961d3e"),
       desc: "ทะเลทรายริมทะเลที่แห้งเพราะกระแสน้ำเย็นชายฝั่งทำให้อากาศเย็นและตกฝนยาก แต่มีหมอกและน้ำค้างที่พืชบางชนิดใช้ประโยชน์ได้",
       tags: ["Cold ocean current", "Fog not rain", "Ex: Namib, Atacama coast, Baja California"],
+      storyLinks: [{id:"namib-fog-desert",label:"Namib Fog Desert"},{id:"namib-coastal-desert",label:"Namib Coast"},{id:"atacama",label:"Atacama"}],
     },
   ],
 
@@ -9437,30 +9465,35 @@ const TYPE_GALLERIES = {
       photo: p("1519681393784-d120267933ba"),
       desc: "ธารน้ำแข็งที่ไหลลงหุบเขาภูเขาสูง ขูดและขยายหุบเขาจาก V-shape เป็น U-shape ทิ้ง lateral moraines ทั้งสองฝั่งและ terminal moraine ที่ปลาย",
       tags: ["Mountain glacier", "U-shaped valley", "Moraines", "Ex: Aletsch, Franz Josef, Perito Moreno"],
+      storyLinks: [{id:"alps-glacier-retreat",label:"Alps Glacier Retreat"},{id:"patagonian-icefields",label:"Patagonian Icefields"},{id:"karakoram-glaciers",label:"Karakoram"}],
     },
     {
       name: "Ice Sheet (Continental Glacier)",
       photo: p("1464822759023-fed622ff2c3b"),
       desc: "แผ่นน้ำแข็งขนาดทวีปที่ปกคลุมพื้นดินทั้งหมด หนาหลายกิโลเมตร กดพื้นดินให้ทรุดและปล่อย ice streams ลงสู่ทะเล ควบคุมระดับน้ำทะเลโลก",
       tags: ["Continent-scale", "Isostatic depression", "Sea level control", "Ex: Antarctica, Greenland"],
+      storyLinks: [{id:"antarctic-ice-sheet",label:"Antarctica"},{id:"greenland-ice-sheet-mass-balance",label:"Greenland Ice Sheet"}],
     },
     {
       name: "Cirque Glacier",
       photo: p("1544735716-392fe2489ffa"),
       desc: "ธารน้ำแข็งขนาดเล็กในแอ่งชามบนภูเขา เกิดจากหิมะสะสมในแอ่งที่หันหน้าไปทางขั้วโลก plucking กัดผิวหินจนเกิด cirque (corrie) กลม",
       tags: ["Bowl-shaped corrie", "Plucking & abrasion", "Tarn lake after melting", "Ex: Alps, Rockies, Andes"],
+      storyLinks: [{id:"alps",label:"Alps"},{id:"karakoram-glaciers",label:"Karakoram"},{id:"patagonia",label:"Patagonia"}],
     },
     {
       name: "Tidewater Glacier",
       photo: p("1507525428034-b723cf961d3e"),
       desc: "ธารน้ำแข็งที่ไหลลงถึงทะเล หัก (calving) เป็นภูเขาน้ำแข็ง (iceberg) น้ำแข็งที่ละลายส่งผลโดยตรงต่อระดับน้ำทะเลและการไหลเวียนมหาสมุทร",
       tags: ["Calving icebergs", "Sea level impact", "Ex: Columbia Glacier Alaska, Sermeq Kujalleq"],
+      storyLinks: [{id:"patagonian-icefields",label:"Patagonian Icefields"},{id:"vatnajokull-glacier",label:"Vatnajökull, Iceland"}],
     },
     {
       name: "Ice Shelf & Ice Stream",
       photo: p("1500375592092-40eb2168fd21"),
       desc: "แผ่นน้ำแข็งลอยบนทะเลที่ต่อมาจาก ice sheet ทำหน้าที่ 'buttress' กั้น ice streams ที่ไหลเร็ว หาก ice shelf พัง ice streams ไหลลงทะเลเร็วขึ้น",
       tags: ["Floating ice", "Buttressing effect", "Ex: Ross Ice Shelf, Larsen C"],
+      storyLinks: [{id:"antarctic-ice-sheet",label:"Antarctica"},{id:"arctic-sea-ice",label:"Arctic Sea Ice"}],
     },
   ],
 
@@ -9470,42 +9503,49 @@ const TYPE_GALLERIES = {
       photo: p("1516026672322-bc52d61a55d5"),
       desc: "ฝนตลอดปีมากกว่า 2,000 มม. ไม่มีฤดูแล้ง อุณหภูมิ 25–27°C ตลอดปี ป่าทึบสูงหลายชั้น biodiversity สูงสุดในโลก",
       tags: ["No dry season", ">2,000 mm/yr", "ITCZ controlled", "Ex: Amazon, Congo, Borneo"],
+      storyLinks: [{id:"amazon",label:"Amazon"},{id:"congo-basin",label:"Congo Basin"},{id:"borneo-rainforest",label:"Borneo"}],
     },
     {
       name: "Tropical Savanna (Aw)",
       photo: p("1474044159687-1ee9f3a51722"),
       desc: "ฤดูฝนและฤดูแล้งสลับชัดเจน ทุ่งหญ้าสูงและต้นไม้กระจาย ไฟป่าเป็นส่วนหนึ่งของ cycle ฝนตามการเคลื่อนที่ของ ITCZ",
       tags: ["Wet & dry seasons", "Grass dominant", "Fire cycle", "Ex: African savanna, Brazilian Cerrado"],
+      storyLinks: [{id:"serengeti-savanna",label:"Serengeti"},{id:"brazil-cerrado-ecotone",label:"Cerrado"}],
     },
     {
       name: "Hot Desert (BWh / BWk)",
       photo: p("1509316785289-025f5b846b35"),
       desc: "ฝนน้อยกว่า 250 มม./ปี ช่วงกลางวันร้อนจัด กลางคืนเย็น อุณหภูมิแกว่งมาก พืชปกคลุมน้อย ระเหยสูงกว่าฝนมาก",
       tags: ["<250 mm/yr", "High evapotranspiration", "Subtropical high pressure", "Ex: Sahara, Arabian, Australian"],
+      storyLinks: [{id:"sahara",label:"Sahara"},{id:"rub-al-khali-erg",label:"Rub' al Khali"},{id:"atacama-desert",label:"Atacama"}],
     },
     {
       name: "Mediterranean (Csa/Csb)",
       photo: p("1501691223387-dd0500403074"),
       desc: "ฤดูร้อนแห้งร้อน ฤดูหนาวชื้นอบอุ่น พืชปรับตัวทนแล้งโดยมีใบแข็งและเล็ก เกษตรพึ่ง winter rainfall เหมาะปลูกมะกอก องุ่น ส้ม",
       tags: ["Dry hot summer", "Wet mild winter", "Sclerophyllous plants", "Ex: S. Europe, California, SW Australia"],
+      storyLinks: [{id:"mediterranean",label:"Mediterranean Sea"},{id:"cape-town-mediterranean",label:"Cape Town"}],
     },
     {
       name: "Temperate Oceanic (Cfb)",
       photo: p("1506905925346-21bda4d32df4"),
       desc: "ภูมิอากาศอบอุ่นชื้นชายฝั่ง ฝนกระจายตลอดปี อุณหภูมิสม่ำเสมอ ป่าผลัดใบ เกษตรเข้มข้น กระแสน้ำอุ่นควบคุมอุณหภูมิ",
       tags: ["Year-round rainfall", "Mild winters", "Deciduous forest", "Ex: W. Europe, NZ, Pacific NW"],
+      storyLinks: [{id:"british-isles-oceanic",label:"British Isles"},{id:"new-zealand-oceanic",label:"New Zealand"}],
     },
     {
       name: "Subarctic Taiga (Dfc/Dfd)",
       photo: p("1516026672322-bc52d61a55d5"),
       desc: "ป่าสนที่ใหญ่ที่สุดในโลก ฤดูหนาวยาวและหนาวจัด ฤดูร้อนสั้น ดิน permafrost ลึกลงไป tree species น้อย แต่ total biomass มาก",
       tags: ["Boreal forest", "Long cold winters", "Short summers", "Ex: Siberia, Canada, Alaska, Scandinavia"],
+      storyLinks: [{id:"siberian-taiga",label:"Siberian Taiga"},{id:"canadian-boreal-fire-climate",label:"Canadian Boreal"}],
     },
     {
       name: "Tundra & Polar (ET/EF)",
       photo: p("1519681393784-d120267933ba"),
       desc: "หนาวจัดตลอดปี พืชขนาดเล็กทนหนาว mosses, lichens, sedges ปกคลุม permafrost ควบคุม hydrology ฤดูร้อนสั้นทำให้ carbon cycle เปราะบาง",
       tags: ["Frozen subsoil", "Low vegetation", "Carbon-rich permafrost", "Ex: Arctic, Antarctic, High mountains"],
+      storyLinks: [{id:"tundra",label:"Arctic Tundra"},{id:"arctic-sea-ice",label:"Arctic Sea Ice"},{id:"antarctic-ice-sheet",label:"Antarctica"}],
     },
   ],
 
@@ -9515,36 +9555,42 @@ const TYPE_GALLERIES = {
       photo: p("1500534314209-a25ddb2bd429"),
       desc: "พลังงานจากรอยเลื่อนปลดปล่อยเป็น seismic waves ทำให้ดินสั่น โครงสร้างพัง อาจตามด้วย liquefaction, tsunami, landslide ความรุนแรงวัดด้วย moment magnitude scale",
       tags: ["Seismic waves", "Fault rupture", "P & S waves", "Ex: 2004 Sumatra, 2011 Tohoku, 1960 Valdivia"],
+      storyLinks: [{id:"san-andreas-fault",label:"San Andreas Fault"},{id:"christchurch-liquefaction",label:"Christchurch"},{id:"ring-of-fire",label:"Ring of Fire"}],
     },
     {
       name: "Tsunami",
       photo: p("1507525428034-b723cf961d3e"),
       desc: "คลื่นยาวพลังงานสูงเกิดจาก submarine earthquake, landslide หรือภูเขาไฟ เคลื่อนที่ข้ามมหาสมุทรด้วยความเร็ว 700–900 กม./ชม. ซัดฝั่งสูงหลายสิบเมตร",
       tags: ["Long-wavelength wave", "800 km/h in deep ocean", "Run-up amplification", "Ex: 2004 Indian Ocean, 2011 Japan"],
+      storyLinks: [{id:"indian-ocean-tsunami",label:"Indian Ocean 2004"},{id:"cascadia-tsunami-evacuation",label:"Cascadia Zone"}],
     },
     {
       name: "Tropical Cyclone / Typhoon / Hurricane",
       photo: p("1501691223387-dd0500403074"),
       desc: "ระบบพายุหมุนเขตร้อนที่ขับเคลื่อนด้วยพลังงานความร้อนชื้นจากทะเลอุ่น กำแพงตา (eyewall) มีลมแรงสุด storm surge คือความเสียหายหลักชายฝั่ง",
       tags: ["Warm ocean energy", "Eye & eyewall", "Storm surge", "Ex: Haiyan 2013, Katrina 2005"],
+      storyLinks: [{id:"bay-of-bengal-cyclone",label:"Bay of Bengal"},{id:"hainan-typhoon-coast",label:"Hainan Typhoon"}],
     },
     {
       name: "Flood",
       photo: p("1500530855697-b586d89ba3ee"),
       desc: "น้ำท่วมเกิดจาก rainfall เกิน capacity ของลุ่มน้ำ หรือ dam failure ประเภท flash flood, riverine flood, coastal flood มีผลต่าง ๆ กัน",
       tags: ["Discharge exceeds bank-full", "Flash/Riverine/Coastal", "Ex: Pakistan 2010, Thailand 2011"],
+      storyLinks: [{id:"mekong-flood-pulse",label:"Mekong Flood Pulse"},{id:"mississippi-floodplain",label:"Mississippi Floodplain"},{id:"bangladesh-river-chars",label:"Bangladesh Chars"}],
     },
     {
       name: "Landslide & Debris Flow",
       photo: p("1464822759023-fed622ff2c3b"),
       desc: "ดินหรือหินเลื่อนตัวลงเนินชัน เกิดง่ายเมื่อฝนหนัก แผ่นดินไหว หรือการตัดหน้าดิน debris flow เคลื่อนไว อันตรายต่อชุมชนเชิงเขา",
       tags: ["Slope failure", "Water saturation", "Ex: Oso WA 2014, Philippines floods"],
+      storyLinks: [{id:"nepal-landslide",label:"Nepal"},{id:"hong-kong-landslides",label:"Hong Kong"},{id:"imja-glof-himalaya",label:"GLOF Himalaya"}],
     },
     {
       name: "Wildfire",
       photo: p("1516026672322-bc52d61a55d5"),
       desc: "ไฟป่าลุกลามในสภาวะแห้ง ร้อน ลมแรง เชื้อเพลิงสูง ส่งผล smoke, air quality, carbon release, biodiversity loss ปัจจุบันรุนแรงขึ้นจาก climate change",
       tags: ["Fire-weather interaction", "Fuel-moisture deficit", "Ex: Australia 2019–20, Canada 2023"],
+      storyLinks: [{id:"california-wildfire",label:"California"},{id:"blue-mountains-bushfire",label:"Blue Mountains, AU"},{id:"canadian-boreal-fire-climate",label:"Canadian Boreal"}],
     },
   ],
 
@@ -9554,30 +9600,35 @@ const TYPE_GALLERIES = {
       photo: p("1506905925346-21bda4d32df4"),
       desc: "หินปูนที่ถูก chemical weathering กัดกร่อนนานจนเหลือเป็นยอดหินโดดตั้งชัน พบในเขตร้อนชื้นที่ dissolution rate สูง ภูมิทัศน์เป็น iconic",
       tags: ["Tropical limestone", "Intense dissolution", "Ex: Guilin, Ha Long Bay, Phang Nga Bay"],
+      storyLinks: [{id:"guilin-karst",label:"Guilin, China"},{id:"ha-long-bay-karst",label:"Hạ Long Bay"},{id:"krabi-karst",label:"Krabi, Thailand"}],
     },
     {
       name: "Cave & Cavern System",
       photo: p("1500375592092-40eb2168fd21"),
       desc: "น้ำที่มี CO₂ ละลาย limestone ตามรอยแตก สร้าง passages, chambers stalactites (จากเพดาน) และ stalagmites (จากพื้น) เป็นหลักฐาน paleo-climate",
       tags: ["Speleothem", "Stalactite & stalagmite", "Paleoclimate record", "Ex: Mammoth Cave, Son Doong"],
+      storyLinks: [{id:"ha-long-bay-karst",label:"Hạ Long Bay Caves"},{id:"karst-spring-dinaric-alps",label:"Dinaric Alps"}],
     },
     {
       name: "Sinkhole (Doline & Cenote)",
       photo: p("1474044159687-1ee9f3a51722"),
       desc: "แอ่งยุบตัวบนผิวโลกเมื่อหลังคาถ้ำพังหรือ limestone ถูกละลายจนโพรง cenotes ในยูคาทันเป็น sacred water source ของ Maya",
       tags: ["Collapse or solution", "Groundwater portal", "Ex: Yucatan cenotes, Florida sinkholes"],
+      storyLinks: [{id:"guilin-karst",label:"Guilin Karst"},{id:"phang-nga-bay",label:"Phang Nga Bay"}],
     },
     {
       name: "Karst Spring & Resurgence",
       photo: p("1500530855697-b586d89ba3ee"),
       desc: "น้ำใต้ดินที่ไหลผ่านระบบถ้ำโผล่ขึ้นมาเป็นน้ำพุขนาดใหญ่ (resurgence) ดีต่อน้ำดื่มแต่เปราะบางต่อมลพิษเพราะ filtration น้อย",
       tags: ["Resurgence spring", "Rapid groundwater flow", "Ex: Vaucluse spring, Fontaine-de-Vaucluse"],
+      storyLinks: [{id:"karst-spring-dinaric-alps",label:"Dinaric Alps"}],
     },
     {
       name: "Polje (Karst Valley Floor)",
       photo: p("1484318571209-661cf29a69c3"),
       desc: "ที่ราบขนาดใหญ่ในพื้นที่ karst เกิดจาก dissolution และ flooding seaonal น้ำระบาย swallow holes เมื่อน้ำลด ใช้เกษตรในฤดูแล้ง",
       tags: ["Flat karst floor", "Seasonal flooding", "Ex: Balkan poljes, Livno"],
+      storyLinks: [{id:"karst-spring-dinaric-alps",label:"Dinaric Alps"},{id:"krabi-karst",label:"Krabi"}],
     },
   ],
 
@@ -9587,36 +9638,42 @@ const TYPE_GALLERIES = {
       photo: p("1516026672322-bc52d61a55d5"),
       desc: "ระบบนิเวศที่มี biomass และ biodiversity สูงสุด ชั้นเรือนยอด 40–70 เมตร carbon sink สำคัญ ถูกคุกคามโดย deforestation",
       tags: ["High biodiversity", "Closed canopy", "Carbon sink", "Ex: Amazon, Congo, SE Asian rainforest"],
+      storyLinks: [{id:"amazon",label:"Amazon"},{id:"congo-basin",label:"Congo Basin"},{id:"borneo-rainforest",label:"Borneo"}],
     },
     {
       name: "Temperate Deciduous Forest",
       photo: p("1441974231531-c6227db76b6e"),
       desc: "ป่าผลัดใบในเขตอบอุ่น ใบร่วงฤดูหนาวเพื่อลด water loss nutrient cycling ชัดเจนตามฤดูกาล ดินอุดมสมบูรณ์เหมาะเกษตร",
       tags: ["Deciduous trees", "4-season cycle", "Rich humus soil", "Ex: N. America, Europe, E. Asia"],
+      storyLinks: [{id:"british-isles-oceanic",label:"British Isles"},{id:"great-dividing-range",label:"Great Dividing Range"}],
     },
     {
       name: "Savanna & Grassland",
       photo: p("1474044159687-1ee9f3a51722"),
       desc: "ทุ่งหญ้าและต้นไม้กระจาย ไฟเป็นตัวควบคุมสำคัญ มีคาร์บอนสะสมในดินมาก สัตว์ป่าขนาดใหญ่ฝูงและ predators",
       tags: ["Grass-dominated", "Fire-maintained", "Large herbivores", "Ex: Serengeti, Cerrado, Australian outback"],
+      storyLinks: [{id:"serengeti-savanna",label:"Serengeti"},{id:"brazil-cerrado-ecotone",label:"Cerrado"}],
     },
     {
       name: "Wetland & Peatland",
       photo: p("1507525428034-b723cf961d3e"),
       desc: "พื้นที่น้ำหล่อเลี้ยงตลอดปีหรือตามฤดูกาล peat สะสม carbon ยาวนาน เป็น nursery สัตว์น้ำ กรองน้ำ และลดน้ำท่วม",
       tags: ["High carbon storage", "Water filtration", "Biodiversity hotspot", "Ex: Everglades, Pantanal, Mekong wetlands"],
+      storyLinks: [{id:"everglades-wetland",label:"Everglades"},{id:"pantanal-wetland",label:"Pantanal"},{id:"sumatra-peat-fire",label:"Sumatra Peat"}],
     },
     {
       name: "Kelp Forest & Seagrass Meadow",
       photo: p("1544551763-46a013bb70d5"),
       desc: "ระบบนิเวศชายฝั่งน้ำเย็นถึงอบอุ่น kelp สูง 40 เมตร ให้ที่อยู่แก่สัตว์หลากหลาย seagrass เก็บ carbon ได้มากกว่าป่าบกต่อพื้นที่",
       tags: ["Coastal marine", "Blue carbon", "High productivity", "Ex: California kelp, Mediterranean Posidonia"],
+      storyLinks: [{id:"monterey-kelp-forest",label:"Monterey, CA"},{id:"shark-bay-seagrass",label:"Shark Bay, WA"}],
     },
     {
       name: "Alpine & Tundra Ecosystem",
       photo: p("1544735716-392fe2489ffa"),
       desc: "ระบบนิเวศเหนือแนวป่าหรือในเขตขั้วโลก พืชเตี้ยและทนหนาว ดิน permafrost กักคาร์บอน การเปลี่ยนแปลงภูมิอากาศส่งผลเร็ว",
       tags: ["Above treeline", "Permafrost", "Rapid warming impact", "Ex: Arctic tundra, Tibetan plateau"],
+      storyLinks: [{id:"svalbard-tundra",label:"Svalbard"},{id:"kilimanjaro-altitude-zones",label:"Kilimanjaro Zones"}],
     },
   ],
 
@@ -9626,36 +9683,42 @@ const TYPE_GALLERIES = {
       photo: p("1484318571209-661cf29a69c3"),
       desc: "เมืองที่ตั้งบนดินดอนปากแม่น้ำ เข้าถึงทะเลและแผ่นดิน ดินอุดมเหมาะเกษตร แต่เสี่ยง subsidence น้ำท่วม น้ำเค็มรุก และระดับน้ำทะเลสูง",
       tags: ["Subsidence risk", "Fertile soil", "Flood-prone", "Ex: Bangkok, Jakarta, Shanghai, Cairo"],
+      storyLinks: [{id:"bangkok-heat",label:"Bangkok"},{id:"jakarta-subsidence",label:"Jakarta"},{id:"yangtze-delta",label:"Yangtze Delta"}],
     },
     {
       name: "Port & Coastal City",
       photo: p("1507525428034-b723cf961d3e"),
       desc: "เมืองท่าเรือที่ขับเคลื่อนด้วยการค้าทางทะเล ท่าเรือน้ำลึก container terminals ขยาย waterfront ด้วยการถมทะเล เสี่ยง storm surge และ sea level rise",
       tags: ["Maritime trade", "Reclaimed land", "Storm surge risk", "Ex: Singapore, Rotterdam, Dubai, Hong Kong"],
+      storyLinks: [{id:"singapore-urban-geography",label:"Singapore"},{id:"dubai-desert-city",label:"Dubai"},{id:"jebel-ali-port-logistics",label:"Jebel Ali Port"}],
     },
     {
       name: "Irrigated Agricultural Landscape",
       photo: p("1501691223387-dd0500403074"),
       desc: "ภูมิทัศน์เกษตรที่พึ่ง irrigation จากแม่น้ำหรือ groundwater เปลี่ยนทะเลทรายและที่ราบแห้งเป็นพื้นที่ผลิตอาหาร แต่มีปัญหา salinization และ aquifer depletion",
       tags: ["Water-dependent farming", "Salinization risk", "Ex: Nile valley, Central Valley CA, Indus plains"],
+      storyLinks: [{id:"nile-river",label:"Nile Valley"},{id:"bali-subak-irrigation",label:"Bali Subak"},{id:"colorado-river-water",label:"Colorado River"}],
     },
     {
       name: "Mountain Terrace & Highland City",
       photo: p("1506905925346-21bda4d32df4"),
       desc: "การตั้งถิ่นฐานบนพื้นที่สูง เกษตรขั้นบันได (terrace farming) จัดการน้ำและดินชันได้ดี อุณหภูมิเย็น เส้นทางคมนาคมยาก",
       tags: ["Terrace farming", "Altitude climate", "Ex: Banaue terraces, Machu Picchu, Kathmandu"],
+      storyLinks: [{id:"rice-terraces-banaue",label:"Banaue Terraces"},{id:"machu-picchu",label:"Machu Picchu"},{id:"ifugao-rice-terraces",label:"Ifugao Terraces"}],
     },
     {
       name: "Desert Oasis & Qanāt City",
       photo: p("1509316785289-025f5b846b35"),
       desc: "ชุมชนในทะเลทรายพึ่ง groundwater ผ่าน qanāt (คลองใต้ดิน), artesian wells หรือ oasis ธรรมชาติ เศรษฐกิจ date palm, trade route",
       tags: ["Groundwater dependent", "Qanat system", "Ex: Yazd Iran, Mecca, Al-Ain UAE"],
+      storyLinks: [{id:"siwa-oasis",label:"Siwa Oasis"},{id:"oman-falaj-qanat",label:"Oman Falaj"},{id:"al-hasa-oasis",label:"Al-Hasa Oasis"}],
     },
     {
       name: "Urban Heat Island City",
       photo: p("1494526585095-c41746248156"),
       desc: "เมืองขนาดใหญ่ที่ concrete และ asphalt สะสมความร้อนทำให้ร้อนกว่าชนบท 2–8°C green roof, urban forest, cool pavement เป็นทางแก้",
       tags: ["Concrete heat storage", "2–8°C warmer", "Green infrastructure", "Ex: Tokyo, Seoul, Beijing, Bangkok"],
+      storyLinks: [{id:"tokyo",label:"Tokyo"},{id:"bangkok-heat",label:"Bangkok"},{id:"singapore-urban-heat",label:"Singapore UHI"}],
     },
   ],
 
@@ -9680,6 +9743,11 @@ function buildTypeGallery(items) {
               <ul class="type-card-tags">
                 ${item.tags.map((t) => `<li>${t}</li>`).join("")}
               </ul>
+              ${item.storyLinks && item.storyLinks.length > 0 ? `
+              <div class="type-card-stories">
+                <span class="type-card-stories-label"><i data-lucide="map-pin"></i>ดูในแผนที่:</span>
+                ${item.storyLinks.map(s => `<button class="type-card-story-btn" type="button" data-story-link="${s.id}">${s.label}</button>`).join("")}
+              </div>` : ""}
             </div>
           </div>`,
           )
@@ -10284,6 +10352,10 @@ function renderStory(topic) {
 
   storyReader.querySelectorAll("[data-related-topic]").forEach((btn) => {
     btn.addEventListener("click", () => selectTopic(btn.dataset.relatedTopic, false));
+  });
+
+  storyReader.querySelectorAll("[data-story-link]").forEach((btn) => {
+    btn.addEventListener("click", () => selectTopic(btn.dataset.storyLink, false));
   });
 
   const openMapBtn = document.getElementById("readerOpenMapBtn");
