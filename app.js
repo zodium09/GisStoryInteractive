@@ -712,11 +712,11 @@ function renderConceptTextbook(conceptKey) {
   tb.innerHTML = `
     <div class="ctb-hero" style="background-image:url('${def.image}')">
       <div class="ctb-hero-inner">
-        <span class="ctb-badge">Encyclopedia</span>
+        <span class="ctb-badge">สารานุกรม</span>
         <h2>${def.title}</h2>
         <p>${def.subtitle}</p>
       </div>
-      <button class="ctb-close" type="button" id="ctbCloseBtn" aria-label="Close textbook">✕</button>
+      <button class="ctb-close" type="button" id="ctbCloseBtn" aria-label="ปิด">✕</button>
     </div>
     <div class="ctb-body">
       <p class="ctb-definition">${guide.definition}</p>
@@ -749,7 +749,7 @@ function renderConceptTextbook(conceptKey) {
 
       <div class="ctb-divider">
         <i data-lucide="layers"></i>
-        <span>Explore real-world locations below</span>
+        <span>สำรวจสถานที่จริงด้านล่าง</span>
         <i data-lucide="chevron-down"></i>
       </div>
     </div>
@@ -10711,10 +10711,10 @@ function renderStory(topic) {
         <a class="article-action-link"
            href="https://www.openstreetmap.org/?mlat=${topic.coords[0]}&mlon=${topic.coords[1]}#map=${topic.zoom}/${topic.coords[0]}/${topic.coords[1]}"
            target="_blank" rel="noreferrer">
-          <i data-lucide="external-link"></i>Open in OpenStreetMap
+          <i data-lucide="external-link"></i>เปิดใน OpenStreetMap
         </a>
         <button type="button" class="article-action-btn" id="readerOpenMapBtn">
-          <i data-lucide="satellite"></i>View Satellite Map
+          <i data-lucide="satellite"></i>ดูแผนที่ดาวเทียม
         </button>
       </div>
 
@@ -10802,9 +10802,9 @@ function initializeMap() {
     mapPanel.setAttribute("aria-hidden", String(!isOpen));
     if (isOpen) {
       setTimeout(() => map.invalidateSize(), 50);
-      mapToggleBtn.querySelector("span").textContent = "Hide Map";
+      mapToggleBtn.querySelector("span").textContent = "ซ่อนแผนที่";
     } else {
-      mapToggleBtn.querySelector("span").textContent = "View Satellite Map";
+      mapToggleBtn.querySelector("span").textContent = "ดูแผนที่ดาวเทียม";
     }
   });
 

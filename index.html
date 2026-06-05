@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Noto+Serif+Thai:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -27,9 +27,9 @@
         <span>GeoStory Atlas</span>
       </a>
       <nav class="main-nav" aria-label="Navigation">
-        <span class="nav-stat"><strong id="topicCount">298</strong> articles</span>
+        <span class="nav-stat"><strong id="topicCount">298</strong> บทความ</span>
         <button class="nav-back-btn" id="navBackBtn" type="button" hidden>
-          <i data-lucide="arrow-left"></i>Encyclopedia
+          <i data-lucide="arrow-left"></i>สารานุกรม
         </button>
       </nav>
     </header>
@@ -45,7 +45,7 @@
             <p class="eyebrow">Geographic Encyclopedia</p>
             <h1 id="hero-title">สารานุกรมภูมิศาสตร์<br>เรียนรู้ผ่านสถานที่จริง</h1>
             <p>
-              298 บทความ ภูมิประเทศ ภูมิอากาศ ทะเล ธารน้ำแข็ง ภัยพิบัติ และ human geography
+              298 บทความ ภูมิประเทศ ภูมิอากาศ ทะเล ธารน้ำแข็ง ภัยพิบัติ และภูมิศาสตร์มนุษย์
               พร้อม infographic แผนที่ดาวเทียม และ story จากสถานที่จริงทั่วโลก
             </p>
             <div class="hero-actions">
@@ -55,8 +55,8 @@
             </div>
           </div>
           <div class="hero-panel" aria-label="Stats">
-            <span><strong id="topicCount2">298</strong> articles</span>
-            <strong>Terrain · Climate · Hazards · Human</strong>
+            <span><strong id="topicCount2">298</strong> บทความ</span>
+            <strong>ภูมิประเทศ · ภูมิอากาศ · ภัยพิบัติ · มนุษย์</strong>
             <small>คลิกหัวข้อเพื่ออ่านบทความ ดู infographic และแผนที่ดาวเทียม</small>
           </div>
         </section>
@@ -92,7 +92,7 @@
           <div class="category-overview" id="categoryOverview" aria-label="Category overview"></div>
           <div class="topic-grid-label" id="topicGridLabel" hidden>
             <i data-lucide="layers"></i>
-            <span id="topicGridLabelText">Explore real-world locations</span>
+            <span id="topicGridLabelText">สำรวจสถานที่จริงทั่วโลก</span>
           </div>
           <div class="topic-grid" id="topicGrid"></div>
         </section>
@@ -104,7 +104,7 @@
 
         <div class="article-back-bar">
           <button class="back-btn" type="button" id="backToLibrary">
-            <i data-lucide="arrow-left"></i>Encyclopedia
+            <i data-lucide="arrow-left"></i>สารานุกรม
           </button>
           <span class="back-breadcrumb" id="articleBreadcrumb"></span>
         </div>
@@ -115,16 +115,16 @@
           <button class="map-toggle-btn" type="button" id="mapToggleBtn"
                   aria-expanded="false" aria-controls="mapPanel">
             <i data-lucide="satellite"></i>
-            <span>View Satellite Map</span>
+            <span>ดูแผนที่ดาวเทียม</span>
           </button>
           <span class="map-location-hint" id="mapLocationHint" aria-live="polite"></span>
         </div>
 
         <div class="map-panel" id="mapPanel" aria-hidden="true">
           <div class="map-layer-row">
-            <span class="map-layer-label">Map layer</span>
-            <button class="map-layer-btn active" type="button" data-layer="satellite">Satellite</button>
-            <button class="map-layer-btn" type="button" data-layer="street">Street</button>
+            <span class="map-layer-label">ชั้นแผนที่</span>
+            <button class="map-layer-btn active" type="button" data-layer="satellite">ดาวเทียม</button>
+            <button class="map-layer-btn" type="button" data-layer="street">ถนน</button>
           </div>
           <div id="map" aria-label="Satellite map showing article location"></div>
         </div>
@@ -135,7 +135,7 @@
 
     <footer class="site-footer">
       <span>GeoStory Atlas</span>
-      <a href="#" id="footerBackTop">Back to top</a>
+      <a href="#" id="footerBackTop">กลับด้านบน</a>
     </footer>
 
     <script
