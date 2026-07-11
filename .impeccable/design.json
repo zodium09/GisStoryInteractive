@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-11T20:10:00+07:00",
+  "title": "Design System: GeoStory Atlas",
+  "extensions": {
+    "colorMeta": {
+      "atlas-ink": { "role": "neutral", "displayName": "Atlas Ink", "canonical": "#172521", "tonalRamp": ["#EEF3EF", "#53625D", "#172521"] },
+      "atlas-deep": { "role": "primary", "displayName": "Deep Cartographic Green", "canonical": "#21483F", "tonalRamp": ["#D5E9E2", "#6B9B8D", "#21483F", "#102F29"] },
+      "mineral": { "role": "secondary", "displayName": "Iron Mineral", "canonical": "#C65F3D", "tonalRamp": ["#F5DDD5", "#C65F3D", "#78341F"] },
+      "contour": { "role": "tertiary", "displayName": "Contour Gold", "canonical": "#D9A441", "tonalRamp": ["#F5E9C8", "#D9A441", "#765313"] },
+      "river": { "role": "secondary", "displayName": "Deep River", "canonical": "#2C7281", "tonalRamp": ["#D2E8EC", "#2C7281", "#17434C"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Field Editorial", "purpose": "Hero and lesson titles only." },
+      "body": { "displayName": "Atlas Interface", "purpose": "Thai body copy, controls, labels, and metadata." }
+    },
+    "shadows": [
+      { "name": "lifted-panel", "value": "0 8px 24px rgba(23,37,33,.12)", "purpose": "Command palette and floating navigation only." },
+      { "name": "hover-lift", "value": "0 4px 8px rgba(23,37,33,.10)", "purpose": "Interactive imagery and learning modules." }
+    ],
+    "motion": [
+      { "name": "ease-atlas", "value": "cubic-bezier(.22,1,.36,1)", "purpose": "Short state transitions and directional feedback." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "720px" },
+      { "name": "compact", "value": "1050px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single strongest action in a learning context.",
+      "html": "<button class=\"ds-primary\">เริ่มเส้นทางเรียน</button>",
+      "css": ".ds-primary{border:0;border-radius:6px;padding:12px 18px;background:#21483F;color:#fff;font:700 14px 'Noto Sans Thai',sans-serif;transition:background .2s,transform .2s}.ds-primary:hover{background:#102F29;transform:translateY(-2px)}.ds-primary:focus-visible{outline:3px solid #D9A441;outline-offset:3px}"
+    },
+    {
+      "name": "Depth Chip",
+      "kind": "chip",
+      "refersTo": "chip-active",
+      "description": "Selects beginner, intermediate, or expert lesson depth.",
+      "html": "<button class=\"ds-depth\" aria-pressed=\"true\">ผู้เชี่ยวชาญ</button>",
+      "css": ".ds-depth{border:0;border-radius:999px;padding:8px 14px;background:#172521;color:#fff;font:700 12px 'Noto Sans Thai',sans-serif}.ds-depth:focus-visible{outline:3px solid #D9A441;outline-offset:3px}"
+    },
+    {
+      "name": "Atlas Search",
+      "kind": "input",
+      "description": "Searches phenomena, places, and concepts across the atlas.",
+      "html": "<label class=\"ds-search\"><span>ค้นหา</span><input placeholder=\"มรสุม ภูเขาไฟ แม่น้ำ…\"></label>",
+      "css": ".ds-search{display:grid;gap:6px;color:#53625D;font:600 12px 'Noto Sans Thai',sans-serif}.ds-search input{min-height:46px;border:1px solid #CAD2CC;border-radius:6px;padding:0 14px;background:#fff;color:#172521;font:400 15px 'Noto Sans Thai',sans-serif}.ds-search input:focus{outline:3px solid #D9A441;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "โต๊ะทำงานของนักสำรวจโลก",
+    "overview": "A contemporary atlas desk combining field notes, satellite evidence, maps, and reference-book typography. Every interaction moves the learner from curiosity to evidence and from overview to mechanism.",
+    "keyCharacteristics": ["Evidence-first imagery", "Three depths of explanation", "Earth-system semantic colors", "Editorial Thai typography"],
+    "rules": [
+      { "name": "Evidence Color Rule", "body": "Saturated color must identify a category, state, or data relationship.", "section": "colors" },
+      { "name": "Flat Atlas Rule", "body": "Lesson surfaces stay flat; shadows indicate actual elevation.", "section": "elevation" }
+    ],
+    "dos": ["Give every image a caption or observation prompt.", "Keep the essential idea visible to beginners within one screen.", "Use progressive disclosure for theory and expert analysis."],
+    "donts": ["Do not make a childlike learning site or an unguided card warehouse.", "Do not create academic walls of text.", "Do not use neon, glassmorphism, gradient text, or decorative imagery without evidence."]
+  }
+}

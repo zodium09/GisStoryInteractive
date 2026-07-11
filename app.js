@@ -649,6 +649,22 @@ const pu = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop
 
 const AI_VISUAL_ASSETS = {
   volcano: "assets/ai/volcano-system-gpt.png",
+  earthSystem: "assets/ai/earth-system-hero-v2.png",
+  himalaya: "assets/lessons/himalaya.webp",
+  andes: "assets/lessons/andes.webp",
+  river: "assets/lessons/amazon.webp",
+  monsoon: "assets/lessons/thai-monsoon.webp",
+  glacier: "assets/lessons/glacial-system.webp",
+  desert: "assets/lessons/arid-aeolian.webp",
+  coast: "assets/lessons/coastal-process.webp",
+  groundwater: "assets/lessons/groundwater-aquifer.webp",
+  ocean: "assets/lessons/ocean-circulation.webp",
+  reef: "assets/lessons/coral-mangrove.webp",
+  earthquake: "assets/lessons/earthquake-fault.webp",
+  cyclone: "assets/lessons/tropical-cyclone.webp",
+  biome: "assets/lessons/biome-gradient.webp",
+  urban: "assets/lessons/urban-climate.webp",
+  agriculture: "assets/lessons/terrace-agriculture.webp",
 };
 
 const GENERIC_STOCK_IMAGE_IDS = new Set([
@@ -1466,7 +1482,7 @@ const topics = [
     location: "รอบมหาสมุทรแปซิฟิก",
     coords: [36.2048, 138.2529],
     zoom: 3,
-    image: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&w=1400&q=82",
+    image: "assets/ai/earth-system-hero-v2.png",
     summary:
       "แนวรอบแปซิฟิกมีภูเขาไฟและแผ่นดินไหวหนาแน่น เพราะเป็นเขตมุดตัวและรอยต่อของแผ่นธรณีหลายแผ่น",
     story:
@@ -8417,7 +8433,7 @@ function renderRoutes() {
 
 function updateStats() {
   if (topicCount) topicCount.textContent = topics.length;
-  if (categoryCount) categoryCount.textContent = categories.length - 1;
+  if (categoryCount) categoryCount.textContent = TAXONOMY.length;
   if (mapCount) mapCount.textContent = topics.length;
 }
 
@@ -8837,7 +8853,7 @@ function svgVolcano(topic) {
       ${svgDefs(id)}
       <rect width="560" height="340" rx="12" fill="url(#skyG${id})"/>
       <!-- underground -->
-      <rect x="0" y="240" width="560" height="100" rx="0 0 12 12" fill="#3d2b1f" opacity=".85"/>
+      <rect x="0" y="240" width="560" height="100" fill="#3d2b1f" opacity=".85"/>
       <rect x="0" y="240" width="560" height="8" fill="#5a4030"/>
       <!-- magma chamber -->
       <ellipse cx="280" cy="298" rx="110" ry="38" fill="#c45a20" opacity=".92"/>
@@ -9035,7 +9051,7 @@ function svgDesert(topic) {
       </defs>
       <rect width="560" height="340" rx="12" fill="url(#desertSky${id})"/>
       <!-- base sand flat -->
-      <rect x="0" y="230" width="560" height="110" rx="0 0 12 12" fill="url(#sandG${id})"/>
+      <rect x="0" y="230" width="560" height="110" fill="url(#sandG${id})"/>
       <!-- eroded rocky surface left -->
       <path d="M0 230 L80 218 L100 228 L120 215 L140 226 L160 212 L180 228 L200 220 L220 230 Z" fill="#c09848"/>
       <!-- ventifact rocks -->
@@ -9212,7 +9228,7 @@ function svgUrbanHeat(topic) {
       </defs>
       <rect width="560" height="340" rx="12" fill="url(#hotHeatG${id})"/>
       <!-- ground base -->
-      <rect x="0" y="240" width="560" height="100" rx="0 0 12 12" fill="#6a7040" opacity=".8"/>
+      <rect x="0" y="240" width="560" height="100" fill="#6a7040" opacity=".8"/>
       <!-- rural left (trees) -->
       <rect x="10" y="220" width="80" height="20" fill="#5a8048"/>
       <ellipse cx="30" cy="215" rx="16" ry="20" fill="#4a7840"/>
@@ -9348,7 +9364,7 @@ function svgForest(topic) {
       </defs>
       <rect width="560" height="340" rx="12" fill="url(#forestSky${id})"/>
       <!-- soil layer -->
-      <rect x="0" y="285" width="560" height="55" rx="0 0 12 12" fill="#6a4a2a"/>
+      <rect x="0" y="285" width="560" height="55" fill="#6a4a2a"/>
       <rect x="0" y="272" width="560" height="16" fill="#8a6a3a" opacity=".9"/>
       <rect x="0" y="260" width="560" height="14" fill="#a08050" opacity=".7"/>
       <!-- roots -->
@@ -9426,7 +9442,7 @@ function svgKarst(topic) {
       <ellipse cx="350" cy="178" rx="22" ry="9" fill="#a09080" opacity=".75"/>
       <path d="M328 178 C334 188 342 194 350 196 C358 198 366 190 372 178" fill="#b8a898" opacity=".65"/>
       <!-- limestone rock body -->
-      <rect x="0" y="178" width="560" height="162" rx="0 0 12 12" fill="#b8b0a0" opacity=".9"/>
+      <rect x="0" y="178" width="560" height="162" fill="#b8b0a0" opacity=".9"/>
       <!-- cave system -->
       <path d="M80 200 C100 210 130 215 170 220 C210 225 250 220 290 216 C330 212 370 218 400 225 C430 232 450 228 470 222" stroke="#7a7060" stroke-width="18" fill="none" stroke-linecap="round"/>
       <path d="M80 200 C100 210 130 215 170 220 C210 225 250 220 290 216 C330 212 370 218 400 225 C430 232 450 228 470 222" stroke="#3a3028" stroke-width="12" fill="none" stroke-linecap="round"/>
@@ -9438,7 +9454,7 @@ function svgKarst(topic) {
       ${[220,245,268,292,312].map((x,i) => `<path d="M${x} ${250} L${x-3} ${235+(i%2)*5} L${x+3} ${235+(i%2)*5} Z" fill="#9a8878" opacity=".65"/>`).join("")}
       <!-- groundwater table -->
       <path d="M0 252 C60 248 120 255 180 250 C240 245 300 252 360 248 C420 244 490 250 560 246" stroke="#4a90c0" stroke-width="2.5" fill="none" stroke-dasharray="8 4"/>
-      <rect x="0" y="252" width="560" height="88" rx="0 0 12 12" fill="#4a90c0" opacity=".22"/>
+      <rect x="0" y="252" width="560" height="88" fill="#4a90c0" opacity=".22"/>
       <!-- spring emerging at right base -->
       <path d="M490 252 C510 250 530 242 548 235 C554 232 558 230 560 230" stroke="#2a78b0" stroke-width="4" fill="none" marker-end="url(#arr${id})"/>
       <circle cx="495" cy="254" r="6" fill="#4a90c0" opacity=".8"/>
@@ -9476,7 +9492,7 @@ function svgOcean(topic) {
       <!-- sky -->
       <rect width="560" height="100" rx="12 12 0 0" fill="#d4eaf6"/>
       <!-- ocean body -->
-      <rect x="0" y="100" width="560" height="240" rx="0 0 12 12" fill="url(#oceanBg${id})"/>
+      <rect x="0" y="100" width="560" height="240" fill="url(#oceanBg${id})"/>
       <!-- land masses -->
       <rect x="0" y="100" width="70" height="240" rx="0 0 0 12" fill="#8a9a70"/>
       <rect x="490" y="100" width="70" height="240" rx="0 0 12 0" fill="#909878"/>
@@ -10647,13 +10663,39 @@ function isGenericStockImage(topic) {
 }
 
 function getTopicDisplayImage(topic) {
-  return isGenericStockImage(topic) ? getSatelliteTileImage(topic) : topic.image;
+  return getTopicIllustrationImage(topic);
 }
 
 function getTopicIllustrationImage(topic) {
-  const profile = getTopicVisualProfile(topic);
-  if (profile.className === "visual-volcano") return AI_VISUAL_ASSETS.volcano;
-  return getTopicDisplayImage(topic);
+  const text = `${topic.id} ${topic.title} ${topic.category} ${topic.subcategory} ${topic.keyConcept}`.toLowerCase();
+
+  if (topic.id === "himalaya") return AI_VISUAL_ASSETS.himalaya;
+  if (topic.id === "andes") return AI_VISUAL_ASSETS.andes;
+  if (topic.id === "amazon") return AI_VISUAL_ASSETS.river;
+  if (topic.id === "thai-monsoon") return AI_VISUAL_ASSETS.monsoon;
+
+  if (/ปะการัง|coral|mangrove|ป่าชายเลน|seagrass|หญ้าทะเล|reef|อะทอลล์|atoll/.test(text)) return AI_VISUAL_ASSETS.reef;
+  if (/น้ำบาดาล|aquifer|groundwater|คาร์สต์|karst|น้ำพุ|spring|โอเอซิส|oasis|คานัต|qanat/.test(text)) return AI_VISUAL_ASSETS.groundwater;
+  if (/ธารน้ำแข็ง|glacier|ice sheet|น้ำแข็ง|หิมะ|snow|permafrost|เพอร์มาฟรอสต์|fjord/.test(text)) return AI_VISUAL_ASSETS.glacier;
+  if (/ทะเลทราย|desert|dune|เนินทราย|arid|แห้งแล้ง|yardang|erg|ซาบคา|sabkha|playa|salt flat/.test(text)) return AI_VISUAL_ASSETS.desert;
+  if (/กระแสน้ำ|current|gyre|upwelling|thermohaline|มหาสมุทรลึก|ocean circulation|sea ice|ร่องลึก|trench|สันเขากลางมหาสมุทร/.test(text)) return AI_VISUAL_ASSETS.ocean;
+  if (/ชายฝั่ง|coast|คลื่น|wave|น้ำขึ้นน้ำลง|tide|ลากูน|lagoon|estuary|ปากแม่น้ำ|spit|beach|หน้าผา/.test(text)) return AI_VISUAL_ASSETS.coast;
+  if (/แผ่นดินไหว|earthquake|fault|รอยเลื่อน|liquefaction|ดินเหลว|tsunami|สึนามิ/.test(text)) return AI_VISUAL_ASSETS.earthquake;
+  if (/cyclone|typhoon|hurricane|พายุหมุน|ไต้ฝุ่น|storm surge|คลื่นพายุซัดฝั่ง/.test(text)) return AI_VISUAL_ASSETS.cyclone;
+  if (/มรสุม|monsoon|ภูมิอากาศ|climate|rain shadow|เงาฝน|enso|el niño|เอลนีโญ|la niña|ลานีญา|itcz|mjo|iod|atmospheric/.test(text)) return AI_VISUAL_ASSETS.monsoon;
+  if (/ข้าว|rice|เกษตร|agricultur|irrigation|ชลประทาน|terrace|ขั้นบันได|chinampa|subak|ดินดำ|black soil/.test(text)) return AI_VISUAL_ASSETS.agriculture;
+  if (/เมือง|urban|city|ท่าเรือ|port|โครงสร้างพื้นฐาน|infrastructure|reclamation|ถมทะเล|polder|คลอง|canal|อุตสาหกรรม/.test(text)) return AI_VISUAL_ASSETS.urban;
+  if (/ระบบนิเวศ|ecology|biome|forest|ป่า|savanna|สะวันนา|wetland|พื้นที่ชุ่มน้ำ|biodiversity|ความหลากหลาย|ecotone|ทุนดรา|tundra|taiga/.test(text)) return AI_VISUAL_ASSETS.biome;
+  if (/ภูเขาไฟ|volcano|volcanic|lava|ลาวา|magma|แมกมา|geothermal|geyser|ภูมิความร้อน/.test(text)) return AI_VISUAL_ASSETS.volcano;
+  if (/subduction|มุดตัว|andes|แอนดีส|volcanic arc|แนวภูเขาไฟ/.test(text)) return AI_VISUAL_ASSETS.andes;
+  if (/แม่น้ำ|river|ลุ่มน้ำ|basin|น้ำท่วม|flood|ดินดอน|delta|meander|คดเคี้ยว|oxbow|ตะกอน|sediment|น้ำตก|waterfall/.test(text)) return AI_VISUAL_ASSETS.river;
+  if (/แผ่นธรณี|plate tectonic|ภูเขาพับ|fold mountain|เทือกเขา|mountain|uplift|ยกตัว|ชั้นหิน|rock|plateau|ที่ราบสูง/.test(text)) return AI_VISUAL_ASSETS.himalaya;
+
+  return AI_VISUAL_ASSETS.earthSystem;
+}
+
+function getLocationEvidenceImage(topic) {
+  return isGenericStockImage(topic) ? getSatelliteTileImage(topic) : topic.image;
 }
 
 function buildVisualCallouts(topic, guide) {
@@ -10710,8 +10752,8 @@ function buildAiIllustrationPanel(topic, guide) {
         </figcaption>
       </figure>
       <div class="ai-illustration-copy">
-        <p class="ai-kicker">GPT Image + Process Infographic</p>
-        <h2>ภาพประกอบและแผนภาพตามหัวข้อนี้</h2>
+        <p class="ai-kicker">Imagen · Scientific Visual</p>
+        <h2>ภาพกระบวนการที่ตรงกับบทเรียนนี้</h2>
         <p>${guide.mapReading}</p>
         <div class="ai-feature-chips" aria-label="Key visual clues">${featureChips}</div>
       </div>
@@ -10720,7 +10762,7 @@ function buildAiIllustrationPanel(topic, guide) {
 }
 
 function buildPlaceGallery(topic) {
-  const displayImage = getTopicDisplayImage(topic);
+  const displayImage = getLocationEvidenceImage(topic);
   const closeZoom = Math.max(7, Math.min(10, topic.zoom || 8));
   const regionalZoom = Math.max(5, closeZoom - 2);
   const contextZoom = Math.max(5, closeZoom - 3);
@@ -10924,6 +10966,13 @@ function getTopicDisciplineLabel(topic) {
   return topic.subcategory;
 }
 
+let activeDepth = localStorage.getItem("geoStoryDepth") || "beginner";
+const depthLabels = {
+  beginner: "เริ่มต้น",
+  intermediate: "ลงลึก",
+  expert: "ผู้เชี่ยวชาญ",
+};
+
 function buildTopicCards(topicList) {
   return topicList
     .map(
@@ -10932,6 +10981,7 @@ function buildTopicCards(topicList) {
           ${buildTopicVisual(topic)}
           <div class="topic-card-content">
             <span class="topic-label">${getTopicDisciplineLabel(topic)}</span>
+            <span class="topic-depth"><i data-lucide="signal"></i>${depthLabels[activeDepth]}</span>
             <h3>${topic.title}</h3>
             <p>${topic.summary}</p>
             <div class="topic-meta">
@@ -11002,9 +11052,37 @@ function renderStory(topic) {
     </div>
 
     <div class="article-body article-body-focused">
+      <nav class="reader-depth-nav" aria-label="เลือกระดับความลึกของบทเรียน">
+        <span>อ่านระดับ</span>
+        <button type="button" data-reader-depth="beginner">เริ่มต้น</button>
+        <button type="button" data-reader-depth="intermediate">ลงลึก</button>
+        <button type="button" data-reader-depth="expert">ผู้เชี่ยวชาญ</button>
+      </nav>
       <p class="article-lead">${topic.summary}</p>
 
       ${buildFocusedArticle(topic, guide)}
+
+      ${buildAiIllustrationPanel(topic, guide)}
+
+      <section class="article-section depth-intermediate" aria-labelledby="mechanism-title">
+        <h2 class="article-section-title" id="mechanism-title"><i data-lucide="workflow"></i>กลไกและความเชื่อมโยง</h2>
+        <div class="expert-lens">
+          <h3>จากสาเหตุสู่ร่องรอย</h3>
+          <p>${guide.definition}</p>
+          <ol>${guide.formation.map((item) => `<li>${item}</li>`).join("")}</ol>
+          <p><strong>หลักฐานที่ควรมองหา:</strong> ${guide.landforms.join(" · ")}</p>
+        </div>
+      </section>
+
+      <section class="article-section depth-expert" aria-labelledby="expert-title">
+        <h2 class="article-section-title" id="expert-title"><i data-lucide="microscope"></i>กรอบวิเคราะห์ระดับผู้เชี่ยวชาญ</h2>
+        <div class="expert-lens">
+          <h3>ตั้งสมมติฐานที่ตรวจสอบได้</h3>
+          <p>พิจารณา ${topic.keyConcept} ภายใต้สเกล ${topic.scale} แยกตัวขับเคลื่อนหลัก เงื่อนไขขอบเขต ตัวแปรตอบสนอง และช่วงเวลาที่กระบวนการทำงาน จากนั้นเปรียบเทียบหลักฐานจากภูมิประเทศ ภาพดาวเทียม และบันทึกภูมิอากาศ</p>
+          <code>รูปแบบพื้นที่ = กระบวนการ × เวลา × เงื่อนไขแวดล้อม × การรบกวนของมนุษย์</code>
+          <p><strong>คำถามวิจัย:</strong> หากอัตราหรือทิศทางของตัวขับเคลื่อนเปลี่ยนไป ร่องรอยใดจะตอบสนองก่อน และหลักฐานใดช่วยแยกสาเหตุที่แข่งขันกันได้?</p>
+        </div>
+      </section>
 
       <section class="article-section diagram-section">
         <h2 class="article-section-title">
@@ -11049,7 +11127,26 @@ function renderStory(topic) {
     });
   }
 
+  setReaderDepth(activeDepth);
+
   refreshIcons();
+}
+
+function setReaderDepth(depth) {
+  activeDepth = depthLabels[depth] ? depth : "beginner";
+  localStorage.setItem("geoStoryDepth", activeDepth);
+  document.body.dataset.readerDepth = activeDepth;
+  document.querySelectorAll("[data-reader-depth]").forEach((button) => {
+    const selected = button.dataset.readerDepth === activeDepth;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+    button.onclick = () => setReaderDepth(button.dataset.readerDepth);
+  });
+  document.querySelectorAll("[data-depth]").forEach((button) => {
+    const selected = button.dataset.depth === activeDepth;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
 }
 
 let satelliteLayer, streetLayer;
@@ -11131,6 +11228,7 @@ function showLibraryView() {
   document.getElementById("navBackBtn").hidden = true;
   window.scrollTo({ top: 0, behavior: "instant" });
   history.replaceState(null, "", "#library");
+  document.title = "GeoStory Atlas | หนังสือเรียนโลกทั้งใบ";
 }
 
 function showArticleView(topic) {
@@ -11158,6 +11256,7 @@ function selectTopic(topicId) {
   if (!topic) return;
 
   activeTopic = topic;
+  document.title = `${topic.title} | GeoStory Atlas`;
   history.replaceState(null, "", "#" + topic.id);
   renderStory(topic);
   showArticleView(topic);
@@ -11172,6 +11271,7 @@ function selectTopic(topicId) {
       clusterGroup.zoomToShowLayer(markers[topic.id], () => markers[topic.id].openPopup());
     }
   }
+  updateBookmarkButton();
 }
 
 // Back navigation
@@ -11192,6 +11292,160 @@ searchInput.addEventListener("input", () => {
   searchDebounceTimer = setTimeout(renderTopics, 220);
 });
 
+// ─── V2 learning experience ─────────────────────────────────────────────────
+
+const commandDialog = document.getElementById("commandDialog");
+const commandInput = document.getElementById("commandInput");
+const commandResults = document.getElementById("commandResults");
+const bookmarkButton = document.getElementById("bookmarkBtn");
+let commandIndex = 0;
+
+function openCommandPalette() {
+  if (!commandDialog?.open) commandDialog?.showModal();
+  requestAnimationFrame(() => commandInput?.focus());
+}
+
+function renderCommandResults() {
+  if (!commandResults) return;
+  const query = commandInput.value.trim().toLowerCase();
+  const matches = (query
+    ? topics.filter((topic) => `${topic.title} ${topic.location} ${topic.keyConcept} ${topic.category} ${topic.subcategory}`.toLowerCase().includes(query))
+    : topics.filter((topic) => ["ring-of-fire", "amazon", "thai-monsoon", "mekong-delta", "great-barrier-reef-system"].includes(topic.id))
+  ).slice(0, 8);
+
+  commandResults.innerHTML = matches.length
+    ? matches.map((topic) => `<button class="command-result" type="button" data-command-topic="${topic.id}"><strong>${topic.title}</strong><small>${topic.location} · ${topic.keyConcept}</small><span>${topic.category}</span></button>`).join("")
+    : `<p class="empty-state">ยังไม่พบหัวข้อนี้ ลองค้นด้วยชื่อสถานที่หรือกระบวนการ เช่น มรสุม ภูเขาไฟ หรือแม่น้ำ</p>`;
+
+  commandIndex = 0;
+  const resultButtons = [...commandResults.querySelectorAll("[data-command-topic]")];
+  resultButtons.forEach((button, index) => button.setAttribute("aria-selected", String(index === commandIndex)));
+
+  resultButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      commandDialog.close();
+      selectTopic(button.dataset.commandTopic);
+    });
+  });
+}
+
+document.getElementById("commandTrigger")?.addEventListener("click", openCommandPalette);
+commandInput?.addEventListener("input", renderCommandResults);
+commandInput?.addEventListener("keydown", (event) => {
+  const resultButtons = [...commandResults.querySelectorAll("[data-command-topic]")];
+  if (!resultButtons.length) return;
+  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+    event.preventDefault();
+    commandIndex = (commandIndex + (event.key === "ArrowDown" ? 1 : -1) + resultButtons.length) % resultButtons.length;
+    resultButtons.forEach((button, index) => button.setAttribute("aria-selected", String(index === commandIndex)));
+    resultButtons[commandIndex].scrollIntoView({ block: "nearest" });
+  }
+  if (event.key === "Enter") {
+    event.preventDefault();
+    resultButtons[commandIndex].click();
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+    event.preventDefault();
+    openCommandPalette();
+  }
+  if (event.key === "/" && !/input|textarea/i.test(document.activeElement?.tagName || "")) {
+    event.preventDefault();
+    showLibraryView();
+    document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => searchInput.focus(), 350);
+  }
+});
+
+document.querySelectorAll("[data-topic]").forEach((button) => {
+  if (!button.closest("#topicGrid")) button.addEventListener("click", () => selectTopic(button.dataset.topic));
+});
+
+function openDiscipline(disciplineId) {
+  if (!TAXONOMY.some((item) => item.id === disciplineId)) return;
+  activeDisciplineId = disciplineId;
+  activeMainTopicId = null;
+  activeSubTopicId = null;
+  renderDisciplineNav();
+  renderDisciplinePanel();
+  updateFilterBreadcrumb();
+  renderCategoryOverview();
+  renderQuickSearches();
+  renderTopics();
+  document.getElementById("library")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.querySelectorAll("[data-discipline-target]").forEach((button) => {
+  button.addEventListener("click", () => openDiscipline(button.dataset.disciplineTarget));
+});
+
+document.querySelector("[data-random-topic]")?.addEventListener("click", () => {
+  const topic = topics[Math.floor(Math.random() * topics.length)];
+  selectTopic(topic.id);
+});
+
+document.querySelectorAll("[data-depth]").forEach((button) => {
+  button.addEventListener("click", () => {
+    setReaderDepth(button.dataset.depth);
+    renderTopics(false);
+  });
+});
+
+function getBookmarks() {
+  try { return JSON.parse(localStorage.getItem("geoStoryBookmarks") || "[]"); }
+  catch { return []; }
+}
+
+function updateBookmarkButton() {
+  if (!bookmarkButton || !activeTopic) return;
+  const saved = getBookmarks().includes(activeTopic.id);
+  bookmarkButton.classList.toggle("saved", saved);
+  bookmarkButton.setAttribute("aria-pressed", String(saved));
+  const label = bookmarkButton.querySelector("span");
+  if (label) label.textContent = saved ? "บันทึกแล้ว" : "บันทึกบทเรียน";
+  const icon = bookmarkButton.querySelector("svg");
+  if (icon) icon.style.fill = saved ? "currentColor" : "none";
+}
+
+bookmarkButton?.addEventListener("click", () => {
+  const bookmarks = getBookmarks();
+  const index = bookmarks.indexOf(activeTopic.id);
+  if (index >= 0) bookmarks.splice(index, 1);
+  else bookmarks.push(activeTopic.id);
+  localStorage.setItem("geoStoryBookmarks", JSON.stringify(bookmarks));
+  updateBookmarkButton();
+});
+
+const themeButton = document.getElementById("themeToggle");
+function setTheme(theme) {
+  document.body.classList.toggle("dark-theme", theme === "dark");
+  localStorage.setItem("geoStoryTheme", theme);
+  themeButton?.setAttribute("aria-label", theme === "dark" ? "ใช้โหมดสว่าง" : "ใช้โหมดมืด");
+  if (themeButton) themeButton.innerHTML = `<i data-lucide="${theme === "dark" ? "sun" : "moon"}"></i>`;
+  refreshIcons();
+}
+themeButton?.addEventListener("click", () => setTheme(document.body.classList.contains("dark-theme") ? "light" : "dark"));
+setTheme(localStorage.getItem("geoStoryTheme") || "light");
+
+window.addEventListener("scroll", () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = max > 0 ? Math.min(100, Math.max(0, window.scrollY / max * 100)) : 0;
+  const bar = document.getElementById("readingProgress");
+  if (bar) bar.style.width = `${progress}%`;
+}, { passive: true });
+
+document.querySelectorAll(".evidence-pin").forEach((pin) => {
+  pin.addEventListener("click", () => {
+    const active = pin.classList.toggle("active");
+    pin.setAttribute("aria-pressed", String(active));
+    pin.closest(".field-lab")?.querySelectorAll(".observation-steps li").forEach((step, index) => step.classList.toggle("highlighted", active && index === Number(pin.textContent.trim()) - 1));
+  });
+});
+
+renderCommandResults();
+setReaderDepth(activeDepth);
+
 // Boot
 const hashId = location.hash.slice(1);
 if (hashId) {
@@ -11211,6 +11465,7 @@ initializeMap();
 if (hashId && topics.find((t) => t.id === hashId)) {
   renderStory(activeTopic);
   showArticleView(activeTopic);
+  document.title = `${activeTopic.title} | GeoStory Atlas`;
   const initHint = document.getElementById("mapLocationHint");
   if (initHint) initHint.textContent = activeTopic.location;
 }
