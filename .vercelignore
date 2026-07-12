@@ -1,0 +1,8 @@
+node_modules
+.claude
+.playwright-cli
+tmp
+output
+*.log
+screenshot-*.png
+ss-*.png

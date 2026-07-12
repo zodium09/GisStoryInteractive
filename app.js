@@ -109,6 +109,42 @@ const processData = [
   { title: "ห่วงโซ่อุตสาหกรรมข้ามภูมิภาค", note: "วัตถุดิบเดินทางผ่านโรงงาน ศูนย์ขนส่ง และตลาด ขณะที่ข้อมูล เงินทุน และผลกระทบไหลย้อนตลอดระบบ", steps: ["แหล่งวัตถุดิบ", "โรงงานแปรรูป", "ท่าเรือและขนส่ง", "ตลาดและการใช้"] }
 ];
 
+const visualAssets = {
+  rock: { src: "assets/lessons/rock-cycle.webp", alt: "วัฏจักรหินและโครงสร้างภายในโลก" },
+  quake: { src: "assets/lessons/earthquake-fault.webp", alt: "รอยเลื่อน คลื่นแผ่นดินไหว และชั้นหิน" },
+  mountain: { src: "assets/lessons/himalaya.webp", alt: "การยกตัวของเทือกเขาจากแผ่นธรณีชนกัน" },
+  weathering: { src: "assets/lessons/weathering-erosion.webp", alt: "การผุพัง การกร่อน และการเคลื่อนตะกอน" },
+  glacier: { src: "assets/lessons/glacial-system.webp", alt: "ระบบธารน้ำแข็งและภูมิลักษณ์เขตหนาว" },
+  desert: { src: "assets/lessons/arid-aeolian.webp", alt: "ภูมิประเทศลมและกระบวนการในเขตแห้งแล้ง" },
+  coast: { src: "assets/lessons/coastal-process.webp", alt: "คลื่น กระแสน้ำ และการเปลี่ยนแปลงชายฝั่ง" },
+  water: { src: "assets/lessons/water-atmosphere-cycle.webp", alt: "วงจรน้ำและการเชื่อมต่อกับบรรยากาศ" },
+  monsoon: { src: "assets/lessons/thai-monsoon.webp", alt: "การไหลเวียนของมรสุมและการกระจายฝน" },
+  cyclone: { src: "assets/lessons/tropical-cyclone.webp", alt: "โครงสร้างและพลังงานของพายุหมุนเขตร้อน" },
+  urban: { src: "assets/lessons/urban-climate.webp", alt: "เมือง พลังงาน อุตสาหกรรม และภูมิอากาศท้องถิ่น" },
+  ocean: { src: "assets/lessons/ocean-circulation.webp", alt: "กระแสน้ำผิวและการหมุนเวียนน้ำลึก" },
+  coral: { src: "assets/lessons/coral-mangrove.webp", alt: "แนวปะการัง ป่าชายเลน และระบบนิเวศชายฝั่ง" },
+  amazon: { src: "assets/lessons/amazon.webp", alt: "ลุ่มน้ำขนาดใหญ่และป่าฝนเขตร้อน" },
+  andes: { src: "assets/lessons/andes.webp", alt: "เทือกเขาแอนดีสและความต่างระดับภูมิภาค" },
+  biome: { src: "assets/lessons/biome-gradient.webp", alt: "การเปลี่ยนชีวนิเวศตามอุณหภูมิและความชื้น" },
+  groundwater: { src: "assets/lessons/groundwater-aquifer.webp", alt: "ชั้นหินอุ้มน้ำ การเติมน้ำ และการสูบน้ำใต้ดิน" },
+  terrace: { src: "assets/lessons/terrace-agriculture.webp", alt: "เกษตรขั้นบันไดและการจัดการดินน้ำ" }
+};
+
+const visualPools = [
+  ["rock", "quake", "mountain", "weathering", "glacier", "desert", "coast", "water"],
+  ["water", "monsoon", "cyclone", "urban", "biome", "ocean", "mountain", "coast"],
+  ["ocean", "coast", "coral", "water", "cyclone", "glacier", "groundwater", "biome"],
+  ["mountain", "andes", "amazon", "desert", "coast", "glacier", "biome", "terrace"],
+  ["groundwater", "terrace", "rock", "weathering", "coral", "urban", "water", "desert"],
+  ["urban", "terrace", "coast", "groundwater", "ocean", "amazon", "monsoon", "rock"]
+];
+
+function subtopicFigure(chapterIndex, sectionIndex, itemIndex, title, section) {
+  const pool = visualPools[chapterIndex];
+  const asset = visualAssets[pool[(sectionIndex * 4 + itemIndex) % pool.length]];
+  return `<figure class="subtopic-figure"><img src="${asset.src}" alt="${asset.alt}" loading="lazy"><figcaption><strong>สิ่งที่ควรสังเกต</strong>${title} เชื่อมกับ ${section.heading.toLowerCase()} อย่างไร และร่องรอยใดในภาพบอกถึงกระบวนการนั้น</figcaption></figure>`;
+}
+
 function processModel(chapterIndex) {
   const model = processData[chapterIndex];
   const xs = [90, 300, 510, 720];
@@ -160,7 +196,7 @@ function renderChapter(index) {
     <div class="article-body">${chapter.sections.map((section, sectionIndex) => `
       <section id="section-${index}-${sectionIndex}">
         <header><span>${String(sectionIndex + 1).padStart(2, "0")}</span><div><h2>${section.heading}</h2><p>${section.lead}</p></div></header>
-        <div class="subtopic-block"><strong>หัวข้อย่อยที่ครอบคลุม</strong><ul>${subtopicCatalog[index][sectionIndex].map((item) => `<li>${item}</li>`).join("")}</ul></div>
+        <div class="subtopic-block"><strong>หัวข้อย่อยฉบับสมบูรณ์</strong><div class="subtopic-details">${subtopicCatalog[index][sectionIndex].map((item, itemIndex) => `<details class="subtopic-detail" ${sectionIndex === 0 && itemIndex === 0 ? "open" : ""}><summary><span>${sectionIndex + 1}.${itemIndex + 1}</span>${item}</summary><div class="subtopic-content">${subtopicFigure(index, sectionIndex, itemIndex, item, section)}<div class="subtopic-prose"><p>${window.SUBTOPIC_DETAILS[item] || "กำลังเรียบเรียงเนื้อหา"}</p><dl><div><dt>อยู่ในหมวด</dt><dd>${chapter.title}</dd></div><div><dt>กลไกที่เชื่อมโยง</dt><dd>${processData[index].steps[(sectionIndex + itemIndex) % processData[index].steps.length]}</dd></div><div><dt>ใช้ทำความเข้าใจ</dt><dd>${section.lead}</dd></div></dl></div></div></details>`).join("")}</div></div>
         ${section.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
         ${section.image ? `<figure><img src="${section.image}" alt="${section.caption}" loading="lazy"><figcaption>${section.caption}</figcaption></figure>` : ""}
       </section>`).join("")}</div>
