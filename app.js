@@ -665,6 +665,9 @@ const AI_VISUAL_ASSETS = {
   biome: "assets/lessons/biome-gradient.webp",
   urban: "assets/lessons/urban-climate.webp",
   agriculture: "assets/lessons/terrace-agriculture.webp",
+  rockCycle: "assets/lessons/rock-cycle.webp",
+  weathering: "assets/lessons/weathering-erosion.webp",
+  waterCycle: "assets/lessons/water-atmosphere-cycle.webp",
 };
 
 const GENERIC_STOCK_IMAGE_IDS = new Set([
@@ -10674,6 +10677,9 @@ function getTopicIllustrationImage(topic) {
   if (topic.id === "amazon") return AI_VISUAL_ASSETS.river;
   if (topic.id === "thai-monsoon") return AI_VISUAL_ASSETS.monsoon;
 
+  if (/วัฏจักรหิน|rock cycle|หินอัคนี|igneous|หินตะกอน|sedimentary|หินแปร|metamorphic|granite|แกรนิต|basalt|บะซอลต์|rhyolite|ไรโอไลต์|andesite|แอนดีไซต์|pumice|หินพัมมิซ/.test(text)) return AI_VISUAL_ASSETS.rockCycle;
+  if (/ผุพัง|weathering|กัดเซาะ|erosion|พัดพา|transport|สะสมตะกอน|deposition|source.to.sink/.test(text)) return AI_VISUAL_ASSETS.weathering;
+  if (/วัฏจักรน้ำ|water cycle|การระเหย|evaporation|การควบแน่น|condensation|หยาดน้ำฟ้า|precipitation/.test(text)) return AI_VISUAL_ASSETS.waterCycle;
   if (/ปะการัง|coral|mangrove|ป่าชายเลน|seagrass|หญ้าทะเล|reef|อะทอลล์|atoll/.test(text)) return AI_VISUAL_ASSETS.reef;
   if (/น้ำบาดาล|aquifer|groundwater|คาร์สต์|karst|น้ำพุ|spring|โอเอซิส|oasis|คานัต|qanat/.test(text)) return AI_VISUAL_ASSETS.groundwater;
   if (/ธารน้ำแข็ง|glacier|ice sheet|น้ำแข็ง|หิมะ|snow|permafrost|เพอร์มาฟรอสต์|fjord/.test(text)) return AI_VISUAL_ASSETS.glacier;
@@ -10699,23 +10705,15 @@ function getLocationEvidenceImage(topic) {
 }
 
 function buildVisualCallouts(topic, guide) {
-  const callouts = [
-    {
-      className: "callout-primary",
-      title: getTopicVisualProfile(topic).label,
-      body: guide.formation[0] || topic.keyConcept,
-    },
-    {
-      className: "callout-secondary",
-      title: "จุดสังเกต",
-      body: guide.landforms[0] || topic.location,
-    },
-    {
-      className: "callout-tertiary",
-      title: "อ่านจากภาพ",
-      body: guide.landforms[1] || topic.climate,
-    },
-  ];
+  const callouts = guide.formation.slice(0, 4).map((step, index) => {
+    const clean = step.replace(/^[^:：]{1,28}[:：]\s*/, "");
+    const body = clean.length > 82 ? `${clean.slice(0, 80).trim()}…` : clean;
+    return {
+      className: `callout-step callout-step-${index + 1}`,
+      title: `ขั้นที่ ${index + 1}`,
+      body,
+    };
+  });
 
   return `
     <div class="ai-image-callouts" aria-label="คำอธิบายบนภาพ">
@@ -10743,7 +10741,8 @@ function buildAiIllustrationPanel(topic, guide) {
 
   return `
     <section class="ai-illustration-panel ${profile.className}" aria-label="AI illustration and topic diagram">
-      <figure class="ai-illustration-media" style="background-image:url('${illustrationImage}')">
+      <figure class="ai-illustration-media process-plate" style="background-image:url('${illustrationImage}')">
+        <div class="process-plate-heading"><span>แผนภาพกระบวนการ</span><strong>${topic.keyConcept}</strong></div>
         ${buildVisualCallouts(topic, guide)}
         <figcaption>
           <span><i data-lucide="${profile.icon}"></i>${profile.label}</span>
@@ -10752,9 +10751,9 @@ function buildAiIllustrationPanel(topic, guide) {
         </figcaption>
       </figure>
       <div class="ai-illustration-copy">
-        <p class="ai-kicker">Imagen · Scientific Visual</p>
-        <h2>ภาพกระบวนการที่ตรงกับบทเรียนนี้</h2>
-        <p>${guide.mapReading}</p>
+        <p class="ai-kicker">Imagen · Process Plate</p>
+        <h2>อ่านกระบวนการทั้งหมดในภาพเดียว</h2>
+        <p>หมายเลขในภาพเรียงตามลำดับเหตุและผล ส่วนรายละเอียดแต่ละขั้นอธิบายเพิ่มเติมในหัวข้อกระบวนการเกิดด้านล่าง</p>
         <div class="ai-feature-chips" aria-label="Key visual clues">${featureChips}</div>
       </div>
     </section>
@@ -10908,6 +10907,113 @@ function buildFocusedArticle(topic, guide) {
   `;
 }
 
+function buildTextbookChapter(topic, guide) {
+  const profile = getTopicVisualProfile(topic);
+  const placeImage = getLocationEvidenceImage(topic);
+  const [latitude, longitude] = topic.coords;
+  const typeItems = (guide.types || []).slice(0, 6);
+  const evidenceItems = (guide.landforms || []).slice(0, 6);
+  const summaryItems = topic.points?.length
+    ? topic.points
+    : [guide.definition, topic.whyItMatters, guide.mapReading];
+
+  return `
+    <div class="chapter-masthead">
+      <span><i data-lucide="${profile.icon}"></i>${getTopicDisciplineLabel(topic)}</span>
+      <strong>${guide.title.replace("บทเรียนวิชาการ: ", "")}</strong>
+      <p>บทนี้อธิบายความหมาย ประเภท กระบวนการเกิด ร่องรอยที่ใช้สังเกต และกรณีศึกษาจากสถานที่จริง</p>
+    </div>
+
+    <section class="article-section textbook-section" id="chapter-definition">
+      <div class="chapter-number">1</div>
+      <div class="chapter-copy">
+        <p class="chapter-label">ความหมายและขอบเขต</p>
+        <h2>${topic.keyConcept} คืออะไร</h2>
+        <p class="textbook-definition">${guide.definition}</p>
+        <p>${topic.summary} ประเด็นนี้สัมพันธ์กับ ${topic.subcategory} และควรพิจารณาทั้งตำแหน่ง กระบวนการ ระยะเวลา และสภาพแวดล้อมที่ควบคุมการเปลี่ยนแปลง</p>
+      </div>
+    </section>
+
+    <section class="article-section textbook-section classification-section" id="chapter-types">
+      <div class="chapter-number">2</div>
+      <div class="chapter-copy">
+        <p class="chapter-label">ประเภทและการจำแนก</p>
+        <h2>ลักษณะที่พบได้</h2>
+        <div class="classification-list">
+          ${typeItems.map((item, index) => `<div><span>${String(index + 1).padStart(2, "0")}</span><p>${item}</p></div>`).join("")}
+        </div>
+      </div>
+    </section>
+
+    ${buildAiIllustrationPanel(topic, guide)}
+
+    <section class="article-section textbook-section process-chapter" id="chapter-process">
+      <div class="chapter-number">3</div>
+      <div class="chapter-copy">
+        <p class="chapter-label">กระบวนการเกิด</p>
+        <h2>จากเงื่อนไขเริ่มต้นสู่ภูมิประเทศ</h2>
+        <ol class="textbook-process-list">
+          ${guide.formation.map((step, index) => `<li><span>${index + 1}</span><div><strong>ขั้นที่ ${index + 1}</strong><p>${step}</p></div></li>`).join("")}
+        </ol>
+      </div>
+    </section>
+
+    <section class="article-section textbook-section evidence-chapter" id="chapter-evidence">
+      <div class="chapter-number">4</div>
+      <div class="chapter-copy">
+        <p class="chapter-label">ลักษณะและหลักฐาน</p>
+        <h2>สิ่งที่ควรมองหาในภาพและแผนที่</h2>
+        <p>${guide.mapReading}</p>
+        <div class="textbook-evidence-grid">
+          ${evidenceItems.map((item) => `<div><i data-lucide="scan-search"></i><strong>${item}</strong><span>หลักฐานของ ${topic.keyConcept}</span></div>`).join("")}
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section textbook-section case-study-chapter" id="chapter-case-study">
+      <div class="chapter-number">5</div>
+      <div class="chapter-copy">
+        <p class="chapter-label">กรณีศึกษาจากโลก</p>
+        <h2>${topic.location}</h2>
+        <div class="case-study-layout">
+          <figure>
+            <img src="${placeImage}" alt="สถานที่จริง: ${topic.location}" loading="lazy">
+            <figcaption>ภาพถ่ายหรือภาพดาวเทียมของพื้นที่ตัวอย่าง ไม่ใช่ภาพจำลองกระบวนการ</figcaption>
+          </figure>
+          <div class="case-study-facts">
+            <p>${topic.story}</p>
+            <dl>
+              <div><dt>พิกัด</dt><dd>${latitude.toFixed(4)}°, ${longitude.toFixed(4)}°</dd></div>
+              <div><dt>มาตราส่วน</dt><dd>${topic.scale}</dd></div>
+              <div><dt>ภูมิอากาศ</dt><dd>${topic.climate}</dd></div>
+              <div><dt>แนวคิดหลัก</dt><dd>${topic.keyConcept}</dd></div>
+            </dl>
+            <a href="https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=${topic.zoom}/${latitude}/${longitude}" target="_blank" rel="noreferrer"><i data-lucide="map-pin"></i>เปิดพิกัดบนแผนที่</a>
+          </div>
+        </div>
+        <div class="why-place-matters"><strong>เหตุใดสถานที่นี้จึงสำคัญ</strong><p>${topic.whyItMatters}</p></div>
+      </div>
+    </section>
+
+    <section class="article-section textbook-section chapter-summary" id="chapter-summary">
+      <div class="chapter-number">6</div>
+      <div class="chapter-copy">
+        <p class="chapter-label">สรุปท้ายบท</p>
+        <h2>ประเด็นสำคัญที่ควรจำ</h2>
+        <ul>${summaryItems.map((item) => `<li>${item}</li>`).join("")}</ul>
+        <div class="review-questions">
+          <h3>คำถามทบทวน</h3>
+          <ol>
+            <li>${topic.keyConcept} หมายถึงอะไร และมีตัวควบคุมสำคัญใดบ้าง?</li>
+            <li>อธิบายกระบวนการเกิดตามลำดับด้วยภาษาของตนเอง</li>
+            <li>หลักฐานใดใน ${topic.location} ที่ช่วยยืนยันกระบวนการนี้?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 function buildTopicVisual(topic, variant = "card") {
   const profile = getTopicVisualProfile(topic);
   const title = variant === "hero" ? topic.title : profile.label;
@@ -10966,13 +11072,6 @@ function getTopicDisciplineLabel(topic) {
   return topic.subcategory;
 }
 
-let activeDepth = localStorage.getItem("geoStoryDepth") || "beginner";
-const depthLabels = {
-  beginner: "เริ่มต้น",
-  intermediate: "ลงลึก",
-  expert: "ผู้เชี่ยวชาญ",
-};
-
 function buildTopicCards(topicList) {
   return topicList
     .map(
@@ -10981,7 +11080,6 @@ function buildTopicCards(topicList) {
           ${buildTopicVisual(topic)}
           <div class="topic-card-content">
             <span class="topic-label">${getTopicDisciplineLabel(topic)}</span>
-            <span class="topic-depth"><i data-lucide="signal"></i>${depthLabels[activeDepth]}</span>
             <h3>${topic.title}</h3>
             <p>${topic.summary}</p>
             <div class="topic-meta">
@@ -11052,37 +11150,9 @@ function renderStory(topic) {
     </div>
 
     <div class="article-body article-body-focused">
-      <nav class="reader-depth-nav" aria-label="เลือกระดับความลึกของบทเรียน">
-        <span>อ่านระดับ</span>
-        <button type="button" data-reader-depth="beginner">เริ่มต้น</button>
-        <button type="button" data-reader-depth="intermediate">ลงลึก</button>
-        <button type="button" data-reader-depth="expert">ผู้เชี่ยวชาญ</button>
-      </nav>
       <p class="article-lead">${topic.summary}</p>
 
-      ${buildFocusedArticle(topic, guide)}
-
-      ${buildAiIllustrationPanel(topic, guide)}
-
-      <section class="article-section depth-intermediate" aria-labelledby="mechanism-title">
-        <h2 class="article-section-title" id="mechanism-title"><i data-lucide="workflow"></i>กลไกและความเชื่อมโยง</h2>
-        <div class="expert-lens">
-          <h3>จากสาเหตุสู่ร่องรอย</h3>
-          <p>${guide.definition}</p>
-          <ol>${guide.formation.map((item) => `<li>${item}</li>`).join("")}</ol>
-          <p><strong>หลักฐานที่ควรมองหา:</strong> ${guide.landforms.join(" · ")}</p>
-        </div>
-      </section>
-
-      <section class="article-section depth-expert" aria-labelledby="expert-title">
-        <h2 class="article-section-title" id="expert-title"><i data-lucide="microscope"></i>กรอบวิเคราะห์ระดับผู้เชี่ยวชาญ</h2>
-        <div class="expert-lens">
-          <h3>ตั้งสมมติฐานที่ตรวจสอบได้</h3>
-          <p>พิจารณา ${topic.keyConcept} ภายใต้สเกล ${topic.scale} แยกตัวขับเคลื่อนหลัก เงื่อนไขขอบเขต ตัวแปรตอบสนอง และช่วงเวลาที่กระบวนการทำงาน จากนั้นเปรียบเทียบหลักฐานจากภูมิประเทศ ภาพดาวเทียม และบันทึกภูมิอากาศ</p>
-          <code>รูปแบบพื้นที่ = กระบวนการ × เวลา × เงื่อนไขแวดล้อม × การรบกวนของมนุษย์</code>
-          <p><strong>คำถามวิจัย:</strong> หากอัตราหรือทิศทางของตัวขับเคลื่อนเปลี่ยนไป ร่องรอยใดจะตอบสนองก่อน และหลักฐานใดช่วยแยกสาเหตุที่แข่งขันกันได้?</p>
-        </div>
-      </section>
+      ${buildTextbookChapter(topic, guide)}
 
       <section class="article-section diagram-section">
         <h2 class="article-section-title">
@@ -11127,26 +11197,7 @@ function renderStory(topic) {
     });
   }
 
-  setReaderDepth(activeDepth);
-
   refreshIcons();
-}
-
-function setReaderDepth(depth) {
-  activeDepth = depthLabels[depth] ? depth : "beginner";
-  localStorage.setItem("geoStoryDepth", activeDepth);
-  document.body.dataset.readerDepth = activeDepth;
-  document.querySelectorAll("[data-reader-depth]").forEach((button) => {
-    const selected = button.dataset.readerDepth === activeDepth;
-    button.classList.toggle("active", selected);
-    button.setAttribute("aria-pressed", String(selected));
-    button.onclick = () => setReaderDepth(button.dataset.readerDepth);
-  });
-  document.querySelectorAll("[data-depth]").forEach((button) => {
-    const selected = button.dataset.depth === activeDepth;
-    button.classList.toggle("active", selected);
-    button.setAttribute("aria-pressed", String(selected));
-  });
 }
 
 let satelliteLayer, streetLayer;
@@ -11385,13 +11436,6 @@ document.querySelector("[data-random-topic]")?.addEventListener("click", () => {
   selectTopic(topic.id);
 });
 
-document.querySelectorAll("[data-depth]").forEach((button) => {
-  button.addEventListener("click", () => {
-    setReaderDepth(button.dataset.depth);
-    renderTopics(false);
-  });
-});
-
 function getBookmarks() {
   try { return JSON.parse(localStorage.getItem("geoStoryBookmarks") || "[]"); }
   catch { return []; }
@@ -11444,7 +11488,6 @@ document.querySelectorAll(".evidence-pin").forEach((pin) => {
 });
 
 renderCommandResults();
-setReaderDepth(activeDepth);
 
 // Boot
 const hashId = location.hash.slice(1);

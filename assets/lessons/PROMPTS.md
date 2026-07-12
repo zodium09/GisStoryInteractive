@@ -27,5 +27,8 @@ Avoid: fantasy geography, neon colors, generic travel postcard, unrelated disast
 - `biome-gradient.webp`: altitude, temperature and moisture controlled biome transition and ecotone.
 - `urban-climate.webp`: heat island, cool park-river corridor and sea-breeze ventilation through urban form.
 - `terrace-agriculture.webp`: watershed, contour terraces, gravity irrigation and sediment-retaining walls.
+- `rock-cycle.webp`: magma, igneous rock, weathering, sediment, lithification, metamorphism and melting in one continuous crustal system.
+- `weathering-erosion.webp`: connected source-to-sink journey from weathering and hillslope erosion to river transport, delta and coast.
+- `water-atmosphere-cycle.webp`: ocean evaporation, atmospheric moisture, orographic rain, infiltration, groundwater, runoff and return flow.
 
 `app.js` matches every lesson using its id, title, category, subcategory and key concept. Specific lesson assets take precedence; unmatched interdisciplinary lessons use the generated Earth-system visual rather than an unrelated stock image.

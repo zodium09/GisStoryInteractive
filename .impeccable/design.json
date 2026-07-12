@@ -36,12 +36,11 @@
       "css": ".ds-primary{border:0;border-radius:6px;padding:12px 18px;background:#21483F;color:#fff;font:700 14px 'Noto Sans Thai',sans-serif;transition:background .2s,transform .2s}.ds-primary:hover{background:#102F29;transform:translateY(-2px)}.ds-primary:focus-visible{outline:3px solid #D9A441;outline-offset:3px}"
     },
     {
-      "name": "Depth Chip",
-      "kind": "chip",
-      "refersTo": "chip-active",
-      "description": "Selects beginner, intermediate, or expert lesson depth.",
-      "html": "<button class=\"ds-depth\" aria-pressed=\"true\">ผู้เชี่ยวชาญ</button>",
-      "css": ".ds-depth{border:0;border-radius:999px;padding:8px 14px;background:#172521;color:#fff;font:700 12px 'Noto Sans Thai',sans-serif}.ds-depth:focus-visible{outline:3px solid #D9A441;outline-offset:3px}"
+      "name": "Chapter Marker",
+      "kind": "custom",
+      "description": "Marks the ordered textbook sections within every lesson.",
+      "html": "<span class=\"ds-chapter\">3</span>",
+      "css": ".ds-chapter{display:grid;width:42px;height:42px;place-items:center;border-radius:50%;background:#21483F;color:#fff;font:700 16px 'Noto Serif Thai',serif}"
     },
     {
       "name": "Atlas Search",
@@ -59,7 +58,7 @@
       { "name": "Evidence Color Rule", "body": "Saturated color must identify a category, state, or data relationship.", "section": "colors" },
       { "name": "Flat Atlas Rule", "body": "Lesson surfaces stay flat; shadows indicate actual elevation.", "section": "elevation" }
     ],
-    "dos": ["Give every image a caption or observation prompt.", "Keep the essential idea visible to beginners within one screen.", "Use progressive disclosure for theory and expert analysis."],
+    "dos": ["Give every image a caption or observation prompt.", "Use one complete textbook structure for every lesson.", "Separate process models from real-place evidence."],
     "donts": ["Do not make a childlike learning site or an unguided card warehouse.", "Do not create academic walls of text.", "Do not use neon, glassmorphism, gradient text, or decorative imagery without evidence."]
   }
 }
