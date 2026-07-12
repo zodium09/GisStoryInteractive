@@ -3,153 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#172521" />
-    <meta name="description" content="หนังสือเรียนภูมิศาสตร์กายภาพและธรณีศาสตร์แบบอินเทอร์แอ็กทีฟ พร้อมแผนที่ ภาพถ่าย และกรณีศึกษาทั่วโลก" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23172521'/%3E%3Cpath d='M12 32h40M32 4c9 9 13 18 13 28S41 51 32 60C23 51 19 42 19 32S23 13 32 4Z' fill='none' stroke='%23D9A441' stroke-width='3'/%3E%3C/svg%3E" />
-    <title>GeoStory Atlas | หนังสือเรียนโลกทั้งใบ</title>
+    <meta name="theme-color" content="#18352f" />
+    <meta name="description" content="หนังสือเรียนภูมิศาสตร์กายภาพฉบับอ่านง่าย เรียงเนื้อหาตามลำดับจากโลกและภูมิลักษณ์ไปสู่ทรัพยากร ภูมิอากาศ สิ่งแวดล้อม และภัยธรรมชาติ" />
+    <title>ภูมิศาสตร์กายภาพ | อ่านโลกอย่างเป็นเรื่องราว</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23d39a2c'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' font-family='serif' fill='%23172521'%3E%E0%B8%A0%E0%B8%B9%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Noto+Serif+Thai:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="v2.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="textbook.css" />
   </head>
   <body>
     <a class="skip-link" href="#mainContent">ข้ามไปยังเนื้อหา</a>
     <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
 
     <header class="site-header">
-      <a class="brand" href="#" id="brandLink" aria-label="GeoStory Atlas หน้าหลัก">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16"/><path d="M6 20h28M20 4c5 5 7 10 7 16s-2 11-7 16c-5-5-7-10-7-16S15 9 20 4Z"/></svg>
-        </span>
-        <span class="brand-copy"><strong>GeoStory</strong><small>EARTH ATLAS</small></span>
+      <a class="brand" href="#top" aria-label="กลับหน้าแรก">
+        <span class="brand-mark" aria-hidden="true">ภู</span>
+        <span><strong>ภูมิศาสตร์กายภาพ</strong><small>หนังสือเรียนอ่านต่อเนื่อง</small></span>
       </a>
-      <nav class="main-nav" aria-label="เมนูหลัก">
-        <a href="#learn">เส้นทางเรียน</a>
-        <a href="#library">คลังความรู้</a>
-        <button class="command-trigger" id="commandTrigger" type="button"><i data-lucide="search"></i><span>ค้นหาทั้ง Atlas</span><kbd>Ctrl K</kbd></button>
+      <nav aria-label="เมนูหลัก">
+        <a href="#contents">สารบัญ</a>
+        <a href="#readingGuide">วิธีอ่าน</a>
+        <button id="themeToggle" type="button" aria-label="เปลี่ยนชุดสี">โหมดกลางคืน</button>
       </nav>
-      <div class="header-actions">
-        <span class="nav-stat"><strong id="topicCount">298</strong><small>บทเรียน</small></span>
-        <button class="header-icon-btn" id="themeToggle" type="button" aria-label="สลับโหมดสี"><i data-lucide="moon"></i></button>
-        <button class="nav-back-btn" id="navBackBtn" type="button" hidden><i data-lucide="arrow-left"></i><span>สารานุกรม</span></button>
-      </div>
     </header>
 
     <main id="mainContent">
-      <div id="libraryView">
-        <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-media" role="img" aria-label="ภาพตัดขวางระบบโลกจากมหาสมุทร แม่น้ำ ชั้นหิน ภูเขาไฟ ภูเขา และธารน้ำแข็ง"></div>
-          <div class="hero-grid" aria-hidden="true"></div>
-          <div class="hero-content">
-            <p class="hero-kicker"><span></span>Interactive Earth Sciences Atlas</p>
-            <h1 id="hero-title">อ่านโลก<br />ให้เป็นเรื่อง</h1>
-            <p class="hero-lead">จากชั้นหินใต้เท้า สู่เมฆเหนือศีรษะ อ่านความหมาย ประเภท และกระบวนการที่สร้างโลก พร้อมแผนภาพและสถานที่จริงในบทเรียนฉบับสมบูรณ์</p>
-            <div class="hero-actions">
-              <a class="primary-action" href="#learn"><i data-lucide="compass"></i>เริ่มเส้นทางเรียน</a>
-              <button class="secondary-action" type="button" data-random-topic><i data-lucide="shuffle"></i>สุ่มสำรวจโลก</button>
-            </div>
-            <div class="hero-levels" aria-label="องค์ประกอบของบทเรียน">
-              <span><b>01</b> ความหมายและประเภท</span><span><b>02</b> กระบวนการเกิด</span><span><b>03</b> สถานที่จริงและพิกัด</span>
-            </div>
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="book-label">เรียบเรียงตามสารบัญภูมิศาสตร์กายภาพ</p>
+          <h1>อ่านโลก<br />อย่างเป็นเรื่องราว</h1>
+          <p>เริ่มตั้งแต่โลกก่อกำเนิด พื้นผิวเปลี่ยนรูปร่าง น้ำและอากาศหมุนเวียน สิ่งมีชีวิตพึ่งพาทรัพยากร จนถึงวันที่ธรรมชาติกลายเป็นภัย เนื้อหาทั้งหมดเรียงเหตุและผลต่อกันด้วยภาษาธรรมดา</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#contents">เปิดสารบัญ</a>
+            <button class="secondary-action" type="button" data-open-chapter="0">เริ่มอ่านบทแรก</button>
           </div>
-          <aside class="hero-observation" aria-label="จุดสังเกตในภาพ">
-            <div class="observation-line"></div>
-            <span>FIELD NOTE · 01</span>
-            <strong>สังเกตว่าทุกระบบเชื่อมกัน</strong>
-            <p>น้ำกัดเซาะหิน พาตะกอนผ่านแม่น้ำ สู่ชายฝั่ง ขณะที่ภูมิอากาศและพลังงานใต้โลกกำหนดจังหวะทั้งหมด</p>
-          </aside>
-          <a class="hero-scroll" href="#learn"><span>เลื่อนเพื่อสำรวจ</span><i data-lucide="arrow-down"></i></a>
-        </section>
+        </div>
+        <figure class="hero-image">
+          <img src="assets/ai/earth-system-hero-v2.png" alt="ภาพตัดขวางแสดงภูเขา แม่น้ำ ทะเล ชั้นหิน และบรรยากาศที่เชื่อมโยงกัน" />
+          <figcaption>โลกทำงานเป็นระบบเดียว การเปลี่ยนแปลงส่วนหนึ่งจึงส่งต่อไปยังส่วนอื่นเสมอ</figcaption>
+        </figure>
+      </section>
 
-        <section class="learning-hub" id="learn" aria-labelledby="learn-title">
-          <div class="section-intro split-heading">
-            <div><p class="section-index">เริ่มต้นตรงนี้</p><h2 id="learn-title">โลกหนึ่งใบ<br />หลายระบบ</h2></div>
-            <p>ภูมิศาสตร์กายภาพไม่ใช่วิชาแยกส่วน แต่คือการอ่านความสัมพันธ์ของหิน น้ำ อากาศ ชีวิต และเวลา เลือกเส้นทางตามความสงสัย หรือเรียนตามลำดับจากพื้นฐาน</p>
-          </div>
+      <section class="reading-guide" id="readingGuide" aria-labelledby="guideTitle">
+        <div>
+          <span>แนวทางของหนังสือ</span>
+          <h2 id="guideTitle">จากเหตุ ไปสู่กระบวนการ แล้วจึงเห็นผล</h2>
+        </div>
+        <p>แต่ละบทเริ่มจากภาพรวม ก่อนเล่ากระบวนการเกิดทีละช่วง และจบด้วยความสัมพันธ์ต่อชีวิตมนุษย์ ศัพท์เฉพาะจะใช้เท่าที่จำเป็นและอธิบายในประโยคเดียวกัน จึงอ่านต่อเนื่องได้โดยไม่ต้องสลับไปมาระหว่างกล่องข้อมูล</p>
+      </section>
 
-          <div class="earth-system-stage">
-            <div class="system-orbit" aria-label="แผนผังระบบโลก">
-              <div class="orbit-rings" aria-hidden="true"><i></i><i></i><i></i></div>
-              <div class="system-core"><span>EARTH</span><strong>ระบบโลก</strong><small>กดแต่ละระบบเพื่อสำรวจ</small></div>
-              <button class="system-node node-geosphere" data-discipline-target="geology" type="button"><i data-lucide="layers-3"></i><span><b>ธรณีภาค</b><small>หิน · แผ่นธรณี · ภูเขาไฟ</small></span></button>
-              <button class="system-node node-atmosphere" data-discipline-target="climatology" type="button"><i data-lucide="wind"></i><span><b>บรรยากาศ</b><small>อากาศ · ภูมิอากาศ · พายุ</small></span></button>
-              <button class="system-node node-hydrosphere" data-discipline-target="hydrology" type="button"><i data-lucide="waves"></i><span><b>อุทกภาค</b><small>แม่น้ำ · มหาสมุทร · น้ำแข็ง</small></span></button>
-              <button class="system-node node-biosphere" data-discipline-target="ecology" type="button"><i data-lucide="leaf"></i><span><b>ชีวภาค</b><small>ชีวนิเวศ · ดิน · การกระจาย</small></span></button>
-            </div>
+      <section class="contents" id="contents" aria-labelledby="contentsTitle">
+        <div class="section-heading">
+          <p>สารบัญ</p>
+          <h2 id="contentsTitle">ห้าบทที่พาเราเข้าใจโลกทั้งระบบ</h2>
+          <p>เรียงหัวข้อหลักตามหนังสือที่แนบ และรวมเรื่องย่อยที่เกี่ยวข้องให้เป็นบทความเดียวกัน</p>
+        </div>
+        <div class="chapter-list" id="chapterList"></div>
+      </section>
 
-            <div class="learning-paths">
-              <article class="path-featured">
-                <div class="path-number">PATH 01</div>
-                <div><span class="path-duration"><i data-lucide="clock-3"></i>8 บท · 45 นาที</span><h3>พื้นฐานการอ่านโลก</h3><p>เริ่มจากสเกล แผนที่ พลังงาน และวัฏจักร ก่อนเชื่อมไปสู่ภูมิประเทศและภูมิอากาศ</p></div>
-                <button type="button" data-topic="ring-of-fire"><span>เริ่มบทแรก</span><i data-lucide="arrow-up-right"></i></button>
-              </article>
-              <button class="path-row" type="button" data-discipline-target="geology"><span>02</span><div><strong>โลกที่เคลื่อนไหว</strong><small>ธรณีแปรสัณฐาน · แผ่นดินไหว · ภูเขาไฟ</small></div><i data-lucide="arrow-right"></i></button>
-              <button class="path-row" type="button" data-discipline-target="geomorphology"><span>03</span><div><strong>ภูมิประเทศที่กำลังก่อตัว</strong><small>ผุพัง · กัดเซาะ · พัดพา · ทับถม</small></div><i data-lucide="arrow-right"></i></button>
-              <button class="path-row" type="button" data-discipline-target="natural-hazards"><span>04</span><div><strong>โลกสุดขั้วและความเสี่ยง</strong><small>ภัยธรรมชาติ · การรับมือ · ภูมิทัศน์เปลี่ยนแปลง</small></div><i data-lucide="arrow-right"></i></button>
-            </div>
-          </div>
-        </section>
-
-        <section class="field-lab" aria-labelledby="lab-title">
-          <div class="field-photo" role="img" aria-label="ชั้นหินคดโค้งเผยให้เห็นแรงที่กระทำต่อเปลือกโลก">
-            <div class="photo-coordinate"><i data-lucide="crosshair"></i>64.1466° N · 21.9426° W</div>
-            <button class="evidence-pin pin-one" type="button" aria-label="ดูรอยคดโค้ง"><span>1</span></button>
-            <button class="evidence-pin pin-two" type="button" aria-label="ดูแนวชั้นหิน"><span>2</span></button>
-          </div>
-          <div class="field-copy">
-            <p class="section-index">ฝึกอ่านหลักฐาน</p>
-            <h2 id="lab-title">ภาพนี้กำลัง<br />เล่าอะไร?</h2>
-            <p>นักภูมิศาสตร์ไม่ได้เริ่มจากการท่องชื่อ แต่เริ่มจากหลักฐาน ลองมองหารูปร่าง แนว เส้น สี และความสัมพันธ์ ก่อนเปิดคำอธิบาย</p>
-            <ol class="observation-steps">
-              <li><span>01</span><div><strong>สังเกตรูปแบบ</strong><p>แนวชั้นหินที่เคยวางตัวราบกลับโค้งงอ</p></div></li>
-              <li><span>02</span><div><strong>ตั้งสมมติฐาน</strong><p>แรงบีบอัดอาจกระทำต่อชั้นหินเป็นเวลานาน</p></div></li>
-              <li><span>03</span><div><strong>เชื่อมกระบวนการ</strong><p>การเคลื่อนที่ของแผ่นธรณีสร้างเทือกเขาและรอยเลื่อน</p></div></li>
-            </ol>
-            <button class="text-action" type="button" data-topic="himalaya"><span>เรียนรู้การอ่านชั้นหิน</span><i data-lucide="arrow-right"></i></button>
-          </div>
-        </section>
-
-        <section class="library-section" id="library" aria-labelledby="library-title">
-          <div class="library-heading">
-            <div><p class="section-index">คลังความรู้ฉบับสมบูรณ์</p><h2 id="library-title">สำรวจ 8 ศาสตร์<br />ผ่าน 298 เรื่อง</h2></div>
-            <div class="library-summary"><p>ค้นจากปรากฏการณ์ สถานที่ หรือคำถาม ทุกเรื่องเขียนเป็นบทเรียนฉบับสมบูรณ์ในโครงเดียวกัน</p><div class="library-counts"><span><strong id="categoryCount">8</strong>ศาสตร์</span><span><strong>18</strong>แผนภาพ</span><span><strong>1</strong>โลก</span></div></div>
-          </div>
-
-          <div class="library-sticky-tools">
-            <label class="search-box"><i data-lucide="search"></i><span class="sr-only">ค้นหาบทเรียน</span><input id="searchInput" type="search" placeholder="ค้นหา เช่น แผ่นธรณี มรสุม แม่น้ำ ภูเขาไฟ…" /><kbd>/</kbd></label>
-            <div class="book-format-note"><i data-lucide="book-marked"></i><span>บทเรียนฉบับสมบูรณ์</span></div>
-          </div>
-
-          <div class="discipline-nav" id="disciplineNav" aria-label="สาขาวิชา"></div>
-          <div class="discipline-panel" id="disciplinePanel" hidden></div>
-          <div class="filter-breadcrumb" id="filterGroup" hidden aria-label="ตัวกรองที่เลือก"></div>
-          <div class="quick-search-group" id="quickSearchGroup" aria-label="คำค้นแนะนำ"></div>
-          <div id="conceptTextbook" class="concept-textbook" hidden aria-live="polite"></div>
-          <div class="category-overview" id="categoryOverview" aria-label="ภาพรวมสาขาวิชา"></div>
-          <div class="topic-grid-label" id="topicGridLabel" hidden><i data-lucide="telescope"></i><span id="topicGridLabelText">กรณีศึกษาจากสถานที่จริงทั่วโลก</span></div>
-          <div class="topic-grid" id="topicGrid"></div>
-        </section>
-      </div>
-
-      <div id="articleView" hidden>
-        <div class="article-back-bar"><button class="back-btn" type="button" id="backToLibrary"><i data-lucide="arrow-left"></i>กลับคลังความรู้</button><span class="back-breadcrumb" id="articleBreadcrumb"></span><button class="bookmark-btn" id="bookmarkBtn" type="button"><i data-lucide="bookmark"></i><span>บันทึกบทเรียน</span></button></div>
-        <article class="story-reader" id="storyReader" aria-live="polite"></article>
-        <div class="map-toggle-bar"><button class="map-toggle-btn" type="button" id="mapToggleBtn" aria-expanded="false" aria-controls="mapPanel"><i data-lucide="satellite"></i><span>เปิดแผนที่หลักฐาน</span></button><span class="map-location-hint" id="mapLocationHint" aria-live="polite"></span></div>
-        <div class="map-panel" id="mapPanel" aria-hidden="true"><div class="map-layer-row"><span class="map-layer-label">ชั้นข้อมูล</span><button class="map-layer-btn active" type="button" data-layer="satellite">ภาพดาวเทียม</button><button class="map-layer-btn" type="button" data-layer="street">แผนที่ถนน</button></div><div id="map" aria-label="แผนที่ตำแหน่งบทเรียน"></div></div>
-      </div>
+      <section class="reader-shell" id="reader" hidden aria-live="polite">
+        <aside class="reader-toc" aria-label="สารบัญบทเรียน">
+          <button class="close-reader" id="closeReader" type="button">← กลับสารบัญหลัก</button>
+          <p>บทในหนังสือ</p>
+          <nav id="readerChapterNav"></nav>
+        </aside>
+        <article class="chapter-article" id="chapterArticle"></article>
+      </section>
     </main>
 
-    <footer class="site-footer"><div><strong>GeoStory Atlas</strong><p>หนังสือเรียนโลกทั้งใบ ผ่านกระบวนการและสถานที่จริง</p></div><div><span>298 บทเรียน · 8 ศาสตร์ · 18 แผนภาพ</span><a href="#" id="footerBackTop">กลับด้านบน <i data-lucide="arrow-up"></i></a></div></footer>
+    <footer>
+      <div><strong>ภูมิศาสตร์กายภาพ</strong><p>ฉบับเรียบเรียงใหม่สำหรับการอ่านต่อเนื่องและเข้าใจง่าย</p></div>
+      <a href="#top">กลับด้านบน ↑</a>
+    </footer>
 
-    <dialog class="command-dialog" id="commandDialog"><form method="dialog" class="command-shell"><div class="command-search"><i data-lucide="search"></i><input id="commandInput" type="search" placeholder="ค้นหาปรากฏการณ์ สถานที่ หรือแนวคิด…" autocomplete="off" /><button value="cancel" aria-label="ปิด"><i data-lucide="x"></i></button></div><div class="command-results" id="commandResults"><p>พิมพ์เพื่อค้นหาใน 298 บทเรียน</p></div><div class="command-hint"><span><kbd>↑</kbd><kbd>↓</kbd> เลือก</span><span><kbd>Enter</kbd> เปิดบทเรียน</span><span><kbd>Esc</kbd> ปิด</span></div></form></dialog>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="app.js"></script>
   </body>
 </html>
