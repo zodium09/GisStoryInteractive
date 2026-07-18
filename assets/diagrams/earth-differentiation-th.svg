@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">การแยกชั้นของโลกยุคแรก</title>
+  <desc id="svg-desc">ภาพเชิงแนวคิดสี่ขั้น แสดงโลกกำลังก่อตัวและร้อนขึ้น วัสดุภายในเคลื่อนตัวได้ วัสดุแยกตามความหนาแน่น และโลกเกิดโครงสร้างเป็นชั้น</desc>
+  <metadata>
+    Scientific reference: NASA/JPL-Caltech, A Rocky Planet Forms, https://science.nasa.gov/resource/a-rocky-planet-forms/
+    Scientific reference: U.S. Geological Survey, What do we know about the interior of the Earth?, https://www.usgs.gov/media/audio/what-do-we-know-about-interior-earth
+    Scientific reference: NASA, Cut-away Diagram of Earth's Interior, https://www.nasa.gov/image-article/cut-away-diagram-of-earths-interior/
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcfbf7"/>
+      <stop offset="1" stop-color="#f1ede3"/>
+    </linearGradient>
+    <radialGradient id="early-earth" cx="38%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#f7c66a"/>
+      <stop offset="0.6" stop-color="#d96f36"/>
+      <stop offset="1" stop-color="#8f352b"/>
+    </radialGradient>
+    <radialGradient id="mantle" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#d97b38"/>
+      <stop offset="0.7" stop-color="#b84e2d"/>
+      <stop offset="1" stop-color="#8b3428"/>
+    </radialGradient>
+    <radialGradient id="core" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#f4d46f"/>
+      <stop offset="0.75" stop-color="#d69a2b"/>
+      <stop offset="1" stop-color="#a96b1e"/>
+    </radialGradient>
+    <pattern id="silicate-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M-4 15 C2 8 8 8 14 15 S26 22 32 15" fill="none" stroke="#6f2923" stroke-width="2" opacity="0.3"/>
+    </pattern>
+    <pattern id="core-pattern" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0 V16 M8 0 V16" stroke="#714917" stroke-width="2" opacity="0.3"/>
+    </pattern>
+    <filter id="card-shadow" x="-12%" y="-12%" width="124%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#3f342c" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow-time" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2c7181"/>
+    </marker>
+    <marker id="arrow-metal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#243a50"/>
+    </marker>
+    <marker id="arrow-silicate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#f5e2b5" stroke="#7f3a29" stroke-width="0.8"/>
+    </marker>
+    <clipPath id="clip-1"><circle cx="235" cy="374" r="123"/></clipPath>
+    <clipPath id="clip-2"><circle cx="615" cy="374" r="123"/></clipPath>
+    <clipPath id="clip-3"><circle cx="995" cy="374" r="123"/></clipPath>
+    <style>
+      .thai { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+      .step-title { font-size: 25px; font-weight: 750; fill: #18242e; }
+      .small-label { font-size: 20px; font-weight: 650; fill: #26333d; }
+      .panel { fill: #fffdf8; stroke: #d4cbbb; stroke-width: 2.5; }
+      .timeline { fill: none; stroke: #2c7181; stroke-width: 5; stroke-linecap: round; marker-end: url(#arrow-time); }
+      .leader { fill: none; stroke: #39434b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <path d="M0 116 H1600" stroke="#d8d0c2" stroke-width="2"/>
+
+  <g class="thai">
+    <text x="800" y="70" text-anchor="middle" font-size="52" font-weight="800" fill="#17232d">การแยกชั้นของโลกยุคแรก</text>
+    <text x="800" y="104" text-anchor="middle" font-size="21" font-weight="500" fill="#68747c">ลำดับเหตุ–ผลจากวัสดุที่ผสมกันสู่โครงสร้างเป็นชั้น</text>
+  </g>
+
+  <g class="thai" aria-label="ลำดับเวลา">
+    <path class="timeline" d="M390 164 H442"/>
+    <path class="timeline" d="M770 164 H822"/>
+    <path class="timeline" d="M1150 164 H1202"/>
+    <text x="800" y="138" text-anchor="middle" font-size="18" font-weight="650" fill="#2c7181">ลำดับเวลา</text>
+  </g>
+
+  <!-- ขั้นที่ 1 -->
+  <g class="thai">
+    <rect class="panel" x="65" y="185" width="340" height="442" rx="24" filter="url(#card-shadow)"/>
+    <rect x="65" y="185" width="340" height="72" rx="24" fill="#f3d8c6"/>
+    <path d="M65 233 H405 V257 H65 Z" fill="#f3d8c6"/>
+    <text class="step-title" x="235" y="229" text-anchor="middle">1 โลกกำลังก่อตัวและร้อนขึ้น</text>
+    <circle cx="235" cy="374" r="130" fill="#7e3028" opacity="0.18"/>
+    <circle cx="235" cy="374" r="123" fill="url(#early-earth)" stroke="#733028" stroke-width="5"/>
+    <circle cx="235" cy="374" r="123" fill="url(#silicate-pattern)"/>
+    <g clip-path="url(#clip-1)" fill="#d69a2b" stroke="#4d3920" stroke-width="2">
+      <circle cx="178" cy="325" r="8"/><circle cx="255" cy="304" r="7"/><circle cx="298" cy="359" r="9"/>
+      <circle cx="201" cy="399" r="7"/><circle cx="263" cy="431" r="8"/><circle cx="315" cy="421" r="6"/>
+      <circle cx="151" cy="374" r="6"/><circle cx="229" cy="354" r="7"/>
+    </g>
+    <g fill="#f1bc68" stroke="#7f3a29" stroke-width="2" opacity="0.95">
+      <path d="M165 349 l13 -11 14 8 -3 16 -17 4 z"/><path d="M271 377 l15 -8 12 12 -6 16 -17 -2 z"/>
+      <path d="M210 445 l12 -10 15 6 1 15 -18 5 z"/><path d="M300 320 l10 -8 13 4 2 13 -15 7 z"/>
+    </g>
+    <g fill="none" stroke="#b84e2d" stroke-width="4" stroke-linecap="round">
+      <path d="M128 315 q-18 20 0 40"/><path d="M342 317 q18 20 0 40"/>
+      <path d="M151 266 q-10 12 0 24"/><path d="M319 266 q10 12 0 24"/>
+    </g>
+    <text x="235" y="548" text-anchor="middle" font-size="21" font-weight="600" fill="#6b483b">วัสดุหลายชนิดยังผสมกัน</text>
+    <text x="235" y="582" text-anchor="middle" font-size="19" fill="#6a7277">พลังงานจากการก่อตัวทำให้โลกร้อนขึ้น</text>
+  </g>
+
+  <!-- ขั้นที่ 2 -->
+  <g class="thai">
+    <rect class="panel" x="445" y="185" width="340" height="442" rx="24" filter="url(#card-shadow)"/>
+    <rect x="445" y="185" width="340" height="72" rx="24" fill="#f2ddc3"/>
+    <path d="M445 233 H785 V257 H445 Z" fill="#f2ddc3"/>
+    <text class="step-title" x="615" y="229" text-anchor="middle">2 วัสดุภายในเคลื่อนตัวได้</text>
+    <circle cx="615" cy="374" r="130" fill="#7e3028" opacity="0.18"/>
+    <circle cx="615" cy="374" r="123" fill="url(#early-earth)" stroke="#733028" stroke-width="5"/>
+    <circle cx="615" cy="374" r="123" fill="url(#silicate-pattern)"/>
+    <g clip-path="url(#clip-2)" fill="#d69a2b" stroke="#4d3920" stroke-width="2">
+      <circle cx="558" cy="325" r="8"/><circle cx="635" cy="304" r="7"/><circle cx="678" cy="359" r="9"/>
+      <circle cx="581" cy="399" r="7"/><circle cx="643" cy="431" r="8"/><circle cx="695" cy="421" r="6"/>
+      <circle cx="531" cy="374" r="6"/><circle cx="609" cy="354" r="7"/>
+    </g>
+    <g fill="#f1bc68" stroke="#7f3a29" stroke-width="2">
+      <path d="M545 349 l13 -11 14 8 -3 16 -17 4 z"/><path d="M651 377 l15 -8 12 12 -6 16 -17 -2 z"/>
+      <path d="M590 445 l12 -10 15 6 1 15 -18 5 z"/><path d="M680 320 l10 -8 13 4 2 13 -15 7 z"/>
+    </g>
+    <g fill="none" stroke="#fff4d5" stroke-width="4" stroke-linecap="round" opacity="0.88">
+      <path d="M551 342 q28 -36 60 -10"/><path d="M659 328 q31 29 4 59"/>
+      <path d="M651 416 q-27 30 -59 7"/><path d="M566 402 q-27 -28 -5 -55"/>
+    </g>
+    <text x="615" y="548" text-anchor="middle" font-size="21" font-weight="600" fill="#6b483b">วัสดุยังไม่แยกเป็นชั้น</text>
+    <text x="615" y="582" text-anchor="middle" font-size="19" fill="#6a7277">แต่สามารถเคลื่อนและจัดเรียงตัวใหม่</text>
+  </g>
+
+  <!-- ขั้นที่ 3 -->
+  <g class="thai">
+    <rect class="panel" x="825" y="185" width="340" height="442" rx="24" filter="url(#card-shadow)"/>
+    <rect x="825" y="185" width="340" height="72" rx="24" fill="#e8e0c5"/>
+    <path d="M825 233 H1165 V257 H825 Z" fill="#e8e0c5"/>
+    <text class="step-title" x="995" y="229" text-anchor="middle">3 วัสดุแยกตามความหนาแน่น</text>
+    <circle cx="995" cy="374" r="130" fill="#7e3028" opacity="0.18"/>
+    <circle cx="995" cy="374" r="123" fill="url(#early-earth)" stroke="#733028" stroke-width="5"/>
+    <circle cx="995" cy="374" r="123" fill="url(#silicate-pattern)"/>
+    <g fill="#d69a2b" stroke="#4d3920" stroke-width="2">
+      <circle cx="938" cy="319" r="8"/><circle cx="1051" cy="321" r="8"/><circle cx="929" cy="419" r="7"/>
+      <circle cx="1060" cy="416" r="7"/><circle cx="995" cy="301" r="7"/><circle cx="995" cy="447" r="7"/>
+      <circle cx="995" cy="374" r="11"/>
+    </g>
+    <g fill="none" stroke="#243a50" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-metal)">
+      <path d="M944 327 L982 362"/><path d="M1045 329 L1008 362"/><path d="M939 411 L981 384"/>
+      <path d="M1051 409 L1009 384"/><path d="M995 314 L995 352"/><path d="M995 434 L995 396"/>
+    </g>
+    <g fill="#f1bc68" stroke="#7f3a29" stroke-width="2">
+      <path d="M914 364 l12 -9 13 6 -2 14 -15 4 z"/><path d="M1055 363 l14 -8 12 10 -5 14 -16 -1 z"/>
+      <path d="M962 281 l12 -8 13 7 -2 13 -15 3 z"/><path d="M1008 455 l12 -9 14 6 0 14 -16 4 z"/>
+    </g>
+    <g fill="none" stroke="#f5e2b5" stroke-width="4" stroke-dasharray="8 7" stroke-linecap="round" marker-end="url(#arrow-silicate)">
+      <path d="M934 363 L907 363"/><path d="M1058 364 L1085 364"/><path d="M970 295 L958 270"/><path d="M1016 451 L1027 476"/>
+    </g>
+    <rect x="846" y="505" width="298" height="112" rx="14" fill="#f7f3e9" stroke="#d3c7b3" stroke-width="2"/>
+    <circle cx="870" cy="527" r="8" fill="#d69a2b" stroke="#4d3920" stroke-width="2"/>
+    <text x="890" y="533" font-size="17" font-weight="700" fill="#26333d">โลหะหนาแน่นสูง</text>
+    <text x="890" y="553" font-size="16" fill="#45525c">จมสู่ศูนย์กลาง</text>
+    <path d="M854 582 h32" stroke="#7f3a29" stroke-width="4" stroke-dasharray="7 6"/>
+    <text x="890" y="588" font-size="16" font-weight="700" fill="#26333d">ซิลิเกตหนาแน่นต่ำกว่า</text>
+    <text x="890" y="607" font-size="16" fill="#45525c">อยู่ในชั้นนอก</text>
+  </g>
+
+  <!-- ขั้นที่ 4 -->
+  <g class="thai">
+    <rect class="panel" x="1205" y="185" width="330" height="442" rx="24" filter="url(#card-shadow)"/>
+    <rect x="1205" y="185" width="330" height="72" rx="24" fill="#d9e6df"/>
+    <path d="M1205 233 H1535 V257 H1205 Z" fill="#d9e6df"/>
+    <text class="step-title" x="1370" y="229" text-anchor="middle">4 โลกเกิดโครงสร้างเป็นชั้น</text>
+    <circle cx="1338" cy="374" r="112" fill="url(#mantle)" stroke="#5d3429" stroke-width="9"/>
+    <circle cx="1338" cy="374" r="112" fill="url(#silicate-pattern)"/>
+    <circle cx="1338" cy="374" r="47" fill="url(#core)" stroke="#9b671d" stroke-width="4"/>
+    <circle cx="1338" cy="374" r="47" fill="url(#core-pattern)"/>
+    <circle cx="1338" cy="374" r="117" fill="none" stroke="#514438" stroke-width="9"/>
+    <path class="leader" d="M1422 293 L1452 280"/>
+    <text x="1518" y="286" text-anchor="end" font-size="18" font-weight="700" fill="#26333d">เปลือกโลก</text>
+    <path class="leader" d="M1412 345 L1452 339"/>
+    <text x="1518" y="345" text-anchor="end" font-size="18" font-weight="700" fill="#26333d">เนื้อโลก</text>
+    <path class="leader" d="M1368 391 L1452 411"/>
+    <text x="1518" y="418" text-anchor="end" font-size="18" font-weight="700" fill="#26333d">แก่นโลก</text>
+    <text x="1370" y="548" text-anchor="middle" font-size="20" font-weight="600" fill="#536169">ผลของการแยกตามความหนาแน่น</text>
+    <text x="1370" y="581" text-anchor="middle" font-size="18" fill="#6a7277">ไม่ใช่ภาพของโลกปัจจุบันที่หลอมเหลวทั้งดวง</text>
+  </g>
+
+  <g class="thai">
+    <rect x="95" y="665" width="1410" height="70" rx="18" fill="#e8f0ed" stroke="#9ab8ac" stroke-width="2.5"/>
+    <text x="800" y="710" text-anchor="middle" font-size="25" font-weight="700" fill="#243d39">เมื่อโลกร้อนและวัสดุเคลื่อนตัวได้ โลหะหนาแน่นจม ส่วนซิลิเกตเบากว่าอยู่ชั้นนอก</text>
+
+    <rect x="95" y="752" width="1410" height="66" rx="18" fill="#fff5d9" stroke="#d4ad52" stroke-width="2.5"/>
+    <circle cx="155" cy="785" r="16" fill="#d99826"/>
+    <text x="155" y="793" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">!</text>
+    <text x="800" y="794" text-anchor="middle" font-size="23" font-weight="700" fill="#594317">การแยกชั้นสร้างแก่นโลหะ แต่สนามแม่เหล็กเกิดจากการไหลในแก่นโลกชั้นนอก</text>
+
+    <text x="800" y="866" text-anchor="middle" font-size="24" font-weight="700" fill="#535854">ภาพเชิงแนวคิด ไม่เป็นมาตราส่วน</text>
+  </g>
+</svg>

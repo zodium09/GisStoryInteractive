@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">โครงสร้างโลก: แบ่งได้สองเกณฑ์</title>
+  <desc id="svg-desc">วงตัดโลกขนาดเท่ากันสองวง เปรียบเทียบการแบ่งตามองค์ประกอบกับการแบ่งตามสมบัติเชิงกล พร้อมเส้นเทียบความลึกเชิงแนวคิด</desc>
+  <metadata>
+    Scientific reference: U.S. Geological Survey, Inside the Earth — This Dynamic Earth, https://pubs.usgs.gov/gip/dynamic/inside.html
+    Scientific reference: U.S. Geological Survey, Are the tectonic plates floating on magma?, https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma
+    Scientific reference: U.S. Geological Survey, The Interior of the Earth, https://pubs.usgs.gov/gip/interior/
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcfbf7"/>
+      <stop offset="1" stop-color="#f1ede4"/>
+    </linearGradient>
+    <radialGradient id="mantle-fill" cx="37%" cy="31%" r="74%">
+      <stop offset="0" stop-color="#d98643"/>
+      <stop offset="0.72" stop-color="#b64f32"/>
+      <stop offset="1" stop-color="#843329"/>
+    </radialGradient>
+    <radialGradient id="core-fill" cx="37%" cy="31%" r="74%">
+      <stop offset="0" stop-color="#f3d26b"/>
+      <stop offset="0.72" stop-color="#d79a2c"/>
+      <stop offset="1" stop-color="#a96a1e"/>
+    </radialGradient>
+    <radialGradient id="inner-core-fill" cx="37%" cy="31%" r="74%">
+      <stop offset="0" stop-color="#fff7c6"/>
+      <stop offset="0.72" stop-color="#edcf65"/>
+      <stop offset="1" stop-color="#c79d32"/>
+    </radialGradient>
+    <pattern id="mantle-pattern" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M-4 16 C2 9 8 9 14 16 S26 23 32 16" fill="none" stroke="#692d27" stroke-width="2" opacity="0.28"/>
+    </pattern>
+    <pattern id="brittle-pattern" width="18" height="18" patternUnits="userSpaceOnUse">
+      <path d="M1 17 L8 10 L5 5 M8 10 L15 6 M8 10 L13 16" fill="none" stroke="#413b37" stroke-width="1.8" opacity="0.45"/>
+    </pattern>
+    <pattern id="slow-solid-pattern" width="24" height="18" patternUnits="userSpaceOnUse">
+      <path d="M-5 9 C2 3 9 3 16 9 S30 15 37 9" fill="none" stroke="#5d3754" stroke-width="2" opacity="0.34"/>
+    </pattern>
+    <pattern id="liquid-pattern" width="26" height="18" patternUnits="userSpaceOnUse">
+      <path d="M-5 9 C2 2 9 2 16 9 S30 16 37 9" fill="none" stroke="#7c4b17" stroke-width="2" opacity="0.35"/>
+    </pattern>
+    <pattern id="composition-core-pattern" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="2.2" fill="#72501b" opacity="0.34"/>
+      <circle cx="14" cy="14" r="2.2" fill="#72501b" opacity="0.34"/>
+    </pattern>
+    <pattern id="solid-pattern" width="17" height="17" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0 V17 M8.5 0 V17" stroke="#715919" stroke-width="2" opacity="0.32"/>
+    </pattern>
+    <filter id="soft-shadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#3c322b" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .thai { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+      .section-title { font-size: 30px; font-weight: 750; fill: #18252f; }
+      .layer-label { font-size: 22px; font-weight: 750; fill: #15232c; }
+      .status-label { font-size: 17px; font-weight: 550; fill: #58636b; }
+      .guide { fill: none; stroke: #6f7a80; stroke-width: 2.5; stroke-dasharray: 8 7; }
+      .leader { fill: none; stroke: #34414a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <path d="M0 116 H1600" stroke="#d7d0c2" stroke-width="2"/>
+
+  <g class="thai">
+    <text x="800" y="70" text-anchor="middle" font-size="52" font-weight="800" fill="#17232d">โครงสร้างโลก: แบ่งได้สองเกณฑ์</text>
+    <text x="800" y="105" text-anchor="middle" font-size="21" font-weight="500" fill="#68747c">ชื่อชั้นและขอบเขตเปลี่ยนไปตามคำถามที่ใช้จำแนก</text>
+    <text class="section-title" x="340" y="165" text-anchor="middle">แบ่งตามองค์ประกอบ</text>
+    <text class="section-title" x="900" y="165" text-anchor="middle">แบ่งตามสมบัติเชิงกล</text>
+  </g>
+
+  <!-- ซ้าย: ชั้นตามองค์ประกอบ -->
+  <g class="thai" filter="url(#soft-shadow)">
+    <circle cx="340" cy="425" r="221" fill="#41362f"/>
+    <circle cx="340" cy="425" r="210" fill="url(#mantle-fill)" stroke="#713029" stroke-width="4"/>
+    <circle cx="340" cy="425" r="210" fill="url(#mantle-pattern)"/>
+    <circle cx="340" cy="425" r="105" fill="url(#core-fill)" stroke="#965f1c" stroke-width="5"/>
+    <circle cx="340" cy="425" r="105" fill="url(#composition-core-pattern)"/>
+    <circle cx="340" cy="425" r="218" fill="none" stroke="#5d493a" stroke-width="12"/>
+
+    <!-- เปลือกทวีปหนากว่าเปลือกมหาสมุทรในเชิงสัญลักษณ์ -->
+    <path d="M185 280 A218 218 0 0 1 340 207" fill="none" stroke="#a57b4c" stroke-width="24" stroke-linecap="round"/>
+    <path d="M340 207 A218 218 0 0 1 495 280" fill="none" stroke="#52778a" stroke-width="12" stroke-linecap="round"/>
+
+    <text x="340" y="448" text-anchor="middle" font-size="26" font-weight="800" fill="#4d3215">แก่นโลก</text>
+    <text x="340" y="542" text-anchor="middle" font-size="26" font-weight="800" fill="#fff3e7">เนื้อโลก</text>
+    <rect x="148" y="566" width="384" height="48" rx="18" fill="#352c28" opacity="0.78"/>
+    <rect x="169" y="579" width="22" height="22" rx="6" fill="#a57b4c" stroke="#f8f3e8" stroke-width="2"/>
+    <text x="203" y="598" font-size="18" font-weight="700" fill="#ffffff">เปลือกทวีป</text>
+    <rect x="352" y="584" width="22" height="12" rx="5" fill="#52778a" stroke="#f8f3e8" stroke-width="2"/>
+    <text x="386" y="598" font-size="18" font-weight="700" fill="#ffffff">เปลือกมหาสมุทร</text>
+  </g>
+
+  <!-- ขวา: ชั้นตามสมบัติเชิงกล -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="900" cy="425" r="221" fill="#41362f"/>
+    <circle cx="900" cy="425" r="216" fill="#7b6658" stroke="#4c4038" stroke-width="5"/>
+    <circle cx="900" cy="425" r="216" fill="url(#brittle-pattern)"/>
+    <circle cx="900" cy="425" r="184" fill="#b08383" stroke="#745267" stroke-width="4"/>
+    <circle cx="900" cy="425" r="184" fill="url(#slow-solid-pattern)"/>
+    <circle cx="900" cy="425" r="148" fill="url(#mantle-fill)" stroke="#78362b" stroke-width="4"/>
+    <circle cx="900" cy="425" r="148" fill="url(#mantle-pattern)"/>
+    <circle cx="900" cy="425" r="105" fill="url(#core-fill)" stroke="#95611e" stroke-width="5"/>
+    <circle cx="900" cy="425" r="105" fill="url(#liquid-pattern)"/>
+    <circle cx="900" cy="425" r="52" fill="url(#inner-core-fill)" stroke="#8e711e" stroke-width="4"/>
+    <circle cx="900" cy="425" r="52" fill="url(#solid-pattern)"/>
+  </g>
+
+  <!-- เส้นเทียบความลึกเชิงแนวคิด: ไม่ใส่ค่าตัวเลข -->
+  <g class="thai">
+    <text x="620" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#68747a">เส้นเทียบความลึกเชิงแนวคิด</text>
+    <path d="M489 221 H645" fill="none" stroke="#a57b4c" stroke-width="2.5" stroke-dasharray="8 7"/>
+    <path d="M685 241 H716" fill="none" stroke="#7b6658" stroke-width="2.5" stroke-dasharray="8 7"/>
+    <path d="M655 219 V242" stroke="#b14c36" stroke-width="3"/>
+    <text x="665" y="270" text-anchor="middle" font-size="16" font-weight="700" fill="#8a3c2f">ขอบเขตไม่ตรงกัน</text>
+
+    <path class="guide" d="M445 320 H795"/>
+    <text x="620" y="313" text-anchor="middle" font-size="15" fill="#68747a">ขอบเนื้อโลก–แก่นโลก</text>
+  </g>
+
+  <!-- คำอธิบายชั้นเชิงกล -->
+  <g class="thai">
+    <rect x="1150" y="195" width="390" height="458" rx="24" fill="#fffdf8" stroke="#d1c8b8" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <text x="1345" y="231" text-anchor="middle" font-size="19" font-weight="700" fill="#667078">สถานะและการตอบสนองต่อแรง</text>
+
+    <rect x="1174" y="249" width="44" height="44" rx="10" fill="#7b6658" stroke="#4c4038" stroke-width="2"/>
+    <rect x="1174" y="249" width="44" height="44" rx="10" fill="url(#brittle-pattern)"/>
+    <text class="layer-label" x="1236" y="269">ธรณีภาค</text>
+    <text class="status-label" x="1236" y="290">แข็งและเปราะ</text>
+
+    <rect x="1174" y="318" width="44" height="44" rx="10" fill="#b08383" stroke="#745267" stroke-width="2"/>
+    <rect x="1174" y="318" width="44" height="44" rx="10" fill="url(#slow-solid-pattern)"/>
+    <text class="layer-label" x="1236" y="338">ฐานธรณีภาค</text>
+    <text class="status-label" x="1236" y="359">ของแข็งที่เปลี่ยนรูปช้า</text>
+
+    <rect x="1174" y="387" width="44" height="44" rx="10" fill="#b64f32" stroke="#78362b" stroke-width="2"/>
+    <rect x="1174" y="387" width="44" height="44" rx="10" fill="url(#mantle-pattern)"/>
+    <text x="1236" y="407" font-size="20" font-weight="750" fill="#15232c">เนื้อโลกส่วนล่าง (เมโซสเฟียร์)</text>
+    <text class="status-label" x="1236" y="428">ของแข็งที่เปลี่ยนรูปช้า</text>
+
+    <rect x="1174" y="456" width="44" height="44" rx="10" fill="#d79a2c" stroke="#95611e" stroke-width="2"/>
+    <rect x="1174" y="456" width="44" height="44" rx="10" fill="url(#liquid-pattern)"/>
+    <text class="layer-label" x="1236" y="476">แก่นโลกชั้นนอก</text>
+    <text class="status-label" x="1236" y="497">ของเหลว</text>
+
+    <rect x="1174" y="525" width="44" height="44" rx="10" fill="#edcf65" stroke="#8e711e" stroke-width="2"/>
+    <rect x="1174" y="525" width="44" height="44" rx="10" fill="url(#solid-pattern)"/>
+    <text class="layer-label" x="1236" y="545">แก่นโลกชั้นใน</text>
+    <text class="status-label" x="1236" y="566">ของแข็ง</text>
+
+    <path d="M1174 597 H1516" stroke="#d7d0c4" stroke-width="2"/>
+    <text x="1345" y="622" text-anchor="middle" font-size="18" font-weight="700" fill="#395467">ธรณีภาค = เปลือกโลก + เนื้อโลกส่วนบนสุด</text>
+    <text x="1345" y="645" text-anchor="middle" font-size="16" fill="#5d6971">เปลือกมหาสมุทร ≠ ธรณีภาคมหาสมุทร</text>
+  </g>
+
+  <g class="thai">
+    <rect x="92" y="690" width="1416" height="72" rx="20" fill="#e8f0ed" stroke="#98b6aa" stroke-width="2.5"/>
+    <text x="800" y="735" text-anchor="middle" font-size="27" font-weight="750" fill="#233c38">เปลือกโลกไม่ใช่ธรณีภาค; เนื้อโลกส่วนใหญ่เป็นหินของแข็งที่ไหลช้ามาก</text>
+
+    <rect x="92" y="780" width="1416" height="54" rx="27" fill="#ece6db" stroke="#c9c0b1" stroke-width="2"/>
+    <text x="800" y="815" text-anchor="middle" font-size="24" font-weight="700" fill="#535853">ภาพเชิงแผนผัง ไม่เป็นมาตราส่วน</text>
+    <text x="800" y="870" text-anchor="middle" font-size="17" fill="#737b7e">เส้นน้ำตาล: ฐานเปลือกโลก • เส้นเทา: ฐานธรณีภาค • เส้นประใช้เทียบเชิงแนวคิด ไม่ใช่ค่าความลึกจริง</text>
+  </g>
+</svg>

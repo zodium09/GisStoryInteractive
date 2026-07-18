@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" width="1800" height="900" role="img" aria-labelledby="wave-title wave-desc">
+  <title id="wave-title">กำเนิดและการแตกตัวของคลื่น</title>
+  <desc id="wave-desc">แผนภาพเชิงกลไกแสดงลมถ่ายเทพลังงานสู่ผิวน้ำ โดยความสูงของคลื่นสัมพันธ์กับความเร็วลม ระยะพัด และเวลาที่ลมพัด แยกการเคลื่อนที่ของพลังงานไปข้างหน้าจากการแกว่งเป็นวงหรือวงรีของอนุภาคน้ำ จากนั้นแสดงคลื่นเข้าสู่น้ำตื้นซึ่งความเร็วและความยาวคลื่นลดลง ความสูงและความชันเพิ่มขึ้นจนแตกตัว พร้อมเปรียบเทียบการแตกแบบไหลล้น ม้วนตัว และพุ่งไต่ ภาพทั้งหมดเป็นแบบจำลองเชิงคุณภาพ ไม่มีค่าปริมาณจริง</desc>
+
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description>
+        <dc:title>กำเนิดและการแตกตัวของคลื่น</dc:title>
+        <dc:description>Deterministic textbook-atlas mechanism schematic. Geometry is qualitative and does not imply measured wave height, wavelength, speed, depth, beach slope, or breaker index.</dc:description>
+        <dc:source>https://oceanservice.noaa.gov/facts/wavesinocean.html</dc:source>
+        <dc:source>https://oceanservice.noaa.gov/education/tutorial_currents/03coastal1.html</dc:source>
+        <dc:source>https://media.fisheries.noaa.gov/2020-09/ShoreZone-Protocol-2017-AKR.pdf</dc:source>
+        <dc:source>https://pubs.usgs.gov/of/2003/of03-337/waves.html</dc:source>
+        <dc:source>https://www.usgs.gov/centers/spcmsc/science/storm-impact-scale</dc:source>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+  <defs>
+    <linearGradient id="wave-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#edf8ff"/>
+      <stop offset="1" stop-color="#f9fcfe"/>
+    </linearGradient>
+    <linearGradient id="wave-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ad3e8"/>
+      <stop offset="1" stop-color="#2f8fb6"/>
+    </linearGradient>
+    <linearGradient id="wave-deep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fcbe3"/>
+      <stop offset="1" stop-color="#146b99"/>
+    </linearGradient>
+    <filter id="wave-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#12364e" flood-opacity="0.15"/>
+    </filter>
+    <pattern id="wave-sand" width="28" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="2.2" fill="#8f673f" fill-opacity="0.28"/>
+      <circle cx="21" cy="15" r="2" fill="#8f673f" fill-opacity="0.24"/>
+    </pattern>
+    <marker id="arrow-wind" markerWidth="15" markerHeight="15" refX="13" refY="7.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L15,7.5 L0,15 Z" fill="#7553a6"/>
+    </marker>
+    <marker id="arrow-energy" markerWidth="15" markerHeight="15" refX="13" refY="7.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L15,7.5 L0,15 Z" fill="#d6671d"/>
+    </marker>
+    <marker id="arrow-orbit" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#087f8c"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="15" markerHeight="15" refX="13" refY="7.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L15,7.5 L0,15 Z" fill="#156f9d"/>
+    </marker>
+    <marker id="arrow-measure-start" markerWidth="11" markerHeight="11" refX="2" refY="5.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M11,0 L0,5.5 L11,11 Z" fill="#526b7a"/>
+    </marker>
+    <marker id="arrow-measure-end" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#526b7a"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans Thai", Tahoma, sans-serif; fill: #102f46; }
+      .title { font-size: 48px; font-weight: 700; }
+      .subtitle { font-size: 22px; font-weight: 500; fill: #3d6075; }
+      .section-title { font-size: 28px; font-weight: 700; }
+      .subhead { font-size: 22px; font-weight: 700; }
+      .label { font-size: 20px; font-weight: 700; }
+      .small { font-size: 18px; font-weight: 500; }
+      .tiny { font-size: 16px; font-weight: 500; }
+      .panel { fill: #ffffff; stroke: #abc4d3; stroke-width: 3; }
+      .chip { fill: #eef7fb; stroke: #7ca2b8; stroke-width: 2.3; }
+      .note { fill: #fff8e8; stroke: #c17a21; stroke-width: 2.5; }
+      .wind-path { fill: none; stroke: #7553a6; stroke-width: 7; stroke-linecap: round; marker-end: url(#arrow-wind); }
+      .energy-path { fill: none; stroke: #d6671d; stroke-width: 7; stroke-linecap: round; marker-end: url(#arrow-energy); }
+      .orbit-path { fill: none; stroke: #087f8c; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrow-orbit); }
+      .measure { fill: none; stroke: #526b7a; stroke-width: 3; marker-start: url(#arrow-measure-start); marker-end: url(#arrow-measure-end); }
+      .leader { fill: none; stroke: #526b7a; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#wave-sky)"/>
+  <text x="54" y="66" class="title">กำเนิดและการแตกตัวของคลื่น</text>
+  <text x="56" y="103" class="subtitle">พลังงานจากลมสร้างคลื่น • พลังงานเดินทาง • คลื่นเปลี่ยนเมื่อท้องทะเลตื้นขึ้น</text>
+  <g transform="translate(1392 24)">
+    <rect width="354" height="70" rx="20" class="chip"/>
+    <text x="177" y="29" text-anchor="middle" class="small">ภาพจำลองเชิงกลไก • ไม่มีค่าปริมาณ</text>
+    <text x="177" y="54" text-anchor="middle" class="tiny">ระยะและความชันไม่ใช่มาตราส่วนจริง</text>
+  </g>
+
+  <!-- 1. Wind-wave generation -->
+  <g filter="url(#wave-shadow)">
+    <rect x="36" y="126" width="850" height="340" rx="28" class="panel"/>
+  </g>
+  <g transform="translate(58 144)">
+    <text x="403" y="28" text-anchor="middle" class="section-title">1 ลมถ่ายเทพลังงานสู่ผิวน้ำ</text>
+    <text x="403" y="55" text-anchor="middle" class="tiny">แรงเสียดทานและความดันจากลมรบกวนผิวน้ำ แล้วคลื่นค่อยเติบโต</text>
+
+    <path d="M62 93 H225" class="wind-path"/>
+    <path d="M212 78 H386" class="wind-path"/>
+    <path d="M368 93 H545" class="wind-path"/>
+    <path d="M530 78 H720" class="wind-path"/>
+    <text x="79" y="76" class="small" fill="#5e4087">ทิศลม</text>
+
+    <path d="M20 178 C55 171 89 185 123 178 C157 171 191 185 225 178 C260 168 294 188 328 178 C363 165 397 191 431 178 C466 159 500 197 534 178 C569 151 603 205 637 178 C672 143 706 213 740 178 C758 160 776 160 790 178 L790 239 L20 239 Z" fill="url(#wave-water)" opacity="0.92"/>
+    <path d="M20 178 C55 171 89 185 123 178 C157 171 191 185 225 178 C260 168 294 188 328 178 C363 165 397 191 431 178 C466 159 500 197 534 178 C569 151 603 205 637 178 C672 143 706 213 740 178 C758 160 776 160 790 178" fill="none" stroke="#157ba8" stroke-width="6"/>
+    <text x="105" y="219" text-anchor="middle" class="tiny">ระลอกเล็ก</text>
+    <text x="680" y="227" text-anchor="middle" class="tiny">คลื่นเติบโตตามเงื่อนไขลม</text>
+
+    <path d="M76 256 H718" class="measure"/>
+    <text x="397" y="250" text-anchor="middle" class="small">ระยะพัด (fetch): ระยะเหนือน้ำที่ลมพัดทิศเดิม</text>
+
+    <g transform="translate(12 262)">
+      <rect width="230" height="42" rx="16" class="chip"/>
+      <text x="115" y="28" text-anchor="middle" class="small">ความเร็วลม</text>
+      <rect x="248" width="252" height="42" rx="16" class="chip"/>
+      <text x="374" y="28" text-anchor="middle" class="small">ระยะพัด (fetch)</text>
+      <rect x="518" width="274" height="42" rx="16" class="chip"/>
+      <text x="655" y="28" text-anchor="middle" class="small">เวลาที่ลมพัด (duration)</text>
+    </g>
+  </g>
+
+  <!-- 2. Energy versus water-particle motion -->
+  <g filter="url(#wave-shadow)">
+    <rect x="914" y="126" width="850" height="340" rx="28" class="panel"/>
+  </g>
+  <g transform="translate(936 144)">
+    <text x="403" y="28" text-anchor="middle" class="section-title">2 พลังงานเดินทาง แต่น้ำแกว่งรอบตำแหน่งเดิม</text>
+    <text x="403" y="55" text-anchor="middle" class="tiny">ภาพอุดมคติของคลื่นผิวน้ำ ไม่ได้หมายความว่าน้ำทั้งก้อนเคลื่อนไปพร้อมยอดคลื่น</text>
+
+    <path d="M74 92 H724" class="energy-path"/>
+    <text x="399" y="82" text-anchor="middle" class="small" fill="#a64b10">ทิศการเคลื่อนของพลังงานคลื่น</text>
+
+    <path d="M20 150 C67 105 113 105 160 150 C207 195 253 195 300 150 C347 105 393 105 440 150 C487 195 533 195 580 150 C627 105 673 105 720 150 C747 176 770 176 790 150 L790 278 L20 278 Z" fill="url(#wave-deep)" opacity="0.92"/>
+    <path d="M20 150 C67 105 113 105 160 150 C207 195 253 195 300 150 C347 105 393 105 440 150 C487 195 533 195 580 150 C627 105 673 105 720 150 C747 176 770 176 790 150" fill="none" stroke="#e6f8ff" stroke-width="5"/>
+
+    <g transform="translate(113 170)">
+      <path d="M58 0 A58 35 0 1 1 57.8 0" class="orbit-path"/>
+      <circle cx="58" cy="0" r="6" fill="#ffffff" stroke="#087f8c" stroke-width="3"/>
+      <path d="M261 0 A58 35 0 1 1 260.8 0" class="orbit-path"/>
+      <circle cx="261" cy="0" r="6" fill="#ffffff" stroke="#087f8c" stroke-width="3"/>
+      <path d="M464 0 A58 35 0 1 1 463.8 0" class="orbit-path"/>
+      <circle cx="464" cy="0" r="6" fill="#ffffff" stroke="#087f8c" stroke-width="3"/>
+    </g>
+    <g transform="translate(135 227)">
+      <path d="M38 0 A38 22 0 1 1 37.8 0" class="orbit-path"/>
+      <path d="M240 0 A38 22 0 1 1 239.8 0" class="orbit-path"/>
+      <path d="M442 0 A38 22 0 1 1 441.8 0" class="orbit-path"/>
+    </g>
+    <text x="403" y="290" text-anchor="middle" class="small">อนุภาคน้ำแกว่งเป็นวง/วงรี และขนาดการแกว่งลดลงตามความลึก</text>
+  </g>
+
+  <!-- 3. Shoaling transformation -->
+  <g filter="url(#wave-shadow)">
+    <rect x="36" y="492" width="1050" height="382" rx="28" class="panel"/>
+  </g>
+  <g transform="translate(58 510)">
+    <text x="503" y="28" text-anchor="middle" class="section-title">3 เมื่อเข้าสู่น้ำตื้น: คลื่นช้าลง สั้นลง สูงและชันขึ้น</text>
+    <text x="503" y="55" text-anchor="middle" class="tiny">สำหรับคลื่นจากแหล่งเดิม คาบใกล้คงเดิม แต่ท้องทะเลเริ่มควบคุมการเคลื่อน</text>
+
+    <path d="M48 105 H897" class="energy-path"/>
+    <text x="468" y="94" text-anchor="middle" class="tiny" fill="#a64b10">พลังงานเคลื่อนเข้าหาฝั่ง</text>
+
+    <!-- water body and rising seabed -->
+    <path d="M20 168 C70 148 120 148 170 168 C220 188 270 188 320 168 C355 154 390 155 425 168 C460 181 495 181 530 168 C558 151 586 151 614 168 C642 185 670 185 698 168 C721 143 744 143 767 168 C790 193 813 193 836 168 C857 131 878 132 899 168 C918 199 938 195 962 168 L962 319 L20 319 Z" fill="url(#wave-water)" opacity="0.92"/>
+    <path d="M20 168 C70 148 120 148 170 168 C220 188 270 188 320 168 C355 154 390 155 425 168 C460 181 495 181 530 168 C558 151 586 151 614 168 C642 185 670 185 698 168 C721 143 744 143 767 168 C790 193 813 193 836 168 C857 131 878 132 899 168 C918 199 938 195 962 168" fill="none" stroke="#eafaff" stroke-width="5"/>
+    <path d="M20 319 L20 300 C247 296 410 278 555 251 C704 223 821 202 962 181 L962 319 Z" fill="#c99a62" stroke="#8a613c" stroke-width="3"/>
+    <path d="M20 319 L20 300 C247 296 410 278 555 251 C704 223 821 202 962 181 L962 319 Z" fill="url(#wave-sand)"/>
+
+    <text x="92" y="290" class="small">น้ำลึก</text>
+    <text x="864" y="239" class="small">น้ำตื้น</text>
+    <path d="M512 277 C575 247 648 226 714 212" class="leader"/>
+    <text x="472" y="290" class="tiny">ท้องทะเลมีอิทธิพลต่อฐานคลื่น</text>
+
+    <!-- qualitative comparison annotations -->
+    <path d="M96 124 H302" class="measure"/>
+    <text x="199" y="116" text-anchor="middle" class="tiny">ความยาวคลื่นมากกว่า</text>
+    <path d="M746 118 H837" class="measure"/>
+    <text x="792" y="108" text-anchor="middle" class="tiny">ความยาวคลื่นลด</text>
+    <path d="M710 143 V193" class="measure"/>
+    <text x="724" y="138" class="tiny">ความสูงคลื่นเพิ่ม</text>
+    <text x="758" y="214" class="tiny">ความเร็วลด • ยอดคลื่นชิดกัน</text>
+    <g transform="translate(55 329)">
+      <rect width="900" height="36" rx="15" class="chip"/>
+      <text x="450" y="24" text-anchor="middle" class="small">ความเร็วลดลง → ความยาวคลื่นลดลง → ความสูงและความชันเพิ่มขึ้น → คลื่นไม่เสถียรและแตกตัว</text>
+    </g>
+  </g>
+
+  <!-- 4. Breaker types -->
+  <g filter="url(#wave-shadow)">
+    <rect x="1114" y="492" width="650" height="382" rx="28" class="panel"/>
+  </g>
+  <g transform="translate(1134 510)">
+    <text x="305" y="28" text-anchor="middle" class="section-title">4 รูปแบบการแตกตัวของคลื่น</text>
+    <text x="305" y="55" text-anchor="middle" class="tiny">รูปแบบขึ้นกับความชันของคลื่นร่วมกับความลาดของชายหาด</text>
+
+    <!-- Spilling -->
+    <g transform="translate(2 78)">
+      <rect width="190" height="230" rx="18" fill="#f7fbfd" stroke="#a9c3d2" stroke-width="2.5"/>
+      <text x="95" y="28" text-anchor="middle" class="subhead">ไหลล้น</text>
+      <text x="95" y="50" text-anchor="middle" class="tiny">spilling</text>
+      <path d="M10 137 C34 103 58 103 82 137 C106 171 130 171 154 137 C165 121 176 121 182 137 L182 190 L10 190 Z" fill="#58afd0"/>
+      <path d="M10 137 C34 103 58 103 82 137 C106 171 130 171 154 137 C165 121 176 121 182 137" fill="none" stroke="#edfaff" stroke-width="5"/>
+      <path d="M73 111 C91 105 108 111 121 124 C103 120 89 123 76 133" fill="#ffffff" opacity="0.95"/>
+      <path d="M10 190 L182 146 L182 218 L10 218 Z" fill="#d1a26b" stroke="#8a613c" stroke-width="2.5"/>
+      <text x="95" y="221" text-anchor="middle" class="tiny">ฟองไหลลงตามหน้าคลื่น</text>
+    </g>
+
+    <!-- Plunging -->
+    <g transform="translate(208 78)">
+      <rect width="190" height="230" rx="18" fill="#f7fbfd" stroke="#a9c3d2" stroke-width="2.5"/>
+      <text x="95" y="28" text-anchor="middle" class="subhead">ม้วนตัว</text>
+      <text x="95" y="50" text-anchor="middle" class="tiny">plunging</text>
+      <path d="M10 153 C39 126 59 120 80 124 C103 128 107 105 95 89 C129 94 151 119 166 153 L182 168 L182 198 L10 198 Z" fill="#3b9fc5"/>
+      <path d="M10 153 C39 126 59 120 80 124 C103 128 107 105 95 89 C129 94 151 119 166 153" fill="none" stroke="#eefbff" stroke-width="6"/>
+      <path d="M96 90 C124 94 142 110 153 131 C128 115 111 112 98 121" fill="#ffffff" opacity="0.98"/>
+      <path d="M10 198 L182 136 L182 218 L10 218 Z" fill="#d1a26b" stroke="#8a613c" stroke-width="2.5"/>
+      <text x="95" y="221" text-anchor="middle" class="tiny">ยอดม้วนและพุ่งลง</text>
+    </g>
+
+    <!-- Surging -->
+    <g transform="translate(414 78)">
+      <rect width="190" height="230" rx="18" fill="#f7fbfd" stroke="#a9c3d2" stroke-width="2.5"/>
+      <text x="95" y="28" text-anchor="middle" class="subhead">พุ่งไต่</text>
+      <text x="95" y="50" text-anchor="middle" class="tiny">surging</text>
+      <path d="M10 168 C38 143 62 143 86 161 C106 176 119 156 128 135 C139 111 154 95 182 79 L182 200 L10 200 Z" fill="#318eb5"/>
+      <path d="M10 168 C38 143 62 143 86 161 C106 176 119 156 128 135 C139 111 154 95 182 79" fill="none" stroke="#eefbff" stroke-width="5"/>
+      <path d="M10 202 L182 69 L182 218 L10 218 Z" fill="#d1a26b" stroke="#8a613c" stroke-width="2.5"/>
+      <path d="M120 140 C138 119 151 104 170 89" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+      <text x="95" y="221" text-anchor="middle" class="tiny">คลื่นพุ่งไต่ลาดชัน</text>
+    </g>
+
+    <g transform="translate(2 320)">
+      <rect width="602" height="44" rx="16" class="note"/>
+      <text x="301" y="20" text-anchor="middle" class="tiny">ชนิดคลื่นแตกไม่ได้กำหนดด้วยความลาดเพียงอย่างเดียว</text>
+      <text x="301" y="38" text-anchor="middle" class="tiny">คาบ ความสูง และความชันของคลื่นก่อนแตกก็มีผล</text>
+    </g>
+  </g>
+
+  <!-- Shared conceptual note -->
+  <g transform="translate(58 452)">
+    <rect width="806" height="34" rx="14" class="note"/>
+    <text x="403" y="23" text-anchor="middle" class="tiny">คลื่นสูงขึ้นได้เมื่อความเร็วลม ระยะพัด และเวลาพัดเอื้อร่วมกัน แต่ไม่ใช่ความสัมพันธ์เชิงเส้นง่าย ๆ</text>
+  </g>
+  <g transform="translate(936 452)">
+    <rect width="806" height="34" rx="14" fill="#edf8f5" stroke="#67a99c" stroke-width="2.5"/>
+    <text x="403" y="23" text-anchor="middle" class="tiny">คลื่นถ่ายทอดพลังงาน ไม่ได้ขนอนุภาคน้ำทั้งหมดไปกับยอดคลื่น</text>
+  </g>
+</svg>

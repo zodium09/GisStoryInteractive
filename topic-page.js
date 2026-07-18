@@ -11,28 +11,28 @@ const chapterInfo = [
   { title: "ภูมิศาสตร์อุตสาหกรรม", english: "Industrial Geography", sections: ["ประเภทและปัจจัยทำเล", "เขตอุตสาหกรรม", "อุตสาหกรรมเกษตรและเทคโนโลยี", "ห่วงโซ่อุปทานและสิ่งแวดล้อม"], steps: ["จัดหาวัตถุดิบและทุน", "ผลิตและประกอบ", "ขนส่งผ่านเครือข่าย", "กระจาย ใช้ และจัดการของเสีย"], context: "ภูมิศาสตร์อุตสาหกรรมอธิบายว่าทำไมกิจการตั้งอยู่บางแห่ง และการผลิตเชื่อมทรัพยากร แรงงาน เมือง ท่าเรือ ตลาด และข้อมูลอย่างไร", evidence: "แผนที่โรงงาน การขนส่ง พลังงาน แรงงาน การค้า และการปล่อยมลพิษเผยให้เห็นข้อได้เปรียบ การกระจุกตัว และความเสี่ยงของห่วงโซ่", importance: "ความเข้าใจทำเลช่วยวางโครงสร้างพื้นฐาน กระจายงาน ลดความเสี่ยง และนับต้นทุนด้านพลังงาน น้ำ ของเสีย แรงงาน และคาร์บอนตลอดวงจรสินค้า" }
 ];
 
-const assets = {
-  earth: ["assets/ai/earth-system-hero-v2.png", "ระบบโลกตั้งแต่ชั้นหินถึงบรรยากาศ"], rock: ["assets/lessons/rock-cycle.webp", "วัฏจักรหินและโครงสร้างโลก"], quake: ["assets/lessons/earthquake-fault.webp", "รอยเลื่อนและคลื่นแผ่นดินไหว"], mountain: ["assets/lessons/himalaya.webp", "เทือกเขาจากการชนของแผ่นธรณี"], weather: ["assets/lessons/weathering-erosion.webp", "การผุพัง กร่อน พัดพา และสะสมตัว"], glacier: ["assets/lessons/glacial-system.webp", "ธารน้ำแข็งและภูมิลักษณ์เขตหนาว"], desert: ["assets/lessons/arid-aeolian.webp", "กระบวนการลมในเขตแห้งแล้ง"], coast: ["assets/lessons/coastal-process.webp", "คลื่นและการเปลี่ยนแปลงชายฝั่ง"], water: ["assets/lessons/water-atmosphere-cycle.webp", "วงจรน้ำและบรรยากาศ"], monsoon: ["assets/lessons/thai-monsoon.webp", "มรสุมและการกระจายฝน"], cyclone: ["assets/lessons/tropical-cyclone.webp", "โครงสร้างของพายุหมุนเขตร้อน"], urban: ["assets/lessons/urban-climate.webp", "เมือง พลังงาน และกิจกรรมมนุษย์"], ocean: ["assets/lessons/ocean-circulation.webp", "การหมุนเวียนของมหาสมุทร"], coral: ["assets/lessons/coral-mangrove.webp", "ระบบนิเวศปะการังและป่าชายเลน"], amazon: ["assets/lessons/amazon.webp", "ลุ่มน้ำและป่าฝนขนาดใหญ่"], andes: ["assets/lessons/andes.webp", "เทือกเขาและความต่างระดับ"], biome: ["assets/lessons/biome-gradient.webp", "ชีวนิเวศตามอุณหภูมิและความชื้น"], groundwater: ["assets/lessons/groundwater-aquifer.webp", "ชั้นหินอุ้มน้ำและการเติมน้ำ"], terrace: ["assets/lessons/terrace-agriculture.webp", "การจัดการดินและน้ำบนพื้นที่ลาดชัน"]
+const relationshipLabels = {
+  sequence: "ลำดับต่อเนื่อง (sequence)",
+  branching: "แตกแขนง (branching)",
+  comparison: "เปรียบเทียบ (comparison)",
+  balance: "สมดุลรับและจ่าย (balance)",
+  flow: "การไหล (flow)",
+  feedback: "วงจรป้อนกลับ (feedback)",
+  profile: "การเปลี่ยนตามแนวดิ่ง (profile)",
+  network: "เครือข่าย (network)",
+  classification: "การจำแนก (classification)",
+  "source-to-sink": "จากต้นทางสู่แหล่งสะสม (source to sink)",
+  budget: "งบรับ จ่าย และเก็บ (budget)",
+  cycle: "วัฏจักร (cycle)",
+  decision: "การตัดสินใจหลายปัจจัย (decision)",
 };
 
-function chooseAssets(title, chapter) {
-  const rules = [
-    [/ระบบสุริยะ|แยกชั้น|เปลือกโลก เนื้อโลก|งบพลังงาน/, ["earth", "rock"]],
-    [/แผ่นดินไหว|คลื่นแผ่นดินไหว|ภูเขาไฟ|สึนามิ|รอยต่อแผ่น/, ["quake", "mountain"]],
-    [/เลื่อนทวีป|แผ่ขยาย|เทือกเขาอายุน้อย|โครงสร้างธรณี/, ["mountain", "rock"]],
-    [/ผุพัง|กร่อน|มวลดิน|สะสมตะกอน/, ["weather", "rock"]],
-    [/แม่น้ำ|ลุ่มน้ำ|ที่ราบตะกอน/, ["amazon", "water"]], [/คาร์สต์|ชั้นหินอุ้มน้ำ|โอเอซิส|น้ำใต้ดิน/, ["groundwater", "water"]],
-    [/ชายฝั่ง|คลื่น|น้ำขึ้นน้ำลง|เกาะ/, ["coast", "ocean"]], [/ทะเลทราย|กระบวนการลม/, ["desert", "weather"]], [/ธารน้ำแข็ง|เขตหนาว|น้ำแข็ง/, ["glacier", "water"]],
-    [/บรรยากาศ|รังสี|อุณหภูมิ|ความชื้น|เมฆ|หยาดน้ำฟ้า/, ["water", "urban"]], [/ความกด|ลมประจำ|มรสุม|ลมกรด/, ["monsoon", "water"]], [/มวลอากาศ|พายุหมุน/, ["cyclone", "water"]], [/เอลนีโญ|ลานีญา|ภูมิอากาศ/, ["ocean", "urban"]],
-    [/มหาสมุทร|ความเค็ม|ความหนาแน่น|กระแสน้ำ|น้ำผุด|พื้นทะเล|ร่องลึก/, ["ocean", "coast"]], [/ปะการัง|ป่าชายเลน|ประมง|มลพิษจากลุ่มน้ำ/, ["coral", "ocean"]],
-    [/แอนดีส|ที่ราบสูง/, ["andes", "mountain"]], [/เอเชีย|แอฟริกา|ยุโรป|อเมริกา|ภูมิภาค|พืชพรรณ/, ["biome", "amazon"]],
-    [/ดิน|อนุรักษ์ดิน|ฟื้นฟูพื้นที่|เกษตร/, ["terrace", "weather"]], [/แร่|ถ่านหิน|น้ำมัน|เหมือง|หิน/, ["rock", "urban"]], [/พลังงาน|ประสิทธิภาพ|เศรษฐกิจหมุนเวียน/, ["urban", "terrace"]],
-    [/อุตสาหกรรมอาหาร|สิ่งทอ/, ["terrace", "urban"]], [/ท่าเรือ|ห่วงโซ่|ขนส่ง|ย้ายฐาน|กระจุกตัว/, ["coast", "urban"]], [/อุตสาหกรรม|เทคโนโลยี|สารกึ่งตัวนำ|บริการดิจิทัล|แรงงาน|ตลาด/, ["urban", "terrace"]]
-  ];
-  const match = rules.find(([pattern]) => pattern.test(title));
-  const defaults = [["rock","weather"],["water","monsoon"],["ocean","coral"],["mountain","biome"],["groundwater","terrace"],["urban","coast"]][chapter];
-  return (match ? match[1] : defaults).map((key) => assets[key]);
-}
+const productionLabels = {
+  hybrid: "GPT Image ร่วมกับป้ายและข้อมูลที่ควบคุมได้",
+  "deterministic-svg": "แผนภาพที่จัดวางและตรวจข้อความได้แน่นอน",
+  "gis-map": "แผนที่จากข้อมูลเชิงพื้นที่และแหล่งอ้างอิง",
+  "gpt-raster": "ภาพจำลองจาก GPT Image",
+};
 
 function renderNotFound() {
   document.querySelector("#topicMain").innerHTML = `<section class="topic-error"><h1>ไม่พบหัวข้อที่ต้องการ</h1><p>ลิงก์อาจไม่สมบูรณ์ กรุณากลับไปเลือกเรื่องจากสารบัญ</p><a href="index.html#contents">กลับสารบัญ</a></section>`;
@@ -46,21 +46,40 @@ function renderTopic() {
   const chapter = chapterInfo[chapterIndex];
   const section = chapter.sections[sectionIndex];
   const detail = window.SUBTOPIC_DETAILS[requestedTitle];
-  const [primary, secondary] = chooseAssets(requestedTitle, chapterIndex);
+  const visualSpec = window.GEOSTORY_TOPIC_VISUAL_SPECS?.[requestedTitle];
+  const visualPlan = window.GEOSTORY_VISUALS.getLessonVisual(requestedTitle, chapterIndex);
+  const model = window.GEOSTORY_VISUALS.getSectionModel(chapterIndex, sectionIndex);
+  const primary = visualPlan.primary;
+  const secondary = visualPlan.secondary;
   const previous = topicKeys[topicIndex - 1];
   const next = topicKeys[topicIndex + 1];
+  const visualStatus = visualPlan.fit === "direct" ? "ภาพอธิบายตรงหัวข้อ" : "ภาพบริบทของหมวด";
+  const annotationKey = primary.annotations.length ? `<ol class="visual-key">${primary.annotations.map((item, index) => `<li><span>${index + 1}</span><div><strong>${item.label}</strong><p>${item.detail}</p></div></li>`).join("")}</ol>` : "";
+  const visualBrief = visualSpec ? `<section id="visual-reading" class="visual-brief" aria-labelledby="visual-brief-title">
+    <div class="visual-brief-heading"><span class="section-label">มาตรฐานภาพเฉพาะเรื่อง</span><h2 id="visual-brief-title">ภาพต้องช่วยให้เข้าใจอะไร</h2><p>${visualSpec.lessonObjective}</p></div>
+    <blockquote>${visualSpec.inImageExplanationTH}</blockquote>
+    <div class="visual-brief-grid">
+      <div><strong>สิ่งที่ต้องเห็น</strong><ul>${visualSpec.mustShow.map((item) => `<li>${item}</li>`).join("")}</ul></div>
+      <div><strong>ป้ายสำคัญในภาพ</strong><p class="label-chips">${visualSpec.labelsTH.map((label) => `<span>${label}</span>`).join("")}</p></div>
+      <div class="brief-warning"><strong>ข้อผิดพลาดที่ต้องหลีกเลี่ยง</strong><ul>${visualSpec.mustAvoid.map((item) => `<li>${item}</li>`).join("")}</ul></div>
+    </div>
+    <dl class="visual-production"><div><dt>รูปแบบภาพ</dt><dd>${productionLabels[visualSpec.productionMode] || visualSpec.productionMode}</dd></div><div><dt>ขอบเขตพื้นที่</dt><dd>${visualSpec.spatialScale}</dd></div><div><dt>ช่วงเวลา</dt><dd>${visualSpec.timeScale}</dd></div></dl>
+  </section>` : "";
+  const sourceLinks = primary.sourceRefs.length ? `<span class="visual-sources"><strong>หลักวิทยาศาสตร์ของภาพ</strong>${primary.sourceRefs.map((source) => `<a href="${source.url}">${source.label}</a>`).join("")}</span>` : "";
+  const secondaryFigure = secondary ? `<figure class="topic-secondary-figure"><img src="${secondary.src}" alt="${secondary.alt}" width="${secondary.width}" height="${secondary.height}"><figcaption><span class="visual-fit">ภาพเปรียบเทียบ</span><strong>หลักฐานที่ใช้เทียบ</strong>${secondary.alt}<small>${secondary.limitation}</small></figcaption></figure>` : `<aside class="visual-gap" aria-label="สถานะภาพหลักฐาน"><strong>ยังไม่ใช้ภาพอื่นแทนหลักฐาน</strong><p>หัวข้อนี้ยังไม่มีภาพหลักฐานเฉพาะเรื่องที่ผ่านการตรวจความสอดคล้อง แอปจึงแสดงเกณฑ์การอ่านหลักฐานแทนการวนใช้ภาพที่ไม่เกี่ยวข้อง</p></aside>`;
   document.title = `${requestedTitle} | ภูมิศาสตร์โลก`;
   document.querySelector("#topicMain").innerHTML = `
-    <header class="topic-hero"><img src="${primary[0]}" alt="${primary[1]}"><div><nav aria-label="ตำแหน่งบทเรียน"><a href="index.html#contents">สารบัญ</a><span>›</span><span>${chapter.title}</span></nav><p>บทที่ ${chapterIndex + 1} · ${chapter.english}</p><h1>${requestedTitle}</h1><p>${detail}</p></div></header>
+    <header class="topic-hero"><img src="${primary.src}" alt="${primary.alt}" width="${primary.width}" height="${primary.height}"><div><nav aria-label="ตำแหน่งบทเรียน"><a href="index.html#contents">สารบัญ</a><span>›</span><span>${chapter.title}</span><span>›</span><span>${section}</span></nav><p>บทที่ ${chapterIndex + 1} · ${chapter.english}</p><h1>${requestedTitle}</h1><p>หัวข้อในตอน “${section}” อ่านผ่านกลไก หลักฐาน มาตราส่วนพื้นที่ และมาตราส่วนเวลา</p><span class="hero-visual-status">${visualStatus}</span></div></header>
     <div class="topic-layout">
-      <aside class="topic-outline"><a href="index.html#chapter-${chapterIndex + 1}">← กลับบท ${chapter.title}</a><p>ในหน้านี้</p><nav><a href="#overview">ทฤษฎีและภาพรวม</a><a href="#process">กระบวนการเกิด</a><a href="#evidence">หลักฐานและตัวอย่าง</a><a href="#importance">ความสำคัญ</a></nav></aside>
+      <aside class="topic-outline"><a href="index.html#chapter-${chapterIndex + 1}">← กลับบท ${chapter.title}</a><p>ในหน้านี้</p><nav><a href="#overview">ทฤษฎีและภาพรวม</a><a href="#visual-reading">กรอบอ่านภาพ</a><a href="#process">กระบวนการเกิด</a><a href="#evidence">หลักฐานและตัวอย่าง</a><a href="#importance">ความสำคัญ</a></nav></aside>
       <article class="topic-article">
-        <section id="overview"><span class="section-label">กรอบอธิบาย</span><h2>ทฤษฎีและภาพรวม</h2><p class="topic-lead">${detail}</p><p>ทฤษฎีของเรื่องนี้อธิบายด้วยความสัมพันธ์ระหว่างตัวขับ กระบวนการถ่ายโอน และผลลัพธ์ที่สังเกตได้ ตัวขับอาจเป็นพลังงาน แรงโน้มถ่วง ความแตกต่างของความดัน คุณสมบัติของวัสดุ หรือการตัดสินใจของมนุษย์ เมื่อเงื่อนไขเปลี่ยน อัตรา ทิศทาง และขอบเขตของ ${requestedTitle} จึงเปลี่ยนตาม</p><p>${chapter.context} การอ่านเรื่อง “${requestedTitle}” ต้องระบุตำแหน่ง มาตราส่วนพื้นที่ และช่วงเวลาก่อน แล้วจึงพิจารณาว่าน้ำ อากาศ หิน สิ่งมีชีวิต หรือกิจกรรมมนุษย์ส่วนใดเป็นตัวควบคุมหลัก วิธีนี้ช่วยแยกสาเหตุออกจากผลที่ปรากฏภายหลัง</p></section>
-        <figure class="topic-main-figure"><img src="${primary[0]}" alt="${primary[1]}"><figcaption><strong>อ่านภาพ</strong>${primary[1]} ให้สังเกตรูปร่าง แนว การเปลี่ยนระดับ และความสัมพันธ์ขององค์ประกอบที่ช่วยอธิบาย ${requestedTitle}</figcaption></figure>
-        <section id="process"><span class="section-label">ลำดับเหตุและผล</span><h2>กระบวนการเกิดอย่างละเอียด</h2><p>${chapter.context} กระบวนการไม่ได้เกิดในเหตุการณ์เดียว แต่เป็นผลสะสมที่แต่ละขั้นส่งต่อเงื่อนไขไปยังขั้นถัดไป ความเร็วของการเปลี่ยนแปลงขึ้นอยู่กับปริมาณพลังงาน คุณสมบัติของวัสดุ ระยะเวลา และการตอบสนองของระบบรอบข้าง</p><ol class="topic-process">${chapter.steps.map((step, i) => `<li><span>${i + 1}</span><div><strong>${step}</strong><p>${i === 0 ? `ระบุแหล่งพลังงาน จุดเริ่มต้น และเงื่อนไขที่ทำให้ ${requestedTitle} เริ่มทำงาน` : i === 1 ? "ติดตามว่าวัสดุ พลังงาน หรือข้อมูลตอบสนอง เปลี่ยนสถานะ และเปลี่ยนตำแหน่งอย่างไร" : i === 2 ? "สังเกตการถ่ายเท การสะสม อัตราการเปลี่ยนแปลง และการเชื่อมต่อกับระบบข้างเคียง" : "อ่านผลลัพธ์และร่องรอยที่ปรากฏในภูมิประเทศ ภูมิอากาศ ทรัพยากร ระบบนิเวศ หรือกิจกรรมมนุษย์"}</p></div></li>`).join("")}</ol></section>
-        <section id="evidence"><span class="section-label">อ่านหลักฐาน</span><h2>หลักฐานและตัวอย่างเชิงพื้นที่</h2><p>${chapter.evidence} ควรเปรียบเทียบหลักฐานจากหลายตำแหน่งและหลายช่วงเวลา เพราะภาพเพียงจุดเดียวอาจบอกได้แค่สภาพขณะหนึ่ง เมื่อนำแผนที่ ภาพถ่าย ภาคตัดขวาง และข้อมูลวัดจริงมาอ่านร่วมกัน เราสามารถแยกผลที่เกิดจาก ${requestedTitle} ออกจากกระบวนการอื่นที่สร้างรูปแบบคล้ายกันได้</p><figure class="topic-secondary-figure"><img src="${secondary[0]}" alt="${secondary[1]}" loading="lazy"><figcaption><strong>ตัวอย่างเปรียบเทียบ</strong>${secondary[1]} ช่วยตรวจว่ากลไกเดียวกันให้ผลต่างกันอย่างไรเมื่อภูมิประเทศ ภูมิอากาศ ทรัพยากร หรือการใช้พื้นที่เปลี่ยนไป</figcaption></figure></section>
+        <section id="overview"><span class="section-label">กรอบอธิบายเฉพาะเรื่อง</span><h2>ความหมายและตำแหน่งในระบบ</h2><p class="topic-lead">${detail}</p><p>${chapter.context} เรื่อง “${requestedTitle}” อยู่ในแบบจำลอง “${model.title}” จึงต้องอ่านทั้งตัวขับ วัสดุที่ตอบสนอง ทิศทางการถ่ายเท และร่องรอยที่เหลืออยู่</p><dl class="scale-strip"><div><dt>มาตราส่วนพื้นที่</dt><dd>${visualSpec?.spatialScale || model.spatialScale}</dd></div><div><dt>มาตราส่วนเวลา</dt><dd>${visualSpec?.timeScale || model.timeScale}</dd></div><div><dt>รูปแบบความสัมพันธ์</dt><dd>${relationshipLabels[model.mode] || model.mode}</dd></div></dl></section>
+        <figure class="topic-main-figure visual-${visualPlan.fit}"><img src="${primary.src}" alt="${primary.alt}" width="${primary.width}" height="${primary.height}"><figcaption><span class="visual-fit">${visualStatus}</span><strong>อ่านภาพ</strong>${visualPlan.caption}<small>${visualPlan.disclaimer}</small>${sourceLinks}</figcaption>${annotationKey}</figure>
+        ${visualBrief}
+        <section id="process"><span class="section-label">ลำดับเหตุและผล</span><h2>${model.title}</h2><p>ขั้นด้านล่างเป็นแบบจำลองของตอน “${section}” ไม่ใช่ลำดับเดียวที่นำไปใช้กับทุกเรื่อง ความเร็ว ทิศทาง จุดเปลี่ยน และวงจรป้อนกลับต้องตรวจร่วมกับมาตราส่วนของหัวข้อนี้</p><ol class="topic-process">${model.steps.map((step, i) => `<li><span>${i + 1}</span><div><strong>${step}</strong><p>${i === 0 ? "กำหนดสภาพตั้งต้นและตัวขับที่ทำให้ระบบเริ่มเปลี่ยน" : i === model.steps.length - 1 ? "อ่านผลลัพธ์ ร่องรอย และเงื่อนไขที่ทำให้ผลต่างกันในแต่ละพื้นที่" : "ติดตามการเปลี่ยนสถานะ ตำแหน่ง หรือการถ่ายเทไปยังส่วนถัดไปของระบบ"}</p></div></li>`).join("")}</ol></section>
+        <section id="evidence"><span class="section-label">อ่านหลักฐาน</span><h2>หลักฐานที่ต้องใช้ตรวจคำอธิบาย</h2><p>${model.evidence} ภาพสังเคราะห์ช่วยจัดโครงความคิด แต่หลักฐานของสถานที่และปริมาณจริงต้องมาจากแผนที่ ภาพถ่าย ภาพดาวเทียม ภาคตัดขวาง หรือข้อมูลวัดที่ระบุแหล่งและเวลา</p>${secondaryFigure}</section>
         <section id="importance"><span class="section-label">เชื่อมสู่โลกจริง</span><h2>ความสำคัญต่อโลกและมนุษย์</h2><p>${chapter.importance}</p><p>ความรู้เรื่อง ${requestedTitle} ช่วยเชื่อมบทเรียนหมวด ${chapter.title} กับหัวข้ออื่น เพราะระบบโลกไม่แยกส่วน การเปลี่ยนแปลงในตำแหน่งหนึ่งอาจส่งผลต่อการไหลของน้ำ พลังงาน วัสดุ ระบบนิเวศ เมือง หรือเศรษฐกิจในพื้นที่อื่น การเข้าใจลำดับเหตุและผลจึงช่วยทั้งการอธิบายอดีต ประเมินสถานการณ์ปัจจุบัน และวางแผนรับการเปลี่ยนแปลงในอนาคต</p></section>
-        <aside class="topic-summary"><strong>สรุปใจความ</strong><p>${detail}</p></aside>
+        <aside class="topic-summary"><strong>สรุปใจความ</strong><p>${visualSpec?.inImageExplanationTH || `${requestedTitle} ต้องอธิบายผ่านแบบจำลอง “${model.title}” และตรวจด้วย ${model.evidence}`}</p></aside>
         <nav class="topic-pagination" aria-label="เปลี่ยนหัวข้อ">${previous ? `<a href="topic.html?topic=${encodeURIComponent(previous)}"><span>เรื่องก่อนหน้า</span>${previous}</a>` : `<span></span>`}${next ? `<a href="topic.html?topic=${encodeURIComponent(next)}"><span>เรื่องถัดไป</span>${next}</a>` : `<a href="index.html#contents"><span>อ่านครบแล้ว</span>กลับสารบัญ</a>`}</nav>
       </article>
     </div>`;

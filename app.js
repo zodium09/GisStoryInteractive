@@ -109,40 +109,18 @@ const processData = [
   { title: "ห่วงโซ่อุตสาหกรรมข้ามภูมิภาค", note: "วัตถุดิบเดินทางผ่านโรงงาน ศูนย์ขนส่ง และตลาด ขณะที่ข้อมูล เงินทุน และผลกระทบไหลย้อนตลอดระบบ", steps: ["แหล่งวัตถุดิบ", "โรงงานแปรรูป", "ท่าเรือและขนส่ง", "ตลาดและการใช้"] }
 ];
 
-const visualAssets = {
-  rock: { src: "assets/lessons/rock-cycle.webp", alt: "วัฏจักรหินและโครงสร้างภายในโลก" },
-  quake: { src: "assets/lessons/earthquake-fault.webp", alt: "รอยเลื่อน คลื่นแผ่นดินไหว และชั้นหิน" },
-  mountain: { src: "assets/lessons/himalaya.webp", alt: "การยกตัวของเทือกเขาจากแผ่นธรณีชนกัน" },
-  weathering: { src: "assets/lessons/weathering-erosion.webp", alt: "การผุพัง การกร่อน และการเคลื่อนตะกอน" },
-  glacier: { src: "assets/lessons/glacial-system.webp", alt: "ระบบธารน้ำแข็งและภูมิลักษณ์เขตหนาว" },
-  desert: { src: "assets/lessons/arid-aeolian.webp", alt: "ภูมิประเทศลมและกระบวนการในเขตแห้งแล้ง" },
-  coast: { src: "assets/lessons/coastal-process.webp", alt: "คลื่น กระแสน้ำ และการเปลี่ยนแปลงชายฝั่ง" },
-  water: { src: "assets/lessons/water-atmosphere-cycle.webp", alt: "วงจรน้ำและการเชื่อมต่อกับบรรยากาศ" },
-  monsoon: { src: "assets/lessons/thai-monsoon.webp", alt: "การไหลเวียนของมรสุมและการกระจายฝน" },
-  cyclone: { src: "assets/lessons/tropical-cyclone.webp", alt: "โครงสร้างและพลังงานของพายุหมุนเขตร้อน" },
-  urban: { src: "assets/lessons/urban-climate.webp", alt: "เมือง พลังงาน อุตสาหกรรม และภูมิอากาศท้องถิ่น" },
-  ocean: { src: "assets/lessons/ocean-circulation.webp", alt: "กระแสน้ำผิวและการหมุนเวียนน้ำลึก" },
-  coral: { src: "assets/lessons/coral-mangrove.webp", alt: "แนวปะการัง ป่าชายเลน และระบบนิเวศชายฝั่ง" },
-  amazon: { src: "assets/lessons/amazon.webp", alt: "ลุ่มน้ำขนาดใหญ่และป่าฝนเขตร้อน" },
-  andes: { src: "assets/lessons/andes.webp", alt: "เทือกเขาแอนดีสและความต่างระดับภูมิภาค" },
-  biome: { src: "assets/lessons/biome-gradient.webp", alt: "การเปลี่ยนชีวนิเวศตามอุณหภูมิและความชื้น" },
-  groundwater: { src: "assets/lessons/groundwater-aquifer.webp", alt: "ชั้นหินอุ้มน้ำ การเติมน้ำ และการสูบน้ำใต้ดิน" },
-  terrace: { src: "assets/lessons/terrace-agriculture.webp", alt: "เกษตรขั้นบันไดและการจัดการดินน้ำ" }
-};
+function subtopicFigure(chapterIndex, sectionIndex, itemIndex, title) {
+  const plan = window.GEOSTORY_VISUALS.getLessonVisual(title, chapterIndex);
+  const image = plan.primary;
+  const fitLabel = plan.fit === "direct" ? "ภาพอธิบายตรงหัวข้อ" : "ภาพบริบทของหมวด";
+  return `<figure class="subtopic-figure visual-${plan.fit}">
+    <img src="${image.src}" alt="${image.alt}" width="${image.width}" height="${image.height}" loading="lazy">
+    <figcaption><span class="visual-fit">${fitLabel}</span><strong>สิ่งที่ควรสังเกต</strong>${plan.caption}<small>${plan.disclaimer}</small></figcaption>
+  </figure>`;
+}
 
-const visualPools = [
-  ["rock", "quake", "mountain", "weathering", "glacier", "desert", "coast", "water"],
-  ["water", "monsoon", "cyclone", "urban", "biome", "ocean", "mountain", "coast"],
-  ["ocean", "coast", "coral", "water", "cyclone", "glacier", "groundwater", "biome"],
-  ["mountain", "andes", "amazon", "desert", "coast", "glacier", "biome", "terrace"],
-  ["groundwater", "terrace", "rock", "weathering", "coral", "urban", "water", "desert"],
-  ["urban", "terrace", "coast", "groundwater", "ocean", "amazon", "monsoon", "rock"]
-];
-
-function subtopicFigure(chapterIndex, sectionIndex, itemIndex, title, section) {
-  const pool = visualPools[chapterIndex];
-  const asset = visualAssets[pool[(sectionIndex * 4 + itemIndex) % pool.length]];
-  return `<figure class="subtopic-figure"><img src="${asset.src}" alt="${asset.alt}" loading="lazy"><figcaption><strong>สิ่งที่ควรสังเกต</strong>${title} เชื่อมกับ ${section.heading.toLowerCase()} อย่างไร และร่องรอยใดในภาพบอกถึงกระบวนการนั้น</figcaption></figure>`;
+function sectionMechanism(chapterIndex, sectionIndex, itemIndex) {
+  return window.GEOSTORY_VISUALS.getSectionModel(chapterIndex, sectionIndex).steps[itemIndex];
 }
 
 function processModel(chapterIndex) {
@@ -171,6 +149,12 @@ const supportRail = $("#supportRail");
 const readerChapterNav = $("#readerChapterNav");
 const readingProgress = $("#readingProgress");
 const chapterProgress = $("#chapterProgress");
+let lastChapterTrigger = null;
+let scrollFrame = 0;
+
+function motionBehavior() {
+  return matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+}
 
 function renderContents() {
   chapterList.innerHTML = chapters.map((chapter, index) => `
@@ -185,30 +169,36 @@ function renderContents() {
   readerChapterNav.innerHTML = chapters.map((chapter, index) => `<button type="button" data-open-chapter="${index}"><span>${index + 1}</span>${chapter.title}</button>`).join("");
 }
 
-function renderChapter(index) {
+function renderChapter(index, options = {}) {
+  const { historyMode = "push", focusHeading = true } = options;
   const chapter = chapters[index];
   const previous = chapters[index - 1];
   const next = chapters[index + 1];
-  chapterHero.innerHTML = `<img src="${chapter.hero}" alt="${chapter.heroAlt}"><div><p>บทที่ ${index + 1} · ${chapter.english}</p><h1>${chapter.title}</h1><p>${chapter.summary}</p><a href="#section-${index}-0">เริ่มอ่าน ↓</a></div>`;
+  chapterHero.innerHTML = `<img src="${chapter.hero}" alt="${chapter.heroAlt}" width="1280" height="720"><div><p>บทที่ ${index + 1} · ${chapter.english}</p><h1 tabindex="-1">${chapter.title}</h1><p>${chapter.summary}</p><a href="#section-${index}-0">เริ่มอ่าน ↓</a></div>`;
   chapterArticle.innerHTML = `
     <nav class="on-this-page" aria-label="หัวข้อในบท"><strong>ในบทนี้</strong>${chapter.sections.map((section, sectionIndex) => `<a href="#section-${index}-${sectionIndex}"><span>${sectionIndex + 1}</span>${section.heading}</a>`).join("")}</nav>
     ${processModel(index)}
     <div class="article-body">${chapter.sections.map((section, sectionIndex) => `
       <section id="section-${index}-${sectionIndex}">
         <header><span>${String(sectionIndex + 1).padStart(2, "0")}</span><div><h2>${section.heading}</h2><p>${section.lead}</p></div></header>
-        <div class="subtopic-block"><strong>หัวข้อย่อยฉบับสมบูรณ์</strong><div class="subtopic-details">${subtopicCatalog[index][sectionIndex].map((item, itemIndex) => `<details class="subtopic-detail" ${sectionIndex === 0 && itemIndex === 0 ? "open" : ""}><summary><span>${sectionIndex + 1}.${itemIndex + 1}</span>${item}</summary><div class="subtopic-content">${subtopicFigure(index, sectionIndex, itemIndex, item, section)}<div class="subtopic-prose"><p>${window.SUBTOPIC_DETAILS[item] || "กำลังเรียบเรียงเนื้อหา"}</p><dl><div><dt>อยู่ในหมวด</dt><dd>${chapter.title}</dd></div><div><dt>กลไกที่เชื่อมโยง</dt><dd>${processData[index].steps[(sectionIndex + itemIndex) % processData[index].steps.length]}</dd></div><div><dt>ใช้ทำความเข้าใจ</dt><dd>${section.lead}</dd></div></dl><a class="open-topic-page" href="topic.html?topic=${encodeURIComponent(item)}">อ่านทฤษฎีและกระบวนการฉบับเต็ม →</a></div></div></details>`).join("")}</div></div>
+        <div class="subtopic-block"><strong>หัวข้อย่อยในตอนนี้</strong><div class="subtopic-details">${subtopicCatalog[index][sectionIndex].map((item, itemIndex) => `<details class="subtopic-detail" ${sectionIndex === 0 && itemIndex === 0 ? "open" : ""}><summary><span>${sectionIndex + 1}.${itemIndex + 1}</span>${item}</summary><div class="subtopic-content">${subtopicFigure(index, sectionIndex, itemIndex, item)}<div class="subtopic-prose"><p>${window.SUBTOPIC_DETAILS[item] || "กำลังเรียบเรียงเนื้อหา"}</p><dl><div><dt>อยู่ในหมวด</dt><dd>${chapter.title}</dd></div><div><dt>กลไกที่เชื่อมโยง</dt><dd>${sectionMechanism(index, sectionIndex, itemIndex)}</dd></div><div><dt>ใช้ทำความเข้าใจ</dt><dd>${section.lead}</dd></div></dl><a class="open-topic-page" href="topic.html?topic=${encodeURIComponent(item)}">เปิดบทเรียนเฉพาะเรื่อง →</a></div></div></details>`).join("")}</div></div>
         ${section.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
         ${section.image ? `<figure><img src="${section.image}" alt="${section.caption}" loading="lazy"><figcaption>${section.caption}</figcaption></figure>` : ""}
       </section>`).join("")}</div>
     <aside class="chapter-summary"><strong>สรุปบท</strong><p>${chapter.summary} การเข้าใจหมวดนี้จึงต้องมองความสัมพันธ์ระหว่างตำแหน่ง กระบวนการ วัสดุ และเวลาร่วมกัน</p></aside>
     <nav class="chapter-pagination" aria-label="เปลี่ยนบท">${previous ? `<button type="button" data-open-chapter="${index - 1}"><span>บทก่อนหน้า</span>${previous.title}</button>` : `<span></span>`}${next ? `<button type="button" data-open-chapter="${index + 1}"><span>บทถัดไป</span>${next.title}</button>` : `<button type="button" data-close-reader><span>อ่านครบทั้งเล่ม</span>กลับสารบัญ</button>`}</nav>`;
   supportRail.innerHTML = `<section class="fact-sheet"><p>ข้อมูลสำคัญ</p>${chapter.facts.map((fact) => `<div><span>${fact.label}</span><strong>${fact.value}</strong></div>`).join("")}</section><figure class="rail-visual"><img src="${chapter.sections[1].image || chapter.hero}" alt="${chapter.sections[1].caption || chapter.heroAlt}" loading="lazy"><figcaption>${chapter.sections[1].caption || chapter.summary}</figcaption></figure><section class="process-card"><p>ลำดับการอ่าน</p>${["สังเกตรูปแบบ", "หาแรงหรือปัจจัย", "ตามการเคลื่อนย้าย", "เชื่อมผลต่อพื้นที่"].map((item, i) => `<div><span>${i + 1}</span>${item}</div>`).join("")}</section>`;
-  document.querySelectorAll("#readerChapterNav button").forEach((button, i) => { button.classList.toggle("active", i === index); button.toggleAttribute("aria-current", i === index); });
+  document.querySelectorAll("#readerChapterNav button").forEach((button, i) => {
+    button.classList.toggle("active", i === index);
+    if (i === index) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  });
   reader.hidden = false;
   $("#contents").hidden = true;
   $("#readingGuide").hidden = true;
   document.body.classList.add("reading-mode");
-  history.replaceState(null, "", `#chapter-${index + 1}`);
+  if (historyMode === "push" && location.hash !== `#chapter-${index + 1}`) history.pushState({ chapter: index }, "", `#chapter-${index + 1}`);
+  if (historyMode === "replace") history.replaceState({ chapter: index }, "", `#chapter-${index + 1}`);
   const svg = chapterArticle.querySelector(".process-model svg");
   if (svg && matchMedia("(prefers-reduced-motion: reduce)").matches) {
     requestAnimationFrame(() => svg.pauseAnimations());
@@ -216,21 +206,28 @@ function renderChapter(index) {
     button.textContent = "เล่นภาพ";
     button.setAttribute("aria-pressed", "true");
   }
-  window.scrollTo({ top: reader.offsetTop - 64, behavior: "smooth" });
+  window.scrollTo({ top: reader.offsetTop - 64, behavior: motionBehavior() });
+  if (focusHeading) requestAnimationFrame(() => chapterHero.querySelector("h1")?.focus({ preventScroll: true }));
 }
 
-function closeReader() {
+function closeReader(options = {}) {
+  const { historyMode = "push", restoreFocus = true } = options;
   reader.hidden = true;
   $("#contents").hidden = false;
   $("#readingGuide").hidden = false;
   document.body.classList.remove("reading-mode");
-  history.replaceState(null, "", "#contents");
-  $("#contents").scrollIntoView({ behavior: "smooth" });
+  if (historyMode === "push" && location.hash !== "#contents") history.pushState(null, "", "#contents");
+  if (historyMode === "replace") history.replaceState(null, "", "#contents");
+  $("#contents").scrollIntoView({ behavior: motionBehavior() });
+  if (restoreFocus && lastChapterTrigger?.isConnected) requestAnimationFrame(() => lastChapterTrigger.focus({ preventScroll: true }));
 }
 
 document.addEventListener("click", (event) => {
   const opener = event.target.closest("[data-open-chapter]");
-  if (opener) renderChapter(Number(opener.dataset.openChapter));
+  if (opener) {
+    if (!document.body.classList.contains("reading-mode")) lastChapterTrigger = opener;
+    renderChapter(Number(opener.dataset.openChapter));
+  }
   if (event.target.closest("[data-close-reader], #closeReader")) closeReader();
   const toggle = event.target.closest("[data-process-toggle]");
   if (toggle) {
@@ -243,7 +240,12 @@ document.addEventListener("click", (event) => {
   }
 });
 
-$("#brandLink").addEventListener("click", () => { if (document.body.classList.contains("reading-mode")) closeReader(); });
+$("#brandLink").addEventListener("click", (event) => {
+  if (document.body.classList.contains("reading-mode")) {
+    event.preventDefault();
+    closeReader();
+  }
+});
 $("#themeToggle").addEventListener("click", (event) => {
   document.body.classList.toggle("dark");
   const dark = document.body.classList.contains("dark");
@@ -252,17 +254,27 @@ $("#themeToggle").addEventListener("click", (event) => {
 });
 
 window.addEventListener("scroll", () => {
-  const max = document.documentElement.scrollHeight - innerHeight;
-  const value = max > 0 ? scrollY / max : 0;
-  readingProgress.style.width = `${value * 100}%`;
-  if (!reader.hidden) {
-    const start = reader.offsetTop + chapterHero.offsetHeight;
-    const end = reader.offsetTop + reader.offsetHeight - innerHeight;
-    chapterProgress.style.width = `${Math.max(0, Math.min(1, (scrollY - start) / Math.max(1, end - start))) * 100}%`;
-  }
+  if (scrollFrame) return;
+  scrollFrame = requestAnimationFrame(() => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const value = max > 0 ? scrollY / max : 0;
+    readingProgress.style.width = `${value * 100}%`;
+    if (!reader.hidden) {
+      const start = reader.offsetTop + chapterHero.offsetHeight;
+      const end = reader.offsetTop + reader.offsetHeight - innerHeight;
+      chapterProgress.style.width = `${Math.max(0, Math.min(1, (scrollY - start) / Math.max(1, end - start))) * 100}%`;
+    }
+    scrollFrame = 0;
+  });
 }, { passive: true });
+
+window.addEventListener("popstate", () => {
+  const chapterMatch = location.hash.match(/^#chapter-([1-6])$/);
+  if (chapterMatch) renderChapter(Number(chapterMatch[1]) - 1, { historyMode: "none" });
+  else if (!reader.hidden) closeReader({ historyMode: "none", restoreFocus: false });
+});
 
 renderContents();
 if (localStorage.getItem("geo-theme") === "dark") { document.body.classList.add("dark"); $("#themeToggle").textContent = "โหมดกลางวัน"; }
 const match = location.hash.match(/^#chapter-([1-6])$/);
-if (match) renderChapter(Number(match[1]) - 1);
+if (match) renderChapter(Number(match[1]) - 1, { historyMode: "none", focusHeading: false });

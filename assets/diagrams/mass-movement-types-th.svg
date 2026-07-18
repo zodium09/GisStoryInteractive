@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">การเคลื่อนตัวของมวลดิน: ปัจจัย กลไก และชนิด</title>
+  <desc id="svg-desc">ภาพตัดขวางตัวอย่างการเลื่อนแบบหมุนและการ์ดตัวอย่างการเคลื่อนตัวของมวลดิน ได้แก่ หินร่วง การเลื่อนแบบระนาบ สลัมป์ การไหล และการคืบ แสดงแรงโน้มถ่วง แรงดันน้ำในช่องว่าง วัสดุ ความเร็วสัมพัทธ์ ร่องรอยภาคสนาม และการแยกความไวต่อการพังออกจากตัวกระตุ้น</desc>
+  <metadata>
+    Scientific reference: U.S. Geological Survey, What is a landslide and what causes one?, https://www.usgs.gov/faqs/what-a-landslide-and-what-causes-one
+    Scientific reference: U.S. Geological Survey, Types of Landslides, https://www.usgs.gov/media/images/types-landslides
+    Scientific reference: Highland, L.M., and Bobrowsky, P., 2008, The Landslide Handbook, USGS Circular 1325, https://pubs.usgs.gov/circ/1325/
+    Scientific reference: Schuster, R.L., and Wieczorek, G.F., 2002, Landslide triggers and types, https://www.usgs.gov/publications/landslide-triggers-and-types
+    Diagram limitation: conceptual and not to scale; movement rates vary widely within a landslide class and no numerical velocity is asserted.
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcfbf7"/>
+      <stop offset="1" stop-color="#f0ece3"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dceff4"/>
+      <stop offset="1" stop-color="#b7d8de"/>
+    </linearGradient>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98355"/>
+      <stop offset="1" stop-color="#855c3d"/>
+    </linearGradient>
+    <pattern id="bedrock-pattern" width="36" height="25" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M0 8 H36 M0 20 H36" stroke="#48575b" stroke-width="1.5" opacity="0.45"/>
+      <path d="M12 0 V8 M27 8 V20 M8 20 V25" stroke="#48575b" stroke-width="1" opacity="0.3"/>
+    </pattern>
+    <pattern id="soil-dots" width="24" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="1.8" fill="#5f3d28" opacity="0.34"/>
+      <circle cx="17" cy="14" r="1.5" fill="#5f3d28" opacity="0.3"/>
+    </pattern>
+    <filter id="shadow" x="-12%" y="-15%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2e3437" flood-opacity="0.15"/>
+    </filter>
+    <marker id="gravity-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#a13d35"/>
+    </marker>
+    <marker id="move-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#c06a2b"/>
+    </marker>
+    <marker id="water-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2a83a5"/>
+    </marker>
+    <marker id="resist-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#39745e"/>
+    </marker>
+    <style>
+      .thai { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+      .title { font-size: 46px; font-weight: 800; fill: #18262e; }
+      .subtitle { font-size: 20px; fill: #64727a; }
+      .label { font-size: 19px; font-weight: 750; fill: #24363f; }
+      .small { font-size: 16px; fill: #52636b; }
+      .micro { font-size: 14px; fill: #5b686e; }
+      .leader { fill: none; stroke: #32464f; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; }
+      .card-title { font-size: 20px; font-weight: 800; fill: #183340; }
+      .card-text { font-size: 14px; fill: #40535c; }
+      .tag { font-size: 13px; font-weight: 750; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#paper)"/>
+  <path d="M0 108 H1800" stroke="#d3cbbc" stroke-width="2"/>
+  <g class="thai">
+    <text class="title" x="900" y="61" text-anchor="middle">การเคลื่อนตัวของมวลดิน</text>
+    <text class="subtitle" x="900" y="94" text-anchor="middle">แรงโน้มถ่วงขับวัสดุลงลาด • ชนิดการเคลื่อน วัสดุ น้ำ และสภาพลาดเขากำหนดรูปแบบที่พบ</text>
+  </g>
+
+  <!-- Main slope mechanics -->
+  <g class="thai">
+    <rect x="38" y="128" width="1092" height="430" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="62" y="153" width="1044" height="380" rx="18" fill="url(#sky)"/>
+
+    <!-- bedrock and soil mantle -->
+    <path d="M62 234 C155 194 246 194 333 224 C442 260 534 300 624 341 C742 394 842 445 930 474 C997 496 1059 500 1106 500 L1106 533 L62 533 Z" fill="#69777a"/>
+    <path d="M62 252 C164 212 244 213 329 242 C441 280 536 318 626 359 C741 411 839 463 930 489 C994 508 1058 512 1106 511 L1106 533 L62 533 Z" fill="url(#bedrock-pattern)" opacity="0.92"/>
+    <path d="M62 215 C154 178 246 181 335 211 C447 249 542 288 632 329 C748 382 846 434 936 461 C1001 481 1061 487 1106 487 L1106 512 C1056 513 996 507 930 489 C839 463 741 411 626 359 C536 318 441 280 329 242 C244 213 164 212 62 252 Z" fill="url(#soil)" stroke="#6d4a33" stroke-width="3"/>
+    <path d="M62 215 C154 178 246 181 335 211 C447 249 542 288 632 329 C748 382 846 434 936 461 C1001 481 1061 487 1106 487 L1106 512 C1056 513 996 507 930 489 C839 463 741 411 626 359 C536 318 441 280 329 242 C244 213 164 212 62 252 Z" fill="url(#soil-dots)" opacity="0.65"/>
+
+    <!-- rotational slump mass -->
+    <path d="M309 203 C383 220 470 253 555 292 C616 320 665 348 713 374 C689 416 623 438 552 425 C473 410 390 360 346 300 C323 269 309 236 309 203 Z" fill="#c79261" stroke="#744d31" stroke-width="3"/>
+    <path d="M309 203 C314 293 382 376 493 414 C573 442 663 426 713 374" fill="none" stroke="#b7473e" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 7"/>
+    <path d="M309 203 L309 241 L338 263" fill="none" stroke="#563a2a" stroke-width="5"/>
+    <path d="M699 367 C727 377 748 395 760 418 C730 419 706 404 691 386 Z" fill="#9c6844" stroke="#65442f" stroke-width="2.5"/>
+
+    <!-- downslope motion and gravity -->
+    <path d="M399 276 C439 298 473 319 509 340" fill="none" stroke="#c06a2b" stroke-width="6" stroke-linecap="round" marker-end="url(#move-arrow)"/>
+    <path d="M520 329 C557 348 594 365 631 379" fill="none" stroke="#c06a2b" stroke-width="6" stroke-linecap="round" marker-end="url(#move-arrow)"/>
+    <path d="M246 242 L246 345" fill="none" stroke="#a13d35" stroke-width="7" stroke-linecap="round" marker-end="url(#gravity-arrow)"/>
+    <text x="164" y="341" font-size="20" font-weight="800" fill="#8f3932">แรงโน้มถ่วง</text>
+    <text x="405" y="265" font-size="17" font-weight="750" fill="#813e21">ตัวอย่าง: การเลื่อนแบบหมุน (slump)</text>
+
+    <!-- resistance along rupture surface -->
+    <path d="M485 408 C447 395 418 376 388 353" fill="none" stroke="#39745e" stroke-width="5" stroke-linecap="round" marker-end="url(#resist-arrow)"/>
+    <text x="312" y="400" font-size="16" font-weight="700" fill="#d8f0e4">แรงต้านตามผิวเลื่อน</text>
+
+    <!-- water infiltration and pore pressure -->
+    <g fill="#f7fbfc" stroke="#85aeb9" stroke-width="2">
+      <ellipse cx="480" cy="177" rx="46" ry="17"/>
+      <ellipse cx="450" cy="183" rx="27" ry="14"/>
+      <ellipse cx="514" cy="183" rx="28" ry="14"/>
+    </g>
+    <path d="M449 201 l-6 18 M476 201 l-6 18 M504 201 l-6 18" stroke="#2a83a5" stroke-width="4" stroke-linecap="round"/>
+    <path d="M463 224 C455 250 456 277 470 303" fill="none" stroke="#2a83a5" stroke-width="4" stroke-dasharray="6 6" marker-end="url(#water-arrow)"/>
+    <g fill="#4da7c4" stroke="#24728f" stroke-width="1.3">
+      <circle cx="432" cy="328" r="6"/><circle cx="461" cy="346" r="7"/><circle cx="493" cy="364" r="6"/><circle cx="528" cy="381" r="7"/><circle cx="566" cy="394" r="6"/>
+    </g>
+    <path class="leader" d="M566 394 L642 421 L704 421"/>
+    <rect x="704" y="399" width="380" height="65" rx="13" fill="#e9f4f6" stroke="#75a9b8" stroke-width="2"/>
+    <text x="722" y="426" class="label">แรงดันน้ำในช่องว่าง</text>
+    <text x="722" y="450" class="small">เพิ่มขึ้นได้เมื่อมีน้ำซึม → แรงต้านอาจลดลง</text>
+
+    <!-- landslide anatomy -->
+    <path class="leader" d="M310 204 L283 184 L201 184"/>
+    <text x="82" y="178" class="label">ส่วนหัวดินถล่ม</text>
+    <text x="82" y="201" class="small">รอยแยกและหน้าผาชันใหม่</text>
+    <path class="leader" d="M568 430 L558 468"/>
+    <rect x="352" y="462" width="358" height="61" rx="13" fill="#f7ece9" stroke="#c77a70" stroke-width="2"/>
+    <text x="372" y="488" class="label">ผิวเลื่อนของสลัมป์ตัวอย่าง</text>
+    <text x="372" y="512" class="small">ผิวโค้ง; บางชนิดเป็นระนาบหรือไม่มีผิวเลื่อนชัด</text>
+    <path class="leader" d="M718 383 L778 354 L850 354"/>
+    <text x="856" y="350" class="label">ส่วนปลาย</text>
+    <text x="856" y="374" class="small">ดินโป่งหรือกองทับถมที่เชิงลาด</text>
+
+    <!-- material legend and field evidence -->
+    <rect x="78" y="444" width="258" height="72" rx="15" fill="#f7f0e5" stroke="#b89b78" stroke-width="2"/>
+    <text x="94" y="468" font-size="17" font-weight="800" fill="#594430">วัสดุที่เคลื่อน</text>
+    <text x="94" y="493" font-size="15" fill="#665342">หิน • เศษหินดิน • ดินเม็ดละเอียด</text>
+    <text x="94" y="511" font-size="13" fill="#756454">ชื่อชนิดใช้ทั้ง “วัสดุ” และ “รูปแบบการเคลื่อน”</text>
+  </g>
+
+  <!-- susceptibility vs trigger -->
+  <g class="thai">
+    <rect x="1155" y="128" width="607" height="430" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#shadow)"/>
+    <text x="1459" y="170" text-anchor="middle" font-size="25" font-weight="800" fill="#1c3039">สภาพลาดเขา ≠ เหตุการณ์กระตุ้น</text>
+
+    <rect x="1180" y="188" width="557" height="116" rx="18" fill="#e9f2f2" stroke="#7ba7a6" stroke-width="2"/>
+    <circle cx="1214" cy="220" r="19" fill="#438080"/>
+    <text x="1214" y="227" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">A</text>
+    <text x="1244" y="216" font-size="20" font-weight="800" fill="#265c5c">ความไวต่อการพัง (susceptibility)</text>
+    <text x="1202" y="247" class="small">สภาพพื้นฐาน: ความลาดชัน • ชนิดและชั้นวัสดุ • รอยแตก</text>
+    <text x="1202" y="272" class="small">การระบายน้ำเดิม • ประวัติการพัง • รูปร่างลาดเขา</text>
+    <text x="1202" y="294" class="micro">บอกว่า “บริเวณใดมีแนวโน้ม” แต่ยังไม่บอกว่าจะพังเมื่อใด</text>
+
+    <rect x="1180" y="318" width="557" height="130" rx="18" fill="#f7e9e6" stroke="#c77a70" stroke-width="2"/>
+    <circle cx="1214" cy="351" r="19" fill="#b85045"/>
+    <text x="1214" y="358" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">B</text>
+    <text x="1244" y="347" font-size="20" font-weight="800" fill="#833e37">ตัวกระตุ้น (trigger)</text>
+    <text x="1202" y="379" class="small">ฝนหนัก/หิมะละลาย • แผ่นดินไหว • ภูเขาไฟ</text>
+    <text x="1202" y="404" class="small">การกัดเซาะเชิงลาด • การตัดเชิงเขา • เปลี่ยนระดับน้ำ</text>
+    <text x="1202" y="430" font-size="15" font-weight="750" fill="#9a4038">ฝนเป็นเพียงหนึ่งในหลายตัวกระตุ้น—มักมีหลายปัจจัยร่วมกัน</text>
+
+    <rect x="1180" y="464" width="557" height="69" rx="17" fill="#f4f0e4" stroke="#bea86e" stroke-width="2"/>
+    <text x="1459" y="491" text-anchor="middle" font-size="20" font-weight="800" fill="#5a4b2d">แรงขับมากกว่าความต้านทาน → เริ่มเคลื่อนลงลาด</text>
+    <text x="1459" y="516" text-anchor="middle" font-size="15" fill="#6e634b">น้ำอาจเพิ่มน้ำหนักและแรงดันในช่องว่าง ทำให้กำลังต้านทานลดลง</text>
+  </g>
+
+  <!-- Five movement classes -->
+  <g class="thai">
+    <text x="52" y="590" font-size="22" font-weight="800" fill="#1c3039">ตัวอย่างชนิดที่พบบ่อยตามรูปแบบการเคลื่อน</text>
+    <text x="1748" y="590" text-anchor="end" font-size="15" fill="#68767d">ความเร็วเป็นเชิงสัมพัทธ์และแปรผันตามวัสดุ น้ำ ปริมาตร และความลาดชัน</text>
+
+    <!-- fall -->
+    <g transform="translate(42 605)">
+      <rect width="330" height="228" rx="18" fill="#f8f3e9" stroke="#c7aa78" stroke-width="2"/>
+      <text x="18" y="31" class="card-title">1 หินร่วง (fall)</text>
+      <rect x="230" y="12" width="82" height="25" rx="12" fill="#f0d8b1"/>
+      <text x="271" y="30" text-anchor="middle" class="tag" fill="#7a4b1e">มักเร็ว</text>
+      <path d="M26 56 L92 52 L96 120 L70 145 L26 145 Z" fill="#657277"/>
+      <path d="M28 64 L90 60 M30 82 L93 78 M31 101 L95 96" stroke="#c3c9c8" stroke-width="2"/>
+      <path d="M114 66 C126 74 129 86 122 96" fill="none" stroke="#c06a2b" stroke-width="4" marker-end="url(#move-arrow)"/>
+      <circle cx="112" cy="64" r="8" fill="#866445"/><circle cx="128" cy="105" r="7" fill="#866445"/><circle cx="143" cy="132" r="9" fill="#866445"/>
+      <text x="165" y="65" class="card-text">วัสดุ: หิน</text>
+      <text x="165" y="88" class="card-text">หลุด–ตก–กระเด้ง–กลิ้ง</text>
+      <text x="165" y="111" class="card-text">ร่องรอย: หน้าผาสด</text>
+      <text x="165" y="133" class="card-text">กองเศษหินที่เชิงผา</text>
+      <text x="18" y="182" font-size="15" font-weight="750" fill="#704a2b">สังเกต: รอยแตก/ชั้นหินที่ตัดหน้าผา</text>
+      <text x="18" y="209" class="micro">การตกอิสระต่างจากการเลื่อนบนผิว</text>
+    </g>
+
+    <!-- translational slide -->
+    <g transform="translate(389 605)">
+      <rect width="330" height="228" rx="18" fill="#edf3f3" stroke="#83a9a8" stroke-width="2"/>
+      <text x="18" y="31" class="card-title">2ก เลื่อนแบบระนาบ</text>
+      <rect x="221" y="12" width="91" height="25" rx="12" fill="#d5e5e4"/>
+      <text x="266" y="30" text-anchor="middle" class="tag" fill="#356666">ช้าถึงเร็ว</text>
+      <path d="M24 130 L24 72 L150 126 L150 145 L24 145 Z" fill="#68787b"/>
+      <path d="M42 69 L134 108 L148 128 L124 128 L37 91 Z" fill="#c19162" stroke="#684b35" stroke-width="2"/>
+      <path d="M35 94 L145 139" stroke="#b7473e" stroke-width="4" stroke-dasharray="7 5"/>
+      <path d="M76 87 L121 107" stroke="#c06a2b" stroke-width="4" marker-end="url(#move-arrow)"/>
+      <text x="165" y="65" class="card-text">วัสดุ: หินหรือดิน</text>
+      <text x="165" y="88" class="card-text">มวลค่อนข้างคงรูป</text>
+      <text x="165" y="111" class="card-text">เคลื่อนบนระนาบเลื่อน</text>
+      <text x="165" y="133" class="card-text">ร่องรอย: หน้าผา/บล็อกเลื่อน</text>
+      <text x="18" y="182" font-size="15" font-weight="750" fill="#315f5f">สังเกต: ผิวเลื่อนค่อนข้างราบ</text>
+      <text x="18" y="209" class="micro">อาจเปลี่ยนเป็นการไหลระหว่างทาง</text>
+    </g>
+
+    <!-- slump -->
+    <g transform="translate(736 605)">
+      <rect width="330" height="228" rx="18" fill="#f4eee8" stroke="#b7947d" stroke-width="2"/>
+      <text x="18" y="31" class="card-title">2ข สลัมป์ (slump)</text>
+      <rect x="221" y="12" width="91" height="25" rx="12" fill="#eadbd0"/>
+      <text x="266" y="30" text-anchor="middle" class="tag" fill="#76523e">ช้าถึงเร็ว</text>
+      <path d="M24 80 C60 58 102 78 150 123 L150 145 L24 145 Z" fill="#6c797b"/>
+      <path d="M55 72 C78 78 106 96 128 116 C111 137 81 137 61 119 C47 106 45 87 55 72 Z" fill="#c99465" stroke="#694b35" stroke-width="2"/>
+      <path d="M55 72 C46 105 74 139 128 116" fill="none" stroke="#b7473e" stroke-width="4" stroke-dasharray="7 5"/>
+      <path d="M75 83 C87 91 96 99 103 109" fill="none" stroke="#c06a2b" stroke-width="4" marker-end="url(#move-arrow)"/>
+      <text x="165" y="65" class="card-text">วัสดุ: ดิน/เศษหินดิน</text>
+      <text x="165" y="88" class="card-text">หมุนบนผิวโค้งเว้า</text>
+      <text x="165" y="111" class="card-text">ร่องรอย: หัวเป็นโค้ง</text>
+      <text x="165" y="133" class="card-text">บล็อกเอียงกลับ–ปลายโป่ง</text>
+      <text x="18" y="182" font-size="15" font-weight="750" fill="#704c37">สังเกต: ขั้นลาดและแอ่งน้ำบนมวล</text>
+      <text x="18" y="209" class="micro">เป็นการเลื่อนแบบหมุน ไม่ใช่ flow</text>
+    </g>
+
+    <!-- flow -->
+    <g transform="translate(1083 605)">
+      <rect width="330" height="228" rx="18" fill="#f3eee1" stroke="#b9a36d" stroke-width="2"/>
+      <text x="18" y="31" class="card-title">3 การไหล (flow)</text>
+      <rect x="207" y="12" width="105" height="25" rx="12" fill="#e9ddb9"/>
+      <text x="259" y="30" text-anchor="middle" class="tag" fill="#6d5b2b">ช้าถึงเร็วมาก</text>
+      <path d="M22 72 C62 82 76 113 112 126 C128 132 143 130 154 126 L154 145 L22 145 Z" fill="#7b694d"/>
+      <path d="M39 81 C58 88 67 106 81 116 C101 131 131 131 148 126" fill="none" stroke="#c06a2b" stroke-width="11" stroke-linecap="round" marker-end="url(#move-arrow)"/>
+      <g fill="#b6986d"><circle cx="58" cy="91" r="4"/><circle cx="78" cy="113" r="5"/><circle cx="104" cy="126" r="4"/><circle cx="131" cy="130" r="5"/></g>
+      <text x="165" y="65" class="card-text">ดิน/เศษหิน; ปริมาณน้ำแปรผัน</text>
+      <text x="165" y="88" class="card-text">เสียรูปภายในและไหล</text>
+      <text x="165" y="111" class="card-text">ร่องรอย: ร่องทางไหล</text>
+      <text x="165" y="133" class="card-text">ตะกอนรูปพู/คละขนาด</text>
+      <text x="18" y="182" font-size="15" font-weight="750" fill="#66552b">สังเกต: บาง flow แห้งได้ ไม่จำเป็นต้องมีน้ำมาก</text>
+      <text x="18" y="209" class="micro">debris flow มักไหลตามร่องน้ำหรือแอ่ง</text>
+    </g>
+
+    <!-- creep -->
+    <g transform="translate(1430 605)">
+      <rect width="330" height="228" rx="18" fill="#edf1e7" stroke="#8da078" stroke-width="2"/>
+      <text x="18" y="31" class="card-title">4 การคืบ (creep)</text>
+      <rect x="224" y="12" width="88" height="25" rx="12" fill="#dbe4ce"/>
+      <text x="268" y="30" text-anchor="middle" class="tag" fill="#50663c">ช้ามาก</text>
+      <path d="M22 117 C62 96 111 99 154 122 L154 145 L22 145 Z" fill="#8a7656"/>
+      <path d="M41 111 L60 118 M67 105 L87 113 M94 108 L115 118" stroke="#c06a2b" stroke-width="3" marker-end="url(#move-arrow)"/>
+      <path d="M82 104 C79 87 88 76 84 59" stroke="#59462e" stroke-width="5" fill="none"/>
+      <path d="M84 59 C95 66 101 75 101 87" stroke="#4f7949" stroke-width="5" fill="none"/>
+      <path d="M127 116 L119 75" stroke="#424f50" stroke-width="5"/>
+      <text x="165" y="65" class="card-text">วัสดุ: ดินหรือหินผุ</text>
+      <text x="165" y="88" class="card-text">เคลื่อนช้ามากต่อเนื่อง</text>
+      <text x="165" y="111" class="card-text">ร่องรอย: ต้นไม้โค้ง</text>
+      <text x="165" y="133" class="card-text">เสาเอียง–ขั้นดินเล็ก ๆ</text>
+      <text x="18" y="182" font-size="15" font-weight="750" fill="#4d6339">สังเกต: ต้องเทียบร่องรอยต่างเวลา</text>
+      <text x="18" y="209" class="micro">อาจไม่เห็นการเคลื่อนด้วยตาในขณะสั้น ๆ</text>
+    </g>
+  </g>
+
+  <g class="thai">
+    <rect x="180" y="846" width="1440" height="43" rx="20" fill="#e5efed" stroke="#8aaca5" stroke-width="2"/>
+    <text x="900" y="875" text-anchor="middle" font-size="23" font-weight="800" fill="#263f3b">เมื่อแรงขับมากกว่าความต้านทาน มวลดินและหินจะเคลื่อนลงลาด</text>
+    <text x="1760" y="893" text-anchor="end" font-size="13" fill="#728086">ภาพเชิงแผนผัง ไม่เป็นมาตราส่วน • ความเร็วของแต่ละชนิดแปรผันและอาจเกิดแบบผสม</text>
+  </g>
+</svg>

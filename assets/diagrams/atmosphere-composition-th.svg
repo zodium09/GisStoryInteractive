@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">องค์ประกอบของบรรยากาศ</title>
+  <desc id="svg-desc">แผนภาพแยกสัดส่วนโดยปริมาตรของอากาศแห้งเป็นไนโตรเจนประมาณ 78 เปอร์เซ็นต์ ออกซิเจน 21 เปอร์เซ็นต์ อาร์กอนประมาณ 0.9 เปอร์เซ็นต์ และก๊าซร่องรอย จากไอน้ำและละอองลอยซึ่งแปรผันตามสถานที่และเวลา</desc>
+  <metadata><![CDATA[
+{
+  "assetId": "atmosphere-composition-th",
+  "titleTH": "องค์ประกอบของบรรยากาศ",
+  "productionMode": "deterministic-svg",
+  "notToScale": true,
+  "created": "2026-07-18",
+  "sourceRefs": [
+    {"label": "NASA Science: The Atmosphere—Getting a Handle on Carbon Dioxide", "url": "https://science.nasa.gov/earth/climate-change/greenhouse-gases/the-atmosphere-getting-a-handle-on-carbon-dioxide/"},
+    {"label": "NOAA NESDIS: Peeling Back the Layers of the Atmosphere", "url": "https://www.nesdis.noaa.gov/news/peeling-back-the-layers-of-the-atmosphere"},
+    {"label": "NOAA Global Monitoring Laboratory: Basics of the Carbon Cycle and the Greenhouse Effect", "url": "https://gml.noaa.gov/outreach/carbon_toolkit/basics.html"},
+    {"label": "NASA: Meteorology—An Educator's Resource", "url": "https://www.nasa.gov/wp-content/uploads/2009/07/288978main_meteorology_guide.pdf"}
+  ],
+  "limitationTH": "สัดส่วนเป็นค่าประมาณโดยปริมาตรของอากาศแห้งใกล้พื้นผิวและปัดเศษเพื่อการเรียนรู้ ไอน้ำและละอองลอยแสดงแยกเพราะแปรผัน ส่วนขยายก๊าซร่องรอยไม่ตามสัดส่วน"
+}
+  ]]></metadata>
+
+  <defs>
+    <linearGradient id="page-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFAF7"/>
+      <stop offset="1" stop-color="#F1F5F6"/>
+    </linearGradient>
+    <linearGradient id="water-scale" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F3F6F8"/>
+      <stop offset="0.45" stop-color="#BFDDF2"/>
+      <stop offset="1" stop-color="#3C86BF"/>
+    </linearGradient>
+    <pattern id="argon-pattern" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="10" height="10" fill="#E2E6E9"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#7E8991" stroke-width="2.5"/>
+    </pattern>
+    <pattern id="trace-pattern" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <rect width="8" height="8" fill="#F8DFD7"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#C6533B" stroke-width="2"/>
+    </pattern>
+    <pattern id="aerosol-pattern" width="18" height="18" patternUnits="userSpaceOnUse">
+      <rect width="18" height="18" fill="#F2EEE6"/>
+      <circle cx="5" cy="5" r="2.2" fill="#8B7A66"/>
+      <circle cx="13" cy="11" r="1.5" fill="#B08C62"/>
+      <circle cx="4" cy="15" r="1" fill="#6F7E86"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#17324D" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2E6FBB"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; fill: #17324D; }
+      .title { font-size: 50px; font-weight: 800; }
+      .subtitle { font-size: 23px; font-weight: 500; }
+      .section { font-size: 28px; font-weight: 800; }
+      .label { font-size: 22px; font-weight: 750; }
+      .body { font-size: 18px; font-weight: 500; }
+      .small { font-size: 16px; font-weight: 500; }
+      .tiny { font-size: 13px; font-weight: 500; }
+      .inverse { fill: #FFFFFF; }
+      .card { stroke: #B8C5CD; stroke-width: 2; filter: url(#shadow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#page-bg)"/>
+  <rect x="0" y="0" width="18" height="900" fill="#2E6FBB"/>
+
+  <!-- Header -->
+  <text x="60" y="66" class="title">องค์ประกอบของบรรยากาศ</text>
+  <text x="60" y="108" class="subtitle">สัดส่วนหลักอ้างอากาศแห้ง ส่วนไอน้ำและละอองลอยเปลี่ยนตามที่และเวลา</text>
+  <rect x="1285" y="39" width="255" height="54" rx="27" fill="#E8F0F7" stroke="#2E6FBB" stroke-width="2"/>
+  <text x="1412" y="62" text-anchor="middle" class="small">ค่าประมาณโดยปริมาตร</text>
+  <text x="1412" y="81" text-anchor="middle" class="tiny">ใกล้พื้นผิวโลก</text>
+  <line x1="60" y1="132" x2="1540" y2="132" stroke="#CBD5DB" stroke-width="2"/>
+
+  <!-- Dry air composition -->
+  <g aria-label="สัดส่วนอากาศแห้ง">
+    <rect x="60" y="154" width="1480" height="322" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="88" y="196" class="section">อากาศแห้ง</text>
+    <text x="257" y="196" class="body">ไม่รวมไอน้ำและละอองลอย</text>
+    <rect x="1280" y="168" width="226" height="35" rx="17" fill="#F1F4F5" stroke="#8797A1" stroke-width="1.5"/>
+    <text x="1393" y="192" text-anchor="middle" class="small">รวม ≈ 100% หลังปัดเศษ</text>
+
+    <!-- True-proportion stacked bar; trace segment is intentionally thin -->
+    <g aria-label="แถบสัดส่วนอากาศแห้งตามปริมาตร">
+      <rect x="88" y="226" width="1092" height="98" rx="14" fill="#447BB8"/>
+      <rect x="1180" y="226" width="294" height="98" fill="#E39A32"/>
+      <rect x="1474" y="226" width="12.6" height="98" fill="url(#argon-pattern)"/>
+      <rect x="1486.6" y="226" width="1.4" height="98" fill="url(#trace-pattern)"/>
+      <path d="M102 226 H1474 M102 324 H1488" stroke="#FFFFFF" stroke-width="2" opacity="0.55"/>
+      <text x="634" y="268" text-anchor="middle" class="section inverse">ไนโตรเจน N₂</text>
+      <text x="634" y="302" text-anchor="middle" class="label inverse">ประมาณ 78%</text>
+      <text x="1327" y="268" text-anchor="middle" class="section inverse">ออกซิเจน O₂</text>
+      <text x="1327" y="302" text-anchor="middle" class="label inverse">ประมาณ 21%</text>
+    </g>
+
+    <!-- Callouts for narrow segments -->
+    <path d="M1480 226 L1442 206 L1370 206" fill="none" stroke="#6F7A82" stroke-width="2.5"/>
+    <rect x="1150" y="338" width="338" height="112" rx="17" fill="#FAFBFB" stroke="#9BA9B2" stroke-width="1.5"/>
+    <text x="1174" y="366" class="small">ขยายส่วนที่น้อยกว่า 1% เพื่อให้อ่านได้</text>
+    <text x="1174" y="388" class="tiny">กล่องนี้ไม่ตามสัดส่วน</text>
+    <rect x="1174" y="401" width="252" height="28" rx="8" fill="url(#argon-pattern)" stroke="#7E8991" stroke-width="1.2"/>
+    <rect x="1426" y="401" width="36" height="28" rx="8" fill="url(#trace-pattern)" stroke="#C6533B" stroke-width="1.2"/>
+    <text x="1300" y="421" text-anchor="middle" class="small">อาร์กอน ≈ 0.9%</text>
+    <text x="1462" y="445" text-anchor="end" class="tiny">ก๊าซร่องรอย ≈ 0.1%</text>
+
+    <g transform="translate(88 348)">
+      <rect x="0" y="0" width="1015" height="102" rx="17" fill="#F4F7F9" stroke="#B5C2CA" stroke-width="1.5"/>
+      <text x="24" y="32" class="label">ก๊าซร่องรอยรวม ≈ 0.1% เมื่อปัดค่าหลัก</text>
+      <text x="24" y="60" class="body">รวมทั้ง CO₂ ประมาณ 0.04%, CH₄, N₂O, O₃, Ne, He และก๊าซอื่น</text>
+      <text x="24" y="86" class="small">สัดส่วนเล็กมาก จึงไม่ขยายให้ดูใกล้ออกซิเจนในแถบหลัก</text>
+      <circle cx="910" cy="51" r="28" fill="#F8DFD7" stroke="#C6533B" stroke-width="2"/>
+      <text x="910" y="57" text-anchor="middle" class="label">CO₂</text>
+    </g>
+  </g>
+
+  <!-- Variable water vapor -->
+  <g aria-label="ไอน้ำแปรผันตามสถานที่และเวลา">
+    <rect x="60" y="500" width="710" height="282" rx="22" fill="#FFFFFF" class="card"/>
+    <circle cx="108" cy="547" r="28" fill="#E0EFF9" stroke="#3C86BF" stroke-width="2"/>
+    <path d="M108 525 C94 544 89 552 89 563 A19 19 0 0 0 127 563 C127 552 122 544 108 525 Z" fill="#3C86BF"/>
+    <text x="153" y="555" class="section">ไอน้ำ: แปรผัน</text>
+    <text x="88" y="592" class="body">ใกล้พื้นผิวอาจประมาณ 0–4% โดยปริมาตร</text>
+
+    <rect x="88" y="617" width="604" height="54" rx="14" fill="url(#water-scale)" stroke="#3C86BF" stroke-width="1.5"/>
+    <text x="106" y="650" class="label">ใกล้ 0%</text>
+    <text x="674" y="650" text-anchor="end" class="label inverse">เข้าใกล้ 4%</text>
+    <line x1="239" y1="617" x2="239" y2="671" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+    <line x1="390" y1="617" x2="390" y2="671" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+    <line x1="541" y1="617" x2="541" y2="671" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+
+    <g transform="translate(88 692)">
+      <rect x="0" y="0" width="180" height="65" rx="13" fill="#F3F5F6" stroke="#9AA8B1" stroke-width="1.3"/>
+      <text x="90" y="27" text-anchor="middle" class="label">อุณหภูมิ</text>
+      <text x="90" y="50" text-anchor="middle" class="small">กำหนดความจุไอน้ำ</text>
+      <rect x="195" y="0" width="180" height="65" rx="13" fill="#F1F7FA" stroke="#6B99BA" stroke-width="1.3"/>
+      <text x="285" y="27" text-anchor="middle" class="label">สถานที่</text>
+      <text x="285" y="50" text-anchor="middle" class="small">ทะเล–แผ่นดิน สูง–ต่ำ</text>
+      <rect x="390" y="0" width="214" height="65" rx="13" fill="#F7F4EE" stroke="#A28B69" stroke-width="1.3"/>
+      <text x="497" y="27" text-anchor="middle" class="label">เวลา</text>
+      <text x="497" y="50" text-anchor="middle" class="small">ชั่วโมง ฤดู และสภาพอากาศ</text>
+    </g>
+  </g>
+
+  <!-- Trace gas importance and aerosols -->
+  <g aria-label="ก๊าซร่องรอยและละอองลอย">
+    <rect x="790" y="500" width="750" height="282" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="818" y="548" class="section">ปริมาณน้อย ≠ บทบาทน้อย</text>
+    <rect x="818" y="570" width="335" height="184" rx="18" fill="#FFF2ED" stroke="#C6533B" stroke-width="1.8"/>
+    <text x="842" y="604" class="label">ก๊าซร่องรอย</text>
+    <g transform="translate(842 624)">
+      <circle cx="25" cy="23" r="20" fill="#F8DFD7" stroke="#C6533B" stroke-width="1.5"/>
+      <text x="25" y="29" text-anchor="middle" class="small">CO₂</text>
+      <circle cx="82" cy="23" r="20" fill="#F8DFD7" stroke="#C6533B" stroke-width="1.5"/>
+      <text x="82" y="29" text-anchor="middle" class="small">CH₄</text>
+      <circle cx="139" cy="23" r="20" fill="#F8DFD7" stroke="#C6533B" stroke-width="1.5"/>
+      <text x="139" y="29" text-anchor="middle" class="small">N₂O</text>
+      <circle cx="196" cy="23" r="20" fill="#F8DFD7" stroke="#C6533B" stroke-width="1.5"/>
+      <text x="196" y="29" text-anchor="middle" class="small">O₃</text>
+      <path d="M10 70 C55 52 96 86 140 67 C178 51 213 60 260 47" fill="none" stroke="#C6533B" stroke-width="3"/>
+      <path d="M258 47 L244 44 M258 47 L249 59" fill="none" stroke="#C6533B" stroke-width="3"/>
+      <text x="0" y="104" class="small">ดูดกลืนและแผ่รังสีต่างช่วงคลื่น</text>
+      <text x="0" y="128" class="small">จึงมีผลต่อสมดุลรังสีและเคมีอากาศ</text>
+    </g>
+
+    <rect x="1174" y="570" width="338" height="184" rx="18" fill="url(#aerosol-pattern)" stroke="#8B7A66" stroke-width="1.8"/>
+    <rect x="1190" y="584" width="150" height="35" rx="17" fill="#FFFFFF" fill-opacity="0.88" stroke="#8B7A66" stroke-width="1.2"/>
+    <text x="1265" y="608" text-anchor="middle" class="label">ละอองลอย</text>
+    <rect x="1190" y="674" width="306" height="70" rx="12" fill="#FFFFFF" fill-opacity="0.9"/>
+    <g transform="translate(1198 633)">
+      <circle cx="15" cy="14" r="7" fill="#8B7A66"/>
+      <circle cx="43" cy="21" r="10" fill="#B08C62"/>
+      <circle cx="79" cy="12" r="5" fill="#6F7E86"/>
+      <circle cx="112" cy="25" r="8" fill="#8D9676"/>
+      <text x="0" y="60" class="small">อนุภาคของแข็งหรือของเหลว</text>
+      <text x="0" y="84" class="small">ไม่ใช่ก๊าซ และไม่มีร้อยละคงที่</text>
+      <text x="0" y="108" class="small">มีผลต่อเมฆ รังสี และคุณภาพอากาศ</text>
+    </g>
+  </g>
+
+  <!-- Reading rule footer -->
+  <g aria-label="กติกาการอ่านแผนภาพ">
+    <rect x="60" y="808" width="1480" height="55" rx="17" fill="#EAF0F2" stroke="#9CAAB2" stroke-width="1.5"/>
+    <text x="88" y="842" class="label">อ่านแยกสองส่วน:</text>
+    <text x="270" y="842" class="body">แถบด้านบน = อากาศแห้ง</text>
+    <line x1="523" y1="820" x2="523" y2="851" stroke="#B4C0C6" stroke-width="1.5"/>
+    <text x="548" y="842" class="body">ไอน้ำและละอองลอย = แปรผันตามสถานที่และเวลา</text>
+    <line x1="1058" y1="820" x2="1058" y2="851" stroke="#B4C0C6" stroke-width="1.5"/>
+    <text x="1083" y="842" class="body">ไม่มี pie รวมไอน้ำเป็นค่าคงที่</text>
+  </g>
+
+  <text x="60" y="888" class="tiny" fill="#526875">ค่าร้อยละปัดเพื่อการเรียนรู้ • ส่วนขยายก๊าซร่องรอยไม่ตามสัดส่วน • ไอน้ำใกล้พื้นผิวแปรผันประมาณ 0–4%</text>
+  <text x="1540" y="888" text-anchor="end" class="tiny" fill="#526875">กรอบอ้างอิง: NASA Science • NASA Education • NOAA NESDIS • NOAA GML</text>
+</svg>

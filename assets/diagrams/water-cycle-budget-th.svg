@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="water-budget-title water-budget-desc">
+  <title id="water-budget-title">วัฏจักรน้ำและงบน้ำ</title>
+  <desc id="water-budget-desc">แผนภาพลุ่มน้ำสมมติแสดงหยาดน้ำฟ้า P เข้าสู่ขอบเขตลุ่มน้ำ การคายระเหย ET และน้ำท่า Q ไหลออก การเปลี่ยนแปลงการกักเก็บ ΔS ในหิมะ น้ำผิวดิน ความชื้นดิน พืช และน้ำใต้ดิน การซึมถูกแยกจากการเติมน้ำใต้ดิน และการถอนน้ำถูกแสดงเป็นการย้ายแหล่งกักภายในขอบเขต สมการใช้กับยอดรวมตลอดหนึ่งปี ไม่ได้หมายความว่าทุก flux สมดุลทันที</desc>
+
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description>
+        <dc:title>วัฏจักรน้ำและงบน้ำ</dc:title>
+        <dc:description>Deterministic textbook-atlas schematic. No quantitative flux values are implied.</dc:description>
+        <dc:source>https://www.usgs.gov/water-science-school/water-cycle</dc:source>
+        <dc:source>https://www.usgs.gov/publications/hydrological-cycle-and-water-budgets</dc:source>
+        <dc:source>https://www.usgs.gov/water-science-school/science/watersheds-and-drainage-basins</dc:source>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9f6ff"/>
+      <stop offset="1" stop-color="#f8fcff"/>
+    </linearGradient>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b77a43"/>
+      <stop offset="1" stop-color="#795235"/>
+    </linearGradient>
+    <linearGradient id="aquifer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe8f5" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#75bed6" stop-opacity="0.96"/>
+    </linearGradient>
+    <pattern id="soil-moisture" width="26" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="3" fill="#80d4ed"/>
+      <circle cx="20" cy="15" r="2.5" fill="#80d4ed"/>
+    </pattern>
+    <pattern id="porous-rock" width="34" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="4" fill="#498da7" fill-opacity="0.38"/>
+      <circle cx="25" cy="18" r="3" fill="#498da7" fill-opacity="0.32"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#12324a" flood-opacity="0.16"/>
+    </filter>
+
+    <marker id="arrow-water" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L18,9 L0,18 Z" fill="#156eaa"/>
+    </marker>
+    <marker id="arrow-et" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L18,9 L0,18 Z" fill="#d76616"/>
+    </marker>
+    <marker id="arrow-ground" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L18,9 L0,18 Z" fill="#087f8c"/>
+    </marker>
+    <marker id="arrow-human" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L18,9 L0,18 Z" fill="#7553a6"/>
+    </marker>
+
+    <style>
+      text { font-family: "Noto Sans Thai", Tahoma, sans-serif; fill: #102f46; }
+      .title { font-size: 48px; font-weight: 700; }
+      .subtitle { font-size: 22px; font-weight: 500; fill: #38596f; }
+      .label { font-size: 24px; font-weight: 700; }
+      .small { font-size: 19px; font-weight: 500; }
+      .tiny { font-size: 16px; font-weight: 500; }
+      .equation { font-size: 42px; font-weight: 700; letter-spacing: 1px; }
+      .inverse { fill: #ffffff; }
+      .water-flow { fill: none; stroke: #156eaa; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-water); }
+      .et-flow { fill: none; stroke: #d76616; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 16 11; marker-end: url(#arrow-et); }
+      .ground-flow { fill: none; stroke: #087f8c; stroke-width: 8; stroke-linecap: round; stroke-dasharray: 5 10; marker-end: url(#arrow-ground); }
+      .human-flow { fill: none; stroke: #7553a6; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 18 10 4 10; marker-end: url(#arrow-human); }
+      .leader { fill: none; stroke: #4c6678; stroke-width: 2.5; }
+      .chip { fill: #ffffff; stroke: #b5cad7; stroke-width: 2; }
+      .stock { fill: #f5fbfe; stroke: #3f7695; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f7fafc"/>
+  <rect x="0" y="0" width="1600" height="610" fill="url(#sky)"/>
+
+  <!-- Heading and accounting contract -->
+  <text x="70" y="72" class="title">วัฏจักรน้ำและงบน้ำ</text>
+  <text x="72" y="110" class="subtitle">ลุ่มน้ำสมมติ • ช่วงเวลา 1 ปี • ไม่รวมการผันน้ำข้ามลุ่ม</text>
+
+  <g transform="translate(1110 36)" filter="url(#shadow)">
+    <rect width="420" height="142" rx="22" fill="#ffffff" stroke="#356b8d" stroke-width="3"/>
+    <text x="210" y="54" text-anchor="middle" class="equation">P = ET + Q + ΔS</text>
+    <text x="210" y="88" text-anchor="middle" class="small">น้ำเข้า = น้ำออก + การเปลี่ยนแปลงการกักเก็บ</text>
+    <text x="210" y="119" text-anchor="middle" class="tiny">ΔS &gt; 0 กักเก็บเพิ่ม • ΔS &lt; 0 กักเก็บลด</text>
+  </g>
+
+  <!-- Explicit budget boundary -->
+  <rect x="58" y="185" width="1392" height="545" rx="32" fill="none" stroke="#294c63" stroke-width="4" stroke-dasharray="15 10"/>
+  <g transform="translate(82 192)">
+    <rect width="208" height="42" rx="20" fill="#294c63"/>
+    <text x="104" y="29" text-anchor="middle" font-size="20" font-weight="700" class="inverse">ขอบเขตลุ่มน้ำ</text>
+  </g>
+
+  <!-- Clouds -->
+  <g transform="translate(155 240)" fill="#ffffff" stroke="#9fb9c9" stroke-width="2.5" filter="url(#shadow)">
+    <ellipse cx="105" cy="44" rx="78" ry="34"/>
+    <circle cx="62" cy="35" r="34"/>
+    <circle cx="107" cy="20" r="45"/>
+    <circle cx="151" cy="39" r="36"/>
+  </g>
+
+  <!-- Precipitation: multiple paths, not all to runoff -->
+  <path d="M205 310 C210 340 220 365 242 392" class="water-flow"/>
+  <path d="M270 310 C280 345 308 375 340 406" class="water-flow"/>
+  <path d="M335 310 C350 350 394 392 435 430" class="water-flow"/>
+  <g transform="translate(125 326)" filter="url(#shadow)">
+    <rect width="166" height="58" rx="18" fill="#ffffff" stroke="#156eaa" stroke-width="3"/>
+    <text x="83" y="25" text-anchor="middle" class="label" fill="#156eaa">หยาดน้ำฟ้า</text>
+    <text x="83" y="48" text-anchor="middle" class="small" fill="#156eaa">P • น้ำเข้า</text>
+  </g>
+
+  <!-- Landscape surface -->
+  <path d="M58 590 L58 520 L160 465 L250 350 L338 432 L420 385 L520 478 L625 455 L740 505 L855 474 L970 512 L1080 495 L1195 535 L1320 548 L1450 555 L1450 730 L58 730 Z" fill="url(#soil)" stroke="#5c4938" stroke-width="3"/>
+  <path d="M58 590 L58 520 L160 465 L250 350 L338 432 L420 385 L520 478 L625 455 L740 505 L855 474 L970 512 L1080 495 L1195 535 L1320 548 L1450 555" fill="none" stroke="#47733e" stroke-width="18" stroke-linejoin="round"/>
+
+  <!-- Snow stock -->
+  <path d="M193 422 L250 350 L302 402 L277 394 L250 377 L225 409 Z" fill="#ffffff" stroke="#b8d4e2" stroke-width="2"/>
+  <g transform="translate(90 408)">
+    <rect class="stock" width="150" height="45" rx="18"/>
+    <text x="75" y="30" text-anchor="middle" class="small">การกักเก็บ: หิมะ</text>
+  </g>
+
+  <!-- Vegetation and plant-water stock -->
+  <g fill="#2f7048" stroke="#24583a" stroke-width="2">
+    <path d="M555 472 l22 -58 l22 58 Z"/><path d="M590 465 l20 -53 l20 53 Z"/>
+    <path d="M638 462 l24 -64 l24 64 Z"/><path d="M690 487 l20 -56 l20 56 Z"/>
+  </g>
+  <g transform="translate(528 354)">
+    <rect class="stock" width="206" height="46" rx="18"/>
+    <text x="103" y="31" text-anchor="middle" class="small">การกักเก็บ: น้ำในพืช</text>
+  </g>
+
+  <!-- River and surface-water stock -->
+  <path d="M355 430 C430 455 500 505 585 514 C675 525 742 519 825 530 C925 544 980 528 1062 538 C1160 550 1262 544 1450 562" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" opacity="0.75"/>
+  <path d="M355 430 C430 455 500 505 585 514 C675 525 742 519 825 530 C925 544 980 528 1062 538 C1160 550 1262 544 1450 562" fill="none" stroke="#2f9bc4" stroke-width="20" stroke-linecap="round"/>
+  <path d="M1180 541 C1260 546 1345 552 1495 566" class="water-flow"/>
+  <path d="M1295 585 L1295 558" class="leader"/>
+  <g transform="translate(1180 585)">
+    <rect class="stock" width="230" height="48" rx="18"/>
+    <text x="115" y="32" text-anchor="middle" class="small">การกักเก็บ: น้ำผิวดิน</text>
+  </g>
+  <g transform="translate(1390 494)" filter="url(#shadow)">
+    <rect width="180" height="74" rx="18" fill="#ffffff" stroke="#156eaa" stroke-width="3"/>
+    <text x="90" y="31" text-anchor="middle" class="label" fill="#156eaa">น้ำไหลออก</text>
+    <text x="90" y="59" text-anchor="middle" class="small" fill="#156eaa">Q • ทางออกลุ่มน้ำ</text>
+  </g>
+
+  <!-- Surface runoff to channel -->
+  <path d="M420 414 C440 448 474 470 510 493" class="water-flow"/>
+  <path d="M852 488 C878 508 900 516 928 527" class="water-flow"/>
+  <g transform="translate(390 488)">
+    <rect class="chip" width="112" height="42" rx="16"/>
+    <text x="56" y="29" text-anchor="middle" class="small">น้ำท่า</text>
+  </g>
+
+  <!-- Soil moisture layer -->
+  <path d="M505 500 C620 484 715 528 820 520 C915 511 1010 538 1100 530 L1100 595 C1005 600 910 580 820 587 C710 597 615 556 505 568 Z" fill="#d6a66a" stroke="#8d633d" stroke-width="2"/>
+  <path d="M505 500 C620 484 715 528 820 520 C915 511 1010 538 1100 530 L1100 595 C1005 600 910 580 820 587 C710 597 615 556 505 568 Z" fill="url(#soil-moisture)"/>
+  <g transform="translate(568 545)">
+    <rect class="stock" width="250" height="44" rx="18"/>
+    <text x="125" y="29" text-anchor="middle" class="small">การกักเก็บ: ความชื้นดิน</text>
+  </g>
+
+  <!-- Infiltration ends in soil storage -->
+  <path d="M735 485 C735 512 735 528 735 550" class="ground-flow"/>
+  <g transform="translate(650 438)">
+    <rect class="chip" width="122" height="42" rx="16"/>
+    <text x="61" y="29" text-anchor="middle" class="small">การซึม</text>
+  </g>
+
+  <!-- Recharge continues separately from soil to aquifer -->
+  <path d="M865 575 C865 610 865 640 865 669" class="ground-flow"/>
+  <g transform="translate(882 590)">
+    <rect class="chip" width="206" height="42" rx="16"/>
+    <text x="103" y="29" text-anchor="middle" class="small">การเติมน้ำใต้ดิน</text>
+  </g>
+  <!-- Aquifer stock and slow lateral flow -->
+  <path d="M390 650 C575 620 715 664 870 646 C1030 628 1165 649 1335 620 L1450 620 L1450 730 L390 730 Z" fill="url(#aquifer)" stroke="#247793" stroke-width="3"/>
+  <path d="M390 650 C575 620 715 664 870 646 C1030 628 1165 649 1335 620 L1450 620 L1450 730 L390 730 Z" fill="url(#porous-rock)"/>
+  <path d="M940 684 C1050 674 1170 662 1302 635" class="ground-flow"/>
+  <path d="M1300 635 C1334 618 1350 600 1368 577" class="ground-flow"/>
+  <g transform="translate(1000 654)">
+    <rect class="stock" width="225" height="48" rx="18"/>
+    <text x="112" y="32" text-anchor="middle" class="small">การกักเก็บ: น้ำใต้ดิน</text>
+  </g>
+  <text x="1255" y="709" text-anchor="middle" class="tiny">การไหลใต้ดินช้า • ไหลออกสู่ลำน้ำ</text>
+  <g transform="translate(500 592)" filter="url(#shadow)">
+    <rect width="272" height="62" rx="18" fill="#fff8e8" stroke="#ba6b18" stroke-width="3"/>
+    <text x="136" y="26" text-anchor="middle" class="small">การซึม ≠ การเติมน้ำใต้ดิน</text>
+    <text x="136" y="49" text-anchor="middle" class="tiny">น้ำบางส่วนค้างในดินหรือกลับสู่อากาศ</text>
+  </g>
+
+  <!-- Evapotranspiration leaves the top boundary -->
+  <path d="M605 420 C590 365 596 300 622 230 C632 205 638 180 640 145" class="et-flow"/>
+  <path d="M792 482 C810 410 820 340 826 270 C830 220 830 178 830 145" class="et-flow"/>
+  <g transform="translate(650 225)" filter="url(#shadow)">
+    <rect width="230" height="68" rx="18" fill="#ffffff" stroke="#d76616" stroke-width="3"/>
+    <text x="115" y="30" text-anchor="middle" class="label" fill="#a74409">การคายระเหย</text>
+    <text x="115" y="56" text-anchor="middle" class="small" fill="#a74409">ET • น้ำออก</text>
+  </g>
+
+  <!-- Human withdrawal and return: internal transfer -->
+  <g transform="translate(1038 385)">
+    <rect width="118" height="75" rx="10" fill="#e7e0f3" stroke="#7553a6" stroke-width="3"/>
+    <path d="M20 55 H98 M30 55 V32 H52 V55 M63 55 V22 H88 V55" fill="none" stroke="#7553a6" stroke-width="5"/>
+  </g>
+  <path d="M1088 650 C1088 585 1088 520 1088 461" class="human-flow"/>
+  <g transform="translate(944 535)">
+    <rect class="chip" width="126" height="42" rx="16" stroke="#7553a6"/>
+    <text x="63" y="29" text-anchor="middle" class="small" fill="#5b3e86">การถอนน้ำ</text>
+  </g>
+  <path d="M1155 437 C1198 450 1212 490 1212 533" class="human-flow"/>
+  <text x="1206" y="420" class="tiny">น้ำใช้แล้วไหลกลับ</text>
+  <g transform="translate(972 305)" filter="url(#shadow)">
+    <rect width="380" height="88" rx="18" fill="#f4f0fa" stroke="#7553a6" stroke-width="3"/>
+    <text x="190" y="30" text-anchor="middle" class="small" fill="#4e3475">การถอนน้ำย้ายแหล่งกักภายในลุ่มน้ำ</text>
+    <text x="190" y="57" text-anchor="middle" class="tiny" fill="#4e3475">หากส่งออกนอกลุ่ม ต้องนับเพิ่มในน้ำไหลออก</text>
+    <text x="190" y="79" text-anchor="middle" class="tiny" fill="#4e3475">การเข้าถึงยังขึ้นกับพื้นที่ เวลา และการจัดการ</text>
+  </g>
+
+  <!-- ΔS callout points to multiple stocks, not one tank -->
+  <g transform="translate(80 625)" filter="url(#shadow)">
+    <rect width="280" height="86" rx="20" fill="#ffffff" stroke="#356b8d" stroke-width="3"/>
+    <text x="140" y="34" text-anchor="middle" class="label">การกักเก็บ ΔS</text>
+    <text x="140" y="61" text-anchor="middle" class="tiny">รวมการเปลี่ยนของหิมะ น้ำผิวดิน</text>
+    <text x="140" y="81" text-anchor="middle" class="tiny">ความชื้นดิน พืช และน้ำใต้ดิน</text>
+  </g>
+
+  <!-- Legend and explanatory caveats -->
+  <g transform="translate(58 755)">
+    <rect width="1492" height="118" rx="24" fill="#ffffff" stroke="#b6cad7" stroke-width="2.5"/>
+
+    <text x="28" y="34" class="small">ชนิดลูกศร</text>
+    <path d="M145 28 H215" class="water-flow"/>
+    <text x="238" y="35" class="tiny">น้ำผิว/หยาดน้ำฟ้า</text>
+    <path d="M410 28 H480" class="ground-flow"/>
+    <text x="503" y="35" class="tiny">การไหลในดิน/น้ำใต้ดิน</text>
+    <path d="M710 28 H780" class="et-flow"/>
+    <text x="803" y="35" class="tiny">การคายระเหย</text>
+    <path d="M956 28 H1026" class="human-flow"/>
+    <text x="1049" y="35" class="tiny">การใช้น้ำของมนุษย์</text>
+
+    <rect x="1240" y="13" width="32" height="24" rx="6" class="stock"/>
+    <text x="1285" y="34" class="tiny">กล่อง = แหล่งกัก</text>
+
+    <line x1="28" y1="54" x2="1464" y2="54" stroke="#d4e0e7" stroke-width="2"/>
+    <text x="746" y="82" text-anchor="middle" class="small">น้ำไม่หายไป แต่เปลี่ยนแหล่งกักและเส้นทางภายในขอบเขตที่กำหนด</text>
+    <text x="746" y="108" text-anchor="middle" class="small" fill="#6d4818">สมการใช้กับยอดรวมตลอดช่วงเวลา ไม่ได้หมายความว่าทุก flux สมดุลทันที</text>
+  </g>
+
+  <g transform="translate(955 192)">
+    <rect width="520" height="64" rx="20" fill="#fff8e8" stroke="#ba6b18" stroke-width="3"/>
+    <text x="260" y="29" text-anchor="middle" class="small" fill="#71400f">น้ำหมุนเวียน แต่ปริมาณที่พร้อมใช้จำกัดตามพื้นที่และเวลา</text>
+    <text x="260" y="52" text-anchor="middle" class="tiny" fill="#71400f">ภาพนี้เป็นงบเชิงแนวคิด ไม่แสดงปริมาณ flux จริง</text>
+  </g>
+</svg>

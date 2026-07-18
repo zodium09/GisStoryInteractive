@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" width="1800" height="900" role="img" aria-labelledby="tides-title tides-desc">
+  <title id="tides-title">น้ำขึ้นน้ำลง</title>
+  <desc id="tides-desc">แผนภาพสามส่วนอธิบายกลไกน้ำขึ้นน้ำลง ส่วนแรกเป็นแบบสมดุลเชิงอุดมคติของระบบโลกและดวงจันทร์ แสดงความต่างของแรงดึงดูดและความเฉื่อยในกรอบหมุนร่วมซึ่งทำให้มีป่องน้ำสองด้าน ส่วนที่สองเปรียบเทียบน้ำเกิดเมื่อดวงอาทิตย์ โลก และดวงจันทร์เกือบอยู่แนวเดียวกันทั้งเดือนมืดและวันเพ็ญ กับน้ำตายเมื่อแนวแรงขึ้นน้ำลงทำมุมใกล้ฉาก ส่วนที่สามเป็นกราฟจำลองรูปแบบวันละครั้ง วันละสองครั้ง และแบบผสมบนรอบวันจันทรคติเดียวกัน เวลาจริงและช่วงน้ำขึ้นกับสถานี รูปร่างแอ่ง ความลึก การเสียดทาน และการสั่นพ้อง</desc>
+
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description>
+        <dc:title>น้ำขึ้นน้ำลง</dc:title>
+        <dc:description>Deterministic textbook-atlas schematic. Curves are conceptual and are not observations or predictions for a tide station.</dc:description>
+        <dc:source>https://oceanservice.noaa.gov/facts/tides.html</dc:source>
+        <dc:source>https://oceanservice.noaa.gov/education/tutorial_tides/tides07_cycles.html</dc:source>
+        <dc:source>https://oceanservice.noaa.gov/education/tutorial_tides/tides06_variations.html</dc:source>
+        <dc:source>https://oceanservice.noaa.gov/facts/tidefrequency.html</dc:source>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+  <defs>
+    <radialGradient id="sun-glow">
+      <stop offset="0" stop-color="#ffe986"/>
+      <stop offset="0.7" stop-color="#f4ad32"/>
+      <stop offset="1" stop-color="#df7f18"/>
+    </radialGradient>
+    <radialGradient id="earth-sea">
+      <stop offset="0" stop-color="#6dc8e5"/>
+      <stop offset="1" stop-color="#237ba8"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#14344b" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow-force" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L16 8 L0 16 Z" fill="#7a4aa2"/>
+    </marker>
+    <marker id="arrow-inertia" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L16 8 L0 16 Z" fill="#147488"/>
+    </marker>
+    <marker id="arrow-orbit" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L14 7 L0 14 Z" fill="#506f83"/>
+    </marker>
+    <g id="sun">
+      <circle cx="0" cy="0" r="34" fill="url(#sun-glow)" stroke="#c36e14" stroke-width="3"/>
+      <g stroke="#e49a25" stroke-width="5" stroke-linecap="round">
+        <path d="M0 -48 V-61"/><path d="M0 48 V61"/><path d="M-48 0 H-61"/><path d="M48 0 H61"/>
+        <path d="M-34 -34 L-44 -44"/><path d="M34 -34 L44 -44"/><path d="M-34 34 L-44 44"/><path d="M34 34 L44 44"/>
+      </g>
+    </g>
+    <g id="earth">
+      <circle cx="0" cy="0" r="30" fill="url(#earth-sea)" stroke="#145d85" stroke-width="3"/>
+      <path d="M-19 -13 C-5 -25 9 -18 12 -8 C2 -3 -4 4 -14 2 Z M3 8 C15 3 22 12 17 21 C7 24 1 17 3 8 Z" fill="#78a95c"/>
+    </g>
+    <g id="moon">
+      <circle cx="0" cy="0" r="22" fill="#dce3e8" stroke="#7f919e" stroke-width="3"/>
+      <circle cx="-7" cy="-5" r="4" fill="#bec9d0"/><circle cx="7" cy="8" r="3" fill="#bec9d0"/>
+    </g>
+    <style>
+      text { font-family: "Noto Sans Thai", Tahoma, sans-serif; fill: #11344c; }
+      .title { font-size: 46px; font-weight: 700; }
+      .subtitle { font-size: 20px; font-weight: 500; fill: #48687c; }
+      .section-title { font-size: 27px; font-weight: 700; }
+      .label { font-size: 19px; font-weight: 700; }
+      .small { font-size: 16px; font-weight: 500; }
+      .tiny { font-size: 14px; font-weight: 500; }
+      .panel { fill: #ffffff; stroke: #9cb6c6; stroke-width: 2.5; }
+      .subpanel { fill: #f6fafc; stroke: #c2d3dd; stroke-width: 2; }
+      .force { fill: none; stroke: #7a4aa2; stroke-width: 6; stroke-linecap: round; marker-end: url(#arrow-force); }
+      .inertia { fill: none; stroke: #147488; stroke-width: 6; stroke-linecap: round; marker-end: url(#arrow-inertia); }
+      .orbit { fill: none; stroke: #506f83; stroke-width: 3; stroke-dasharray: 9 7; marker-end: url(#arrow-orbit); }
+      .align { fill: none; stroke: #6f8797; stroke-width: 3; stroke-dasharray: 8 6; }
+      .datum { stroke: #6c8494; stroke-width: 2.5; stroke-dasharray: 8 6; }
+      .axis { stroke: #405f72; stroke-width: 2.5; }
+      .curve-one { fill: none; stroke: #176f8d; stroke-width: 6; stroke-linecap: round; }
+      .curve-two { fill: none; stroke: #bd5a25; stroke-width: 6; stroke-linecap: round; }
+      .curve-mixed { fill: none; stroke: #7550a4; stroke-width: 6; stroke-linecap: round; }
+      .chip { fill: #ffffff; stroke: #8ba8b9; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="#f3f8fb"/>
+
+  <!-- Header -->
+  <text x="52" y="58" class="title">น้ำขึ้นน้ำลง</text>
+  <text x="54" y="94" class="subtitle">แรงดาราศาสตร์ขับคลื่นน้ำขึ้นน้ำลง • รูปร่างแอ่งกำหนดการตอบสนองเฉพาะพื้นที่</text>
+  <g transform="translate(1360 28)">
+    <rect width="390" height="66" rx="20" fill="#e9f2f6" stroke="#55778c" stroke-width="2.5"/>
+    <text x="195" y="28" text-anchor="middle" class="small">ภาพจำลองเชิงกลไก ไม่ใช่ข้อมูลสถานี</text>
+    <text x="195" y="52" text-anchor="middle" class="tiny">วัตถุและระยะทางไม่ใช่มาตราส่วนจริง</text>
+  </g>
+
+  <!-- SECTION 1: Earth-Moon mechanism -->
+  <g transform="translate(38 118)">
+    <rect class="panel" width="550" height="550" rx="24" filter="url(#shadow)"/>
+    <text x="275" y="42" text-anchor="middle" class="section-title">1 กลไกโลก–ดวงจันทร์</text>
+    <text x="275" y="69" text-anchor="middle" class="tiny">แบบสมดุลเชิงอุดมคติในกรอบหมุนร่วม</text>
+
+    <!-- Earth, idealized two-sided bulge, moon and barycenter -->
+    <ellipse cx="275" cy="246" rx="128" ry="82" fill="#9fe0ee" stroke="#277d9f" stroke-width="4"/>
+    <circle cx="275" cy="246" r="72" fill="url(#earth-sea)" stroke="#145d85" stroke-width="4"/>
+    <path d="M236 219 C256 196 290 197 303 216 C289 225 275 239 249 236 Z M282 255 C310 247 329 269 313 291 C294 299 275 281 282 255 Z" fill="#78a95c"/>
+    <circle cx="318" cy="246" r="7" fill="#f7d04a" stroke="#744f00" stroke-width="2"/>
+    <text x="318" y="303" text-anchor="middle" class="tiny">จุดศูนย์กลางมวลร่วม</text>
+    <use href="#moon" x="477" y="246"/>
+    <text x="477" y="290" text-anchor="middle" class="label">ดวงจันทร์</text>
+    <path d="M191 149 C275 91 407 117 466 187" class="orbit"/>
+    <text x="320" y="119" text-anchor="middle" class="tiny">ระบบโคจรรอบจุดศูนย์กลางมวลร่วม</text>
+
+    <!-- Differential gravity and inertia, kept separate -->
+    <path d="M355 222 C390 207 420 207 451 222" class="force"/>
+    <text x="406" y="192" text-anchor="middle" class="small">แรงดึงดูดด้านใกล้มากกว่า</text>
+    <path d="M197 269 C158 285 130 284 98 270" class="inertia"/>
+    <text x="142" y="323" text-anchor="middle" class="small">ความเฉื่อยสัมพัทธ์ด้านไกล</text>
+
+    <g transform="translate(63 355)">
+      <rect width="424" height="68" rx="18" fill="#edf7fa" stroke="#277d9f" stroke-width="2.5"/>
+      <text x="212" y="28" text-anchor="middle" class="small">แบบอุดมคติมีป่องน้ำสองด้านตามแกนโลก–ดวงจันทร์</text>
+      <text x="212" y="53" text-anchor="middle" class="tiny">ไม่ใช่ป่องด้านเดียว และไม่ติดอยู่ใต้ดวงจันทร์อย่างแข็ง</text>
+    </g>
+    <g transform="translate(63 440)">
+      <rect width="424" height="79" rx="18" fill="#fff7e8" stroke="#b97622" stroke-width="2.5"/>
+      <text x="212" y="29" text-anchor="middle" class="small">มหาสมุทรจริงเป็นคลื่นยาวที่เคลื่อนผ่านแอ่ง</text>
+      <text x="212" y="53" text-anchor="middle" class="tiny">ทวีป ความลึก การเสียดทาน และการสั่นพ้อง</text>
+      <text x="212" y="73" text-anchor="middle" class="tiny">ทำให้เวลาและช่วงน้ำต่างกันตามสถานี</text>
+    </g>
+  </g>
+
+  <!-- SECTION 2: Spring and neap alignments -->
+  <g transform="translate(625 118)">
+    <rect class="panel" width="550" height="550" rx="24" filter="url(#shadow)"/>
+    <text x="275" y="42" text-anchor="middle" class="section-title">2 น้ำเกิด–น้ำตาย</text>
+    <text x="275" y="69" text-anchor="middle" class="tiny">การจัดแนวเปลี่ยนช่วงน้ำ ไม่ได้กำหนดเวลาท้องถิ่นโดยลำพัง</text>
+
+    <!-- Spring tide: both new and full moon alignments -->
+    <g transform="translate(22 84)">
+      <rect class="subpanel" width="506" height="210" rx="18"/>
+      <g transform="translate(20 14)">
+        <rect width="112" height="36" rx="15" fill="#f5dca9" stroke="#c58227" stroke-width="2"/>
+        <text x="56" y="25" text-anchor="middle" class="label">น้ำเกิด</text>
+      </g>
+      <text x="253" y="46" text-anchor="middle" class="tiny">แรงขึ้นน้ำลงของดวงจันทร์และดวงอาทิตย์ร่วมเสริม</text>
+
+      <!-- New moon alignment -->
+      <line x1="70" y1="96" x2="453" y2="96" class="align"/>
+      <use href="#sun" x="74" y="96" transform="translate(74 96) scale(0.62) translate(-74 -96)"/>
+      <use href="#moon" x="253" y="96"/>
+      <ellipse cx="419" cy="96" rx="47" ry="34" fill="#a9e5ef" stroke="#277d9f" stroke-width="3"/>
+      <use href="#earth" x="419" y="96"/>
+      <text x="74" y="139" text-anchor="middle" class="tiny">ดวงอาทิตย์</text>
+      <text x="253" y="139" text-anchor="middle" class="tiny">ดวงจันทร์</text>
+      <text x="419" y="139" text-anchor="middle" class="tiny">เดือนมืด</text>
+
+      <!-- Full moon alignment -->
+      <line x1="70" y1="170" x2="453" y2="170" class="align"/>
+      <use href="#sun" x="74" y="170" transform="translate(74 170) scale(0.62) translate(-74 -170)"/>
+      <ellipse cx="260" cy="170" rx="47" ry="34" fill="#a9e5ef" stroke="#277d9f" stroke-width="3"/>
+      <use href="#earth" x="260" y="170"/>
+      <use href="#moon" x="435" y="170"/>
+          <text x="350" y="198" text-anchor="middle" class="tiny">วันเพ็ญ</text>
+      <text x="435" y="204" text-anchor="middle" class="tiny">ดวงจันทร์</text>
+    </g>
+
+    <!-- Neap tide: near-right-angle alignment -->
+    <g transform="translate(22 309)">
+      <rect class="subpanel" width="506" height="188" rx="18"/>
+      <g transform="translate(20 14)">
+        <rect width="112" height="36" rx="15" fill="#dcebf3" stroke="#527a91" stroke-width="2"/>
+        <text x="56" y="25" text-anchor="middle" class="label">น้ำตาย</text>
+      </g>
+      <text x="322" y="39" text-anchor="middle" class="tiny">แนวแรงขึ้นน้ำลงทำมุมใกล้ฉาก จึงร่วมลดช่วงน้ำ</text>
+      <line x1="67" y1="118" x2="432" y2="118" class="align"/>
+      <line x1="295" y1="57" x2="295" y2="168" class="align"/>
+      <use href="#sun" x="78" y="118" transform="translate(78 118) scale(0.66) translate(-78 -118)"/>
+      <ellipse cx="295" cy="118" rx="38" ry="33" fill="#a9e5ef" stroke="#277d9f" stroke-width="3"/>
+      <use href="#earth" x="295" y="118"/>
+      <use href="#moon" x="295" y="63"/>
+      <text x="78" y="165" text-anchor="middle" class="tiny">ดวงอาทิตย์</text>
+      <text x="295" y="181" text-anchor="middle" class="tiny">โลก</text>
+      <text x="365" y="72" class="tiny">ดวงจันทร์</text>
+      <text x="365" y="94" class="tiny">ข้างขึ้น/ข้างแรมครึ่งดวง</text>
+    </g>
+
+    <text x="275" y="528" text-anchor="middle" class="small">น้ำเกิด: ช่วงน้ำมากขึ้น • น้ำตาย: ช่วงน้ำปานกลาง</text>
+  </g>
+
+  <!-- SECTION 3: Local schematic tide curves -->
+  <g transform="translate(1212 118)">
+    <rect class="panel" width="550" height="550" rx="24" filter="url(#shadow)"/>
+    <text x="275" y="42" text-anchor="middle" class="section-title">3 รูปแบบน้ำรายวันท้องถิ่น</text>
+    <text x="275" y="69" text-anchor="middle" class="tiny">กราฟจำลองเชิงรูปแบบ • ไม่ใช่ข้อมูลหรือคำพยากรณ์สถานี</text>
+
+    <!-- Shared vertical axis label -->
+    <text x="28" y="300" text-anchor="middle" class="tiny" transform="rotate(-90 28 300)">ระดับน้ำ (สเกลสัมพัทธ์)</text>
+
+    <!-- Diurnal -->
+    <g transform="translate(0 78)">
+      <text x="78" y="20" class="label">วันละครั้ง</text>
+      <line x1="78" y1="92" x2="518" y2="92" class="datum"/>
+      <line x1="78" y1="28" x2="78" y2="148" class="axis"/>
+            <path d="M82 92 C154 37 226 37 299 92 C371 147 444 147 516 92" class="curve-one"/>
+      <text x="191" y="39" text-anchor="middle" class="tiny">น้ำขึ้น</text>
+      <text x="344" y="151" text-anchor="middle" class="tiny">น้ำลง</text>
+      <text x="84" y="86" class="tiny">ระดับอ้างอิง</text>
+      <line x1="488" y1="39" x2="488" y2="147" stroke="#516e81" stroke-width="2"/>
+      <line x1="480" y1="39" x2="496" y2="39" stroke="#516e81" stroke-width="2"/>
+      <line x1="480" y1="147" x2="496" y2="147" stroke="#516e81" stroke-width="2"/>
+      <text x="458" y="97" text-anchor="end" class="tiny">ช่วงน้ำ</text>
+    </g>
+
+    <!-- Semidiurnal -->
+    <g transform="translate(0 229)">
+      <text x="78" y="20" class="label">วันละสองครั้ง</text>
+      <line x1="78" y1="86" x2="518" y2="86" class="datum"/>
+      <line x1="78" y1="28" x2="78" y2="140" class="axis"/>
+            <path d="M82 86 C118 38 154 38 190 86 C226 134 262 134 298 86 C334 38 370 38 406 86 C442 134 478 134 516 86" class="curve-two"/>
+    </g>
+
+    <!-- Mixed semidiurnal -->
+    <g transform="translate(0 372)">
+      <text x="78" y="20" class="label">แบบผสม</text>
+      <line x1="78" y1="82" x2="518" y2="82" class="datum"/>
+      <line x1="78" y1="28" x2="78" y2="132" class="axis"/>
+            <path d="M82 82 C118 33 154 33 190 82 C226 122 262 122 298 82 C334 55 370 55 406 82 C442 132 478 132 516 82" class="curve-mixed"/>
+      <line x1="78" y1="145" x2="518" y2="145" class="axis"/>
+      <text x="298" y="167" text-anchor="middle" class="small">รอบวันจันทรคติ ≈ 24 ชั่วโมง 50 นาที</text>
+    </g>
+  </g>
+
+  <!-- Shared caveats and local controls -->
+  <g transform="translate(38 694)">
+    <rect width="1724" height="178" rx="24" fill="#ffffff" stroke="#9cb6c6" stroke-width="2.5"/>
+    <text x="862" y="34" text-anchor="middle" class="label">แรงดาราศาสตร์เป็นตัวขับ แต่รูปร่างแอ่งกำหนดเวลารอบและช่วงน้ำท้องถิ่น</text>
+
+    <g transform="translate(28 53)">
+      <text x="0" y="25" class="small">ตัวปรับท้องถิ่น</text>
+      <g transform="translate(130 0)"><rect class="chip" width="150" height="40" rx="16"/><text x="75" y="27" text-anchor="middle" class="small">รูปร่างแอ่ง</text></g>
+      <g transform="translate(295 0)"><rect class="chip" width="130" height="40" rx="16"/><text x="65" y="27" text-anchor="middle" class="small">ความลึก</text></g>
+      <g transform="translate(440 0)"><rect class="chip" width="150" height="40" rx="16"/><text x="75" y="27" text-anchor="middle" class="small">การเสียดทาน</text></g>
+      <g transform="translate(605 0)"><rect class="chip" width="150" height="40" rx="16"/><text x="75" y="27" text-anchor="middle" class="small">การสั่นพ้อง</text></g>
+      <g transform="translate(785 -2)">
+        <rect width="420" height="44" rx="16" fill="#edf5f8" stroke="#7595a8" stroke-width="2"/>
+        <text x="210" y="20" text-anchor="middle" class="tiny">กราฟใช้สเกลเวลาเดียวกัน แต่ไม่กำหนดเวลาน้ำขึ้นจริง</text>
+        <text x="210" y="38" text-anchor="middle" class="tiny">สถานีจริงต้องมี datum เขตเวลา ช่วงข้อมูล และแหล่งอ้างอิง</text>
+      </g>
+    </g>
+
+    <line x1="28" y1="108" x2="1696" y2="108" stroke="#d0dde5" stroke-width="2"/>
+    <text x="862" y="137" text-anchor="middle" class="small">น้ำเกิดเกิดได้ทุกฤดู เมื่อดวงอาทิตย์ โลก และดวงจันทร์เกือบอยู่แนวเดียวกัน</text>
+    <text x="862" y="162" text-anchor="middle" class="tiny">คำว่า spring tide หมายถึงช่วงน้ำที่ “เพิ่มมากขึ้น” ไม่ได้หมายถึงฤดูใบไม้ผลิ</text>
+  </g>
+</svg>

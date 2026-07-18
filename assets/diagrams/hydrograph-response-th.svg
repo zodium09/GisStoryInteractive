@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" width="1800" height="900" role="img" aria-labelledby="hydrograph-title hydrograph-desc">
+  <title id="hydrograph-title">อัตราการไหล ไฮโดรกราฟ และเวลาตอบสนอง</title>
+  <desc id="hydrograph-desc">แผนภาพเชิงกลไกเปรียบเทียบไฮโดรกราฟของลุ่มน้ำซึมได้และเมืองทึบน้ำภายใต้ฝนเหตุการณ์เดียวกัน แยกไฮเอโทกราฟความเข้มฝนออกจากกราฟอัตราการไหล แสดงอัตราการไหลฐาน แขนขาขึ้น แขนขาลง ยอดอัตราการไหล และเวลาหน่วง โดยยอดอัตราการไหลเกิดหลังช่วงฝนสูงสุดทั้งสองกรณี รูปร่างเส้นและระยะเวลาเป็นเชิงคุณภาพ ไม่มีค่าปริมาณจริง</desc>
+
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description>
+        <dc:title>อัตราการไหล ไฮโดรกราฟ และเวลาตอบสนอง</dc:title>
+        <dc:description>Deterministic textbook-atlas schematic. Rainfall and discharge use separate qualitative axes; curve shapes do not represent measured data.</dc:description>
+        <dc:source>https://www.usgs.gov/water-science-school/science/streamflow-and-water-cycle</dc:source>
+        <dc:source>https://www.usgs.gov/water-science-school/science/surface-runoff-and-water-cycle</dc:source>
+        <dc:source>https://www.usgs.gov/water-science-school/science/runoff-surface-and-overland-water-runoff</dc:source>
+        <dc:source>https://pubs.usgs.gov/fs/fs07603/</dc:source>
+        <dc:source>https://pubs.usgs.gov/wri/wri034108/</dc:source>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+  <defs>
+    <linearGradient id="hydro-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#edf8ff"/>
+      <stop offset="1" stop-color="#f8fbfd"/>
+    </linearGradient>
+    <linearGradient id="rural-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6eb8ae" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#6eb8ae" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="urban-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dd7a31" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#dd7a31" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="hydro-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#12364e" flood-opacity="0.14"/>
+    </filter>
+    <marker id="hydro-arrow-teal" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#087f8c"/>
+    </marker>
+    <marker id="hydro-arrow-blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#166f9d"/>
+    </marker>
+    <marker id="hydro-arrow-both-start" markerWidth="11" markerHeight="11" refX="2" refY="5.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M11,0 L0,5.5 L11,11 Z" fill="#73559e"/>
+    </marker>
+    <marker id="hydro-arrow-both-end" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#73559e"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans Thai", Tahoma, sans-serif; fill: #102f46; }
+      .title { font-size: 48px; font-weight: 700; }
+      .subtitle { font-size: 22px; font-weight: 500; fill: #3d6075; }
+      .section-title { font-size: 27px; font-weight: 700; }
+      .label { font-size: 20px; font-weight: 700; }
+      .small { font-size: 18px; font-weight: 500; }
+      .tiny { font-size: 16px; font-weight: 500; }
+      .panel { fill: #ffffff; stroke: #abc4d3; stroke-width: 3; }
+      .axis { fill: none; stroke: #3b5d72; stroke-width: 3; stroke-linecap: round; }
+      .grid { stroke: #d8e3e9; stroke-width: 2; }
+      .rain-bar { fill: #3f9ec5; stroke: #1975a7; stroke-width: 2; }
+      .rain-guide { fill: none; stroke: #3f9ec5; stroke-width: 3; stroke-dasharray: 7 8; }
+      .rural-line { fill: none; stroke: #087f8c; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .urban-line { fill: none; stroke: #bd5a1f; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .base-line { fill: none; stroke: #617988; stroke-width: 3; stroke-dasharray: 11 8; }
+      .lag-line { fill: none; stroke: #73559e; stroke-width: 4; marker-start: url(#hydro-arrow-both-start); marker-end: url(#hydro-arrow-both-end); }
+      .leader { fill: none; stroke: #506a7a; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#hydro-bg)"/>
+
+  <text x="54" y="66" class="title">อัตราการไหล ไฮโดรกราฟ และเวลาตอบสนอง</text>
+  <text x="56" y="103" class="subtitle">ติดตามฝน → การกักเก็บและการเดินทางของน้ำ → อัตราการไหลที่ทางออกลุ่มน้ำ</text>
+  <g transform="translate(1392 24)">
+    <rect width="354" height="70" rx="20" fill="#eef7fb" stroke="#6f98b0" stroke-width="2.5"/>
+    <text x="177" y="29" text-anchor="middle" class="small">ภาพจำลองเชิงกลไก • ไม่มีค่าปริมาณ</text>
+    <text x="177" y="54" text-anchor="middle" class="tiny">แกนเวลาเดียวกัน • ไฮโดรกราฟใช้สเกล Q เดียวกัน</text>
+  </g>
+
+  <!-- Shared rainfall hyetograph -->
+  <g filter="url(#hydro-shadow)">
+    <rect x="36" y="126" width="1728" height="158" rx="26" class="panel"/>
+  </g>
+  <g transform="translate(60 145)">
+    <path d="M20 64 C48 34 79 35 101 54 C121 29 158 28 177 54 C204 42 235 58 238 84 H18 C6 78 7 69 20 64 Z" fill="#ffffff" stroke="#8baabd" stroke-width="3"/>
+    <path d="M58 95 V128 M105 95 V128 M152 95 V128" fill="none" stroke="#1975a7" stroke-width="6" stroke-linecap="round" marker-end="url(#hydro-arrow-blue)"/>
+    <text x="128" y="22" text-anchor="middle" class="section-title">ฝนเหตุการณ์เดียวกัน</text>
+    <text x="128" y="132" text-anchor="middle" class="tiny">อินพุตเดียวกันสำหรับสองลุ่มน้ำ</text>
+  </g>
+
+  <g>
+    <text x="380" y="151" class="label">ไฮเอโทกราฟของฝน (rainfall hyetograph)</text>
+    <text x="348" y="224" text-anchor="middle" class="tiny" transform="rotate(-90 348 224)">ความเข้มฝน • เชิงเปรียบเทียบ</text>
+    <path d="M380 165 V258 H1710" class="axis"/>
+    <line x1="560" y1="165" x2="560" y2="258" class="grid"/>
+    <line x1="820" y1="165" x2="820" y2="258" class="grid"/>
+    <line x1="1080" y1="165" x2="1080" y2="258" class="grid"/>
+    <line x1="1340" y1="165" x2="1340" y2="258" class="grid"/>
+    <line x1="1600" y1="165" x2="1600" y2="258" class="grid"/>
+    <rect x="555" y="165" width="52" height="18" class="rain-bar"/>
+    <rect x="615" y="165" width="52" height="32" class="rain-bar"/>
+    <rect x="675" y="165" width="52" height="51" class="rain-bar"/>
+    <rect x="735" y="165" width="52" height="73" class="rain-bar"/>
+    <rect x="795" y="165" width="52" height="91" class="rain-bar"/>
+    <rect x="855" y="165" width="52" height="68" class="rain-bar"/>
+    <rect x="915" y="165" width="52" height="44" class="rain-bar"/>
+    <rect x="975" y="165" width="52" height="25" class="rain-bar"/>
+    <path d="M821 157 V145 H1042" class="leader"/>
+    <text x="1054" y="151" class="tiny" fill="#156d99">ช่วงฝนสูงสุด</text>
+    <text x="1710" y="276" text-anchor="end" class="tiny">เวลา →</text>
+  </g>
+
+  <!-- Rain peak guide: intentionally does not align with either discharge peak -->
+  <path d="M821 151 V758" class="rain-guide"/>
+
+  <!-- Infiltrable watershed hydrograph -->
+  <g filter="url(#hydro-shadow)">
+    <rect x="36" y="302" width="1728" height="226" rx="26" class="panel"/>
+  </g>
+  <g transform="translate(58 318)">
+    <rect width="275" height="194" rx="20" fill="#edf7ea" stroke="#78a76c" stroke-width="2.5"/>
+    <text x="137" y="31" text-anchor="middle" class="section-title">ลุ่มน้ำซึมได้</text>
+    <path d="M18 117 C70 75 124 91 165 106 C205 120 235 106 257 116 L257 165 L18 165 Z" fill="#b77947" stroke="#765238" stroke-width="2.5"/>
+    <path d="M18 117 C70 75 124 91 165 106 C205 120 235 106 257 116" fill="none" stroke="#4f7b43" stroke-width="13"/>
+    <g fill="#3f8044" stroke="#2d6336" stroke-width="2">
+      <circle cx="76" cy="74" r="24"/><circle cx="102" cy="82" r="21"/><path d="M82 93 V123" stroke="#79513a" stroke-width="8"/>
+    </g>
+    <path d="M145 108 C145 128 145 145 145 165" fill="none" stroke="#087f8c" stroke-width="6" stroke-dasharray="5 8" marker-end="url(#hydro-arrow-teal)"/>
+    <path d="M161 105 C189 113 213 116 257 118" fill="none" stroke="#2b9dc3" stroke-width="15" stroke-linecap="round"/>
+    <text x="137" y="184" text-anchor="middle" class="tiny">กักและซึมมากกว่า • เส้นทางน้ำช้ากว่า</text>
+  </g>
+
+  <g>
+    <text x="380" y="333" class="label">ไฮโดรกราฟอัตราการไหลที่ทางออกลุ่มน้ำ</text>
+    <text x="346" y="430" text-anchor="middle" class="tiny" transform="rotate(-90 346 430)">อัตราการไหล Q • เชิงเปรียบเทียบ</text>
+    <path d="M380 352 V496 H1710" class="axis"/>
+    <line x1="560" y1="352" x2="560" y2="496" class="grid"/>
+    <line x1="820" y1="352" x2="820" y2="496" class="grid"/>
+    <line x1="1080" y1="352" x2="1080" y2="496" class="grid"/>
+    <line x1="1340" y1="352" x2="1340" y2="496" class="grid"/>
+    <line x1="1600" y1="352" x2="1600" y2="496" class="grid"/>
+    <path d="M380 482 C610 482 720 481 790 476 C900 468 1005 432 1100 399 C1155 380 1200 376 1230 384 C1320 409 1395 450 1490 469 C1575 484 1640 486 1710 486 L1710 486 L380 486 Z" fill="url(#rural-fill)"/>
+    <path d="M380 482 C610 482 720 481 790 476 C900 468 1005 432 1100 399 C1155 380 1200 376 1230 384 C1320 409 1395 450 1490 469 C1575 484 1640 486 1710 486" class="rural-line"/>
+    <path d="M380 486 H1710" class="base-line"/>
+    <text x="500" y="476" class="tiny">อัตราการไหลฐาน (baseflow)</text>
+    <circle cx="1200" cy="378" r="8" fill="#087f8c" stroke="#ffffff" stroke-width="3"/>
+    <path d="M1200 378 V363 H1320" class="leader"/>
+    <text x="1332" y="368" class="small">ยอดอัตราการไหล (peak discharge)</text>
+    <text x="965" y="438" text-anchor="middle" class="tiny">แขนขาขึ้น (rising limb)</text>
+    <text x="1432" y="437" text-anchor="middle" class="tiny">แขนขาลง (falling limb)</text>
+    <path d="M831 358 H1191" class="lag-line"/>
+    <text x="1011" y="347" text-anchor="middle" class="tiny" fill="#62458b">เวลาหน่วง (lag time) • ยาวกว่า</text>
+    <path d="M1200 358 V371" stroke="#73559e" stroke-width="3" stroke-dasharray="5 5"/>
+    <text x="1710" y="516" text-anchor="end" class="tiny">เวลา →</text>
+  </g>
+
+  <!-- Urban watershed hydrograph -->
+  <g filter="url(#hydro-shadow)">
+    <rect x="36" y="546" width="1728" height="226" rx="26" class="panel"/>
+  </g>
+  <g transform="translate(58 562)">
+    <rect width="275" height="194" rx="20" fill="#f1f0f4" stroke="#91879f" stroke-width="2.5"/>
+    <text x="137" y="31" text-anchor="middle" class="section-title">เมืองทึบน้ำ</text>
+    <path d="M18 120 H257 V165 H18 Z" fill="#727e88"/>
+    <line x1="30" y1="142" x2="235" y2="142" stroke="#f5d46c" stroke-width="4" stroke-dasharray="18 13"/>
+    <path d="M38 113 L84 72 L130 113 Z" fill="#6f8090" stroke="#4d5c68" stroke-width="3"/>
+    <rect x="49" y="113" width="70" height="52" fill="#e3e9ed" stroke="#596977" stroke-width="3"/>
+    <rect x="171" y="82" width="55" height="83" fill="#d5dce1" stroke="#596977" stroke-width="3"/>
+    <path d="M122 130 C155 137 187 139 235 140" fill="none" stroke="#166f9d" stroke-width="7" marker-end="url(#hydro-arrow-blue)"/>
+    <text x="137" y="184" text-anchor="middle" class="tiny">ผิวทึบน้ำและท่อ • เส้นทางน้ำเร็วกว่า</text>
+  </g>
+
+  <g>
+    <text x="380" y="577" class="label">ไฮโดรกราฟอัตราการไหลที่ทางออกลุ่มน้ำ</text>
+    <text x="346" y="674" text-anchor="middle" class="tiny" transform="rotate(-90 346 674)">อัตราการไหล Q • เชิงเปรียบเทียบ</text>
+    <path d="M380 596 V740 H1710" class="axis"/>
+    <line x1="560" y1="596" x2="560" y2="740" class="grid"/>
+    <line x1="820" y1="596" x2="820" y2="740" class="grid"/>
+    <line x1="1080" y1="596" x2="1080" y2="740" class="grid"/>
+    <line x1="1340" y1="596" x2="1340" y2="740" class="grid"/>
+    <line x1="1600" y1="596" x2="1600" y2="740" class="grid"/>
+    <path d="M380 730 C620 730 735 728 795 714 C850 700 892 643 948 605 C975 586 1000 581 1020 591 C1060 611 1092 666 1140 701 C1205 729 1310 733 1710 734 L1710 734 L380 734 Z" fill="url(#urban-fill)"/>
+    <path d="M380 730 C620 730 735 728 795 714 C850 700 892 643 948 605 C975 586 1000 581 1020 591 C1060 611 1092 666 1140 701 C1205 729 1310 733 1710 734" class="urban-line"/>
+    <path d="M380 734 H1710" class="base-line"/>
+    <text x="500" y="724" class="tiny">อัตราการไหลฐาน (baseflow)</text>
+    <circle cx="1000" cy="583" r="8" fill="#bd5a1f" stroke="#ffffff" stroke-width="3"/>
+    <path d="M1000 583 V571 H1170" class="leader"/>
+    <text x="1182" y="576" class="small">ยอดอัตราการไหล (peak discharge)</text>
+    <text x="885" y="663" text-anchor="middle" class="tiny">แขนขาขึ้น (rising limb)</text>
+    <text x="1125" y="666" text-anchor="middle" class="tiny">แขนขาลง (falling limb)</text>
+    <path d="M831 574 H991" class="lag-line"/>
+    <text x="911" y="563" text-anchor="middle" class="tiny" fill="#62458b">เวลาหน่วง (lag time) • สั้นกว่า</text>
+    <path d="M1000 574 V578" stroke="#73559e" stroke-width="3" stroke-dasharray="5 5"/>
+    <text x="1710" y="760" text-anchor="end" class="tiny">เวลา →</text>
+  </g>
+
+  <!-- Reading contract and watershed-related factors -->
+  <g transform="translate(36 795)">
+    <rect width="1728" height="80" rx="23" fill="#ffffff" stroke="#abc4d3" stroke-width="2.5"/>
+    <text x="30" y="28" class="small">อ่านกราฟ</text>
+    <rect x="130" y="11" width="300" height="32" rx="14" fill="#eaf6fa" stroke="#6e9bb2" stroke-width="2"/>
+    <text x="280" y="33" text-anchor="middle" class="tiny">ฝนและอัตราการไหลเป็นคนละตัวแปร คนละแกน</text>
+    <rect x="450" y="11" width="302" height="32" rx="14" fill="#f3eff9" stroke="#8a70aa" stroke-width="2"/>
+    <text x="601" y="33" text-anchor="middle" class="tiny">ยอดอัตราการไหลไม่จำเป็นต้องตรงกับฝนสูงสุด</text>
+    <rect x="772" y="11" width="404" height="32" rx="14" fill="#edf8f5" stroke="#66a89b" stroke-width="2"/>
+    <text x="974" y="33" text-anchor="middle" class="tiny">พื้นที่ใต้เส้นเหนือ baseflow สื่อปริมาตรน้ำจากเหตุการณ์</text>
+    <rect x="1196" y="11" width="502" height="32" rx="14" fill="#fff8e8" stroke="#c2822d" stroke-width="2"/>
+    <text x="1447" y="33" text-anchor="middle" class="tiny">ภาพนี้เปรียบเทียบรูปทรง ไม่ใช่พยากรณ์น้ำท่วมของสถานีจริง</text>
+    <line x1="30" y1="51" x2="1698" y2="51" stroke="#d6e2e8" stroke-width="2"/>
+    <text x="864" y="72" text-anchor="middle" class="tiny">เวลาตอบสนองยังขึ้นกับขนาดและรูปร่างลุ่มน้ำ ความลาดชัน ดิน ความชื้นเดิม การกักเก็บ และโครงข่ายทางน้ำ</text>
+  </g>
+</svg>

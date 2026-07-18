@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">การแผ่ขยายพื้นมหาสมุทร</title>
+  <desc id="svg-desc">แผนภาพหลักฐานการแผ่ขยายพื้นมหาสมุทร แสดงสันเขากลางมหาสมุทร เปลือกโลกใหม่ แถบแม่เหล็กสมมาตร อายุพื้นสมุทรและตะกอนที่เพิ่มออกจากสันเขา และการรีไซเคิลเปลือกเก่าที่เขตมุดตัว</desc>
+  <metadata>
+    Scientific reference: U.S. Geological Survey, Developing the theory — This Dynamic Earth, https://pubs.usgs.gov/gip/dynamic/developing.html
+    Scientific reference: U.S. Geological Survey, Magnetic stripes and isotopic clocks, https://pubs.usgs.gov/gip/dynamic/stripes.html
+    Scientific reference: U.S. Geological Survey, Sea-Floor Spreading and Subduction Model, https://pubs.usgs.gov/of/1999/ofr-99-0132/
+    Scientific reference: U.S. Geological Survey, Understanding plate motions, https://pubs.usgs.gov/gip/dynamic/understanding.html
+    Diagram limitation: conceptual cross-section and relative patterns; no geographic coordinates, absolute ages, or spreading rates are encoded.
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcfbf7"/>
+      <stop offset="1" stop-color="#f1ede4"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cde8f1"/>
+      <stop offset="1" stop-color="#7db8cc"/>
+    </linearGradient>
+    <linearGradient id="crust-age-left" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#f4b548"/>
+      <stop offset="1" stop-color="#654d48"/>
+    </linearGradient>
+    <linearGradient id="crust-age-right" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4b548"/>
+      <stop offset="1" stop-color="#654d48"/>
+    </linearGradient>
+    <linearGradient id="magma" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#b53b29"/>
+      <stop offset="1" stop-color="#ffb33b"/>
+    </linearGradient>
+    <pattern id="normal-polarity" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0 V14 M7 0 V14" stroke="#304e67" stroke-width="3" opacity="0.72"/>
+    </pattern>
+    <pattern id="reversed-polarity" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <path d="M0 0 V14 M7 0 V14" stroke="#8d443d" stroke-width="3" opacity="0.72"/>
+    </pattern>
+    <pattern id="sediment-pattern" width="16" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 3 H16 M0 9 H16" stroke="#846f55" stroke-width="1.8" opacity="0.6"/>
+    </pattern>
+    <pattern id="slow-solid-pattern" width="24" height="18" patternUnits="userSpaceOnUse">
+      <path d="M-5 9 C2 3 9 3 16 9 S30 15 37 9" fill="none" stroke="#69415e" stroke-width="2" opacity="0.34"/>
+    </pattern>
+    <filter id="soft-shadow" x="-12%" y="-15%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#3f352d" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#326f7c"/>
+    </marker>
+    <marker id="arrow-warm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#ca5b2c"/>
+    </marker>
+    <style>
+      .thai { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+      .panel-title { font-size: 28px; font-weight: 780; fill: #1b2b34; }
+      .label { font-size: 20px; font-weight: 720; fill: #26363f; }
+      .small { font-size: 17px; fill: #5b676e; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#paper)"/>
+  <path d="M0 112 H1800" stroke="#d6cec0" stroke-width="2"/>
+
+  <g class="thai">
+    <text x="900" y="67" text-anchor="middle" font-size="50" font-weight="800" fill="#17232d">การแผ่ขยายพื้นมหาสมุทร</text>
+    <text x="900" y="101" text-anchor="middle" font-size="21" fill="#68747c">พื้นสมุทรสร้างใหม่ที่สันเขาและถูกพาออกสองด้าน ทิ้งหลักฐานที่ตรวจสอบได้เป็นแนวสมมาตร</text>
+  </g>
+
+  <!-- Panel 1: top view evidence -->
+  <g class="thai">
+    <rect x="45" y="135" width="830" height="400" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <rect x="45" y="135" width="830" height="64" rx="25" fill="#e8eff3"/>
+    <path d="M45 176 H875 V199 H45 Z" fill="#e8eff3"/>
+    <text class="panel-title" x="460" y="178" text-anchor="middle">1 หลักฐานเมื่อมองจากด้านบน</text>
+
+    <text x="460" y="230" text-anchor="middle" font-size="20" font-weight="750" fill="#3b5361">แถบแม่เหล็กสมมาตร</text>
+    <rect x="100" y="255" width="720" height="154" rx="15" fill="#dbe9ed" stroke="#7396a2" stroke-width="2.5"/>
+
+    <!-- left sequence -->
+    <rect x="100" y="255" width="80" height="154" fill="#8798a5"/>
+    <rect x="100" y="255" width="80" height="154" fill="url(#normal-polarity)"/>
+    <rect x="180" y="255" width="60" height="154" fill="#c98b80"/>
+    <rect x="180" y="255" width="60" height="154" fill="url(#reversed-polarity)"/>
+    <rect x="240" y="255" width="72" height="154" fill="#8798a5"/>
+    <rect x="240" y="255" width="72" height="154" fill="url(#normal-polarity)"/>
+    <rect x="312" y="255" width="48" height="154" fill="#c98b80"/>
+    <rect x="312" y="255" width="48" height="154" fill="url(#reversed-polarity)"/>
+    <rect x="360" y="255" width="78" height="154" fill="#8798a5"/>
+    <rect x="360" y="255" width="78" height="154" fill="url(#normal-polarity)"/>
+
+    <!-- central newest crust -->
+    <rect x="438" y="255" width="44" height="154" fill="#f1b33f" stroke="#8f571c" stroke-width="3"/>
+    <path d="M460 255 V409" stroke="#b94b2d" stroke-width="6"/>
+
+    <!-- mirrored right sequence -->
+    <rect x="482" y="255" width="78" height="154" fill="#8798a5"/>
+    <rect x="482" y="255" width="78" height="154" fill="url(#normal-polarity)"/>
+    <rect x="560" y="255" width="48" height="154" fill="#c98b80"/>
+    <rect x="560" y="255" width="48" height="154" fill="url(#reversed-polarity)"/>
+    <rect x="608" y="255" width="72" height="154" fill="#8798a5"/>
+    <rect x="608" y="255" width="72" height="154" fill="url(#normal-polarity)"/>
+    <rect x="680" y="255" width="60" height="154" fill="#c98b80"/>
+    <rect x="680" y="255" width="60" height="154" fill="url(#reversed-polarity)"/>
+    <rect x="740" y="255" width="80" height="154" fill="#8798a5"/>
+    <rect x="740" y="255" width="80" height="154" fill="url(#normal-polarity)"/>
+
+    <path d="M428 291 H300" stroke="#326f7c" stroke-width="5" marker-end="url(#arrow)"/>
+    <path d="M492 291 H620" stroke="#326f7c" stroke-width="5" marker-end="url(#arrow)"/>
+    <text x="460" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#274f5a">ทิศการแผ่ขยาย</text>
+    <text x="460" y="350" text-anchor="middle" font-size="17" font-weight="800" fill="#5e3b17" transform="rotate(-90 460 350)">เปลือกโลกใหม่</text>
+
+    <path d="M430 438 H140" stroke="#6a7479" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M490 438 H780" stroke="#6a7479" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="460" y="444" text-anchor="middle" font-size="18" font-weight="750" fill="#515d63">อายุหินเพิ่มขึ้น</text>
+    <text x="460" y="483" text-anchor="middle" font-size="17" fill="#616d73">แถบขั้วแม่เหล็กสลับบันทึกทิศสนามแม่เหล็กขณะหินเย็นตัว</text>
+    <g>
+      <rect x="215" y="500" width="23" height="16" rx="4" fill="#8798a5"/>
+      <rect x="215" y="500" width="23" height="16" rx="4" fill="url(#normal-polarity)"/>
+      <text x="250" y="514" font-size="15" fill="#59656b">ขั้วแบบหนึ่ง</text>
+      <rect x="545" y="500" width="23" height="16" rx="4" fill="#c98b80"/>
+      <rect x="545" y="500" width="23" height="16" rx="4" fill="url(#reversed-polarity)"/>
+      <text x="580" y="514" font-size="15" fill="#59656b">ขั้วตรงข้าม</text>
+    </g>
+  </g>
+
+  <!-- Panel 2: cross-section -->
+  <g class="thai">
+    <rect x="925" y="135" width="830" height="400" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <rect x="925" y="135" width="830" height="64" rx="25" fill="#e9f1ee"/>
+    <path d="M925 176 H1755 V199 H925 Z" fill="#e9f1ee"/>
+    <text class="panel-title" x="1340" y="178" text-anchor="middle">2 ภาพตัดขวางสันเขาและตะกอน</text>
+
+    <path d="M965 215 H1715 V333 C1615 320 1530 305 1455 278 C1405 258 1372 232 1340 222 C1308 232 1275 258 1225 278 C1150 305 1065 320 965 333 Z" fill="url(#water)"/>
+    <path d="M965 333 C1065 320 1150 305 1225 278 C1275 258 1308 232 1340 222 C1372 232 1405 258 1455 278 C1530 305 1615 320 1715 333" fill="none" stroke="#334951" stroke-width="4"/>
+
+    <!-- sediment wedges: thicker away from ridge -->
+    <path d="M965 333 C1065 320 1150 305 1225 278 L1225 291 C1145 322 1060 346 965 358 Z" fill="#b9a17d" stroke="#7c684d" stroke-width="2"/>
+    <path d="M965 333 C1065 320 1150 305 1225 278 L1225 291 C1145 322 1060 346 965 358 Z" fill="url(#sediment-pattern)"/>
+    <path d="M1455 278 C1530 305 1615 320 1715 333 L1715 358 C1620 346 1535 322 1455 291 Z" fill="#b9a17d" stroke="#7c684d" stroke-width="2"/>
+    <path d="M1455 278 C1530 305 1615 320 1715 333 L1715 358 C1620 346 1535 322 1455 291 Z" fill="url(#sediment-pattern)"/>
+
+    <!-- oceanic crust -->
+    <path d="M965 358 C1070 350 1155 325 1232 293 C1285 271 1313 248 1340 240 L1340 285 C1308 294 1280 313 1238 332 C1158 368 1070 389 965 395 Z" fill="url(#crust-age-left)" stroke="#4f433f" stroke-width="3"/>
+    <path d="M1340 240 C1367 248 1395 271 1448 293 C1525 325 1610 350 1715 358 L1715 395 C1610 389 1522 368 1442 332 C1400 313 1372 294 1340 285 Z" fill="url(#crust-age-right)" stroke="#4f433f" stroke-width="3"/>
+
+    <!-- asthenosphere -->
+    <path d="M965 395 H1715 V505 H965 Z" fill="#b28592" stroke="#765568" stroke-width="3"/>
+    <path d="M965 395 H1715 V505 H965 Z" fill="url(#slow-solid-pattern)"/>
+
+    <!-- magma generation at ridge, not a plate-motion arrow -->
+    <path d="M1290 505 C1300 458 1316 410 1331 360 C1336 339 1338 312 1340 285 C1342 312 1344 339 1349 360 C1364 410 1380 458 1390 505 Z" fill="url(#magma)" stroke="#963b27" stroke-width="3"/>
+    <path d="M1340 466 V310" stroke="#ca5b2c" stroke-width="5" marker-end="url(#arrow-warm)"/>
+
+    <path d="M1308 250 H1170" stroke="#326f7c" stroke-width="5" marker-end="url(#arrow)"/>
+    <path d="M1372 250 H1510" stroke="#326f7c" stroke-width="5" marker-end="url(#arrow)"/>
+    <text x="1340" y="220" text-anchor="middle" font-size="18" font-weight="800" fill="#294a54">สันเขากลางมหาสมุทร</text>
+    <text x="1340" y="318" text-anchor="middle" font-size="16" font-weight="750" fill="#603b18">เปลือกโลกใหม่</text>
+    <text x="1340" y="486" text-anchor="middle" font-size="17" font-weight="750" fill="#fff2dc">แมกมาขึ้นและเย็นตัว</text>
+    <text x="1025" y="378" font-size="17" font-weight="750" fill="#534636">ตะกอนหนาขึ้น</text>
+    <text x="1655" y="378" text-anchor="end" font-size="17" font-weight="750" fill="#534636">ตะกอนหนาขึ้น</text>
+    <text x="1025" y="438" font-size="18" font-weight="750" fill="#543d50">ฐานธรณีภาค</text>
+    <text x="1025" y="465" font-size="16" fill="#5d4b58">หินของแข็งที่เปลี่ยนรูปช้า</text>
+    <text x="1340" y="528" text-anchor="middle" font-size="17" font-weight="700" fill="#526168">การเคลื่อนของแผ่นพาพื้นสมุทรออกสองด้าน</text>
+  </g>
+
+  <!-- Panel 3: creation–recycling system -->
+  <g class="thai">
+    <rect x="45" y="565" width="1710" height="190" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <text class="panel-title" x="900" y="605" text-anchor="middle">3 สร้างที่สันเขาและรีไซเคิลที่เขตมุดตัว</text>
+
+    <rect x="95" y="628" width="390" height="78" rx="18" fill="#fff1d8" stroke="#d4a345" stroke-width="2.5"/>
+    <path d="M130 684 L165 642 L200 684 Z" fill="#bd4d2e" stroke="#7d3425" stroke-width="3"/>
+    <path d="M165 676 V648" stroke="#f3b642" stroke-width="5" marker-end="url(#arrow-warm)"/>
+    <text x="335" y="660" text-anchor="middle" font-size="21" font-weight="750" fill="#583d22">สันเขากลางมหาสมุทร</text>
+    <text x="335" y="689" text-anchor="middle" font-size="18" fill="#6c573e">สร้างเปลือกมหาสมุทรใหม่</text>
+
+    <path d="M505 667 H660" stroke="#326f7c" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="680" y="628" width="440" height="78" rx="18" fill="#e8f0ee" stroke="#91b0a6" stroke-width="2.5"/>
+    <text x="900" y="660" text-anchor="middle" font-size="21" font-weight="750" fill="#28433e">ทิศการแผ่ขยาย</text>
+    <text x="900" y="689" text-anchor="middle" font-size="18" fill="#536761">พื้นสมุทรเก่าเคลื่อนห่างจากสันเขา</text>
+
+    <path d="M1140 667 H1295" stroke="#326f7c" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="1315" y="628" width="390" height="78" rx="18" fill="#eee7e1" stroke="#9f8171" stroke-width="2.5"/>
+    <path d="M1350 649 H1420 L1460 690" fill="none" stroke="#5f4b43" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M1420 652 L1460 692" stroke="#326f7c" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="1550" y="660" text-anchor="middle" font-size="21" font-weight="750" fill="#493a34">เขตมุดตัว</text>
+    <text x="1550" y="689" text-anchor="middle" font-size="18" fill="#675750">นำเปลือกมหาสมุทรเก่ากลับลงลึก</text>
+
+    <text x="900" y="737" text-anchor="middle" font-size="19" font-weight="750" fill="#5b4a3f">เปลือกโลกสร้างใหม่และเปลือกเก่าถูกรีไซเคิลในระบบเดียวกัน — โลกจึงไม่ขยายตัว</text>
+  </g>
+
+  <g class="thai">
+    <rect x="95" y="780" width="1610" height="62" rx="22" fill="#e5efec" stroke="#92b2a7" stroke-width="2.5"/>
+    <text x="900" y="819" text-anchor="middle" font-size="27" font-weight="750" fill="#263f3b">เปลือกใหม่เกิดที่สันเขา อายุหินและแถบแม่เหล็กจึงเรียงสมมาตรสองด้าน</text>
+    <text x="900" y="878" text-anchor="middle" font-size="16" fill="#737b7e">ภาพเชิงแผนผัง ไม่เป็นมาตราส่วน • อายุและความหนาตะกอนเป็นความสัมพันธ์เชิงสัมพัทธ์ ไม่ใช่ค่าข้อมูล</text>
+  </g>
+</svg>

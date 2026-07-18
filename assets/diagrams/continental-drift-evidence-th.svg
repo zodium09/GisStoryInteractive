@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">หลักฐานว่าทวีปเคยเชื่อมต่อกัน</title>
+  <desc id="svg-desc">แผ่นภาพเชิงแนวคิดเปรียบเทียบอเมริกาใต้และแอฟริกาในตำแหน่งปัจจุบันกับการประกอบกลับเป็นแพนเจีย พร้อมหลักฐานรูปร่างขอบไหล่ทวีป ซากดึกดำบรรพ์ ธรณีวิทยา และภูมิอากาศบรรพกาล</desc>
+  <metadata>
+    Scientific reference: U.S. Geological Survey, Historical perspective — This Dynamic Earth, https://pubs.usgs.gov/gip/dynamic/historical.html
+    Scientific reference: U.S. Geological Survey, Wegener's Puzzling Continental Drift Evidence, https://www.usgs.gov/educational-resources/wegeners-puzzling-continental-drift-evidence
+    Scientific reference: U.S. Geological Survey, Developing the theory — This Dynamic Earth, https://pubs.usgs.gov/gip/dynamic/developing.html
+    Diagram limitation: schematic evidence-synthesis graphic; not a georeferenced map and not a dataset of paleogeographic coordinates.
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcfbf7"/>
+      <stop offset="1" stop-color="#f1ede4"/>
+    </linearGradient>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcecf1"/>
+      <stop offset="1" stop-color="#c6dfe7"/>
+    </linearGradient>
+    <pattern id="land-pattern" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M-4 16 C2 9 8 9 14 16 S26 23 32 16" fill="none" stroke="#6e5130" stroke-width="1.7" opacity="0.25"/>
+    </pattern>
+    <pattern id="geo-pattern" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0 V12 M6 0 V12" stroke="#785817" stroke-width="2" opacity="0.55"/>
+    </pattern>
+    <pattern id="climate-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M2 16 L10 4 M10 16 L18 4" stroke="#245e80" stroke-width="2.2" opacity="0.72"/>
+    </pattern>
+    <filter id="soft-shadow" x="-12%" y="-18%" width="124%" height="145%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#3d332c" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#356f79"/>
+    </marker>
+    <marker id="arrow-small" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#607178"/>
+    </marker>
+
+    <!-- เงารูปทวีปเป็นสัญลักษณ์เชิงแนวคิด ไม่ใช่ geometry เชิงพิกัด -->
+    <path id="south-america" d="M25 4 C70 -8 110 12 122 48 C137 82 118 116 101 146 C87 176 76 210 61 247 C46 283 28 302 12 278 C1 252 7 218 0 190 C-9 159 -12 126 2 97 C-6 66 -5 29 25 4 Z"/>
+    <path id="africa" d="M12 5 C60 -10 126 0 151 35 C176 68 162 100 139 126 C130 160 119 201 91 245 C68 277 45 283 30 254 C18 229 22 194 18 166 C-2 137 -11 105 5 77 C-4 45 -4 20 12 5 Z"/>
+    <g id="fossil-symbol">
+      <ellipse cx="0" cy="0" rx="12" ry="7" fill="#9c3d70" transform="rotate(-24)"/>
+      <path d="M-13 8 L13 -8 M-6 4 L-9 -4 M2 -1 L0 -9 M8 -5 L9 2" fill="none" stroke="#5f2346" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#paper)"/>
+  <path d="M0 112 H1800" stroke="#d6cec0" stroke-width="2"/>
+
+  <g font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif">
+    <text x="900" y="67" text-anchor="middle" font-size="50" font-weight="800" fill="#17232d">หลักฐานว่าทวีปเคยเชื่อมต่อกัน</text>
+    <text x="900" y="101" text-anchor="middle" font-size="21" fill="#68747c">การอนุมานต้องอาศัยหลักฐานหลายสายที่สอดคล้องกัน ไม่ใช่รูปร่างชายฝั่งเพียงอย่างเดียว</text>
+  </g>
+
+  <!-- ช่องตำแหน่งปัจจุบัน -->
+  <g font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif">
+    <rect x="55" y="135" width="820" height="360" rx="25" fill="url(#ocean)" stroke="#8eb0bc" stroke-width="3" filter="url(#soft-shadow)"/>
+    <rect x="55" y="135" width="820" height="62" rx="25" fill="#eaf3f5"/>
+    <path d="M55 174 H875 V197 H55 Z" fill="#eaf3f5"/>
+    <text x="465" y="177" text-anchor="middle" font-size="29" font-weight="750" fill="#19323d">ตำแหน่งปัจจุบัน</text>
+    <text x="465" y="214" text-anchor="middle" font-size="16" fill="#58717b">แผนภาพเชิงแนวคิด • ไม่ใช่แผนที่พิกัด</text>
+
+    <g transform="translate(210 218)">
+      <use href="#south-america" fill="#c79558" stroke="#6d4b2f" stroke-width="4"/>
+      <use href="#south-america" fill="url(#land-pattern)"/>
+      <path d="M108 38 C128 76 112 118 95 148 C84 175 73 207 60 240" fill="none" stroke="#2b7287" stroke-width="7" stroke-dasharray="12 8"/>
+      <use href="#fossil-symbol" transform="translate(96 104)"/>
+      <path d="M46 152 L102 132" stroke="#d5a728" stroke-width="13"/>
+      <path d="M46 152 L102 132" stroke="url(#geo-pattern)" stroke-width="13"/>
+      <path d="M31 222 l18 -28 M43 232 l18 -28 M55 240 l18 -28" stroke="#245e80" stroke-width="4"/>
+    </g>
+    <text x="270" y="480" text-anchor="middle" font-size="23" font-weight="750" fill="#27343c">อเมริกาใต้</text>
+
+    <g transform="translate(585 218)">
+      <use href="#africa" fill="#c79558" stroke="#6d4b2f" stroke-width="4"/>
+      <use href="#africa" fill="url(#land-pattern)"/>
+      <path d="M9 23 C-1 53 5 83 17 108 C7 137 13 167 25 192" fill="none" stroke="#2b7287" stroke-width="7" stroke-dasharray="12 8"/>
+      <use href="#fossil-symbol" transform="translate(22 102)"/>
+      <path d="M18 148 L74 134" stroke="#d5a728" stroke-width="13"/>
+      <path d="M18 148 L74 134" stroke="url(#geo-pattern)" stroke-width="13"/>
+      <path d="M28 223 l18 -28 M40 233 l18 -28 M52 241 l18 -28" stroke="#245e80" stroke-width="4"/>
+    </g>
+    <text x="660" y="480" text-anchor="middle" font-size="23" font-weight="750" fill="#27343c">แอฟริกา</text>
+
+    <path d="M323 274 H547" stroke="#607178" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow-small)"/>
+    <text x="435" y="262" text-anchor="middle" font-size="17" font-weight="700" fill="#4e626b">แนวขอบไหล่ทวีป</text>
+  </g>
+
+  <!-- ช่องประกอบกลับ -->
+  <g font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif">
+    <rect x="925" y="135" width="820" height="360" rx="25" fill="url(#ocean)" stroke="#8eb0bc" stroke-width="3" filter="url(#soft-shadow)"/>
+    <rect x="925" y="135" width="820" height="62" rx="25" fill="#e7f0e8"/>
+    <path d="M925 174 H1745 V197 H925 Z" fill="#e7f0e8"/>
+    <text x="1335" y="177" text-anchor="middle" font-size="29" font-weight="750" fill="#1e3b32">ประกอบกลับเป็นแพนเจีย</text>
+    <text x="1335" y="214" text-anchor="middle" font-size="16" fill="#597069">ตำแหน่งโดยประมาณ • แผนภาพความสอดคล้อง ไม่ใช่แผนที่พิกัด</text>
+
+    <g transform="translate(1150 218)">
+      <use href="#south-america" fill="#c79558" stroke="#6d4b2f" stroke-width="4"/>
+      <use href="#south-america" fill="url(#land-pattern)"/>
+      <path d="M108 38 C128 76 112 118 95 148 C84 175 73 207 60 240" fill="none" stroke="#2b7287" stroke-width="7" stroke-dasharray="12 8"/>
+      <use href="#fossil-symbol" transform="translate(96 104)"/>
+      <path d="M46 152 L102 132" stroke="#d5a728" stroke-width="13"/>
+      <path d="M46 152 L102 132" stroke="url(#geo-pattern)" stroke-width="13"/>
+      <path d="M31 222 l18 -28 M43 232 l18 -28 M55 240 l18 -28" stroke="#245e80" stroke-width="4"/>
+    </g>
+    <g transform="translate(1267 218)">
+      <use href="#africa" fill="#c79558" stroke="#6d4b2f" stroke-width="4"/>
+      <use href="#africa" fill="url(#land-pattern)"/>
+      <path d="M9 23 C-1 53 5 83 17 108 C7 137 13 167 25 192" fill="none" stroke="#2b7287" stroke-width="7" stroke-dasharray="12 8"/>
+      <use href="#fossil-symbol" transform="translate(22 102)"/>
+      <path d="M18 148 L74 134" stroke="#d5a728" stroke-width="13"/>
+      <path d="M18 148 L74 134" stroke="url(#geo-pattern)" stroke-width="13"/>
+      <path d="M28 223 l18 -28 M40 233 l18 -28 M52 241 l18 -28" stroke="#245e80" stroke-width="4"/>
+    </g>
+
+    <path d="M1255 250 C1270 284 1261 324 1251 362 C1244 394 1237 425 1227 458" fill="none" stroke="#2b7287" stroke-width="4"/>
+    <text x="1420" y="264" font-size="20" font-weight="750" fill="#2c4a42">แพนเจีย (การสร้างใหม่)</text>
+    <text x="1420" y="292" font-size="17" fill="#60716b">หลักฐานหลายสีและสัญลักษณ์ต่อเนื่องข้ามรอยประกอบ</text>
+    <path d="M1410 315 H1308" stroke="#356f79" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <text x="1200" y="480" text-anchor="middle" font-size="21" font-weight="750" fill="#27343c">อเมริกาใต้</text>
+    <text x="1350" y="480" text-anchor="middle" font-size="21" font-weight="750" fill="#27343c">แอฟริกา</text>
+  </g>
+
+  <!-- การ์ดหลักฐาน 4 สาย -->
+  <g font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif">
+    <g>
+      <rect x="55" y="525" width="405" height="165" rx="21" fill="#fffdf8" stroke="#b9a98e" stroke-width="2.5" filter="url(#soft-shadow)"/>
+      <circle cx="100" cy="568" r="24" fill="#dbeef1" stroke="#2b7287" stroke-width="3"/>
+      <path d="M86 572 C95 550 105 550 114 572 M91 579 C98 563 104 563 110 579" fill="none" stroke="#2b7287" stroke-width="3" stroke-dasharray="5 4"/>
+      <text x="140" y="563" font-size="22" font-weight="750" fill="#21313a">หลักฐานรูปร่างทวีป</text>
+      <text x="140" y="591" font-size="18" font-weight="650" fill="#2b5969">แนวขอบไหล่ทวีป</text>
+      <text x="80" y="631" font-size="17" fill="#5c666c">ขอบไหล่ทวีปสอดคล้องกว่าการใช้</text>
+      <text x="80" y="657" font-size="17" fill="#5c666c">รูปร่างชายฝั่งปัจจุบันเพียงอย่างเดียว</text>
+    </g>
+
+    <g>
+      <rect x="485" y="525" width="405" height="165" rx="21" fill="#fffdf8" stroke="#c29ab0" stroke-width="2.5" filter="url(#soft-shadow)"/>
+      <circle cx="530" cy="568" r="24" fill="#f3e2ec" stroke="#9c3d70" stroke-width="3"/>
+      <use href="#fossil-symbol" transform="translate(530 568) scale(1.1)"/>
+      <text x="570" y="563" font-size="22" font-weight="750" fill="#21313a">หลักฐานซากดึกดำบรรพ์</text>
+      <text x="570" y="591" font-size="18" font-weight="650" fill="#7a3159">ซากดึกดำบรรพ์ชนิดเดียวกัน</text>
+      <text x="510" y="631" font-size="17" fill="#5c666c">พบชนิดที่สอดคล้องกันบนทวีป</text>
+      <text x="510" y="657" font-size="17" fill="#5c666c">ซึ่งปัจจุบันแยกจากกันด้วยมหาสมุทร</text>
+    </g>
+
+    <g>
+      <rect x="915" y="525" width="405" height="165" rx="21" fill="#fffdf8" stroke="#c7a44c" stroke-width="2.5" filter="url(#soft-shadow)"/>
+      <circle cx="960" cy="568" r="24" fill="#f6e9bd" stroke="#b48820" stroke-width="3"/>
+      <path d="M943 579 L953 559 L962 571 L971 552 L980 579 Z" fill="#d5a728" stroke="#785817" stroke-width="2"/>
+      <path d="M946 577 L977 557" stroke="url(#geo-pattern)" stroke-width="7"/>
+      <text x="1000" y="563" font-size="22" font-weight="750" fill="#21313a">หลักฐานธรณีวิทยา</text>
+      <text x="1000" y="591" font-size="17" font-weight="650" fill="#74591a">แนวหินและเทือกเขาอายุสอดคล้อง</text>
+      <text x="940" y="631" font-size="17" fill="#5c666c">แนวหินและโครงสร้างต่อเนื่องกันได้</text>
+      <text x="940" y="657" font-size="17" fill="#5c666c">เมื่อประกอบทวีปกลับเข้าหากัน</text>
+    </g>
+
+    <g>
+      <rect x="1345" y="525" width="400" height="165" rx="21" fill="#fffdf8" stroke="#80a9bf" stroke-width="2.5" filter="url(#soft-shadow)"/>
+      <circle cx="1390" cy="568" r="24" fill="#e3eef4" stroke="#3e7897" stroke-width="3"/>
+      <path d="M1376 579 l15 -24 M1387 581 l15 -24 M1398 581 l15 -24" stroke="#245e80" stroke-width="3"/>
+      <text x="1430" y="563" font-size="22" font-weight="750" fill="#21313a">หลักฐานภูมิอากาศบรรพกาล</text>
+      <text x="1430" y="591" font-size="17" font-weight="650" fill="#2c627f">ร่องรอยธารน้ำแข็งบรรพกาล</text>
+      <text x="1370" y="631" font-size="17" fill="#5c666c">ทิศรอยครูดและตะกอนธารน้ำแข็ง</text>
+      <text x="1370" y="657" font-size="17" fill="#5c666c">สอดคล้องกันเมื่อสร้างตำแหน่งเดิมกลับ</text>
+    </g>
+
+    <path d="M258 691 V714 H900" fill="none" stroke="#607178" stroke-width="2.5"/>
+    <path d="M688 691 V714 H900" fill="none" stroke="#607178" stroke-width="2.5"/>
+    <path d="M1118 691 V714 H900" fill="none" stroke="#607178" stroke-width="2.5"/>
+    <path d="M1545 691 V714 H900" fill="none" stroke="#607178" stroke-width="2.5"/>
+    <path d="M900 714 V727" fill="none" stroke="#356f79" stroke-width="4" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif">
+    <rect x="120" y="730" width="1560" height="66" rx="21" fill="#e6f0ed" stroke="#91b2a7" stroke-width="2.5"/>
+    <text x="900" y="771" text-anchor="middle" font-size="27" font-weight="750" fill="#253f3b">หลักฐานหลายชนิดต่อเนื่องกันเมื่อประกอบทวีปกลับเป็นแพนเจีย</text>
+
+    <rect x="120" y="813" width="430" height="52" rx="18" fill="#f1e8d9" stroke="#c9ad7e" stroke-width="2"/>
+    <text x="335" y="847" text-anchor="middle" font-size="20" font-weight="700" fill="#634a2e">หลักฐานที่ใช้เสนอการเลื่อนทวีป</text>
+    <path d="M570 839 H690" stroke="#607178" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#arrow-small)"/>
+    <text x="630" y="828" text-anchor="middle" font-size="15" font-weight="700" fill="#607178">หลักฐานภายหลัง</text>
+    <rect x="710" y="813" width="970" height="52" rx="18" fill="#edf1f3" stroke="#9aaab2" stroke-width="2"/>
+    <text x="1195" y="847" text-anchor="middle" font-size="21" font-weight="700" fill="#3d4f58">หลักฐานพื้นสมุทรภายหลัง: สันเขา อายุพื้นสมุทร แถบแม่เหล็ก และร่องลึก</text>
+  </g>
+</svg>

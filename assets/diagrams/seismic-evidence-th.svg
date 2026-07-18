@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">หลักฐานจากคลื่นแผ่นดินไหว</title>
+  <desc id="svg-desc">แผนภาพสามส่วนแสดงสมบัติคลื่น P และ S เส้นทางคลื่นกับเขตเงาอย่างสมมาตร และข้ออนุมานว่าแก่นโลกชั้นนอกเป็นของเหลว ส่วนแก่นโลกชั้นในเป็นของแข็ง</desc>
+  <metadata>
+    Scientific reference: U.S. Geological Survey, The Interior of the Earth, https://pubs.usgs.gov/gip/interior/
+    Scientific reference: IRIS, Seismic Shadow Zone: Basic Introduction, https://www.iris.edu/hq/inclass/animation/seismic_shadow_zone_basic_introduction
+    Scientific reference: IRIS, Seismic Shadow Zones: P wave, https://www.iris.edu/hq/inclass/animation/seismic_shadow_zones_p_wave
+    Scientific reference: IRIS, Seismic Shadow Zones: S wave shadow zone, https://www.iris.edu/hq/inclass/animation/seismic_shadow_zones_s_wave_shadow_zone
+    Diagram limitation: schematic topology; angular values and travel times are intentionally omitted.
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcfbf7"/>
+      <stop offset="1" stop-color="#f1ede4"/>
+    </linearGradient>
+    <radialGradient id="mantle" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#d98245"/>
+      <stop offset="0.72" stop-color="#b84f32"/>
+      <stop offset="1" stop-color="#87342a"/>
+    </radialGradient>
+    <radialGradient id="outer-core" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#f4d16c"/>
+      <stop offset="0.72" stop-color="#d89a2d"/>
+      <stop offset="1" stop-color="#aa691e"/>
+    </radialGradient>
+    <radialGradient id="inner-core" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#fff8c8"/>
+      <stop offset="0.72" stop-color="#ecd066"/>
+      <stop offset="1" stop-color="#c89e33"/>
+    </radialGradient>
+    <pattern id="solid-pattern" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0 V18 M9 0 V18" stroke="#625f59" stroke-width="2" opacity="0.38"/>
+    </pattern>
+    <pattern id="liquid-pattern" width="26" height="18" patternUnits="userSpaceOnUse">
+      <path d="M-5 9 C2 2 9 2 16 9 S30 16 37 9" fill="none" stroke="#7d4c17" stroke-width="2" opacity="0.38"/>
+    </pattern>
+    <pattern id="mantle-pattern" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M-4 16 C2 9 8 9 14 16 S26 23 32 16" fill="none" stroke="#692d27" stroke-width="2" opacity="0.26"/>
+    </pattern>
+    <filter id="soft-shadow" x="-12%" y="-15%" width="124%" height="138%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#3e342d" flood-opacity="0.14"/>
+    </filter>
+    <g id="station">
+      <rect x="-17" y="-13" width="34" height="25" rx="4" fill="#fffdf8" stroke="#37434a" stroke-width="3"/>
+      <path d="M-11 1 L-7 -4 L-3 5 L2 -7 L6 4 L11 -1" fill="none" stroke="#37434a" stroke-width="2"/>
+      <path d="M-8 16 H8 M0 12 V16" stroke="#37434a" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g id="source-star">
+      <path d="M0 -13 L4 -4 L14 -4 L6 2 L9 12 L0 6 L-9 12 L-6 2 L-14 -4 L-4 -4 Z" fill="#e34b36" stroke="#ffffff" stroke-width="3"/>
+    </g>
+    <style>
+      .thai { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+      .panel-title { font-size: 27px; font-weight: 780; fill: #1a2932; }
+      .p-ray { fill: none; stroke: #1976bd; stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+      .s-ray { fill: none; stroke: #d9473f; stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+      .small { font-size: 17px; fill: #5c686f; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#paper)"/>
+  <path d="M0 112 H1800" stroke="#d6cec0" stroke-width="2"/>
+
+  <g class="thai">
+    <text x="900" y="67" text-anchor="middle" font-size="50" font-weight="800" fill="#17232d">หลักฐานจากคลื่นแผ่นดินไหว</text>
+    <text x="900" y="101" text-anchor="middle" font-size="21" fill="#68747c">สมบัติของคลื่น เส้นทางที่หักเห และเขตเงา ใช้อนุมานโครงสร้างที่มองไม่เห็นภายในโลก</text>
+  </g>
+
+  <!-- Panel 1: สมบัติ P/S -->
+  <g class="thai">
+    <rect x="35" y="135" width="420" height="650" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <rect x="35" y="135" width="420" height="64" rx="25" fill="#e8eff3"/>
+    <path d="M35 176 H455 V199 H35 Z" fill="#e8eff3"/>
+    <text class="panel-title" x="245" y="178" text-anchor="middle">1 สมบัติของคลื่น</text>
+
+    <text x="75" y="242" font-size="27" font-weight="800" fill="#1976bd">คลื่น P</text>
+    <text x="185" y="242" font-size="19" font-weight="650" fill="#34444e">คลื่นปฐมภูมิ</text>
+    <rect x="75" y="267" width="145" height="100" rx="16" fill="#c8c5bc" stroke="#69655d" stroke-width="2.5"/>
+    <rect x="75" y="267" width="145" height="100" rx="16" fill="url(#solid-pattern)"/>
+    <text x="147" y="393" text-anchor="middle" font-size="18" font-weight="700" fill="#52585b">ของแข็ง</text>
+    <rect x="270" y="267" width="145" height="100" rx="16" fill="#edbd5d" stroke="#9c6a21" stroke-width="2.5"/>
+    <rect x="270" y="267" width="145" height="100" rx="16" fill="url(#liquid-pattern)"/>
+    <text x="342" y="393" text-anchor="middle" font-size="18" font-weight="700" fill="#665229">ของเหลว</text>
+    <path class="p-ray" d="M55 317 C82 287 108 347 135 317 S189 287 216 317 S270 347 297 317 S351 287 378 317 S422 341 438 317"/>
+    <text x="245" y="429" text-anchor="middle" font-size="20" font-weight="700" fill="#274657">คลื่นปฐมภูมิเดินทางผ่านของแข็งและของเหลว</text>
+
+    <path d="M65 463 H425" stroke="#d8d0c3" stroke-width="2"/>
+    <text x="75" y="510" font-size="27" font-weight="800" fill="#d9473f">คลื่น S</text>
+    <text x="185" y="510" font-size="19" font-weight="650" fill="#34444e">คลื่นทุติยภูมิ</text>
+    <rect x="75" y="535" width="145" height="100" rx="16" fill="#c8c5bc" stroke="#69655d" stroke-width="2.5"/>
+    <rect x="75" y="535" width="145" height="100" rx="16" fill="url(#solid-pattern)"/>
+    <text x="147" y="661" text-anchor="middle" font-size="18" font-weight="700" fill="#52585b">ของแข็ง</text>
+    <rect x="270" y="535" width="145" height="100" rx="16" fill="#edbd5d" stroke="#9c6a21" stroke-width="2.5"/>
+    <rect x="270" y="535" width="145" height="100" rx="16" fill="url(#liquid-pattern)"/>
+    <text x="342" y="661" text-anchor="middle" font-size="18" font-weight="700" fill="#665229">ของเหลว</text>
+    <path class="s-ray" d="M55 585 C82 555 108 615 135 585 S189 555 216 585 L252 585"/>
+    <path d="M254 560 V610" stroke="#d9473f" stroke-width="6" stroke-linecap="round"/>
+    <text x="245" y="701" text-anchor="middle" font-size="20" font-weight="700" fill="#693835">คลื่นทุติยภูมิผ่านได้เฉพาะของแข็ง</text>
+    <text x="245" y="742" text-anchor="middle" font-size="17" fill="#616a6f">เส้นคลื่นเป็นสัญลักษณ์ ไม่ใช่รูปการสั่นตามสเกลจริง</text>
+  </g>
+
+  <!-- Panel 2: ray paths and shadows -->
+  <g class="thai">
+    <rect x="485" y="135" width="850" height="650" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <rect x="485" y="135" width="850" height="64" rx="25" fill="#e9f1ee"/>
+    <path d="M485 176 H1335 V199 H485 Z" fill="#e9f1ee"/>
+    <text class="panel-title" x="910" y="178" text-anchor="middle">2 เส้นทางคลื่นและเขตเงา</text>
+    <text x="705" y="232" text-anchor="middle" font-size="23" font-weight="800" fill="#1976bd">คลื่น P</text>
+    <text x="705" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#5b6d76">แนวคลื่นหักเหที่ขอบเขตชั้น</text>
+    <text x="1115" y="232" text-anchor="middle" font-size="23" font-weight="800" fill="#d9473f">คลื่น S</text>
+
+    <!-- P globe -->
+    <g>
+      <circle cx="705" cy="450" r="184" fill="#4c3d34" opacity="0.16"/>
+      <circle cx="705" cy="450" r="180" fill="url(#mantle)" stroke="#663129" stroke-width="5"/>
+      <circle cx="705" cy="450" r="180" fill="url(#mantle-pattern)"/>
+      <circle cx="705" cy="450" r="85" fill="url(#outer-core)" stroke="#97601e" stroke-width="4"/>
+      <circle cx="705" cy="450" r="85" fill="url(#liquid-pattern)"/>
+      <circle cx="705" cy="450" r="40" fill="url(#inner-core)" stroke="#866b1d" stroke-width="3"/>
+      <circle cx="705" cy="450" r="40" fill="url(#solid-pattern)"/>
+
+      <path d="M535 505 Q557 575 620 615" fill="none" stroke="#b8d8ec" stroke-width="30" stroke-linecap="round" opacity="0.9"/>
+      <path d="M790 615 Q853 575 875 505" fill="none" stroke="#b8d8ec" stroke-width="30" stroke-linecap="round" opacity="0.9"/>
+
+      <path class="p-ray" d="M705 288 Q650 290 566 330"/>
+      <path class="p-ray" d="M705 288 Q760 290 844 330"/>
+      <path class="p-ray" d="M705 288 Q590 330 530 450"/>
+      <path class="p-ray" d="M705 288 Q820 330 880 450"/>
+      <path class="p-ray" d="M705 288 Q673 329 662 373 Q638 450 662 527 Q655 575 660 620"/>
+      <path class="p-ray" d="M705 288 Q737 329 748 373 Q772 450 748 527 Q755 575 750 620"/>
+      <path class="p-ray" d="M705 288 C705 350 705 550 705 630"/>
+
+      <use href="#source-star" transform="translate(705 288)"/>
+      <use href="#station" transform="translate(566 326)"/>
+      <use href="#station" transform="translate(844 326)"/>
+      <use href="#station" transform="translate(526 450)"/>
+      <use href="#station" transform="translate(884 450)"/>
+      <use href="#station" transform="translate(660 632)"/>
+      <use href="#station" transform="translate(705 642)"/>
+      <use href="#station" transform="translate(750 632)"/>
+      <text x="705" y="678" text-anchor="middle" font-size="18" font-weight="750" fill="#41647a">เขตเงาคลื่น P อยู่สองด้านอย่างสมมาตร</text>
+    </g>
+
+    <!-- S globe -->
+    <g>
+      <circle cx="1115" cy="450" r="184" fill="#4c3d34" opacity="0.16"/>
+      <circle cx="1115" cy="450" r="180" fill="url(#mantle)" stroke="#663129" stroke-width="5"/>
+      <circle cx="1115" cy="450" r="180" fill="url(#mantle-pattern)"/>
+      <circle cx="1115" cy="450" r="85" fill="url(#outer-core)" stroke="#97601e" stroke-width="4"/>
+      <circle cx="1115" cy="450" r="85" fill="url(#liquid-pattern)"/>
+      <circle cx="1115" cy="450" r="40" fill="url(#inner-core)" stroke="#866b1d" stroke-width="3"/>
+      <circle cx="1115" cy="450" r="40" fill="url(#solid-pattern)"/>
+
+      <path d="M945 505 Q970 630 1115 630 Q1260 630 1285 505" fill="none" stroke="#efc4c1" stroke-width="30" stroke-linecap="round" opacity="0.9"/>
+
+      <path class="s-ray" d="M1115 288 Q1060 290 976 330"/>
+      <path class="s-ray" d="M1115 288 Q1170 290 1254 330"/>
+      <path class="s-ray" d="M1115 288 Q1000 330 940 450"/>
+      <path class="s-ray" d="M1115 288 Q1230 330 1290 450"/>
+      <path class="s-ray" d="M1115 288 Q1085 325 1075 380"/>
+      <path class="s-ray" d="M1115 288 Q1145 325 1155 380"/>
+      <path class="s-ray" d="M1115 288 V365"/>
+      <circle cx="1075" cy="380" r="6" fill="#d9473f" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="1155" cy="380" r="6" fill="#d9473f" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="1115" cy="365" r="6" fill="#d9473f" stroke="#ffffff" stroke-width="2"/>
+
+      <use href="#source-star" transform="translate(1115 288)"/>
+      <use href="#station" transform="translate(976 326)"/>
+      <use href="#station" transform="translate(1254 326)"/>
+      <use href="#station" transform="translate(936 450)"/>
+      <use href="#station" transform="translate(1294 450)"/>
+      <text x="1115" y="454" text-anchor="middle" font-size="15" font-weight="750" fill="#65430f">แก่นโลกชั้นนอก</text>
+      <text x="1115" y="678" text-anchor="middle" font-size="18" font-weight="750" fill="#8b4742">เขตเงาคลื่น S ต่อเนื่องรอบด้านไกล</text>
+    </g>
+
+    <text x="910" y="718" text-anchor="middle" font-size="17" font-weight="700" fill="#55646a">จุดกำเนิดแผ่นดินไหวอยู่ใต้ผิว • เส้นทางหักเหเมื่อสมบัติวัสดุเปลี่ยน</text>
+    <g>
+      <use href="#station" transform="translate(690 755) scale(0.72)"/>
+      <text x="718" y="762" font-size="17" font-weight="700" fill="#4f5f66">สถานีตรวจวัด</text>
+      <use href="#source-star" transform="translate(905 755) scale(0.72)"/>
+      <text x="931" y="762" font-size="17" font-weight="700" fill="#4f5f66">จุดกำเนิดแผ่นดินไหว</text>
+      <path d="M1135 755 H1183" stroke="#1976bd" stroke-width="5"/>
+      <text x="1194" y="762" font-size="17" font-weight="700" fill="#1976bd">คลื่น P</text>
+      <path d="M1255 755 H1303" stroke="#d9473f" stroke-width="5"/>
+      <text x="1314" y="762" font-size="17" font-weight="700" fill="#d9473f">คลื่น S</text>
+    </g>
+  </g>
+
+  <!-- Panel 3: inference -->
+  <g class="thai">
+    <rect x="1365" y="135" width="400" height="650" rx="25" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <rect x="1365" y="135" width="400" height="64" rx="25" fill="#f2eadb"/>
+    <path d="M1365 176 H1765 V199 H1365 Z" fill="#f2eadb"/>
+    <text class="panel-title" x="1565" y="178" text-anchor="middle">3 จากหลักฐานสู่ข้ออนุมาน</text>
+
+    <rect x="1400" y="225" width="330" height="88" rx="17" fill="#f8e6e3" stroke="#d88c86" stroke-width="2"/>
+    <text x="1565" y="259" text-anchor="middle" font-size="20" font-weight="750" fill="#7d3935">คลื่น S ไม่ผ่านแก่นโลกชั้นนอก</text>
+    <text x="1565" y="288" text-anchor="middle" font-size="17" fill="#6e5552">เกิดเขตเงาคลื่น S ด้านไกล</text>
+    <path d="M1565 315 V350" stroke="#607178" stroke-width="4"/>
+    <path d="M1555 342 L1565 354 L1575 342" fill="none" stroke="#607178" stroke-width="4"/>
+
+    <circle cx="1565" cy="460" r="95" fill="url(#outer-core)" stroke="#95611e" stroke-width="5"/>
+    <circle cx="1565" cy="460" r="95" fill="url(#liquid-pattern)"/>
+    <circle cx="1565" cy="460" r="46" fill="url(#inner-core)" stroke="#866b1d" stroke-width="4"/>
+    <circle cx="1565" cy="460" r="46" fill="url(#solid-pattern)"/>
+    <text x="1565" y="388" text-anchor="middle" font-size="17" font-weight="800" fill="#5d3f13">แก่นโลกชั้นนอก</text>
+    <text x="1565" y="415" text-anchor="middle" font-size="16" font-weight="700" fill="#674815">ของเหลว</text>
+    <text x="1565" y="456" text-anchor="middle" font-size="16" font-weight="800" fill="#5b4917">แก่นโลกชั้นใน</text>
+    <text x="1565" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#5b4917">ของแข็ง</text>
+
+    <rect x="1400" y="585" width="330" height="105" rx="17" fill="#eef2f3" stroke="#9eafb5" stroke-width="2"/>
+    <text x="1565" y="618" text-anchor="middle" font-size="18" font-weight="750" fill="#374b54">พฤติกรรมของคลื่นเมื่อผ่าน</text>
+    <text x="1565" y="645" text-anchor="middle" font-size="18" font-weight="750" fill="#374b54">ขอบเขตแก่นโลกชั้นใน</text>
+    <text x="1565" y="674" text-anchor="middle" font-size="16" fill="#5c686e">สนับสนุนว่าแก่นโลกชั้นในเป็นของแข็ง</text>
+
+    <text x="1565" y="736" text-anchor="middle" font-size="16" fill="#667078">ข้ออนุมานอาศัยเส้นทาง เวลาเดินทาง</text>
+    <text x="1565" y="759" text-anchor="middle" font-size="16" fill="#667078">และการเปลี่ยนชนิดคลื่นร่วมกัน</text>
+  </g>
+
+  <g class="thai">
+    <rect x="95" y="813" width="1610" height="58" rx="21" fill="#e5efec" stroke="#92b2a7" stroke-width="2.5"/>
+    <text x="900" y="849" text-anchor="middle" font-size="26" font-weight="750" fill="#263f3b">เส้นทางและเขตเงาของคลื่นเผยขอบเขตและสถานะของชั้นภายในโลก</text>
+    <text x="900" y="892" text-anchor="middle" font-size="16" fill="#737b7e">ภาพเชิงแผนผัง ไม่เป็นมาตราส่วน • ไม่แสดงค่ามุมและเวลาเดินทาง</text>
+  </g>
+</svg>

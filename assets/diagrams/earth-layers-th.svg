@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">เปลือกโลก เนื้อโลก และแก่นโลก</title>
+  <desc id="svg-desc">ภาพตัดขวางเชิงแผนผังแสดงเปลือกโลก เนื้อโลก แก่นโลกชั้นนอกที่เป็นของเหลว และแก่นโลกชั้นในที่เป็นของแข็ง ภาพจำลองไม่ตามมาตราส่วน</desc>
+  <metadata>
+    Scientific reference: U.S. Geological Survey, The Interior of the Earth, https://pubs.usgs.gov/gip/interior/
+    Scientific reference: U.S. Geological Survey, Inside the Earth — This Dynamic Earth, https://pubs.usgs.gov/gip/dynamic/inside.html
+    Scientific reference: U.S. Geological Survey, Are the tectonic plates floating on magma?, https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbfaf6"/>
+      <stop offset="1" stop-color="#f3efe5"/>
+    </linearGradient>
+    <radialGradient id="mantle-base" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#d77732"/>
+      <stop offset="0.68" stop-color="#b9522d"/>
+      <stop offset="1" stop-color="#8e3628"/>
+    </radialGradient>
+    <radialGradient id="outer-core-base" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#ffd66b"/>
+      <stop offset="0.7" stop-color="#efa72d"/>
+      <stop offset="1" stop-color="#d9821f"/>
+    </radialGradient>
+    <radialGradient id="inner-core-base" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#fff9c7"/>
+      <stop offset="0.7" stop-color="#f2d86d"/>
+      <stop offset="1" stop-color="#d8ae42"/>
+    </radialGradient>
+    <pattern id="mantle-pattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M-4 18 C3 9 9 9 16 18 S29 27 36 18" fill="none" stroke="#6f2e25" stroke-width="2" opacity="0.28"/>
+    </pattern>
+    <pattern id="liquid-pattern" width="28" height="18" patternUnits="userSpaceOnUse">
+      <path d="M-5 9 C2 2 9 2 16 9 S30 16 37 9" fill="none" stroke="#7e4b16" stroke-width="2" opacity="0.34"/>
+    </pattern>
+    <pattern id="solid-pattern" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0 V18 M9 0 V18" stroke="#80641f" stroke-width="2" opacity="0.28"/>
+    </pattern>
+    <pattern id="crust-pattern" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0 V14" stroke="#efe0bd" stroke-width="4" opacity="0.58"/>
+    </pattern>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2a2018" flood-opacity="0.18"/>
+    </filter>
+    <filter id="card-shadow" x="-15%" y="-25%" width="130%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#40352d" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .thai { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+      .leader { fill: none; stroke: #31363b; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .anchor { stroke: #ffffff; stroke-width: 5; }
+      .label-title { font-size: 31px; font-weight: 700; fill: #17212b; }
+      .label-note { font-size: 23px; font-weight: 500; fill: #4c5965; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <path d="M0 132 H1600" stroke="#d8d1c3" stroke-width="2"/>
+
+  <g class="thai">
+    <text x="800" y="74" text-anchor="middle" font-size="52" font-weight="800" fill="#18232c">เปลือกโลก เนื้อโลก และแก่นโลก</text>
+    <text x="800" y="113" text-anchor="middle" font-size="23" font-weight="500" fill="#66727b">โครงสร้างหลักของโลกเมื่อแบ่งตามองค์ประกอบของวัสดุ</text>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <circle cx="470" cy="500" r="305" fill="#30251f"/>
+    <circle cx="470" cy="500" r="292" fill="url(#mantle-base)" stroke="#6c2b25" stroke-width="4"/>
+    <circle cx="470" cy="500" r="292" fill="url(#mantle-pattern)"/>
+    <circle cx="470" cy="500" r="173" fill="url(#outer-core-base)" stroke="#a35a19" stroke-width="5"/>
+    <circle cx="470" cy="500" r="173" fill="url(#liquid-pattern)"/>
+    <circle cx="470" cy="500" r="82" fill="url(#inner-core-base)" stroke="#9c7823" stroke-width="5"/>
+    <circle cx="470" cy="500" r="82" fill="url(#solid-pattern)"/>
+    <circle cx="470" cy="500" r="299" fill="none" stroke="#5f4938" stroke-width="18"/>
+    <circle cx="470" cy="500" r="299" fill="none" stroke="url(#crust-pattern)" stroke-width="12"/>
+  </g>
+
+  <g class="thai">
+    <g>
+      <path class="leader" d="M670 276 L815 225 L940 225"/>
+      <circle class="anchor" cx="670" cy="276" r="10" fill="#504033"/>
+      <rect x="940" y="174" width="500" height="102" rx="18" fill="#fffdf8" stroke="#76604d" stroke-width="3" filter="url(#card-shadow)"/>
+      <rect x="940" y="174" width="13" height="102" rx="6" fill="#5f4938"/>
+      <text class="label-title" x="985" y="235">เปลือกโลก</text>
+      <text class="label-note" x="1162" y="235">ชั้นนอกสุดและบางมาก</text>
+    </g>
+
+    <g>
+      <path class="leader" d="M670 382 L820 358 L940 358"/>
+      <circle class="anchor" cx="670" cy="382" r="10" fill="#a8432b"/>
+      <rect x="940" y="307" width="500" height="102" rx="18" fill="#fffaf4" stroke="#b04c2d" stroke-width="3" filter="url(#card-shadow)"/>
+      <rect x="940" y="307" width="13" height="102" rx="6" fill="#b04c2d"/>
+      <text class="label-title" x="985" y="368">เนื้อโลก</text>
+      <text class="label-note" x="1135" y="368">หินของแข็งที่เปลี่ยนรูปช้ามาก</text>
+    </g>
+
+    <g>
+      <path class="leader" d="M620 496 L820 491 L940 491"/>
+      <circle class="anchor" cx="620" cy="496" r="10" fill="#e79a27"/>
+      <rect x="940" y="440" width="500" height="102" rx="18" fill="#fffbec" stroke="#d78b20" stroke-width="3" filter="url(#card-shadow)"/>
+      <rect x="940" y="440" width="13" height="102" rx="6" fill="#e49b28"/>
+      <text class="label-title" x="985" y="501">แก่นโลกชั้นนอก (ของเหลว)</text>
+    </g>
+
+    <g>
+      <path class="leader" d="M510 548 L820 624 L940 624"/>
+      <circle class="anchor" cx="510" cy="548" r="10" fill="#efd86f"/>
+      <rect x="940" y="573" width="500" height="102" rx="18" fill="#fffef3" stroke="#ae8b31" stroke-width="3" filter="url(#card-shadow)"/>
+      <rect x="940" y="573" width="13" height="102" rx="6" fill="#d7b84b"/>
+      <text class="label-title" x="985" y="634">แก่นโลกชั้นใน (ของแข็ง)</text>
+    </g>
+  </g>
+
+  <g class="thai">
+    <rect x="119" y="816" width="1362" height="50" rx="25" fill="#e9e4d8" stroke="#c9c1b1" stroke-width="2"/>
+    <circle cx="485" cy="841" r="6" fill="#5f4938"/>
+    <text x="800" y="850" text-anchor="middle" font-size="25" font-weight="700" fill="#4e514f">ภาพจำลอง ไม่ตามมาตราส่วน</text>
+    <circle cx="1115" cy="841" r="6" fill="#5f4938"/>
+  </g>
+</svg>

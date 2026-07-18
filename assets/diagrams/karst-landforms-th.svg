@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">ภูมิลักษณ์คาร์สต์และระบบน้ำใต้ดิน</title>
+  <desc id="svg-desc">ภาพตัดขวางคาร์สต์ในหินปูน แสดงน้ำฝนกรดอ่อนซึมตามรอยแตก หลุมยุบ ลำธารที่หายลงใต้ดิน ถ้ำ หินงอก หินย้อย เครือข่ายชั้นหินอุ้มน้ำคาร์สต์ และน้ำพุคาร์สต์ที่น้ำกลับสู่ผิว</desc>
+  <metadata>
+    Scientific reference: U.S. Geological Survey, Karst Aquifers, https://www.usgs.gov/mission-areas/water-resources/science/karst-aquifers
+    Scientific reference: U.S. Geological Survey, Characteristics of Karst Aquifers in Tennessee, https://pubs.usgs.gov/wri/wri974097/text/karst.html
+    Scientific reference: U.S. Geological Survey, Geology of Mammoth Cave National Park, https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-mammoth-cave-national-park
+    Scientific reference: U.S. Geological Survey, Geology of Carlsbad Caverns National Park, https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-carlsbad-caverns-national-park
+    Diagram limitation: conceptual section; openings, flow paths, and relief are not to scale and do not represent a specific mapped aquifer.
+  </metadata>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcfbf7"/>
+      <stop offset="1" stop-color="#f1ede4"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dceef3"/>
+      <stop offset="1" stop-color="#a8cfdb"/>
+    </linearGradient>
+    <linearGradient id="limestone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcc69d"/>
+      <stop offset="1" stop-color="#b99c70"/>
+    </linearGradient>
+    <pattern id="limestone-pattern" width="32" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 7 H32 M0 19 H32" stroke="#7e684c" stroke-width="1.5" opacity="0.35"/>
+      <path d="M8 0 V7 M24 7 V19 M14 19 V24" stroke="#7e684c" stroke-width="1.2" opacity="0.28"/>
+    </pattern>
+    <pattern id="matrix-pattern" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.8" fill="#7896a0" opacity="0.32"/>
+      <circle cx="14" cy="13" r="1.8" fill="#7896a0" opacity="0.32"/>
+    </pattern>
+    <filter id="soft-shadow" x="-12%" y="-15%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#3e342d" flood-opacity="0.14"/>
+    </filter>
+    <marker id="water-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#237fa4"/>
+    </marker>
+    <marker id="risk-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#c54f45"/>
+    </marker>
+    <clipPath id="karst-land">
+      <path d="M70 327 C160 277 245 270 330 302 C386 322 416 355 468 360 C521 365 548 325 592 292 C658 243 735 250 803 289 C870 327 941 341 1003 314 C1061 289 1106 246 1172 242 C1230 239 1280 267 1320 310 L1320 725 H70 Z"/>
+    </clipPath>
+    <style>
+      .thai { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+      .title { font-size: 50px; font-weight: 800; fill: #17232d; }
+      .label { font-size: 20px; font-weight: 750; fill: #22343e; }
+      .small { font-size: 17px; fill: #59666c; }
+      .leader { fill: none; stroke: #34454d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .water-flow { fill: none; stroke: #237fa4; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#water-arrow); }
+      .fracture { fill: none; stroke: #63513d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#paper)"/>
+  <path d="M0 112 H1800" stroke="#d6cec0" stroke-width="2"/>
+
+  <g class="thai">
+    <text class="title" x="900" y="67" text-anchor="middle">ภูมิลักษณ์คาร์สต์และระบบน้ำใต้ดิน</text>
+    <text x="900" y="101" text-anchor="middle" font-size="21" fill="#68747c">น้ำกรดอ่อนละลายหินปูน เปิดรอยแตกเป็นเครือข่ายที่เชื่อมผิวดิน ถ้ำ ชั้นหินอุ้มน้ำ และน้ำพุ</text>
+  </g>
+
+  <!-- Main conceptual cross-section -->
+  <g class="thai">
+    <rect x="45" y="135" width="1310" height="650" rx="26" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <rect x="70" y="165" width="1250" height="560" rx="18" fill="url(#sky)"/>
+
+    <!-- limestone body and bedding -->
+    <path d="M70 327 C160 277 245 270 330 302 C386 322 416 355 468 360 C521 365 548 325 592 292 C658 243 735 250 803 289 C870 327 941 341 1003 314 C1061 289 1106 246 1172 242 C1230 239 1280 267 1320 310 L1320 725 H70 Z" fill="url(#limestone)" stroke="#6d5942" stroke-width="4"/>
+    <rect x="70" y="235" width="1250" height="490" fill="url(#limestone-pattern)" clip-path="url(#karst-land)"/>
+    <rect x="70" y="235" width="1250" height="490" fill="url(#matrix-pattern)" clip-path="url(#karst-land)" opacity="0.45"/>
+
+    <!-- rainfall and weak-acid recharge -->
+    <g fill="#f8fbfc" stroke="#8baeb9" stroke-width="2">
+      <ellipse cx="245" cy="205" rx="55" ry="22"/>
+      <ellipse cx="210" cy="212" rx="34" ry="18"/>
+      <ellipse cx="285" cy="212" rx="35" ry="18"/>
+    </g>
+    <path d="M202 230 l-8 22 M230 232 l-8 22 M260 232 l-8 22 M290 230 l-8 22" stroke="#3c91b2" stroke-width="4" stroke-linecap="round"/>
+    <text x="245" y="181" text-anchor="middle" font-size="18" font-weight="750" fill="#385d6b">น้ำฝน + คาร์บอนไดออกไซด์</text>
+    <text x="245" y="269" text-anchor="middle" font-size="17" font-weight="700" fill="#385d6b">กรดอ่อน</text>
+
+    <!-- surface stream and sinking stream -->
+    <path d="M86 313 C154 290 225 287 300 309 C360 327 409 351 458 356" fill="none" stroke="#237fa4" stroke-width="9" stroke-linecap="round"/>
+    <path d="M385 340 C424 349 449 355 469 359" class="water-flow"/>
+    <path d="M448 351 C462 353 476 353 490 351 C482 376 463 391 447 376 C441 367 442 359 448 351 Z" fill="#5c493a" stroke="#3f3229" stroke-width="3"/>
+    <text x="118" y="287" font-size="18" font-weight="750" fill="#2b657c">น้ำผิวดิน</text>
+    <path class="leader" d="M470 368 L505 392"/>
+    <text x="510" y="401" class="label">หลุมยุบ</text>
+    <text x="510" y="426" class="small">น้ำผิวดินหายลงใต้ดิน</text>
+
+    <!-- fracture network -->
+    <path class="fracture" d="M468 370 L455 422 L480 458 L458 507 L485 553"/>
+    <path class="fracture" d="M565 315 L552 370 L574 410 L549 452 L568 505"/>
+    <path class="fracture" d="M690 273 L680 330 L705 370 L688 420 L706 466"/>
+    <path class="fracture" d="M805 292 L790 348 L813 390 L799 441 L820 484"/>
+    <path class="fracture" d="M1002 320 L985 369 L1009 410 L992 465 L1016 520"/>
+    <path class="fracture" d="M1168 245 L1152 309 L1178 354 L1160 407 L1182 462"/>
+    <path class="fracture" d="M455 422 L552 370 L680 330"/>
+    <path class="fracture" d="M574 410 L688 420 L799 441 L992 465"/>
+    <path class="fracture" d="M485 553 L568 505 L706 466 L820 484 L1016 520 L1182 462"/>
+
+    <!-- dissolved/enlarged paths and distributed water -->
+    <path class="water-flow" d="M466 378 C455 420 470 458 480 500 C490 532 525 548 575 560"/>
+    <path d="M575 560 C635 548 690 532 742 540" fill="none" stroke="#237fa4" stroke-width="7" stroke-linecap="round" marker-end="url(#water-arrow)"/>
+    <path d="M520 474 C565 450 610 455 650 478" fill="none" stroke="#62a9c1" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#water-arrow)"/>
+    <path d="M686 420 C738 400 790 412 835 447" fill="none" stroke="#62a9c1" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#water-arrow)"/>
+    <path d="M803 489 C855 470 910 475 963 505" fill="none" stroke="#62a9c1" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#water-arrow)"/>
+    <path d="M995 520 C1045 490 1095 470 1157 459" fill="none" stroke="#62a9c1" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#water-arrow)"/>
+
+    <!-- cave chamber -->
+    <path d="M590 510 C625 467 684 449 746 464 C805 437 880 448 919 494 C948 531 931 590 885 614 C823 641 680 635 616 603 C576 583 563 544 590 510 Z" fill="#473f3b" stroke="#2f2926" stroke-width="4"/>
+    <text x="755" y="493" text-anchor="middle" font-size="21" font-weight="800" fill="#fff8e9">ถ้ำ</text>
+
+    <!-- stalactites: ceiling; stalagmites: floor -->
+    <path d="M650 481 L664 481 L657 530 Z M705 464 L720 463 L712 520 Z M843 459 L858 463 L850 520 Z" fill="#e8d5a8" stroke="#8a754c" stroke-width="2"/>
+    <path d="M675 611 L689 565 L703 611 Z M772 626 L786 574 L800 626 Z M867 616 L879 578 L891 612 Z" fill="#e8d5a8" stroke="#8a754c" stroke-width="2"/>
+    <path class="leader" d="M712 509 L677 445"/>
+    <text x="620" y="442" class="label">หินย้อย</text>
+    <text x="620" y="466" class="small">เกิดจากเพดานถ้ำ</text>
+    <path d="M786 578 L825 552" fill="none" stroke="#f2e8d6" stroke-width="3" stroke-linecap="round"/>
+    <text x="830" y="552" font-size="20" font-weight="750" fill="#fff8e9">หินงอก</text>
+    <text x="830" y="576" font-size="17" fill="#e6ddd1">งอกจากพื้นถ้ำ</text>
+
+    <!-- main conduit/underground stream through cave, plus branches -->
+    <path d="M574 560 C642 573 705 587 774 594 C855 603 918 581 980 552 C1047 521 1105 500 1170 480" fill="none" stroke="#237fa4" stroke-width="12" stroke-linecap="round" marker-end="url(#water-arrow)"/>
+    <text x="912" y="628" text-anchor="middle" font-size="19" font-weight="750" fill="#174f68">ลำธารใต้ดิน</text>
+
+    <!-- karst spring/resurgence -->
+    <path d="M1167 480 C1197 448 1218 402 1227 354 C1233 327 1244 312 1264 305" fill="none" stroke="#237fa4" stroke-width="10" stroke-linecap="round" marker-end="url(#water-arrow)"/>
+    <ellipse cx="1270" cy="312" rx="22" ry="10" fill="#4fa2c0" stroke="#246985" stroke-width="3"/>
+    <path d="M1268 310 C1286 315 1300 323 1316 335" fill="none" stroke="#237fa4" stroke-width="8" stroke-linecap="round"/>
+    <path class="leader" d="M1268 312 L1198 292 L1135 292"/>
+    <text x="1030" y="280" class="label">น้ำพุคาร์สต์</text>
+    <text x="1030" y="304" class="small">น้ำกลับสู่ผิว (resurgence)</text>
+
+    <!-- labels for rock/fractures/aquifer -->
+    <path class="leader" d="M162 515 L115 548"/>
+    <text x="94" y="575" class="label">หินปูน</text>
+    <text x="94" y="599" class="small">หินที่ละลายได้</text>
+    <path class="leader" d="M1010 410 L1070 392"/>
+    <text x="1078" y="397" class="label">รอยแตก</text>
+    <text x="1078" y="421" class="small">บางส่วนถูกละลายจนกว้างขึ้น</text>
+
+    <rect x="95" y="648" width="440" height="56" rx="17" fill="#e6f1f4" stroke="#8eb5c3" stroke-width="2"/>
+    <text x="315" y="674" text-anchor="middle" font-size="19" font-weight="750" fill="#315d6d">ชั้นหินอุ้มน้ำคาร์สต์</text>
+    <text x="315" y="697" text-anchor="middle" font-size="16" fill="#526c75">เนื้อหิน + รอยแตก + โพรง + ทางน้ำขนาดใหญ่</text>
+
+    <!-- contamination route -->
+    <path d="M402 311 C414 294 426 294 438 311 C446 325 438 339 420 343 C402 339 394 325 402 311 Z" fill="#c54f45" stroke="#843932" stroke-width="3"/>
+    <path d="M420 343 C430 377 447 414 460 455" fill="none" stroke="#c54f45" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#risk-arrow)"/>
+    <text x="345" y="281" font-size="17" font-weight="750" fill="#933e38">สารปนเปื้อนบนผิวดิน</text>
+  </g>
+
+  <!-- Explanatory column -->
+  <g class="thai">
+    <rect x="1385" y="135" width="370" height="650" rx="26" fill="#fffdf8" stroke="#cfc5b5" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    <text x="1570" y="181" text-anchor="middle" font-size="27" font-weight="780" fill="#1b2b34">กระบวนการและข้อควรจำ</text>
+
+    <rect x="1415" y="215" width="310" height="137" rx="18" fill="#f4eee0" stroke="#c9aa72" stroke-width="2"/>
+    <circle cx="1450" cy="252" r="19" fill="#c69b4f"/>
+    <text x="1450" y="259" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">1</text>
+    <text x="1480" y="249" font-size="19" font-weight="750" fill="#513f27">การละลาย</text>
+    <text x="1450" y="284" font-size="17" fill="#62594b">น้ำฝนรับคาร์บอนไดออกไซด์</text>
+    <text x="1450" y="309" font-size="17" fill="#62594b">เป็นกรดอ่อนและซึมตามรอยแตก</text>
+    <text x="1450" y="334" font-size="17" font-weight="700" fill="#6b4c24">รอยเปิดจึงค่อย ๆ กว้างขึ้น</text>
+
+    <rect x="1415" y="371" width="310" height="173" rx="18" fill="#e9f1f3" stroke="#8eafba" stroke-width="2"/>
+    <circle cx="1450" cy="408" r="19" fill="#4e91a7"/>
+    <text x="1450" y="415" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">2</text>
+    <text x="1480" y="405" font-size="19" font-weight="750" fill="#294d59">โครงสร้างชั้นหินอุ้มน้ำ</text>
+    <text x="1450" y="441" font-size="17" fill="#506970">น้ำเก็บในเนื้อหินและรอยแตก</text>
+    <text x="1450" y="466" font-size="17" fill="#506970">แต่บางส่วนไหลเร็วในโพรง</text>
+    <text x="1450" y="491" font-size="17" fill="#506970">และทางน้ำที่เชื่อมต่อกัน</text>
+    <text x="1570" y="523" text-anchor="middle" font-size="17" font-weight="800" fill="#2e5967">ไม่ใช่อุโมงค์แม่น้ำเส้นเดียวทั้งหมด</text>
+
+    <rect x="1415" y="563" width="310" height="172" rx="18" fill="#f8e8e6" stroke="#d2948e" stroke-width="2"/>
+    <circle cx="1450" cy="600" r="19" fill="#c75a50"/>
+    <text x="1450" y="607" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">3</text>
+    <text x="1480" y="597" font-size="19" font-weight="750" fill="#713c37">ความไวต่อมลพิษ</text>
+    <text x="1450" y="633" font-size="17" fill="#6b5552">น้ำจากหลุมยุบอาจเข้าสู่</text>
+    <text x="1450" y="658" font-size="17" fill="#6b5552">ทางไหลเร็วโดยตรง</text>
+    <text x="1450" y="683" font-size="17" fill="#6b5552">จึงกรองตามธรรมชาติน้อย</text>
+    <text x="1570" y="716" text-anchor="middle" font-size="17" font-weight="800" fill="#8a413b">พื้นที่คาร์สต์เปราะบางต่อมลพิษ</text>
+
+    <text x="1570" y="763" text-anchor="middle" font-size="15" fill="#727a7d">โพรงใหญ่เป็นเพียงส่วนหนึ่งของระบบ</text>
+  </g>
+
+  <g class="thai">
+    <rect x="95" y="807" width="1610" height="60" rx="22" fill="#e5efec" stroke="#92b2a7" stroke-width="2.5"/>
+    <text x="900" y="845" text-anchor="middle" font-size="26" font-weight="750" fill="#263f3b">น้ำกรดอ่อนละลายหินปูนตามรอยแตก เชื่อมหลุมยุบ ถ้ำ และทางน้ำใต้ดิน</text>
+    <text x="900" y="892" text-anchor="middle" font-size="16" fill="#737b7e">ภาพเชิงแผนผัง ไม่เป็นมาตราส่วน • ทางน้ำจริงเป็นเครือข่ายสามมิติที่ซับซ้อน</text>
+  </g>
+</svg>

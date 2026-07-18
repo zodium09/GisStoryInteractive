@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build:specs": "node scripts/build-topic-visual-specs.mjs",
+    "validate": "npm run build:specs && node scripts/validate-visual-manifest.mjs && node scripts/validate-topic-visual-specs.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

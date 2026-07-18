@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="title desc">
+  <title id="title">การกลับตัวของอุณหภูมิ</title>
+  <desc id="desc">ภาพเปรียบเทียบโปรไฟล์อุณหภูมิภาวะปกติกับการกลับตัวในหุบเขาและเมือง แสดงอากาศเย็นใกล้พื้น ชั้นอุ่นด้านบน ความเสถียร การผสมแนวดิ่งที่ลดลง และมลพิษสะสม พร้อมแยกการกลับตัวจากการแผ่รังสี การจมตัว และแนวปะทะ</desc>
+  <metadata><![CDATA[
+  {
+    "topicTH": "การกลับตัวของอุณหภูมิ",
+    "visualKind": "profile-comparison",
+    "productionMode": "deterministic-svg",
+    "reviewedAgainst": [
+      "https://forecast.weather.gov/glossary.php?word=INVERSION",
+      "https://gml.noaa.gov/grad/about/redsky/",
+      "https://www.epa.gov/pmcourse/clinical-scenario-2-particle-pollution",
+      "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=2000F0ZT.TXT",
+      "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100HFPS.TXT"
+    ],
+    "scopeTH": "ภาพเชิงแนวคิดของโทรโพสเฟียร์ชั้นล่าง ไม่ใช่สเกลความสูงหรืออุณหภูมิเชิงปริมาณ",
+    "keyCaveatTH": "อุณหภูมิเพิ่มตามความสูงเฉพาะในชั้นกลับตัว เหนือและใต้ชั้นนั้นอาจมีแนวโน้มอื่น"
+  }
+  ]]></metadata>
+
+  <defs>
+    <linearGradient id="day-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B9E2F2"/>
+      <stop offset="1" stop-color="#EDF8F1"/>
+    </linearGradient>
+    <linearGradient id="night-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#294866"/>
+      <stop offset="1" stop-color="#9BC3D5"/>
+    </linearGradient>
+    <linearGradient id="cold-pool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9BD3EA" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#579BC5" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="inversion-band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4A261" stop-opacity="0"/>
+      <stop offset="0.28" stop-color="#F4A261" stop-opacity="0.76"/>
+      <stop offset="0.70" stop-color="#E98A48" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#E98A48" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#78977C"/>
+      <stop offset="1" stop-color="#42624F"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#18324A" flood-opacity="0.14"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <marker id="up-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#2D9B78"/>
+    </marker>
+    <marker id="blocked-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#B65B4B"/>
+    </marker>
+    <marker id="cold-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#4E91BD"/>
+    </marker>
+    <style><![CDATA[
+      text { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; fill: #18324A; }
+      .title { font-size: 48px; font-weight: 800; }
+      .subtitle { font-size: 22px; font-weight: 500; }
+      .section { font-size: 27px; font-weight: 800; }
+      .label { font-size: 20px; font-weight: 750; }
+      .body { font-size: 18px; font-weight: 500; }
+      .small { font-size: 16px; font-weight: 500; }
+      .tiny { font-size: 14px; font-weight: 500; }
+      .inverse { fill: #FFFFFF; }
+      .muted { fill: #536B7B; }
+      .card { fill: #FFFFFF; stroke: #B9CBD7; stroke-width: 2; filter: url(#shadow); }
+      .axis { stroke: #526B7B; stroke-width: 2.5; }
+      .grid { stroke: #CAD7DE; stroke-width: 1.3; stroke-dasharray: 5 6; }
+    ]]></style>
+  </defs>
+
+  <rect width="1800" height="900" fill="#F7F6F1"/>
+  <rect width="18" height="900" fill="#325E88"/>
+
+  <!-- Header -->
+  <text x="60" y="66" class="title">การกลับตัวของอุณหภูมิ</text>
+  <text x="60" y="105" class="subtitle">อากาศอุ่นวางเหนืออากาศเย็น เพิ่มความเสถียร ลดการผสมแนวดิ่ง และเอื้อต่อการสะสมมลพิษ</text>
+  <rect x="1405" y="35" width="335" height="58" rx="29" fill="#E7EEF4" stroke="#325E88" stroke-width="2"/>
+  <text x="1572" y="59" text-anchor="middle" class="small">เปรียบเทียบด้วยแกนเดียวกัน</text>
+  <text x="1572" y="80" text-anchor="middle" class="tiny">อุณหภูมิเพิ่มเฉพาะ “ช่วงกลับตัว”</text>
+  <line x1="60" y1="132" x2="1740" y2="132" stroke="#C4D0D8" stroke-width="2"/>
+
+  <!-- Panel A: normal profile -->
+  <g aria-label="ภาวะปกติ อุณหภูมิลดลงเมื่อสูงขึ้นและอากาศผสมตัวได้">
+    <rect x="60" y="154" width="560" height="632" rx="24" class="card"/>
+    <rect x="82" y="175" width="516" height="48" rx="17" fill="#E7F3ED"/>
+    <circle cx="108" cy="199" r="14" fill="#2D9B78"/>
+    <text x="136" y="207" class="section">ภาวะปกติ: ผสมตัวได้มากกว่า</text>
+
+    <!-- Daytime scene -->
+    <rect x="82" y="239" width="328" height="449" rx="16" fill="url(#day-sky)"/>
+    <circle cx="126" cy="286" r="30" fill="#FFD35B"/>
+    <g stroke="#F1B62A" stroke-width="4" stroke-linecap="round">
+      <line x1="126" y1="240" x2="126" y2="226"/><line x1="126" y1="332" x2="126" y2="346"/>
+      <line x1="80" y1="286" x2="94" y2="286"/><line x1="158" y1="254" x2="169" y2="243"/>
+    </g>
+    <path d="M82 597 L162 475 L224 576 L303 451 L410 604 L410 688 L82 688 Z" fill="#8DAD8B" opacity="0.72"/>
+    <path d="M82 632 C150 594 219 624 276 605 C329 588 372 611 410 599 L410 688 L82 688 Z" fill="url(#mountain)"/>
+    <rect x="140" y="615" width="38" height="44" fill="#D5D9DB"/><rect x="147" y="625" width="8" height="10" fill="#6E91A3"/><rect x="161" y="625" width="8" height="10" fill="#6E91A3"/>
+    <rect x="184" y="595" width="46" height="64" fill="#C4CDD1"/><rect x="193" y="606" width="9" height="11" fill="#6E91A3"/><rect x="211" y="606" width="9" height="11" fill="#6E91A3"/>
+    <rect x="238" y="622" width="34" height="37" fill="#D5D9DB"/>
+    <rect x="292" y="573" width="15" height="76" fill="#7B8790"/><rect x="287" y="649" width="66" height="18" fill="#9DA7AD"/>
+
+    <!-- Mixed plume and rising parcels -->
+    <path d="M300 570 C295 529 322 507 306 469 C294 442 313 416 302 382" fill="none" stroke="#6F7881" stroke-width="9" stroke-linecap="round" opacity="0.65"/>
+    <g fill="#677783" opacity="0.5"><circle cx="307" cy="493" r="8"/><circle cx="292" cy="453" r="6"/><circle cx="320" cy="430" r="5"/><circle cx="300" cy="397" r="4"/></g>
+    <path d="M174 604 C153 554 172 517 190 482" fill="none" stroke="#2D9B78" stroke-width="5" marker-end="url(#up-arrow)"/>
+    <path d="M237 603 C265 548 247 501 227 463" fill="none" stroke="#2D9B78" stroke-width="5" marker-end="url(#up-arrow)"/>
+    <text x="244" y="367" text-anchor="middle" class="label">การผสมอากาศ</text>
+    <text x="244" y="391" text-anchor="middle" class="small">อากาศอุ่นลอยและเจือจางมลพิษ</text>
+    <rect x="100" y="650" width="180" height="28" rx="14" fill="#F9EFE4"/>
+    <text x="190" y="670" text-anchor="middle" class="small">พื้นอุ่น → อากาศใกล้พื้นอุ่น</text>
+
+    <!-- Normal temperature profile -->
+    <g aria-label="กราฟอุณหภูมิปกติ">
+      <rect x="425" y="239" width="173" height="449" rx="16" fill="#F8FAFA" stroke="#CAD7DE" stroke-width="1.5"/>
+      <text x="511" y="270" text-anchor="middle" class="label">โปรไฟล์อุณหภูมิ</text>
+      <line x1="451" y1="631" x2="451" y2="299" class="axis"/>
+      <path d="M445 310 L451 299 L457 310" fill="none" class="axis"/>
+      <line x1="451" y1="631" x2="578" y2="631" class="axis"/>
+      <path d="M567 625 L578 631 L567 637" fill="none" class="axis"/>
+      <line x1="451" y1="520" x2="578" y2="520" class="grid"/>
+      <line x1="451" y1="410" x2="578" y2="410" class="grid"/>
+      <text x="440" y="469" text-anchor="middle" class="small" transform="rotate(-90 440 469)">ความสูง</text>
+      <text x="515" y="660" text-anchor="middle" class="small">อุณหภูมิ</text>
+      <text x="460" y="650" class="tiny">เย็น</text><text x="551" y="650" class="tiny">อุ่น</text>
+      <path d="M558 612 C536 541 516 473 494 401 C484 365 476 337 468 315" fill="none" stroke="#2D9B78" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="558" cy="612" r="7" fill="#F39A55"/><circle cx="468" cy="315" r="7" fill="#65A8C7"/>
+      <text x="511" y="705" text-anchor="middle" class="small">สูงขึ้น → โดยทั่วไปเย็นลง</text>
+    </g>
+
+    <rect x="82" y="721" width="516" height="45" rx="15" fill="#E7F3ED"/>
+    <text x="340" y="750" text-anchor="middle" class="label">ความไม่เสถียรช่วยให้การผสมแนวดิ่งเกิดได้</text>
+  </g>
+
+  <!-- Panel B: surface radiation inversion in valley/city -->
+  <g aria-label="การกลับตัวจากการแผ่รังสีในหุบเขาและเมือง">
+    <rect x="640" y="154" width="560" height="632" rx="24" class="card"/>
+    <rect x="662" y="175" width="516" height="48" rx="17" fill="#FCE9DD"/>
+    <circle cx="688" cy="199" r="14" fill="#D66A4E"/>
+    <text x="716" y="207" class="section">กลับตัวใกล้พื้น: ผสมตัวลดลง</text>
+
+    <!-- Clear calm night valley scene -->
+    <rect x="662" y="239" width="328" height="449" rx="16" fill="url(#night-sky)"/>
+    <path d="M930 264 a27 27 0 1 0 0 47 a22 22 0 1 1 0 -47" fill="#FFF2B8"/>
+    <g fill="#FFFFFF" opacity="0.8"><circle cx="705" cy="274" r="2"/><circle cx="789" cy="297" r="2.5"/><circle cx="866" cy="261" r="2"/><circle cx="958" cy="329" r="2"/></g>
+    <path d="M662 518 L730 344 L808 529 L892 338 L990 525 L990 688 L662 688 Z" fill="#466174"/>
+    <path d="M662 602 L744 476 L814 598 L899 465 L990 602 L990 688 L662 688 Z" fill="#5C786B"/>
+    <rect x="662" y="475" width="328" height="93" fill="url(#inversion-band)"/>
+    <path d="M662 520 C745 540 893 536 990 514 L990 688 L662 688 Z" fill="url(#cold-pool)"/>
+
+    <!-- Cold drainage -->
+    <path d="M703 438 C725 476 743 506 764 548" fill="none" stroke="#7BC4E5" stroke-width="5" marker-end="url(#cold-arrow)"/>
+    <path d="M945 428 C925 469 907 505 884 548" fill="none" stroke="#7BC4E5" stroke-width="5" marker-end="url(#cold-arrow)"/>
+    <text x="816" y="555" text-anchor="middle" class="label inverse">อากาศเย็นใกล้พื้น</text>
+    <text x="816" y="580" text-anchor="middle" class="small inverse">ไหลลงและรวมในแอ่ง</text>
+
+    <!-- City and pollution -->
+    <rect x="723" y="620" width="42" height="44" fill="#BEC7CD"/><rect x="730" y="630" width="8" height="9" fill="#597C92"/><rect x="747" y="630" width="8" height="9" fill="#597C92"/>
+    <rect x="772" y="597" width="48" height="67" fill="#AEBAC1"/><rect x="780" y="608" width="9" height="10" fill="#597C92"/><rect x="800" y="608" width="9" height="10" fill="#597C92"/>
+    <rect x="831" y="625" width="36" height="39" fill="#C7CED2"/>
+    <rect x="901" y="575" width="14" height="80" fill="#7C8992"/><rect x="893" y="655" width="67" height="16" fill="#949FA6"/>
+    <g fill="#6D6063" opacity="0.66">
+      <circle cx="745" cy="604" r="7"/><circle cx="778" cy="575" r="9"/><circle cx="818" cy="595" r="8"/>
+      <circle cx="855" cy="566" r="10"/><circle cx="895" cy="601" r="8"/><circle cx="928" cy="554" r="7"/>
+      <circle cx="715" cy="580" r="6"/><circle cx="944" cy="610" r="9"/>
+    </g>
+    <path d="M804 592 C798 555 803 535 817 516 C827 503 823 491 814 484" fill="none" stroke="#B65B4B" stroke-width="5" marker-end="url(#blocked-arrow)"/>
+    <path d="M817 484 C840 474 858 481 872 493" fill="none" stroke="#B65B4B" stroke-width="4"/>
+    <line x1="783" y1="479" x2="875" y2="479" stroke="#9F4D40" stroke-width="4" stroke-dasharray="8 6"/>
+    <rect x="690" y="424" width="272" height="37" rx="16" fill="#203D57" opacity="0.9"/>
+    <text x="826" y="450" text-anchor="middle" class="label inverse">ชั้นกลับตัว: อากาศอุ่นด้านบน</text>
+    <rect x="738" y="600" width="176" height="31" rx="14" fill="#674E57" opacity="0.9"/>
+    <text x="826" y="622" text-anchor="middle" class="label inverse">มลพิษสะสม</text>
+    <rect x="693" y="650" width="234" height="28" rx="14" fill="#355B76" opacity="0.92"/>
+    <text x="810" y="670" text-anchor="middle" class="small inverse">พื้นเย็น • ลมสงบ • การผสมน้อย</text>
+
+    <!-- Inversion temperature profile -->
+    <g aria-label="กราฟอุณหภูมิที่มีช่วงกลับตัว">
+      <rect x="1005" y="239" width="173" height="449" rx="16" fill="#F8FAFA" stroke="#CAD7DE" stroke-width="1.5"/>
+      <text x="1091" y="270" text-anchor="middle" class="label">โปรไฟล์อุณหภูมิ</text>
+      <line x1="1031" y1="631" x2="1031" y2="299" class="axis"/>
+      <path d="M1025 310 L1031 299 L1037 310" fill="none" class="axis"/>
+      <line x1="1031" y1="631" x2="1158" y2="631" class="axis"/>
+      <path d="M1147 625 L1158 631 L1147 637" fill="none" class="axis"/>
+      <line x1="1031" y1="520" x2="1158" y2="520" class="grid"/>
+      <line x1="1031" y1="410" x2="1158" y2="410" class="grid"/>
+      <rect x="1032" y="493" width="125" height="89" fill="#F4A261" opacity="0.16"/>
+      <text x="1020" y="469" text-anchor="middle" class="small" transform="rotate(-90 1020 469)">ความสูง</text>
+      <text x="1095" y="660" text-anchor="middle" class="small">อุณหภูมิ</text>
+      <text x="1040" y="650" class="tiny">เย็น</text><text x="1131" y="650" class="tiny">อุ่น</text>
+      <path d="M1052 612 C1062 577 1106 532 1137 500 C1121 449 1091 387 1065 315" fill="none" stroke="#D66A4E" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="1052" cy="612" r="7" fill="#65A8C7"/><circle cx="1137" cy="500" r="7" fill="#F39A55"/>
+      <text x="1095" y="705" text-anchor="middle" class="small">เพิ่มเฉพาะช่วงสีส้ม</text>
+    </g>
+
+    <rect x="662" y="721" width="516" height="45" rx="15" fill="#FCE9DD"/>
+    <text x="920" y="750" text-anchor="middle" class="label">ความเสถียรสูงขึ้น → การยกตัวถูกกด</text>
+  </g>
+
+  <!-- Right: distinguish mechanisms -->
+  <g aria-label="ชนิดและกลไกการกลับตัวของอุณหภูมิ">
+    <rect x="1230" y="154" width="510" height="407" rx="24" class="card"/>
+    <text x="1260" y="197" class="section">กลไกต่างกัน—อย่าปะปน</text>
+    <text x="1260" y="224" class="small muted">ชั้นกลับตัวอาจติดพื้นหรืออยู่สูงจากพื้นก็ได้</text>
+
+    <g transform="translate(1255 247)">
+      <rect width="460" height="89" rx="18" fill="#EEF4FA" stroke="#87A9C2" stroke-width="1.5"/>
+      <circle cx="39" cy="43" r="24" fill="#365B7D"/><path d="M47 27 a18 18 0 1 0 0 32 a14 14 0 1 1 0 -32" fill="#FFF2B8"/>
+      <text x="78" y="31" class="label">1  การแผ่รังสีตอนกลางคืน (radiation)</text>
+      <text x="78" y="56" class="small">พื้นคายรังสีและเย็นเร็วในคืนฟ้าใส ลมสงบ</text>
+      <text x="78" y="78" class="small">เริ่มชิดพื้น; แอ่งช่วยให้อากาศเย็นรวมตัว</text>
+    </g>
+
+    <g transform="translate(1255 349)">
+      <rect width="460" height="89" rx="18" fill="#F7F0E7" stroke="#C9A472" stroke-width="1.5"/>
+      <circle cx="39" cy="43" r="24" fill="#E6A35C"/>
+      <path d="M31 20 V56 M47 20 V56" stroke="#FFFFFF" stroke-width="4" marker-end="url(#blocked-arrow)"/>
+      <text x="78" y="31" class="label">2  การจมตัว (subsidence)</text>
+      <text x="78" y="56" class="small">อากาศจมใต้ความกดสูง อุ่นขึ้นจากการอัดตัว</text>
+      <text x="78" y="78" class="small">มักเป็นชั้นยกสูงและกดเพดานการผสมด้านล่าง</text>
+    </g>
+
+    <g transform="translate(1255 451)">
+      <rect width="460" height="89" rx="18" fill="#F4EEF5" stroke="#AF8CB4" stroke-width="1.5"/>
+      <circle cx="39" cy="43" r="24" fill="#8E6596"/>
+      <path d="M20 51 C31 33 43 25 58 22" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+      <path d="M20 57 H60" stroke="#C7E9F5" stroke-width="7"/>
+      <text x="78" y="31" class="label">3  แนวปะทะ (frontal)</text>
+      <text x="78" y="56" class="small">อากาศอุ่นไหลทับอากาศเย็นบริเวณแนวปะทะ</text>
+      <text x="78" y="78" class="small">โครงสร้างเอียงและเคลื่อนตามระบบอากาศ</text>
+    </g>
+
+    <rect x="1230" y="586" width="510" height="200" rx="24" class="card"/>
+    <text x="1260" y="628" class="section">ข้อสำคัญในการอ่านกราฟ</text>
+    <path d="M1270 750 V665 H1346" fill="none" class="axis"/>
+    <path d="M1291 738 C1298 716 1332 699 1338 681 C1324 667 1310 660 1297 651" fill="none" stroke="#D66A4E" stroke-width="6" stroke-linecap="round"/>
+    <rect x="1272" y="690" width="72" height="38" fill="#F4A261" opacity="0.18"/>
+    <text x="1370" y="670" class="body">• “กลับตัว” คือช่วงที่อุณหภูมิเพิ่มเมื่อสูงขึ้น</text>
+    <text x="1370" y="703" class="body">• เหนือชั้นนั้น อุณหภูมิอาจกลับมาลดลงอีก</text>
+    <text x="1370" y="736" class="body">• เกิดได้ทั้งเมือง ชนบท ชายฝั่ง และหุบเขา</text>
+    <rect x="1365" y="750" width="342" height="27" rx="13" fill="#FFF0E7"/>
+    <text x="1536" y="769" text-anchor="middle" class="small">ไม่ใช่อุณหภูมิเพิ่มตลอดทั้งบรรยากาศ</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="60" y="811" width="1680" height="55" rx="18" fill="#E9F0F2" stroke="#B9CBD7" stroke-width="1.5"/>
+  <text x="900" y="846" text-anchor="middle" class="label">ชั้นอุ่นด้านบนกดการผสมแนวดิ่ง ทำให้มลพิษสะสมใกล้พื้น</text>
+  <text x="60" y="891" class="tiny muted">ภาพเปรียบเทียบเชิงแนวคิด • ความสูงและอุณหภูมิไม่ใช่สเกลเชิงปริมาณ • สภาพจริงเปลี่ยนตามลม เมฆ ภูมิประเทศ และช่วงเวลา</text>
+  <text x="1740" y="891" text-anchor="end" class="tiny muted">กรอบอ้างอิง: NOAA / NWS • NOAA GML • U.S. EPA / AirNow</text>
+</svg>

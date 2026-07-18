@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">โครงสร้างชั้นบรรยากาศ</title>
+  <desc id="svg-desc">หน้าตัดแนวดิ่งของโทรโพสเฟียร์ สตราโตสเฟียร์ มีโซสเฟียร์ เทอร์โมสเฟียร์ และเอกโซสเฟียร์ พร้อมแกนความสูงแบบแบ่งช่วง เส้นแนวโน้มอุณหภูมิที่สลับทิศ ชั้นโอโซนในสตราโตสเฟียร์ และสภาพอากาศในโทรโพสเฟียร์</desc>
+  <metadata><![CDATA[
+{
+  "assetId": "atmosphere-layers-th",
+  "titleTH": "โครงสร้างชั้นบรรยากาศ",
+  "productionMode": "deterministic-svg-vertical-profile",
+  "notToScale": true,
+  "created": "2026-07-18",
+  "sourceRefs": [
+    {"label": "NASA: What Is Earth's Atmosphere?", "url": "https://www.nasa.gov/general/what-is-earths-atmosphere/"},
+    {"label": "NASA Science: Earth's Atmosphere—A Multi-layered Cake", "url": "https://science.nasa.gov/earth/earth-atmosphere/earths-atmosphere-a-multi-layered-cake/"},
+    {"label": "NOAA JetStream: Layers of the Atmosphere", "url": "https://prod-01-alb-www-noaa.woc.noaa.gov/jetstream/atmosphere/layers-of-atmosphere"},
+    {"label": "NASA Science: Ozone", "url": "https://science.nasa.gov/earth/earth-observatory/ozone/"}
+  ],
+  "limitationTH": "ขอบเขตความสูงเป็นช่วงโดยประมาณและเปลี่ยนตามละติจูด ฤดู สภาพอากาศ และนิยาม แกน 0–85 กิโลเมตรใกล้สัดส่วนเชิงเส้น ส่วนเหนือ 85 กิโลเมตรถูกย่อและเอกโซสเฟียร์ไม่มีขอบบนคม"
+}
+  ]]></metadata>
+
+  <defs>
+    <linearGradient id="page-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFAF7"/>
+      <stop offset="1" stop-color="#F1F5F7"/>
+    </linearGradient>
+    <linearGradient id="tropos-fill" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#B8DDF4"/>
+      <stop offset="1" stop-color="#D9EDF8"/>
+    </linearGradient>
+    <linearGradient id="strato-fill" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#E7E2F4"/>
+      <stop offset="1" stop-color="#D8D8EF"/>
+    </linearGradient>
+    <linearGradient id="meso-fill" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#CAD7EA"/>
+      <stop offset="1" stop-color="#AFC1DD"/>
+    </linearGradient>
+    <linearGradient id="thermo-fill" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#B5DCE5"/>
+      <stop offset="1" stop-color="#84C0CD"/>
+    </linearGradient>
+    <linearGradient id="exo-fill" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#6D9DB4" stop-opacity="0.86"/>
+      <stop offset="0.68" stop-color="#253C59" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#17243B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="boundary-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ozone-band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6C5AA7" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#6C5AA7" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#6C5AA7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#17324D" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-temp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#C7543B"/>
+    </marker>
+    <marker id="arrow-uv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#7A5AA7"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; fill: #17324D; }
+      .title { font-size: 50px; font-weight: 800; }
+      .subtitle { font-size: 23px; font-weight: 500; }
+      .section { font-size: 27px; font-weight: 800; }
+      .label { font-size: 21px; font-weight: 750; }
+      .body { font-size: 17px; font-weight: 500; }
+      .small { font-size: 15px; font-weight: 500; }
+      .tiny { font-size: 13px; font-weight: 500; }
+      .inverse { fill: #FFFFFF; }
+      .card { stroke: #B8C5CD; stroke-width: 2; filter: url(#shadow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#page-bg)"/>
+  <rect x="0" y="0" width="18" height="900" fill="#365F8D"/>
+
+  <!-- Header -->
+  <text x="60" y="66" class="title">โครงสร้างชั้นบรรยากาศ</text>
+  <text x="60" y="108" class="subtitle">ชั้นบรรยากาศแบ่งตามแนวโน้มอุณหภูมิ ไม่ใช่กำแพงแข็งที่แยกขาดกัน</text>
+  <rect x="1242" y="39" width="298" height="54" rx="27" fill="#E8EEF4" stroke="#365F8D" stroke-width="2"/>
+  <text x="1391" y="61" text-anchor="middle" class="small">ความสูงเป็นช่วงโดยประมาณ</text>
+  <text x="1391" y="81" text-anchor="middle" class="tiny">ขอบชั้นเปลี่ยนตามที่และเวลา</text>
+  <line x1="60" y1="132" x2="1540" y2="132" stroke="#CBD5DB" stroke-width="2"/>
+
+  <!-- Main vertical profile card -->
+  <g aria-label="หน้าตัดชั้นบรรยากาศและแนวโน้มอุณหภูมิ">
+    <rect x="60" y="154" width="780" height="646" rx="22" fill="#FFFFFF" class="card"/>
+    <!-- Height axis -->
+    <line x1="116" y1="250" x2="116" y2="763" stroke="#526875" stroke-width="3"/>
+    <path d="M116 250 L108 266 M116 250 L124 266" fill="none" stroke="#526875" stroke-width="3"/>
+    <text x="74" y="520" class="label" transform="rotate(-90 74 520)">ความสูง</text>
+
+    <!-- Layer fields: 0 at y763; 12 at 708; 50 at 534; 85 at 374 -->
+    <rect x="150" y="708" width="640" height="55" fill="url(#tropos-fill)"/>
+    <rect x="150" y="534" width="640" height="174" fill="url(#strato-fill)"/>
+    <rect x="150" y="374" width="640" height="160" fill="url(#meso-fill)"/>
+    <rect x="150" y="232" width="640" height="142" fill="url(#thermo-fill)"/>
+    <rect x="150" y="165" width="640" height="67" fill="url(#exo-fill)"/>
+
+    <!-- Soft transitions, not walls -->
+    <rect x="150" y="699" width="640" height="18" fill="url(#boundary-fade)"/>
+    <rect x="150" y="525" width="640" height="18" fill="url(#boundary-fade)"/>
+    <rect x="150" y="365" width="640" height="18" fill="url(#boundary-fade)"/>
+    <rect x="150" y="223" width="640" height="18" fill="url(#boundary-fade)"/>
+
+    <!-- Axis ticks -->
+    <g class="small">
+      <line x1="108" y1="763" x2="126" y2="763" stroke="#526875" stroke-width="2"/><text x="99" y="768" text-anchor="end">0 กม.</text>
+      <line x1="108" y1="708" x2="126" y2="708" stroke="#526875" stroke-width="2"/><text x="99" y="713" text-anchor="end">ราว 8–14</text>
+      <line x1="108" y1="534" x2="126" y2="534" stroke="#526875" stroke-width="2"/><text x="99" y="539" text-anchor="end">50</text>
+      <line x1="108" y1="374" x2="126" y2="374" stroke="#526875" stroke-width="2"/><text x="99" y="379" text-anchor="end">85</text>
+      <line x1="108" y1="232" x2="126" y2="232" stroke="#526875" stroke-width="2"/><text x="99" y="237" text-anchor="end">ราว 600–700</text>
+    </g>
+    <path d="M106 346 L126 337 L106 328 L126 319" fill="none" stroke="#526875" stroke-width="2.5"/>
+    <text x="82" y="326" text-anchor="end" class="tiny">แกนย่อ</text>
+
+    <!-- Layer labels -->
+    <text x="174" y="746" class="label">โทรโพสเฟียร์</text>
+    <text x="174" y="570" class="section">สตราโตสเฟียร์</text>
+    <text x="174" y="414" class="section">มีโซสเฟียร์</text>
+    <text x="174" y="272" class="section">เทอร์โมสเฟียร์</text>
+    <text x="174" y="200" class="label inverse">เอกโซสเฟียร์</text>
+    <text x="174" y="220" class="tiny inverse">เริ่มราว 600–700 กม. และค่อย ๆ จางสู่อวกาศ</text>
+
+    <!-- Weather in troposphere -->
+    <g transform="translate(332 716)">
+      <path d="M10 24 C10 13 20 7 29 11 C34 1 51 2 55 14 C68 11 77 19 75 29 H17 C12 29 10 27 10 24 Z" fill="#FFFFFF" stroke="#4A86B2" stroke-width="2"/>
+      <path d="M24 35 L18 46 M42 35 L36 46 M60 35 L54 46" stroke="#2E6FBB" stroke-width="2"/>
+      <text x="95" y="25" class="body">เมฆ ฝน ลม และสภาพอากาศส่วนใหญ่</text>
+    </g>
+
+    <!-- Ozone in stratosphere, as gradient band -->
+    <rect x="150" y="606" width="640" height="92" fill="url(#ozone-band)"/>
+    <path d="M706 557 C739 574 748 596 742 620" fill="none" stroke="#7A5AA7" stroke-width="3" marker-end="url(#arrow-uv)"/>
+    <text x="615" y="640" class="label">ชั้นโอโซน</text>
+    <text x="615" y="664" class="small">บริเวณที่โอโซนเด่น ไม่ใช่แผ่นทึบ</text>
+    <text x="615" y="688" class="small">ดูดกลืน UV และทำให้อุณหภูมิเพิ่มกับความสูง</text>
+
+    <!-- Mesosphere meteor -->
+    <path d="M238 466 L310 420" stroke="#E49734" stroke-width="5" stroke-linecap="round"/>
+    <path d="M226 474 L245 454 M218 461 L239 444" stroke="#F0B45E" stroke-width="3"/>
+    <circle cx="316" cy="416" r="11" fill="#9B6C4B" stroke="#6B4834" stroke-width="2"/>
+    <text x="350" y="444" class="body">อุกกาบาตจำนวนมากเผาไหม้</text>
+    <text x="350" y="468" class="small">อุณหภูมิลดลงอีกครั้งเมื่อสูงขึ้น</text>
+
+    <!-- Thermosphere / exosphere phenomena -->
+    <path d="M242 325 C273 288 304 337 333 291 C362 246 392 315 420 271" fill="none" stroke="#4BAF94" stroke-width="7" opacity="0.8"/>
+    <path d="M242 341 C275 304 305 353 334 307 C363 263 392 329 425 286" fill="none" stroke="#8A6FBD" stroke-width="5" opacity="0.72"/>
+    <text x="453" y="315" class="body">ออโรราและบริเวณไอออไนซ์บางส่วน</text>
+    <text x="453" y="340" class="small">ดูดกลืน UV พลังงานสูงและรังสีเอกซ์</text>
+    <circle cx="654" cy="196" r="10" fill="#FFFFFF"/>
+    <path d="M642 196 H666 M654 184 V208 M638 187 L670 205 M638 205 L670 187" stroke="#D9E6EF" stroke-width="2"/>
+
+    <!-- Temperature trend profile -->
+    <text x="488" y="248" class="label">อุณหภูมิ</text>
+    <text x="470" y="775" class="tiny">หนาวกว่า</text>
+    <text x="700" y="775" class="tiny">อุ่นกว่า*</text>
+    <line x1="520" y1="760" x2="700" y2="760" stroke="#C7543B" stroke-width="2" marker-end="url(#arrow-temp)"/>
+    <path d="M620 758 C590 745 536 730 500 708 C526 665 580 595 620 534 C577 483 530 414 486 374 C537 330 624 270 694 232" fill="none" stroke="#C7543B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="500" cy="708" r="7" fill="#FFFFFF" stroke="#C7543B" stroke-width="3"/>
+    <circle cx="620" cy="534" r="7" fill="#FFFFFF" stroke="#C7543B" stroke-width="3"/>
+    <circle cx="486" cy="374" r="7" fill="#FFFFFF" stroke="#C7543B" stroke-width="3"/>
+    <text x="716" y="252" class="tiny">แนวโน้มเชิงคุณภาพ</text>
+  </g>
+
+  <!-- Right explanatory panels -->
+  <g aria-label="วิธีอ่านแนวโน้มอุณหภูมิ">
+    <rect x="865" y="154" width="675" height="242" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="893" y="195" class="section">อุณหภูมิสลับแนวโน้ม</text>
+    <text x="893" y="221" class="small">เส้นสีแดงแสดงทิศการเปลี่ยน ไม่ใช่ค่าอุณหภูมิจริง</text>
+    <g transform="translate(893 243)">
+      <rect x="0" y="0" width="300" height="50" rx="13" fill="#E2F0F8" stroke="#4A86B2" stroke-width="1.5"/>
+      <text x="16" y="31" class="label">โทรโพสเฟียร์</text><text x="278" y="31" text-anchor="end" class="body">ลดลง ↑</text>
+      <rect x="320" y="0" width="300" height="50" rx="13" fill="#ECE8F6" stroke="#7666A5" stroke-width="1.5"/>
+      <text x="336" y="31" class="label">สตราโตสเฟียร์</text><text x="598" y="31" text-anchor="end" class="body">เพิ่มขึ้น ↑</text>
+      <rect x="0" y="67" width="300" height="50" rx="13" fill="#D3DEEE" stroke="#5D779A" stroke-width="1.5"/>
+      <text x="16" y="98" class="label">มีโซสเฟียร์</text><text x="278" y="98" text-anchor="end" class="body">ลดลง ↑</text>
+      <rect x="320" y="67" width="300" height="50" rx="13" fill="#D6ECEF" stroke="#4A8C98" stroke-width="1.5"/>
+      <text x="336" y="98" class="label">เทอร์โมสเฟียร์</text><text x="598" y="98" text-anchor="end" class="body">เพิ่มขึ้น ↑</text>
+    </g>
+  </g>
+
+  <g aria-label="ปรากฏการณ์สำคัญของแต่ละชั้น">
+    <rect x="865" y="420" width="675" height="240" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="893" y="460" class="section">แต่ละชั้นเด่นด้วยกระบวนการต่างกัน</text>
+    <g transform="translate(893 480)">
+      <circle cx="15" cy="15" r="11" fill="#4A86B2"/><text x="40" y="21" class="body">โทรโพสเฟียร์: มวลอากาศหนาแน่นที่สุด ไอน้ำและสภาพอากาศ</text>
+      <circle cx="15" cy="54" r="11" fill="#7666A5"/><text x="40" y="60" class="body">สตราโตสเฟียร์: โอโซนดูดกลืน UV อากาศเสถียรกว่า</text>
+      <circle cx="15" cy="93" r="11" fill="#5D779A"/><text x="40" y="99" class="body">มีโซสเฟียร์: บริเวณใกล้ยอดชั้นหนาวมาก อุกกาบาตเผาไหม้</text>
+      <circle cx="15" cy="132" r="11" fill="#4A8C98"/><text x="40" y="138" class="body">เทอร์โมสเฟียร์: รังสีพลังงานสูง ออโรรา และไอออไนซ์</text>
+      <circle cx="15" cy="171" r="11" fill="#253C59"/><text x="40" y="177" class="body">เอกโซสเฟียร์: อนุภาคเบาบางมากและค่อย ๆ จางสู่อวกาศ</text>
+    </g>
+  </g>
+
+  <g aria-label="ข้อควรระวังในการอ่านภาพ">
+    <rect x="865" y="684" width="675" height="116" rx="22" fill="#FFF7E3" stroke="#D39A27" stroke-width="2" class="card"/>
+    <text x="893" y="721" class="label">อุณหภูมิสูงในเทอร์โมสเฟียร์ ≠ ร้อนต่อผิวเหมือนใกล้พื้น</text>
+    <text x="893" y="749" class="body">อุณหภูมิบอกพลังงานจลน์เฉลี่ยของอนุภาค แต่อนุภาคมีน้อยมาก</text>
+    <text x="893" y="777" class="small">ขอบชั้นคือบริเวณเปลี่ยนแนวโน้ม ไม่ใช่กำแพง และความสูงขยับได้</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="60" y="824" width="1480" height="45" rx="15" fill="#EAF0F3" stroke="#A3B1B8" stroke-width="1.5"/>
+  <text x="82" y="853" class="small">แกน 0–85 กม. ใกล้สัดส่วนเชิงเส้น</text>
+  <line x1="380" y1="834" x2="380" y2="860" stroke="#B4C0C6" stroke-width="1.5"/>
+  <text x="405" y="853" class="small">เหนือ 85 กม. ถูกย่ออย่างประกาศชัด</text>
+  <line x1="750" y1="834" x2="750" y2="860" stroke="#B4C0C6" stroke-width="1.5"/>
+  <text x="775" y="853" class="small">ช่วงความสูงและขอบชั้นเป็นค่าประมาณ</text>
+  <line x1="1145" y1="834" x2="1145" y2="860" stroke="#B4C0C6" stroke-width="1.5"/>
+  <text x="1170" y="853" class="small">เอกโซสเฟียร์ไม่มีขอบบนคม</text>
+
+  <text x="60" y="892" class="tiny" fill="#526875">*อุ่นกว่าในกราฟหมายถึงอุณหภูมิจลน์ของอนุภาค ไม่ใช่ความร้อนที่ร่างกายจะได้รับ</text>
+  <text x="1540" y="892" text-anchor="end" class="tiny" fill="#526875">กรอบอ้างอิง: NASA • NASA Science • NOAA JetStream</text>
+</svg>

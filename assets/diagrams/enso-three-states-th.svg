@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" width="1800" height="900" role="img" aria-labelledby="enso-title enso-desc">
+  <title id="enso-title">เอลนีโญและลานีญา</title>
+  <desc id="enso-desc">แผนภาพเปรียบเทียบสามสถานะของแปซิฟิกเขตร้อนบนทิศและสเกลเดียวกัน ภาวะปกติมีลมค้าพัดจากตะวันออกไปตะวันตก น้ำอุ่นและฝนอยู่เด่นทางตะวันตก เทอร์โมไคลน์ตื้นขึ้นและมีน้ำผุดทางตะวันออก เอลนีโญมีลมค้าอ่อน น้ำอุ่นและบริเวณฝนมากเลื่อนไปทางกลางและตะวันออก เทอร์โมไคลน์ฝั่งตะวันออกลึกและน้ำผุดลดลง ลานีญามีลมค้าแรง ความลาดเทอร์โมไคลน์และน้ำผุดเด่นขึ้น ผลกระทบภูมิภาคเป็นความน่าจะเป็น ไม่ใช่ผลแน่นอนทุกเหตุการณ์</desc>
+
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description>
+        <dc:title>เอลนีโญและลานีญา</dc:title>
+        <dc:description>Deterministic mechanism schematic; no current event, year, index threshold, or measured anomaly is represented.</dc:description>
+        <dc:source>https://www.pmel.noaa.gov/elnino/what-is-el-nino</dc:source>
+        <dc:source>https://www.pmel.noaa.gov/elnino/schematic-diagrams</dc:source>
+        <dc:source>https://www.climate.gov/news-features/understanding-climate/el-nino-and-la-nina-frequently-asked-questions</dc:source>
+        <dc:source>https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/announcement.php</dc:source>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+  <defs>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd6ec"/>
+      <stop offset="0.5" stop-color="#438fbd"/>
+      <stop offset="1" stop-color="#18547e"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ef7b2c" stop-opacity="0.94"/>
+      <stop offset="0.72" stop-color="#f4b04d" stop-opacity="0.83"/>
+      <stop offset="1" stop-color="#f8cf72" stop-opacity="0.48"/>
+    </linearGradient>
+    <linearGradient id="cold-tongue" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#77d5ec" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#77d5ec" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#15344b" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow-air" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L16 8 L0 16 Z" fill="#176c78"/>
+    </marker>
+    <marker id="arrow-anomaly" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L16 8 L0 16 Z" fill="#7a4ba5"/>
+    </marker>
+    <marker id="arrow-water" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L16 8 L0 16 Z" fill="#d9f5ff" stroke="#166488" stroke-width="1.5"/>
+    </marker>
+    <g id="rain-cloud">
+      <g fill="#ffffff" stroke="#7d9aad" stroke-width="2">
+        <ellipse cx="56" cy="30" rx="48" ry="21"/>
+        <circle cx="29" cy="28" r="21"/>
+        <circle cx="54" cy="17" r="27"/>
+        <circle cx="81" cy="28" r="22"/>
+      </g>
+      <g stroke="#2386b4" stroke-width="4" stroke-linecap="round">
+        <path d="M26 52 l-8 18"/><path d="M47 52 l-8 22"/><path d="M68 52 l-8 18"/><path d="M88 52 l-8 22"/>
+      </g>
+    </g>
+    <style>
+      text { font-family: "Noto Sans Thai", Tahoma, sans-serif; fill: #11344c; }
+      .title { font-size: 46px; font-weight: 700; }
+      .subtitle { font-size: 20px; font-weight: 500; fill: #47667a; }
+      .panel-title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 19px; font-weight: 700; }
+      .small { font-size: 16px; font-weight: 500; }
+      .tiny { font-size: 14px; font-weight: 500; }
+      .inverse { fill: #ffffff; }
+      .light { fill: #ffffff; }
+      .warm-text { fill: #77370e; }
+      .anomaly-text { fill: #66378e; }
+      .panel { fill: #ffffff; stroke: #9bb5c6; stroke-width: 2.5; }
+      .air { fill: none; stroke: #176c78; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-air); }
+      .air-strong { fill: none; stroke: #176c78; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-air); }
+      .air-weak { fill: none; stroke: #176c78; stroke-width: 4; stroke-dasharray: 12 9; stroke-linecap: round; marker-end: url(#arrow-air); opacity: 0.78; }
+      .anomaly { fill: none; stroke: #7a4ba5; stroke-width: 5; stroke-dasharray: 11 8; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-anomaly); }
+      .upwell { fill: none; stroke: #d9f5ff; stroke-width: 7; stroke-linecap: round; marker-end: url(#arrow-water); }
+      .upwell-strong { fill: none; stroke: #d9f5ff; stroke-width: 10; stroke-linecap: round; marker-end: url(#arrow-water); }
+      .upwell-weak { fill: none; stroke: #d9f5ff; stroke-width: 4; stroke-dasharray: 9 8; stroke-linecap: round; marker-end: url(#arrow-water); opacity: 0.68; }
+      .thermocline { fill: none; stroke: #7b315d; stroke-width: 5; stroke-dasharray: 11 7; }
+      .coast { fill: #8b613d; stroke: #5c422f; stroke-width: 2.5; }
+      .sea-floor { fill: #2e5367; opacity: 0.72; }
+      .chip { fill: #ffffff; stroke: #8aa9ba; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="#f4f8fb"/>
+
+  <!-- Global header -->
+  <text x="58" y="58" class="title">เอลนีโญและลานีญา</text>
+  <text x="60" y="94" class="subtitle">ภาพจำลองเชิงกลไก • แปซิฟิกเขตร้อน • ใช้ทิศ สเกล และความลึกเดียวกันทั้งสามแผง</text>
+  <g transform="translate(1398 32)">
+    <rect width="342" height="62" rx="20" fill="#e8f1f6" stroke="#52758a" stroke-width="2.5"/>
+    <text x="171" y="28" text-anchor="middle" class="small">ซ้าย = ตะวันตกใกล้เอเชีย</text>
+    <text x="171" y="50" text-anchor="middle" class="small">ขวา = ตะวันออกใกล้อเมริกาใต้</text>
+  </g>
+
+  <!-- PANEL 1: Neutral -->
+  <g transform="translate(38 118)">
+    <rect class="panel" width="550" height="610" rx="24" filter="url(#shadow)"/>
+    <rect x="14" y="58" width="522" height="230" rx="14" fill="#edf8ff"/>
+    <rect x="14" y="288" width="522" height="250" fill="url(#ocean)"/>
+    <path class="sea-floor" d="M14 500 C130 485 230 506 340 490 C425 479 485 494 536 483 L536 538 L14 538 Z"/>
+    <path class="coast" d="M14 288 L14 205 L58 238 L86 288 Z"/>
+    <path class="coast" d="M536 288 L536 219 L504 243 L482 288 Z"/>
+
+    <text x="275" y="40" text-anchor="middle" class="panel-title">ภาวะปกติ</text>
+
+    <!-- Warm pool, cold tongue and thermocline -->
+    <path d="M62 288 L355 288 C410 289 455 298 500 318 L500 333 C445 315 395 311 342 314 C245 320 155 349 62 365 Z" fill="url(#warm)"/>
+    <path d="M345 288 C410 288 462 296 500 318 L500 345 C450 324 397 318 345 320 Z" fill="url(#cold-tongue)"/>
+    <path d="M62 365 C155 349 245 320 342 314 C395 311 445 315 500 333" class="thermocline"/>
+    <text x="125" y="327" class="label warm-text">น้ำอุ่น</text>
+    <text x="348" y="392" class="label light">น้ำเย็น</text>
+    <g transform="translate(185 363)"><rect class="chip" width="150" height="34" rx="14"/><text x="75" y="23" text-anchor="middle" class="small">เทอร์โมไคลน์</text></g>
+
+    <!-- Neutral Walker circulation: closed cell -->
+    <path d="M438 260 C355 257 275 257 168 260" class="air"/>
+    <path d="M164 255 C147 225 145 182 158 133" class="air"/>
+    <path d="M164 126 C254 98 352 101 438 133" class="air"/>
+    <path d="M441 136 C453 172 453 217 440 252" class="air"/>
+    <text x="295" y="252" text-anchor="middle" class="label">ลมค้า</text>
+    <text x="75" y="153" class="tiny">อากาศลอยตัว</text>
+    <text x="420" y="171" text-anchor="end" class="tiny">อากาศจมตัว</text>
+
+    <use href="#rain-cloud" x="108" y="76"/>
+    <text x="276" y="89" text-anchor="middle" class="tiny">บริเวณฝนมาก</text>
+
+    <!-- Eastern upwelling -->
+    <path d="M473 395 C479 355 480 325 482 298" class="upwell"/>
+    <text x="418" y="367" class="label light">น้ำผุด</text>
+
+    <text x="135" y="566" text-anchor="middle" class="tiny">เอเชีย–แปซิฟิกตะวันตก</text>
+    <text x="415" y="566" text-anchor="middle" class="tiny">อเมริกาใต้–แปซิฟิกตะวันออก</text>
+    <line x1="27" y1="578" x2="523" y2="578" stroke="#c8d7e0" stroke-width="2"/>
+    <text x="275" y="600" text-anchor="middle" class="small">ลมค้าดันน้ำอุ่นไปตะวันตก • น้ำผุดทางตะวันออก</text>
+  </g>
+
+  <!-- PANEL 2: El Nino -->
+  <g transform="translate(625 118)">
+    <rect class="panel" width="550" height="610" rx="24" filter="url(#shadow)"/>
+    <rect x="14" y="58" width="522" height="230" rx="14" fill="#f6f1fb"/>
+    <rect x="14" y="288" width="522" height="250" fill="url(#ocean)"/>
+    <path class="sea-floor" d="M14 500 C130 485 230 506 340 490 C425 479 485 494 536 483 L536 538 L14 538 Z"/>
+    <path class="coast" d="M14 288 L14 205 L58 238 L86 288 Z"/>
+    <path class="coast" d="M536 288 L536 219 L504 243 L482 288 Z"/>
+
+    <text x="275" y="40" text-anchor="middle" class="panel-title">เอลนีโญ</text>
+
+    <!-- Warm water extends east; thermocline flattens/deepens in east -->
+    <path d="M62 288 L500 288 L500 370 C413 355 327 351 238 356 C174 360 117 367 62 377 Z" fill="url(#warm)"/>
+    <path d="M425 288 L500 288 L500 335 C474 328 448 326 425 329 Z" fill="url(#cold-tongue)" opacity="0.42"/>
+    <path d="M62 377 C117 367 174 360 238 356 C327 351 413 355 500 370" class="thermocline"/>
+    <text x="310" y="326" class="label warm-text">น้ำอุ่น</text>
+    <text x="150" y="420" class="label light">น้ำเย็น</text>
+    <g transform="translate(188 371)"><rect class="chip" width="150" height="34" rx="14"/><text x="75" y="23" text-anchor="middle" class="small">เทอร์โมไคลน์</text></g>
+
+    <!-- Weak easterly trade plus reversed anomaly cell -->
+    <path d="M438 260 C355 258 285 258 205 261" class="air-weak"/>
+    <text x="327" y="250" text-anchor="middle" class="label">ลมค้าอ่อนลง</text>
+    <path d="M151 272 C240 274 320 273 393 263" class="anomaly"/>
+    <path d="M394 256 C408 222 407 179 394 136" class="anomaly"/>
+    <path d="M389 129 C310 103 222 104 145 135" class="anomaly"/>
+    <path d="M141 140 C129 175 130 218 147 263" class="anomaly"/>
+    <text x="273" y="286" text-anchor="middle" class="tiny anomaly-text">ความผิดปกติลมตะวันตก</text>
+    <text x="372" y="170" text-anchor="end" class="tiny">อากาศลอยตัว</text>
+    <text x="72" y="169" class="tiny">อากาศจมตัว</text>
+
+    <use href="#rain-cloud" x="337" y="77"/>
+    <text x="319" y="99" text-anchor="end" class="tiny">บริเวณฝนมาก</text>
+
+    <!-- Upwelling reduced, not absent -->
+    <path d="M473 405 C478 363 480 332 482 302" class="upwell-weak"/>
+    <text x="389" y="395" class="label light">น้ำผุดลดลง</text>
+
+    <text x="135" y="566" text-anchor="middle" class="tiny">เอเชีย–แปซิฟิกตะวันตก</text>
+    <text x="415" y="566" text-anchor="middle" class="tiny">อเมริกาใต้–แปซิฟิกตะวันออก</text>
+    <line x1="27" y1="578" x2="523" y2="578" stroke="#c8d7e0" stroke-width="2"/>
+    <text x="275" y="600" text-anchor="middle" class="small">น้ำอุ่นและฝนเลื่อนไปตะวันออก • น้ำผุดลดลง</text>
+  </g>
+
+  <!-- PANEL 3: La Nina -->
+  <g transform="translate(1212 118)">
+    <rect class="panel" width="550" height="610" rx="24" filter="url(#shadow)"/>
+    <rect x="14" y="58" width="522" height="230" rx="14" fill="#eaf8f7"/>
+    <rect x="14" y="288" width="522" height="250" fill="url(#ocean)"/>
+    <path class="sea-floor" d="M14 500 C130 485 230 506 340 490 C425 479 485 494 536 483 L536 538 L14 538 Z"/>
+    <path class="coast" d="M14 288 L14 205 L58 238 L86 288 Z"/>
+    <path class="coast" d="M536 288 L536 219 L504 243 L482 288 Z"/>
+
+    <text x="275" y="40" text-anchor="middle" class="panel-title">ลานีญา</text>
+
+    <!-- Warm pool farther west; steeper thermocline and stronger cold tongue -->
+    <path d="M62 288 L286 288 C352 289 414 294 500 304 L500 318 C426 310 360 312 300 325 C218 337 138 373 62 398 Z" fill="url(#warm)"/>
+    <path d="M276 288 C366 286 438 294 500 304 L500 350 C425 328 352 320 276 333 Z" fill="url(#cold-tongue)"/>
+    <path d="M62 398 C138 373 218 337 300 325 C360 312 426 310 500 318" class="thermocline"/>
+    <text x="105" y="333" class="label warm-text">น้ำอุ่น</text>
+    <text x="338" y="397" class="label light">น้ำเย็น</text>
+    <g transform="translate(179 375)"><rect class="chip" width="150" height="34" rx="14"/><text x="75" y="23" text-anchor="middle" class="small">เทอร์โมไคลน์</text></g>
+
+    <!-- Stronger Walker circulation: closed cell -->
+    <path d="M446 260 C352 255 263 255 145 261" class="air-strong"/>
+    <path d="M141 254 C124 216 126 174 144 126" class="air-strong"/>
+    <path d="M151 119 C245 91 355 94 447 128" class="air-strong"/>
+    <path d="M451 135 C466 173 466 218 449 252" class="air-strong"/>
+    <text x="298" y="250" text-anchor="middle" class="label">ลมค้าแรงขึ้น</text>
+    <text x="52" y="151" class="tiny">อากาศลอยตัว</text>
+    <text x="425" y="169" text-anchor="end" class="tiny">อากาศจมตัว</text>
+
+    <use href="#rain-cloud" x="91" y="66"/>
+    <use href="#rain-cloud" x="132" y="83" transform="scale(0.82) translate(31 16)"/>
+    <text x="278" y="89" text-anchor="middle" class="tiny">บริเวณฝนมาก</text>
+
+    <!-- Stronger eastern upwelling -->
+    <path d="M468 410 C476 365 479 325 482 295" class="upwell-strong"/>
+    <text x="395" y="376" class="label light">น้ำผุด</text>
+
+    <text x="135" y="566" text-anchor="middle" class="tiny">เอเชีย–แปซิฟิกตะวันตก</text>
+    <text x="415" y="566" text-anchor="middle" class="tiny">อเมริกาใต้–แปซิฟิกตะวันออก</text>
+    <line x1="27" y1="578" x2="523" y2="578" stroke="#c8d7e0" stroke-width="2"/>
+    <text x="275" y="600" text-anchor="middle" class="small">ลมค้าแรงขึ้น • ความลาดชันและน้ำผุดเด่นขึ้น</text>
+  </g>
+
+  <!-- Shared explanation and uncertainty gate -->
+  <g transform="translate(40 752)">
+    <rect width="1720" height="120" rx="24" fill="#ffffff" stroke="#9bb5c6" stroke-width="2.5"/>
+    <g transform="translate(28 18)">
+      <path d="M0 14 H68" class="air"/>
+      <text x="88" y="20" class="small">การไหลเวียนของอากาศ</text>
+      <path d="M310 14 H378" class="anomaly"/>
+      <text x="398" y="20" class="small">ความผิดปกติจากภาวะปกติ</text>
+      <path d="M690 14 H758" class="thermocline"/>
+      <text x="778" y="20" class="small">เทอร์โมไคลน์</text>
+      <path d="M1030 24 C1035 10 1035 3 1038 -6" class="upwell"/>
+      <text x="1062" y="20" class="small">น้ำผุด</text>
+      <rect x="1198" y="-6" width="442" height="44" rx="14" fill="#eef4f7" stroke="#9bb5c6" stroke-width="2"/>
+      <text x="1419" y="12" text-anchor="middle" class="tiny">สีแสดงตำแหน่งน้ำอุ่น–น้ำเย็นเชิงกลไก</text>
+      <text x="1419" y="31" text-anchor="middle" class="tiny">ไม่ใช่แผนที่ SST anomaly หรือเหตุการณ์ปีปัจจุบัน</text>
+    </g>
+    <line x1="30" y1="58" x2="1690" y2="58" stroke="#d2dee5" stroke-width="2"/>
+    <text x="860" y="84" text-anchor="middle" class="label">ENSO เป็นการเปลี่ยนร่วมกันของลม น้ำอุ่น เทอร์โมไคลน์ และฝนในแปซิฟิก</text>
+    <text x="860" y="109" text-anchor="middle" class="small" fill="#6c3f13">ผลกระทบแต่ละภูมิภาคเป็นความน่าจะเป็น ไม่ใช่ผลแน่นอนทุกเหตุการณ์</text>
+  </g>
+</svg>

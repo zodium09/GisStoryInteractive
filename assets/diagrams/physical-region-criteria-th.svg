@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">เกณฑ์แบ่งภูมิภาคกายภาพ</title>
+  <desc id="svg-desc">แผนที่สังเคราะห์สี่ช่องเปรียบเทียบชั้นธรณีและภูมิประเทศ ชั้นลุ่มน้ำ ชั้นภูมิอากาศ และชั้นพืชพรรณ พร้อมภาพซ้อนทับที่แสดงขอบเขตภูมิภาคหลายระดับความเชื่อมั่นและเขตเปลี่ยนผ่าน</desc>
+  <metadata><![CDATA[
+{
+  "assetId": "physical-region-criteria-th",
+  "titleTH": "เกณฑ์แบ่งภูมิภาคกายภาพ",
+  "productionMode": "deterministic-svg-synthetic-map",
+  "notToScale": true,
+  "syntheticMap": true,
+  "created": "2026-07-18",
+  "sourceRefs": [
+    {"label": "USGS Physiographic divisions of the conterminous U.S.", "url": "https://data.usgs.gov/datacatalog/data/USGS%3Ae04ea9e9-17b6-45ae-b279-7bc35ea79539"},
+    {"label": "USGS North America Tapestry of Time and Terrain", "url": "https://www.usgs.gov/educational-resources/north-america-tapestry-time-and-terrain"},
+    {"label": "USGS Named landforms of the World", "url": "https://www.usgs.gov/publications/named-landforms-world-a-geomorphological-and-physiographic-compilation"}
+  ],
+  "limitationTH": "แผนที่และขอบเขตทั้งหมดเป็นข้อมูลสังเคราะห์เพื่ออธิบายหลักการ ไม่อ้างพิกัด ประเทศ ระยะทาง projection หรือช่วงเวลาจริง"
+}
+  ]]></metadata>
+
+  <defs>
+    <linearGradient id="page-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFAF7"/>
+      <stop offset="1" stop-color="#F1F5F3"/>
+    </linearGradient>
+    <linearGradient id="relief-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E7F0D8"/>
+      <stop offset="0.48" stop-color="#D7E5C2"/>
+      <stop offset="0.52" stop-color="#D6B98E"/>
+      <stop offset="1" stop-color="#EFE0C7"/>
+    </linearGradient>
+    <linearGradient id="transition-fill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F5C35B" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#F5C35B" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#F5C35B" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="geology-a" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="12" height="12" fill="#E7D2B7"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#A66D45" stroke-width="3"/>
+    </pattern>
+    <pattern id="geology-b" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#D8E3D1"/>
+      <circle cx="4" cy="4" r="2" fill="#668A67"/>
+      <circle cx="11" cy="11" r="1.5" fill="#668A67"/>
+    </pattern>
+    <pattern id="basin-a" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#DCEBFA"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#75A9D7" stroke-width="2"/>
+    </pattern>
+    <pattern id="basin-b" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <rect width="10" height="10" fill="#E2F2ED"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#78B5A7" stroke-width="2"/>
+    </pattern>
+    <pattern id="climate-wet" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#D9EEE9"/>
+      <circle cx="7" cy="7" r="2.4" fill="#26897F"/>
+    </pattern>
+    <pattern id="climate-dry" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#F7E9BD"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#D39A27" stroke-width="2.5"/>
+    </pattern>
+    <pattern id="vegetation-dense" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#CFE7C4"/>
+      <path d="M 6 1 L 2 8 H 5 V 11 H 7 V 8 H 10 Z" fill="#438454"/>
+    </pattern>
+    <pattern id="vegetation-open" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#E9E7BE"/>
+      <path d="M 2 10 L 4 4 M 6 10 L 7 3 M 10 10 L 9 5" stroke="#8A8D43" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="transition-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="12" height="12" fill="#F6D88F" fill-opacity="0.45"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#CA8C19" stroke-width="3" stroke-opacity="0.72"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#17324D" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2E6FBB"/>
+    </marker>
+    <clipPath id="land-clip">
+      <path d="M35 40 C55 14 91 17 113 34 C140 9 177 14 193 39 C224 28 258 45 265 73 C288 89 283 116 253 128 C239 154 199 163 168 145 C140 171 101 165 79 142 C49 149 20 128 27 100 C8 80 14 55 35 40 Z"/>
+    </clipPath>
+    <path id="land-outline" d="M35 40 C55 14 91 17 113 34 C140 9 177 14 193 39 C224 28 258 45 265 73 C288 89 283 116 253 128 C239 154 199 163 168 145 C140 171 101 165 79 142 C49 149 20 128 27 100 C8 80 14 55 35 40 Z"/>
+    <style>
+      text { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; fill: #17324D; }
+      .title { font-size: 50px; font-weight: 800; }
+      .subtitle { font-size: 23px; font-weight: 500; }
+      .section { font-size: 25px; font-weight: 800; }
+      .label { font-size: 20px; font-weight: 750; }
+      .body { font-size: 17px; font-weight: 500; }
+      .small { font-size: 15px; font-weight: 500; }
+      .tiny { font-size: 13px; font-weight: 500; }
+      .inverse { fill: #FFFFFF; }
+      .card { stroke: #B8C5CD; stroke-width: 2; filter: url(#shadow); }
+      .map-outline { fill: none; stroke: #415A69; stroke-width: 2.4; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#page-bg)"/>
+  <rect x="0" y="0" width="18" height="900" fill="#2B6F73"/>
+
+  <!-- Header -->
+  <text x="60" y="66" class="title">เกณฑ์แบ่งภูมิภาคกายภาพ</text>
+  <text x="60" y="108" class="subtitle">ภูมิภาคเป็นผลจากเกณฑ์และชั้นข้อมูล จึงมีขอบเขตซ้อนทับและเปลี่ยนผ่าน</text>
+  <rect x="1260" y="40" width="280" height="54" rx="27" fill="#E8F0F1" stroke="#2B6F73" stroke-width="2"/>
+  <text x="1400" y="64" text-anchor="middle" class="small">แผนที่สังเคราะห์</text>
+  <text x="1400" y="83" text-anchor="middle" class="tiny">ไม่อ้างพิกัดหรือประเทศจริง</text>
+  <line x1="60" y1="132" x2="1540" y2="132" stroke="#CBD5DB" stroke-width="2"/>
+
+  <!-- Panel 1: geology and relief -->
+  <g aria-label="ชั้นธรณีและภูมิประเทศ">
+    <rect x="60" y="154" width="350" height="322" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="85" y="191" class="section">ธรณี–ภูมิประเทศ</text>
+    <rect x="85" y="205" width="142" height="30" rx="15" fill="#EAF0E2" stroke="#678268" stroke-width="1.5"/>
+    <text x="156" y="226" text-anchor="middle" class="small">ชั้นภูมิประเทศ</text>
+    <rect x="238" y="205" width="104" height="30" rx="15" fill="#F0E2D5" stroke="#9B704D" stroke-width="1.5"/>
+    <text x="290" y="226" text-anchor="middle" class="small">ชั้นธรณี</text>
+    <g transform="translate(84 244)">
+      <use href="#land-outline" fill="url(#relief-fill)"/>
+      <g clip-path="url(#land-clip)">
+        <path d="M0 23 L116 7 L105 184 L0 180 Z" fill="url(#geology-b)" opacity="0.72"/>
+        <path d="M104 0 L220 0 L181 190 L102 183 Z" fill="url(#geology-a)" opacity="0.72"/>
+        <path d="M220 0 L300 0 L300 190 L181 190 Z" fill="#E8D9C6" opacity="0.75"/>
+        <path d="M70 157 C105 131 121 102 139 62 C156 31 182 33 200 70 C219 108 240 130 273 145" fill="none" stroke="#7A5A43" stroke-width="15" opacity="0.9"/>
+        <path d="M72 157 C108 132 123 103 141 65 C158 36 180 38 197 72 C216 110 238 132 270 146" fill="none" stroke="#E5D1B7" stroke-width="4"/>
+      </g>
+      <use href="#land-outline" class="map-outline"/>
+      <path d="M128 23 C145 49 147 80 139 109 C133 132 124 148 111 161" fill="none" stroke="#17324D" stroke-width="4"/>
+    </g>
+    <line x1="86" y1="438" x2="116" y2="438" stroke="#17324D" stroke-width="4"/>
+    <text x="125" y="444" class="small">ขอบเขตตามแนวโครงสร้างและระดับสูงต่ำ</text>
+  </g>
+
+  <!-- Panel 2: watershed -->
+  <g aria-label="ชั้นลุ่มน้ำ">
+    <rect x="430" y="154" width="350" height="322" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="455" y="191" class="section">ระบบระบายน้ำ</text>
+    <rect x="455" y="205" width="128" height="30" rx="15" fill="#E4EFFA" stroke="#2E6FBB" stroke-width="1.5"/>
+    <text x="519" y="226" text-anchor="middle" class="small">ชั้นลุ่มน้ำ</text>
+    <g transform="translate(454 244)">
+      <use href="#land-outline" fill="#EEF3EA"/>
+      <g clip-path="url(#land-clip)">
+        <path d="M0 0 H143 L131 190 H0 Z" fill="url(#basin-a)"/>
+        <path d="M143 0 H300 V190 H131 Z" fill="url(#basin-b)"/>
+        <path d="M145 24 C139 57 149 78 139 108 C132 131 114 143 93 161" fill="none" stroke="#6F7E87" stroke-width="5" stroke-dasharray="9 7"/>
+        <path d="M70 49 C93 65 111 82 126 105 C141 126 159 139 184 154" fill="none" stroke="#2E6FBB" stroke-width="4"/>
+        <path d="M101 72 C108 84 116 91 126 105 M177 61 C157 80 145 94 134 115 M215 88 C188 101 167 116 153 134" fill="none" stroke="#2E6FBB" stroke-width="2.4"/>
+        <path d="M184 154 C205 160 223 159 245 151" fill="none" stroke="#2E6FBB" stroke-width="4" marker-end="url(#arrow-blue)"/>
+      </g>
+      <use href="#land-outline" class="map-outline"/>
+    </g>
+    <line x1="456" y1="438" x2="486" y2="438" stroke="#6F7E87" stroke-width="4" stroke-dasharray="7 5"/>
+    <text x="495" y="444" class="small">ขอบเขตตามสันปันน้ำ ไม่ใช่เส้นแม่น้ำ</text>
+  </g>
+
+  <!-- Panel 3: climate -->
+  <g aria-label="ชั้นภูมิอากาศ">
+    <rect x="800" y="154" width="350" height="322" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="825" y="191" class="section">ความชื้นและฤดูกาล</text>
+    <rect x="825" y="205" width="142" height="30" rx="15" fill="#E4F2EE" stroke="#2B8078" stroke-width="1.5"/>
+    <text x="896" y="226" text-anchor="middle" class="small">ชั้นภูมิอากาศ</text>
+    <g transform="translate(824 244)">
+      <use href="#land-outline" fill="#EFF1E9"/>
+      <g clip-path="url(#land-clip)">
+        <rect x="0" y="0" width="300" height="66" fill="#DCEBF5"/>
+        <rect x="0" y="66" width="300" height="66" fill="url(#climate-wet)"/>
+        <rect x="0" y="132" width="300" height="70" fill="url(#climate-dry)"/>
+        <path d="M8 79 C68 65 112 73 157 91 C203 110 245 109 298 91" fill="none" stroke="#2B8078" stroke-width="4"/>
+        <path d="M4 133 C63 118 118 127 165 143 C214 158 254 151 298 137" fill="none" stroke="#C8871D" stroke-width="4" stroke-dasharray="10 7"/>
+      </g>
+      <use href="#land-outline" class="map-outline"/>
+    </g>
+    <line x1="826" y1="438" x2="856" y2="438" stroke="#C8871D" stroke-width="4" stroke-dasharray="8 5"/>
+    <text x="865" y="444" class="small">ขอบเขตตามค่าภูมิอากาศและช่วงอ้างอิง</text>
+  </g>
+
+  <!-- Panel 4: vegetation -->
+  <g aria-label="ชั้นพืชพรรณ">
+    <rect x="1170" y="154" width="370" height="322" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="1195" y="191" class="section">ชีวนิเวศและสิ่งปกคลุม</text>
+    <rect x="1195" y="205" width="142" height="30" rx="15" fill="#E6F1DC" stroke="#568B52" stroke-width="1.5"/>
+    <text x="1266" y="226" text-anchor="middle" class="small">ชั้นพืชพรรณ</text>
+    <g transform="translate(1194 244)">
+      <use href="#land-outline" fill="#EEF1E8"/>
+      <g clip-path="url(#land-clip)">
+        <path d="M0 0 H174 C151 46 162 85 137 111 C106 143 66 150 0 141 Z" fill="url(#vegetation-dense)"/>
+        <path d="M174 0 H300 V190 H138 C165 148 151 117 175 88 C202 56 224 35 174 0 Z" fill="url(#vegetation-open)"/>
+        <path d="M146 17 C167 46 165 75 145 105 C127 132 112 148 86 161" fill="none" stroke="#4B824F" stroke-width="5"/>
+        <path d="M176 22 C195 51 196 77 177 108 C161 134 148 147 130 159" fill="none" stroke="#839241" stroke-width="5" stroke-dasharray="9 6"/>
+      </g>
+      <use href="#land-outline" class="map-outline"/>
+    </g>
+    <line x1="1196" y1="438" x2="1226" y2="438" stroke="#568B52" stroke-width="4"/>
+    <text x="1235" y="444" class="small">ขอบเขตตามรูปแบบพืชและสิ่งปกคลุม</text>
+  </g>
+
+  <!-- Synthesis map -->
+  <g aria-label="ภาพซ้อนทับและความเชื่อมั่นของขอบเขต">
+    <rect x="60" y="510" width="900" height="286" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="85" y="548" class="section">เมื่อซ้อนชั้นข้อมูล ขอบเขตไม่จำเป็นต้องตรงกัน</text>
+    <g transform="translate(84 571) scale(1.18)">
+      <use href="#land-outline" fill="url(#relief-fill)"/>
+      <g clip-path="url(#land-clip)">
+        <path d="M142 5 C165 45 157 78 143 109 C131 136 113 151 89 171" fill="none" stroke="url(#transition-fill)" stroke-width="34"/>
+        <path d="M142 5 C165 45 157 78 143 109 C131 136 113 151 89 171" fill="none" stroke="url(#transition-hatch)" stroke-width="24"/>
+        <path d="M124 11 C144 46 147 79 138 108 C131 134 116 150 98 166" fill="none" stroke="#17324D" stroke-width="4.5"/>
+        <path d="M164 13 C184 46 180 78 161 108 C145 133 131 148 115 162" fill="none" stroke="#C8871D" stroke-width="4" stroke-dasharray="10 7"/>
+        <path d="M70 49 C96 65 112 82 126 105 C142 127 162 140 187 154" fill="none" stroke="#2E6FBB" stroke-width="2.5" opacity="0.75"/>
+      </g>
+      <use href="#land-outline" class="map-outline"/>
+    </g>
+
+    <g transform="translate(470 574)">
+      <text x="0" y="0" class="label">ความเชื่อมั่นของการตีความ</text>
+      <line x1="0" y1="34" x2="55" y2="34" stroke="#17324D" stroke-width="5"/>
+      <text x="72" y="40" class="body">ขอบเขตภูมิภาค • สูง</text>
+      <text x="72" y="59" class="tiny">หลายชั้นข้อมูลเปลี่ยนใกล้ตำแหน่งเดียวกัน</text>
+
+      <line x1="0" y1="85" x2="55" y2="85" stroke="#C8871D" stroke-width="5" stroke-dasharray="10 7"/>
+      <text x="72" y="91" class="body">ขอบเขตภูมิภาค • ปานกลาง</text>
+      <text x="72" y="110" class="tiny">ชั้นข้อมูลให้ตำแหน่งต่างกันบางส่วน</text>
+
+      <rect x="0" y="128" width="55" height="25" rx="6" fill="url(#transition-hatch)" stroke="#C8871D" stroke-width="1"/>
+      <text x="72" y="147" class="body">เขตเปลี่ยนผ่าน • ต่ำ</text>
+      <text x="72" y="166" class="tiny">คุณลักษณะค่อย ๆ เปลี่ยน ไม่มีเส้นคมเส้นเดียว</text>
+
+      <rect x="0" y="174" width="400" height="46" rx="12" fill="#F1F4F5" stroke="#9AAAB4" stroke-width="1.5"/>
+      <text x="16" y="193" class="small">เส้นการเมืองไม่ได้ใช้สร้างขอบเขตภูมิภาคในภาพนี้</text>
+      <text x="16" y="212" class="tiny">หากนำมาเปรียบเทียบ ต้องวางเป็นชั้นแยกและใช้สัญลักษณ์คนละแบบ</text>
+    </g>
+  </g>
+
+  <!-- Criteria box -->
+  <g aria-label="เกณฑ์ที่ใช้">
+    <rect x="990" y="510" width="550" height="286" rx="22" fill="#FFFFFF" class="card"/>
+    <rect x="990" y="510" width="550" height="54" rx="22" fill="#17324D"/>
+    <path d="M990 542 H1540 V564 H990 Z" fill="#17324D"/>
+    <text x="1018" y="547" class="section inverse">เกณฑ์ที่ใช้</text>
+
+    <g transform="translate(1018 584)">
+      <circle cx="14" cy="14" r="12" fill="url(#geology-a)" stroke="#8B6446" stroke-width="1.5"/>
+      <text x="42" y="20" class="label">ธรณีและภูมิประเทศ</text>
+      <text x="286" y="20" class="small">ชนิดหิน โครงสร้าง ความสูง ความลาด</text>
+
+      <line x1="0" y1="42" x2="494" y2="42" stroke="#D8E0E4" stroke-width="1.5"/>
+      <circle cx="14" cy="60" r="12" fill="url(#basin-a)" stroke="#2E6FBB" stroke-width="1.5"/>
+      <text x="42" y="66" class="label">ลุ่มน้ำ</text>
+      <text x="286" y="66" class="small">สันปันน้ำ ทางระบาย และปลายทาง</text>
+
+      <line x1="0" y1="88" x2="494" y2="88" stroke="#D8E0E4" stroke-width="1.5"/>
+      <circle cx="14" cy="106" r="12" fill="url(#climate-wet)" stroke="#2B8078" stroke-width="1.5"/>
+      <text x="42" y="112" class="label">ภูมิอากาศ</text>
+      <text x="286" y="112" class="small">อุณหภูมิ ความชื้น ฤดูกาล ช่วงอ้างอิง</text>
+
+      <line x1="0" y1="134" x2="494" y2="134" stroke="#D8E0E4" stroke-width="1.5"/>
+      <circle cx="14" cy="152" r="12" fill="url(#vegetation-dense)" stroke="#568B52" stroke-width="1.5"/>
+      <text x="42" y="158" class="label">พืชพรรณ</text>
+      <text x="286" y="158" class="small">รูปแบบพืช สิ่งปกคลุม และการรบกวน</text>
+
+      <rect x="0" y="170" width="494" height="53" rx="14" fill="#FFF6DE" stroke="#D89A23" stroke-width="1.5"/>
+      <text x="18" y="191" class="small">คำถามต่างกัน → เลือกเกณฑ์และน้ำหนักต่างกัน</text>
+      <text x="18" y="213" class="body">จึงได้ขอบเขตซ้อนทับและเขตเปลี่ยนผ่าน</text>
+    </g>
+  </g>
+
+  <!-- Cartographic honesty footer -->
+  <g aria-label="ข้อมูลกำกับแผนที่สังเคราะห์">
+    <rect x="60" y="820" width="1480" height="55" rx="17" fill="#E9EFF0" stroke="#9BAAB2" stroke-width="1.5"/>
+    <g transform="translate(82 831)">
+      <path d="M14 31 L14 3 M14 3 L7 14 M14 3 L21 14" fill="none" stroke="#17324D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="29" y="22" class="small">ทิศเหนือเพื่อการวางแนว</text>
+    </g>
+    <line x1="310" y1="831" x2="310" y2="864" stroke="#B6C3C9" stroke-width="1.5"/>
+    <text x="335" y="853" class="small">มาตราส่วน: เชิงสัมพัทธ์</text>
+    <line x1="545" y1="831" x2="545" y2="864" stroke="#B6C3C9" stroke-width="1.5"/>
+    <text x="570" y="853" class="small">ระบบฉาย: ไม่มี—ผังสังเคราะห์</text>
+    <line x1="890" y1="831" x2="890" y2="864" stroke="#B6C3C9" stroke-width="1.5"/>
+    <text x="915" y="853" class="small">ช่วงข้อมูล: ตัวอย่างแนวคิด ไม่อ้างปี</text>
+    <line x1="1220" y1="831" x2="1220" y2="864" stroke="#B6C3C9" stroke-width="1.5"/>
+    <text x="1245" y="853" class="small">สี + ลวดลาย + รูปแบบเส้น</text>
+  </g>
+</svg>

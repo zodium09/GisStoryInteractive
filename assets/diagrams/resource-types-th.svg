@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">ความหมายและประเภททรัพยากร</title>
+  <desc id="svg-desc">แผนภาพจำแนกฐานทรัพยากรเป็นปริมาณสะสมและอัตราการไหล แสดงว่าความต้องการและเทคโนโลยีมีผลต่อการใช้ และเปรียบเทียบอัตราใช้กับอัตราฟื้นตัวผ่านตัวอย่างน้ำ ป่า แร่ และพลังงานแสงอาทิตย์</desc>
+  <metadata><![CDATA[
+{
+  "assetId": "resource-types-th",
+  "titleTH": "ความหมายและประเภททรัพยากร",
+  "productionMode": "deterministic-svg",
+  "notToScale": true,
+  "created": "2026-07-18",
+  "sourceRefs": [
+    {"label": "UN SEEA Central Framework", "url": "https://seea.un.org/node/33"},
+    {"label": "UN SEEA Material Flow Accounts", "url": "https://seea.un.org/content/material-flow-accounts"},
+    {"label": "UNEP International Resource Panel", "url": "https://www.unep.org/explore-topics/resource-efficiency/what-we-do/international-resource-panel"}
+  ],
+  "limitationTH": "แผนภาพเชิงแนวคิด ไม่แสดงปริมาณจริง อัตราจริง หรือมาตราส่วนเวลาเดียวกันของทรัพยากรทุกชนิด"
+}
+  ]]></metadata>
+
+  <defs>
+    <linearGradient id="page-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFAF7"/>
+      <stop offset="1" stop-color="#F2F5F3"/>
+    </linearGradient>
+    <linearGradient id="stock-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DCEBFA"/>
+      <stop offset="1" stop-color="#EDF4FB"/>
+    </linearGradient>
+    <pattern id="flow-pattern" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#E4F3EF"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#91C9BD" stroke-width="3"/>
+    </pattern>
+    <pattern id="mineral-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#F2E9DF"/>
+      <circle cx="3" cy="3" r="1.4" fill="#A77851"/>
+      <circle cx="8" cy="8" r="1" fill="#A77851"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#17324D" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2E6FBB"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#147D7A"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; fill: #17324D; }
+      .title { font-size: 50px; font-weight: 800; letter-spacing: 0.2px; }
+      .subtitle { font-size: 23px; font-weight: 500; }
+      .section { font-size: 27px; font-weight: 800; }
+      .label { font-size: 22px; font-weight: 750; }
+      .body { font-size: 19px; font-weight: 500; }
+      .small { font-size: 16px; font-weight: 500; }
+      .tiny { font-size: 14px; font-weight: 500; }
+      .inverse { fill: #FFFFFF; }
+      .latin { font-family: Inter, Arial, sans-serif; font-weight: 800; letter-spacing: 1.2px; }
+      .card { stroke: #B8C5CD; stroke-width: 2; filter: url(#shadow); }
+      .flow-line { fill: none; stroke: #2E6FBB; stroke-width: 5; marker-end: url(#arrow-blue); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#page-bg)"/>
+  <rect x="0" y="0" width="18" height="900" fill="#147D7A"/>
+
+  <!-- Header -->
+  <text x="60" y="66" class="title">ความหมายและประเภททรัพยากร</text>
+  <text x="60" y="110" class="subtitle">ทรัพยากรเปลี่ยนสถานะตามคุณค่า เทคโนโลยี และอัตราใช้เทียบการฟื้นตัว</text>
+  <line x1="60" y1="132" x2="1540" y2="132" stroke="#CBD5DB" stroke-width="2"/>
+
+  <!-- Concept flow -->
+  <g aria-label="โครงความสัมพันธ์จากฐานทรัพยากรสู่การใช้">
+    <rect x="60" y="162" width="350" height="208" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="85" y="202" class="section">ฐานทรัพยากร</text>
+    <line x1="85" y1="216" x2="385" y2="216" stroke="#D7E0E5" stroke-width="2"/>
+
+    <rect x="85" y="235" width="140" height="105" rx="14" fill="url(#stock-fill)" stroke="#2E6FBB" stroke-width="2"/>
+    <text x="155" y="266" text-anchor="middle" class="label latin" fill="#1F5A94">STOCK</text>
+    <text x="155" y="295" text-anchor="middle" class="body">ปริมาณสะสม</text>
+    <text x="155" y="321" text-anchor="middle" class="small">ณ ช่วงเวลาหนึ่ง</text>
+
+    <rect x="245" y="235" width="140" height="105" rx="14" fill="url(#flow-pattern)" stroke="#147D7A" stroke-width="2"/>
+    <text x="315" y="266" text-anchor="middle" class="label latin" fill="#116762">FLOW</text>
+    <text x="315" y="295" text-anchor="middle" class="body">อัตราการไหล</text>
+    <text x="315" y="321" text-anchor="middle" class="small">ต่อหน่วยเวลา</text>
+
+    <path d="M 410 266 L 462 266" class="flow-line"/>
+
+    <rect x="475" y="172" width="285" height="188" rx="22" fill="#FFF9E8" stroke="#D6A23A" stroke-width="2" class="card"/>
+    <text x="617" y="207" text-anchor="middle" class="small" fill="#71500E">เงื่อนไขที่ทำให้เกิดคุณค่าและเข้าถึงได้</text>
+    <rect x="505" y="226" width="225" height="48" rx="24" fill="#FFF1C7" stroke="#D89A23" stroke-width="2"/>
+    <text x="617" y="258" text-anchor="middle" class="label">ความต้องการ</text>
+    <rect x="505" y="291" width="225" height="48" rx="24" fill="#EAF0F8" stroke="#587AA2" stroke-width="2"/>
+    <text x="617" y="323" text-anchor="middle" class="label">เทคโนโลยี</text>
+
+    <path d="M 760 266 L 812 266" class="flow-line"/>
+
+    <rect x="825" y="172" width="190" height="188" rx="22" fill="#FCE9E2" stroke="#C95432" stroke-width="2" class="card"/>
+    <text x="920" y="218" text-anchor="middle" class="section">การใช้</text>
+    <path d="M 880 248 L 960 248 L 960 292 L 880 292 Z" fill="#FFFFFF" stroke="#C95432" stroke-width="3"/>
+    <path d="M 895 270 L 945 270" stroke="#C95432" stroke-width="5" marker-end="url(#arrow-blue)"/>
+    <text x="920" y="329" text-anchor="middle" class="small">ดึง stock หรือรับ flow</text>
+
+    <path d="M 1015 266 L 1057 266" class="flow-line"/>
+
+    <rect x="1070" y="152" width="470" height="228" rx="22" fill="#FFFFFF" class="card"/>
+    <text x="1095" y="190" class="section">อัตราใช้ เทียบ อัตราฟื้นตัว</text>
+    <text x="1095" y="218" class="small">เป็นเงื่อนไขเชิงแนวคิด ไม่ใช่ค่าจริงของทรัพยากรทุกชนิด</text>
+
+    <rect x="1095" y="238" width="128" height="35" rx="17" fill="#DDF1EC" stroke="#147D7A" stroke-width="2"/>
+    <text x="1159" y="262" text-anchor="middle" class="body">การฟื้นตัว</text>
+    <line x1="1238" y1="255" x2="1495" y2="255" stroke="#147D7A" stroke-width="12" stroke-linecap="round"/>
+    <line x1="1260" y1="246" x2="1260" y2="264" stroke="#FFFFFF" stroke-width="3"/>
+    <line x1="1345" y1="246" x2="1345" y2="264" stroke="#FFFFFF" stroke-width="3"/>
+    <line x1="1430" y1="246" x2="1430" y2="264" stroke="#FFFFFF" stroke-width="3"/>
+
+    <rect x="1095" y="286" width="128" height="35" rx="17" fill="#FCE7DE" stroke="#C95432" stroke-width="2"/>
+    <text x="1159" y="310" text-anchor="middle" class="body">การใช้</text>
+    <line x1="1238" y1="303" x2="1390" y2="303" stroke="#C95432" stroke-width="12" stroke-linecap="round"/>
+
+    <rect x="1095" y="329" width="132" height="38" rx="12" fill="#E7F4F0" stroke="#147D7A" stroke-width="1.5"/>
+    <text x="1161" y="346" text-anchor="middle" class="tiny">ใช้ &lt; ฟื้นตัว</text>
+    <text x="1161" y="362" text-anchor="middle" class="tiny">มีโอกาสคงสภาพ</text>
+    <rect x="1238" y="329" width="132" height="38" rx="12" fill="#FFF3D6" stroke="#D89A23" stroke-width="1.5"/>
+    <text x="1304" y="346" text-anchor="middle" class="tiny">ใช้ ≈ ฟื้นตัว</text>
+    <text x="1304" y="362" text-anchor="middle" class="tiny">ต้องติดตาม</text>
+    <rect x="1381" y="329" width="145" height="38" rx="12" fill="#F8DDD4" stroke="#C95432" stroke-width="1.5"/>
+    <text x="1453" y="346" text-anchor="middle" class="tiny">ใช้ &gt; ฟื้นตัว</text>
+    <text x="1453" y="362" text-anchor="middle" class="tiny">ใช้แล้วลดลง</text>
+  </g>
+
+  <!-- Four examples -->
+  <g aria-label="ตัวอย่างทรัพยากรสี่ชนิด">
+    <!-- Water -->
+    <rect x="60" y="414" width="350" height="245" rx="22" fill="#F7FBFF" stroke="#2E6FBB" stroke-width="3" class="card"/>
+    <circle cx="110" cy="461" r="29" fill="#DCEBFA" stroke="#2E6FBB" stroke-width="2"/>
+    <path d="M 110 437 C 98 454 91 462 91 473 A 19 19 0 0 0 129 473 C 129 462 122 454 110 437 Z" fill="#2E6FBB"/>
+    <text x="152" y="462" class="section">น้ำ</text>
+    <text x="88" y="526" class="label latin" fill="#1F5A94">STOCK</text>
+    <text x="190" y="526" class="small">น้ำในดิน อ่าง และชั้นหิน</text>
+    <text x="88" y="562" class="label latin" fill="#116762">FLOW</text>
+    <text x="190" y="562" class="small">ฝน เติมกลับ และไหลออก</text>
+    <line x1="88" y1="578" x2="382" y2="578" stroke="#CBD8E2" stroke-width="2"/>
+    <text x="88" y="606" class="small">ถ้าใช้เร็วกว่าการเติมกลับ</text>
+    <text x="88" y="634" class="small" fill="#A33E25">ระดับและความพร้อมใช้ลดลง</text>
+
+    <!-- Forest -->
+    <rect x="430" y="414" width="350" height="245" rx="22" fill="#F6FBF4" stroke="#4E8A54" stroke-width="3" class="card"/>
+    <circle cx="480" cy="461" r="29" fill="#E1F0DD" stroke="#4E8A54" stroke-width="2"/>
+    <path d="M 480 435 L 459 470 H 472 L 455 492 H 505 L 488 470 H 501 Z" fill="#4E8A54"/>
+    <rect x="476" y="482" width="8" height="15" fill="#77543A"/>
+    <text x="522" y="462" class="section">ป่า</text>
+    <text x="458" y="526" class="label latin" fill="#1F5A94">STOCK</text>
+    <text x="560" y="526" class="small">ชีวมวล ดิน และถิ่นอาศัย</text>
+    <text x="458" y="562" class="label latin" fill="#116762">FLOW</text>
+    <text x="560" y="562" class="small">การเติบโตและการฟื้นตัว</text>
+    <line x1="458" y1="578" x2="752" y2="578" stroke="#CBD8E2" stroke-width="2"/>
+    <text x="458" y="606" class="small">การตัดต่ำกว่าการเติบโต</text>
+    <text x="458" y="634" class="small" fill="#6A5B1B">ยังไม่รับประกันคุณภาพระบบนิเวศ</text>
+
+    <!-- Minerals -->
+    <rect x="800" y="414" width="350" height="245" rx="22" fill="#FCF9F5" stroke="#9A6C47" stroke-width="3" class="card"/>
+    <circle cx="850" cy="461" r="29" fill="url(#mineral-pattern)" stroke="#9A6C47" stroke-width="2"/>
+    <path d="M 828 478 L 839 444 L 861 436 L 874 456 L 865 484 L 842 489 Z" fill="#8B725E" stroke="#5E4938" stroke-width="2"/>
+    <path d="M 839 444 L 850 463 L 861 436 M 850 463 L 874 456 M 850 463 L 842 489" fill="none" stroke="#D8C6B5" stroke-width="2"/>
+    <text x="892" y="462" class="section">แร่</text>
+    <text x="828" y="526" class="label latin" fill="#1F5A94">STOCK</text>
+    <text x="930" y="526" class="small">แหล่งสะสมและคุณภาพแร่</text>
+    <text x="828" y="562" class="label latin" fill="#116762">FLOW</text>
+    <text x="930" y="562" class="small">เกิดช้ามากในธรณีกาล</text>
+    <line x1="828" y1="578" x2="1122" y2="578" stroke="#D8CEC5" stroke-width="2"/>
+    <text x="828" y="606" class="small">การสกัดทำให้แหล่งคุณภาพสูง</text>
+    <text x="828" y="634" class="small" fill="#A33E25">ใช้แล้วลดลงในมาตราเวลามนุษย์</text>
+
+    <!-- Solar -->
+    <rect x="1170" y="414" width="370" height="245" rx="22" fill="#FFFBF0" stroke="#D89A23" stroke-width="3" class="card"/>
+    <circle cx="1220" cy="461" r="18" fill="#F4B942" stroke="#A86F0E" stroke-width="2"/>
+    <g stroke="#D89A23" stroke-width="4" stroke-linecap="round">
+      <line x1="1220" y1="429" x2="1220" y2="418"/><line x1="1220" y1="493" x2="1220" y2="504"/>
+      <line x1="1188" y1="461" x2="1177" y2="461"/><line x1="1252" y1="461" x2="1263" y2="461"/>
+      <line x1="1197" y1="438" x2="1189" y2="430"/><line x1="1243" y1="484" x2="1251" y2="492"/>
+      <line x1="1243" y1="438" x2="1251" y2="430"/><line x1="1197" y1="484" x2="1189" y2="492"/>
+    </g>
+    <text x="1272" y="462" class="section">พลังงานแสงอาทิตย์</text>
+    <text x="1198" y="526" class="label latin" fill="#116762">FLOW</text>
+    <text x="1278" y="526" class="small">พลังงานไหลเข้าตามเวลา</text>
+    <text x="1198" y="562" class="label">การใช้</text>
+    <text x="1278" y="562" class="small">ไม่ทำให้ดวงอาทิตย์ลดลง</text>
+    <line x1="1198" y1="578" x2="1512" y2="578" stroke="#E2D6B4" stroke-width="2"/>
+    <text x="1198" y="606" class="small">แต่พลังงานที่ใช้ได้จำกัดด้วยเวลา</text>
+    <text x="1198" y="634" class="small" fill="#8B5E13">พื้นที่ โครงข่าย ที่เก็บ และวัสดุ</text>
+  </g>
+
+  <!-- Quality and availability -->
+  <g aria-label="ปริมาณไม่เท่ากับคุณภาพและความพร้อมใช้">
+    <rect x="60" y="690" width="1480" height="128" rx="22" fill="#FFFFFF" stroke="#718694" stroke-width="2" class="card"/>
+    <rect x="60" y="690" width="320" height="128" rx="22" fill="#17324D"/>
+    <path d="M 355 690 H 380 V 818 H 355 C 370 780 370 728 355 690 Z" fill="#17324D"/>
+    <text x="220" y="738" text-anchor="middle" class="section inverse">ปริมาณ ≠ ความพร้อมใช้</text>
+    <text x="220" y="775" text-anchor="middle" class="body inverse">คุณภาพและตำแหน่งมีความหมาย</text>
+
+    <g transform="translate(420 710)">
+      <circle cx="34" cy="34" r="27" fill="#DCEBFA" stroke="#2E6FBB" stroke-width="2"/>
+      <path d="M 34 15 C 23 29 18 36 18 44 A 16 16 0 0 0 50 44 C 50 36 45 29 34 15 Z" fill="#2E6FBB"/>
+      <text x="75" y="31" class="label">คุณภาพ</text>
+      <text x="75" y="57" class="small">มลพิษ ความเค็ม ความเข้มข้น</text>
+    </g>
+    <line x1="770" y1="708" x2="770" y2="800" stroke="#D5DEE3" stroke-width="2"/>
+    <g transform="translate(810 710)">
+      <circle cx="34" cy="34" r="27" fill="#E6F2ED" stroke="#147D7A" stroke-width="2"/>
+      <path d="M 34 15 C 22 15 14 24 14 35 C 14 50 34 61 34 61 C 34 61 54 50 54 35 C 54 24 46 15 34 15 Z" fill="#147D7A"/>
+      <circle cx="34" cy="34" r="7" fill="#FFFFFF"/>
+      <text x="75" y="31" class="label">ตำแหน่งและเวลา</text>
+      <text x="75" y="57" class="small">มีอยู่ที่ไหน และพร้อมใช้เมื่อใด</text>
+    </g>
+    <line x1="1160" y1="708" x2="1160" y2="800" stroke="#D5DEE3" stroke-width="2"/>
+    <g transform="translate(1200 710)">
+      <circle cx="34" cy="34" r="27" fill="#FFF1C7" stroke="#D89A23" stroke-width="2"/>
+      <path d="M 20 38 H 48 M 27 29 L 20 38 L 27 47 M 41 29 L 48 38 L 41 47" fill="none" stroke="#9A6711" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="75" y="31" class="label">การเข้าถึง</text>
+      <text x="75" y="57" class="small">สิทธิ โครงสร้างพื้นฐาน และต้นทุน</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="60" y="856" class="tiny" fill="#526875">แผนภาพเชิงแนวคิด • ไม่แสดงปริมาณจริง • มาตราเวลาของทรัพยากรแต่ละชนิดต่างกัน</text>
+  <text x="1540" y="856" text-anchor="end" class="tiny" fill="#526875">กรอบอ้างอิง: UN SEEA • UNEP International Resource Panel</text>
+</svg>
